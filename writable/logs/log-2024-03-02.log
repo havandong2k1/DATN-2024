@@ -1,0 +1,1102 @@
+INFO - 2024-03-02 06:07:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 06:07:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 06:07:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 06:07:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 06:07:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 06:07:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 06:07:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 06:07:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 06:07:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 06:07:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 06:08:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 06:08:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 06:08:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 06:08:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 06:09:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 06:09:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 06:10:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 06:10:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 06:10:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 06:10:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 06:11:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 06:11:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 06:11:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 06:11:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 06:12:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 06:12:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 06:12:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 06:12:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 06:12:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 06:12:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 06:13:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 06:13:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 06:13:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 06:13:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 06:13:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 06:13:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 06:13:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-02 06:20:23 --> Invalid file: "emmtycart.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('emmtycart.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('emmtycart', [], true)
+ 3 APPPATH\Views\cart.php(25): view('emmtycart')
+ 4 SYSTEMPATH\View\View.php(228): include('D:\\xampp\\file\\htdocs\\ComputerShop\\app\\Views\\cart.php')
+ 5 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('cart', [], true)
+ 7 APPPATH\Controllers\Users\HomeControllers.php(26): view('cart')
+ 8 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Users\HomeControllers->cart()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users\HomeControllers))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+INFO - 2024-03-02 06:20:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 06:20:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 06:20:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 06:20:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 06:21:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 06:21:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 06:21:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 06:21:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 06:21:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 06:21:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 06:21:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 06:21:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 06:21:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 06:21:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 06:21:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 06:22:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 06:22:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 06:22:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 06:22:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 06:24:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 06:24:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 06:24:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 06:24:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 06:25:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 06:25:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 06:26:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 06:26:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 06:26:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 06:26:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 06:26:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 06:26:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 06:26:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 06:26:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 06:26:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 06:26:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 06:32:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 06:32:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 06:43:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 06:43:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 06:45:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 06:45:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 06:46:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 06:46:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 06:51:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 06:51:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 06:52:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 06:52:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 06:52:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 06:52:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 07:33:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 07:33:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 07:34:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 07:34:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 07:34:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 07:34:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 07:34:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 07:34:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 07:34:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 07:34:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 07:34:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 07:34:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 07:46:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 07:46:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-02 07:49:07 --> Undefined array key "password"
+in APPPATH\Services\ProductsService.php on line 33.
+ 1 APPPATH\Services\ProductsService.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "password"', 'D:\\xampp\\file\\htdocs\\ComputerShop\\app\\Services\\ProductsService.php', 33)
+ 2 APPPATH\Controllers\Admin\ProductControllers.php(52): App\Services\ProductsService->addProductsInfo(Object(CodeIgniter\HTTP\IncomingRequest))
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\ProductControllers->create()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\ProductControllers))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+CRITICAL - 2024-03-02 07:49:36 --> Call to a member function save() on null
+in APPPATH\Services\ProductsService.php on line 35.
+ 1 APPPATH\Controllers\Admin\ProductControllers.php(52): App\Services\ProductsService->addProductsInfo(Object(CodeIgniter\HTTP\IncomingRequest))
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\ProductControllers->create()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\ProductControllers))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+ERROR - 2024-03-02 07:50:21 --> mysqli_sql_exception: Unknown column 'price' in 'field list' in D:\xampp\file\htdocs\ComputerShop\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\xampp\file\htdocs\ComputerShop\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `us...', 0)
+#1 D:\xampp\file\htdocs\ComputerShop\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 D:\xampp\file\htdocs\ComputerShop\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 D:\xampp\file\htdocs\ComputerShop\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 D:\xampp\file\htdocs\ComputerShop\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 D:\xampp\file\htdocs\ComputerShop\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 D:\xampp\file\htdocs\ComputerShop\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, false)
+#7 D:\xampp\file\htdocs\ComputerShop\system\BaseModel.php(698): CodeIgniter\Model->insert(Array, false)
+#8 D:\xampp\file\htdocs\ComputerShop\app\Services\ProductsService.php(36): CodeIgniter\BaseModel->save(Array)
+#9 D:\xampp\file\htdocs\ComputerShop\app\Controllers\Admin\ProductControllers.php(52): App\Services\ProductsService->addProductsInfo(Object(CodeIgniter\HTTP\IncomingRequest))
+#10 D:\xampp\file\htdocs\ComputerShop\system\CodeIgniter.php(942): App\Controllers\Admin\ProductControllers->create()
+#11 D:\xampp\file\htdocs\ComputerShop\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\ProductControllers))
+#12 D:\xampp\file\htdocs\ComputerShop\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 D:\xampp\file\htdocs\ComputerShop\public\index.php(81): CodeIgniter\CodeIgniter->run()
+#14 D:\xampp\file\htdocs\ComputerShop\system\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\h...')
+#15 {main}
+CRITICAL - 2024-03-02 07:50:21 --> Unknown column 'price' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`id`, `name`, `price`, `description`, `category`, `amount`) VALUES (:id:, :name:, :price:, :description:, :category:, :amount:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(698): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Services\ProductsService.php(36): CodeIgniter\BaseModel->save([...])
+ 7 APPPATH\Controllers\Admin\ProductControllers.php(52): App\Services\ProductsService->addProductsInfo(Object(CodeIgniter\HTTP\IncomingRequest))
+ 8 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\ProductControllers->create()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\ProductControllers))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+ERROR - 2024-03-02 07:51:54 --> mysqli_sql_exception: Unknown column 'price' in 'field list' in D:\xampp\file\htdocs\ComputerShop\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\xampp\file\htdocs\ComputerShop\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `us...', 0)
+#1 D:\xampp\file\htdocs\ComputerShop\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 D:\xampp\file\htdocs\ComputerShop\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 D:\xampp\file\htdocs\ComputerShop\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 D:\xampp\file\htdocs\ComputerShop\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 D:\xampp\file\htdocs\ComputerShop\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 D:\xampp\file\htdocs\ComputerShop\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, false)
+#7 D:\xampp\file\htdocs\ComputerShop\system\BaseModel.php(698): CodeIgniter\Model->insert(Array, false)
+#8 D:\xampp\file\htdocs\ComputerShop\app\Services\ProductsService.php(36): CodeIgniter\BaseModel->save(Array)
+#9 D:\xampp\file\htdocs\ComputerShop\app\Controllers\Admin\ProductControllers.php(52): App\Services\ProductsService->addProductsInfo(Object(CodeIgniter\HTTP\IncomingRequest))
+#10 D:\xampp\file\htdocs\ComputerShop\system\CodeIgniter.php(942): App\Controllers\Admin\ProductControllers->create()
+#11 D:\xampp\file\htdocs\ComputerShop\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\ProductControllers))
+#12 D:\xampp\file\htdocs\ComputerShop\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 D:\xampp\file\htdocs\ComputerShop\public\index.php(81): CodeIgniter\CodeIgniter->run()
+#14 D:\xampp\file\htdocs\ComputerShop\system\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\h...')
+#15 {main}
+CRITICAL - 2024-03-02 07:51:54 --> Unknown column 'price' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`id`, `name`, `price`, `description`, `category`, `amount`) VALUES (:id:, :name:, :price:, :description:, :category:, :amount:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(698): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Services\ProductsService.php(36): CodeIgniter\BaseModel->save([...])
+ 7 APPPATH\Controllers\Admin\ProductControllers.php(52): App\Services\ProductsService->addProductsInfo(Object(CodeIgniter\HTTP\IncomingRequest))
+ 8 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\ProductControllers->create()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\ProductControllers))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+ERROR - 2024-03-02 07:53:46 --> mysqli_sql_exception: Unknown column 'price' in 'field list' in D:\xampp\file\htdocs\ComputerShop\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\xampp\file\htdocs\ComputerShop\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `us...', 0)
+#1 D:\xampp\file\htdocs\ComputerShop\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 D:\xampp\file\htdocs\ComputerShop\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 D:\xampp\file\htdocs\ComputerShop\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 D:\xampp\file\htdocs\ComputerShop\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 D:\xampp\file\htdocs\ComputerShop\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 D:\xampp\file\htdocs\ComputerShop\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, false)
+#7 D:\xampp\file\htdocs\ComputerShop\system\BaseModel.php(698): CodeIgniter\Model->insert(Array, false)
+#8 D:\xampp\file\htdocs\ComputerShop\app\Services\ProductsService.php(36): CodeIgniter\BaseModel->save(Array)
+#9 D:\xampp\file\htdocs\ComputerShop\app\Controllers\Admin\ProductControllers.php(52): App\Services\ProductsService->addProductsInfo(Object(CodeIgniter\HTTP\IncomingRequest))
+#10 D:\xampp\file\htdocs\ComputerShop\system\CodeIgniter.php(942): App\Controllers\Admin\ProductControllers->create()
+#11 D:\xampp\file\htdocs\ComputerShop\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\ProductControllers))
+#12 D:\xampp\file\htdocs\ComputerShop\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 D:\xampp\file\htdocs\ComputerShop\public\index.php(81): CodeIgniter\CodeIgniter->run()
+#14 D:\xampp\file\htdocs\ComputerShop\system\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\h...')
+#15 {main}
+CRITICAL - 2024-03-02 07:53:46 --> Unknown column 'price' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`id`, `name`, `price`, `description`, `category`, `amount`) VALUES (:id:, :name:, :price:, :description:, :category:, :amount:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(698): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Services\ProductsService.php(36): CodeIgniter\BaseModel->save([...])
+ 7 APPPATH\Controllers\Admin\ProductControllers.php(52): App\Services\ProductsService->addProductsInfo(Object(CodeIgniter\HTTP\IncomingRequest))
+ 8 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\ProductControllers->create()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\ProductControllers))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+ERROR - 2024-03-02 08:08:07 --> mysqli_sql_exception: Unknown column 'price' in 'field list' in D:\xampp\file\htdocs\ComputerShop\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\xampp\file\htdocs\ComputerShop\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `us...', 0)
+#1 D:\xampp\file\htdocs\ComputerShop\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 D:\xampp\file\htdocs\ComputerShop\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 D:\xampp\file\htdocs\ComputerShop\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 D:\xampp\file\htdocs\ComputerShop\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 D:\xampp\file\htdocs\ComputerShop\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 D:\xampp\file\htdocs\ComputerShop\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, false)
+#7 D:\xampp\file\htdocs\ComputerShop\system\BaseModel.php(698): CodeIgniter\Model->insert(Array, false)
+#8 D:\xampp\file\htdocs\ComputerShop\app\Services\ProductsService.php(36): CodeIgniter\BaseModel->save(Array)
+#9 D:\xampp\file\htdocs\ComputerShop\app\Controllers\Admin\ProductControllers.php(52): App\Services\ProductsService->addProductsInfo(Object(CodeIgniter\HTTP\IncomingRequest))
+#10 D:\xampp\file\htdocs\ComputerShop\system\CodeIgniter.php(942): App\Controllers\Admin\ProductControllers->create()
+#11 D:\xampp\file\htdocs\ComputerShop\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\ProductControllers))
+#12 D:\xampp\file\htdocs\ComputerShop\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 D:\xampp\file\htdocs\ComputerShop\public\index.php(81): CodeIgniter\CodeIgniter->run()
+#14 D:\xampp\file\htdocs\ComputerShop\system\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\h...')
+#15 {main}
+CRITICAL - 2024-03-02 08:08:07 --> Unknown column 'price' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`id`, `name`, `price`, `description`, `category`, `amount`) VALUES (:id:, :name:, :price:, :description:, :category:, :amount:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(698): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Services\ProductsService.php(36): CodeIgniter\BaseModel->save([...])
+ 7 APPPATH\Controllers\Admin\ProductControllers.php(52): App\Services\ProductsService->addProductsInfo(Object(CodeIgniter\HTTP\IncomingRequest))
+ 8 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\ProductControllers->create()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\ProductControllers))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+ERROR - 2024-03-02 08:08:09 --> mysqli_sql_exception: Unknown column 'price' in 'field list' in D:\xampp\file\htdocs\ComputerShop\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\xampp\file\htdocs\ComputerShop\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `us...', 0)
+#1 D:\xampp\file\htdocs\ComputerShop\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 D:\xampp\file\htdocs\ComputerShop\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 D:\xampp\file\htdocs\ComputerShop\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 D:\xampp\file\htdocs\ComputerShop\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 D:\xampp\file\htdocs\ComputerShop\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 D:\xampp\file\htdocs\ComputerShop\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, false)
+#7 D:\xampp\file\htdocs\ComputerShop\system\BaseModel.php(698): CodeIgniter\Model->insert(Array, false)
+#8 D:\xampp\file\htdocs\ComputerShop\app\Services\ProductsService.php(36): CodeIgniter\BaseModel->save(Array)
+#9 D:\xampp\file\htdocs\ComputerShop\app\Controllers\Admin\ProductControllers.php(52): App\Services\ProductsService->addProductsInfo(Object(CodeIgniter\HTTP\IncomingRequest))
+#10 D:\xampp\file\htdocs\ComputerShop\system\CodeIgniter.php(942): App\Controllers\Admin\ProductControllers->create()
+#11 D:\xampp\file\htdocs\ComputerShop\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\ProductControllers))
+#12 D:\xampp\file\htdocs\ComputerShop\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 D:\xampp\file\htdocs\ComputerShop\public\index.php(81): CodeIgniter\CodeIgniter->run()
+#14 D:\xampp\file\htdocs\ComputerShop\system\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\h...')
+#15 {main}
+CRITICAL - 2024-03-02 08:08:09 --> Unknown column 'price' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`id`, `name`, `price`, `description`, `category`, `amount`) VALUES (:id:, :name:, :price:, :description:, :category:, :amount:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(698): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Services\ProductsService.php(36): CodeIgniter\BaseModel->save([...])
+ 7 APPPATH\Controllers\Admin\ProductControllers.php(52): App\Services\ProductsService->addProductsInfo(Object(CodeIgniter\HTTP\IncomingRequest))
+ 8 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\ProductControllers->create()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\ProductControllers))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+CRITICAL - 2024-03-02 08:08:22 --> Undefined array key "password"
+in APPPATH\Services\ProductsService.php on line 34.
+ 1 APPPATH\Services\ProductsService.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "password"', 'D:\\xampp\\file\\htdocs\\ComputerShop\\app\\Services\\ProductsService.php', 34)
+ 2 APPPATH\Controllers\Admin\ProductControllers.php(52): App\Services\ProductsService->addProductsInfo(Object(CodeIgniter\HTTP\IncomingRequest))
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\ProductControllers->create()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\ProductControllers))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+INFO - 2024-03-02 08:08:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 08:09:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-02 08:09:03 --> Undefined array key "password"
+in APPPATH\Services\ProductsService.php on line 34.
+ 1 APPPATH\Services\ProductsService.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "password"', 'D:\\xampp\\file\\htdocs\\ComputerShop\\app\\Services\\ProductsService.php', 34)
+ 2 APPPATH\Controllers\Admin\ProductControllers.php(52): App\Services\ProductsService->addProductsInfo(Object(CodeIgniter\HTTP\IncomingRequest))
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\ProductControllers->create()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\ProductControllers))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+INFO - 2024-03-02 08:09:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 08:09:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 08:10:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 08:10:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 08:11:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 08:11:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 08:12:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 08:12:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 08:12:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 08:12:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 08:13:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 08:13:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 08:25:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 08:25:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 08:26:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 08:27:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 08:27:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 08:27:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 08:27:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 08:28:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 08:28:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 08:36:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 08:36:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-02 08:36:54 --> Call to a member function save() on null
+in APPPATH\Services\ProductsService.php on line 34.
+ 1 APPPATH\Controllers\Admin\ProductControllers.php(52): App\Services\ProductsService->addProductsInfo(Object(CodeIgniter\HTTP\IncomingRequest))
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\ProductControllers->create()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\ProductControllers))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+INFO - 2024-03-02 08:37:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-02 08:37:29 --> Undefined array key "messageCode"
+in APPPATH\Controllers\Admin\ProductControllers.php on line 53.
+ 1 APPPATH\Controllers\Admin\ProductControllers.php(53): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "messageCode"', 'D:\\xampp\\file\\htdocs\\ComputerShop\\app\\Controllers\\Admin\\ProductControllers.php', 53)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\ProductControllers->create()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\ProductControllers))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+INFO - 2024-03-02 08:38:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 08:38:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 08:38:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 08:38:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 08:38:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 08:38:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 08:38:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 08:47:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 08:47:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 09:07:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 09:07:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 09:07:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 09:07:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 09:07:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 09:07:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 09:07:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 09:08:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 09:54:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 09:54:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 09:54:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 09:54:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 09:54:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 09:54:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 09:54:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 09:54:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 09:54:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 09:54:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 10:01:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-02 10:01:03 --> Undefined variable $product
+in APPPATH\Views\Admin\pages\product\list.php on line 28.
+ 1 APPPATH\Views\Admin\pages\product\list.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $product', 'D:\\xampp\\file\\htdocs\\ComputerShop\\app\\Views\\Admin\\pages\\product\\list.php', 28)
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\xampp\\file\\htdocs\\ComputerShop\\app\\Views\\Admin\\pages\\product\\list.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('admin/pages/product/list', [], true)
+ 5 APPPATH\Controllers\BaseController.php(65): view('admin/pages/product/list', [...])
+ 6 APPPATH\Controllers\Admin\ProductControllers.php(40): App\Controllers\BaseController->loadMasterLayout([...], 'Danh sách sản phẩm', 'admin/pages/product/list', [...], [...], [...])
+ 7 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\ProductControllers->list()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\ProductControllers))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+INFO - 2024-03-02 10:02:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 10:02:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 10:02:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 10:02:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 10:04:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 10:04:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 10:04:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 10:04:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 10:04:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 10:04:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 10:15:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 10:15:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 10:15:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 10:16:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 10:16:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 10:16:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 10:16:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 10:17:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 10:17:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 10:17:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 10:17:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 10:17:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 10:17:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 10:18:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 10:18:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 10:20:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 10:20:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 10:20:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 10:21:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-02 10:21:09 --> Undefined array key "messageCode"
+in APPPATH\Controllers\Admin\ProductControllers.php on line 57.
+ 1 APPPATH\Controllers\Admin\ProductControllers.php(57): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "messageCode"', 'D:\\xampp\\file\\htdocs\\ComputerShop\\app\\Controllers\\Admin\\ProductControllers.php', 57)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\ProductControllers->create()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\ProductControllers))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+INFO - 2024-03-02 10:29:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-02 10:29:23 --> Undefined array key "messageCode"
+in APPPATH\Controllers\Admin\ProductControllers.php on line 57.
+ 1 APPPATH\Controllers\Admin\ProductControllers.php(57): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "messageCode"', 'D:\\xampp\\file\\htdocs\\ComputerShop\\app\\Controllers\\Admin\\ProductControllers.php', 57)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\ProductControllers->create()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\ProductControllers))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+INFO - 2024-03-02 10:29:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 10:29:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 10:30:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 10:30:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 10:30:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 10:30:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 10:30:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 10:30:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 10:30:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 10:34:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 10:34:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 10:34:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 10:34:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 10:34:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-02 10:34:52 --> Undefined array key "messageCode"
+in APPPATH\Controllers\Admin\UserControllers.php on line 78.
+ 1 APPPATH\Controllers\Admin\UserControllers.php(78): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "messageCode"', 'D:\\xampp\\file\\htdocs\\ComputerShop\\app\\Controllers\\Admin\\UserControllers.php', 78)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\UserControllers->update()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\UserControllers))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+INFO - 2024-03-02 10:35:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 10:35:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 10:35:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 10:35:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 10:35:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 10:36:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 10:36:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-02 10:36:17 --> Undefined array key "messageCode"
+in APPPATH\Controllers\Admin\UserControllers.php on line 54.
+ 1 APPPATH\Controllers\Admin\UserControllers.php(54): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "messageCode"', 'D:\\xampp\\file\\htdocs\\ComputerShop\\app\\Controllers\\Admin\\UserControllers.php', 54)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\UserControllers->create()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\UserControllers))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+WARNING - 2024-03-02 10:37:25 --> [DEPRECATED] preg_quote(): Passing null to parameter #1 ($str) of type string is deprecated in SYSTEMPATH\Validation\Validation.php on line 833.
+ 1 SYSTEMPATH\Validation\Validation.php(833): preg_quote(null, '/')
+ 2 [internal function]: CodeIgniter\Validation\Validation::CodeIgniter\Validation\{closure}('email')
+ 3 SYSTEMPATH\Validation\Validation.php(832): array_filter([...], Object(Closure), 2)
+ 4 APPPATH\Services\UserService.php(35): CodeIgniter\Validation\Validation->getError()
+ 5 APPPATH\Controllers\Admin\UserControllers.php(53): App\Services\UserService->addUserInfo(Object(CodeIgniter\HTTP\IncomingRequest))
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\UserControllers->create()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\UserControllers))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+INFO - 2024-03-02 10:37:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-02 10:37:25 --> Undefined array key "messageCode"
+in APPPATH\Controllers\Admin\UserControllers.php on line 54.
+ 1 APPPATH\Controllers\Admin\UserControllers.php(54): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "messageCode"', 'D:\\xampp\\file\\htdocs\\ComputerShop\\app\\Controllers\\Admin\\UserControllers.php', 54)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\UserControllers->create()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\UserControllers))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+INFO - 2024-03-02 10:37:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 10:37:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-03-02 10:37:37 --> [DEPRECATED] preg_quote(): Passing null to parameter #1 ($str) of type string is deprecated in SYSTEMPATH\Validation\Validation.php on line 833.
+ 1 SYSTEMPATH\Validation\Validation.php(833): preg_quote(null, '/')
+ 2 [internal function]: CodeIgniter\Validation\Validation::CodeIgniter\Validation\{closure}('email')
+ 3 SYSTEMPATH\Validation\Validation.php(832): array_filter([...], Object(Closure), 2)
+ 4 APPPATH\Services\UserService.php(35): CodeIgniter\Validation\Validation->getError()
+ 5 APPPATH\Controllers\Admin\UserControllers.php(53): App\Services\UserService->addUserInfo(Object(CodeIgniter\HTTP\IncomingRequest))
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\UserControllers->create()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\UserControllers))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+INFO - 2024-03-02 10:37:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-02 10:37:37 --> Undefined array key "messageCode"
+in APPPATH\Controllers\Admin\UserControllers.php on line 54.
+ 1 APPPATH\Controllers\Admin\UserControllers.php(54): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "messageCode"', 'D:\\xampp\\file\\htdocs\\ComputerShop\\app\\Controllers\\Admin\\UserControllers.php', 54)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\UserControllers->create()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\UserControllers))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+WARNING - 2024-03-02 10:42:23 --> [DEPRECATED] preg_quote(): Passing null to parameter #1 ($str) of type string is deprecated in SYSTEMPATH\Validation\Validation.php on line 833.
+ 1 SYSTEMPATH\Validation\Validation.php(833): preg_quote(null, '/')
+ 2 [internal function]: CodeIgniter\Validation\Validation::CodeIgniter\Validation\{closure}('email')
+ 3 SYSTEMPATH\Validation\Validation.php(832): array_filter([...], Object(Closure), 2)
+ 4 APPPATH\Services\UserService.php(35): CodeIgniter\Validation\Validation->getError()
+ 5 APPPATH\Controllers\Admin\UserControllers.php(53): App\Services\UserService->addUserInfo(Object(CodeIgniter\HTTP\IncomingRequest))
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\UserControllers->create()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\UserControllers))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+INFO - 2024-03-02 10:42:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 10:42:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 10:42:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-03-02 10:42:30 --> [DEPRECATED] preg_quote(): Passing null to parameter #1 ($str) of type string is deprecated in SYSTEMPATH\Validation\Validation.php on line 833.
+ 1 SYSTEMPATH\Validation\Validation.php(833): preg_quote(null, '/')
+ 2 [internal function]: CodeIgniter\Validation\Validation::CodeIgniter\Validation\{closure}('email')
+ 3 SYSTEMPATH\Validation\Validation.php(832): array_filter([...], Object(Closure), 2)
+ 4 APPPATH\Services\UserService.php(35): CodeIgniter\Validation\Validation->getError()
+ 5 APPPATH\Controllers\Admin\UserControllers.php(53): App\Services\UserService->addUserInfo(Object(CodeIgniter\HTTP\IncomingRequest))
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\UserControllers->create()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\UserControllers))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+INFO - 2024-03-02 10:42:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 10:42:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 10:42:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-03-02 10:43:16 --> [DEPRECATED] preg_quote(): Passing null to parameter #1 ($str) of type string is deprecated in SYSTEMPATH\Validation\Validation.php on line 833.
+ 1 SYSTEMPATH\Validation\Validation.php(833): preg_quote(null, '/')
+ 2 [internal function]: CodeIgniter\Validation\Validation::CodeIgniter\Validation\{closure}('email')
+ 3 SYSTEMPATH\Validation\Validation.php(832): array_filter([...], Object(Closure), 2)
+ 4 APPPATH\Services\UserService.php(35): CodeIgniter\Validation\Validation->getError()
+ 5 APPPATH\Controllers\Admin\UserControllers.php(53): App\Services\UserService->addUserInfo(Object(CodeIgniter\HTTP\IncomingRequest))
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\UserControllers->create()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\UserControllers))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+INFO - 2024-03-02 10:43:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 10:43:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 10:43:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 10:43:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 10:43:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 10:43:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 10:43:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 10:44:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 10:44:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 10:44:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 10:44:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 10:44:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 10:44:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 10:44:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 10:44:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 10:44:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 10:44:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-02 10:44:50 --> Undefined array key "messageCode"
+in APPPATH\Controllers\Admin\ProductControllers.php on line 56.
+ 1 APPPATH\Controllers\Admin\ProductControllers.php(56): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "messageCode"', 'D:\\xampp\\file\\htdocs\\ComputerShop\\app\\Controllers\\Admin\\ProductControllers.php', 56)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\ProductControllers->create()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\ProductControllers))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+INFO - 2024-03-02 10:45:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 10:45:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 10:45:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 10:45:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 10:45:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 10:45:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 10:45:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 10:46:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 10:46:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-02 10:47:03 --> Undefined array key "messageCode"
+in APPPATH\Controllers\Admin\UserControllers.php on line 90.
+ 1 APPPATH\Controllers\Admin\UserControllers.php(90): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "messageCode"', 'D:\\xampp\\file\\htdocs\\ComputerShop\\app\\Controllers\\Admin\\UserControllers.php', 90)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\UserControllers->delete('11')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\UserControllers))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+INFO - 2024-03-02 10:47:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-02 10:47:34 --> Undefined variable $message
+in APPPATH\Views\errors\html\error_404.php on line 77.
+ 1 APPPATH\Views\errors\html\error_404.php(77): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $message', 'D:\\xampp\\file\\htdocs\\ComputerShop\\app\\Views\\errors\\html\\error_404.php', 77)
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\xampp\\file\\htdocs\\ComputerShop\\app\\Views\\errors\\html\\error_404.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('errors/html/error_404', [], true)
+ 5 APPPATH\Config\Routes.php(20): view('errors/html/error_404')
+ 6 SYSTEMPATH\CodeIgniter.php(891): CodeIgniter\Router\RouteCollection->{closure}()
+ 7 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+INFO - 2024-03-02 10:47:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 10:47:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 10:47:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 10:47:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 10:47:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 10:53:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 10:53:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 10:53:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 10:53:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 10:53:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 10:53:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-03-02 10:53:55 --> [DEPRECATED] preg_quote(): Passing null to parameter #1 ($str) of type string is deprecated in SYSTEMPATH\Validation\Validation.php on line 833.
+ 1 SYSTEMPATH\Validation\Validation.php(833): preg_quote(null, '/')
+ 2 [internal function]: CodeIgniter\Validation\Validation::CodeIgniter\Validation\{closure}('password')
+ 3 SYSTEMPATH\Validation\Validation.php(832): array_filter([...], Object(Closure), 2)
+ 4 APPPATH\Services\UserService.php(67): CodeIgniter\Validation\Validation->getError()
+ 5 APPPATH\Controllers\Admin\UserControllers.php(77): App\Services\UserService->updateUserInfo(Object(CodeIgniter\HTTP\IncomingRequest))
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\UserControllers->update()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\UserControllers))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+INFO - 2024-03-02 10:53:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 10:53:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 10:53:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 10:55:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 10:55:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 10:55:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 10:55:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 10:55:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 11:00:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 11:00:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 11:00:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 11:00:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 11:00:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 11:00:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 11:00:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-02 11:01:12 --> Call to a member function findAll() on null
+in APPPATH\Services\ProductsService.php on line 23.
+ 1 APPPATH\Controllers\Admin\ProductControllers.php(39): App\Services\ProductsService->getAllProduct()
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\ProductControllers->list()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\ProductControllers))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+CRITICAL - 2024-03-02 11:22:02 --> Call to a member function findAll() on null
+in APPPATH\Services\ProductsService.php on line 23.
+ 1 APPPATH\Controllers\Admin\ProductControllers.php(38): App\Services\ProductsService->getAllProduct()
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\ProductControllers->list()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\ProductControllers))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+INFO - 2024-03-02 11:22:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 11:22:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 11:22:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 11:22:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-02 11:22:22 --> Call to a member function findAll() on null
+in APPPATH\Services\ProductsService.php on line 23.
+ 1 APPPATH\Controllers\Admin\ProductControllers.php(38): App\Services\ProductsService->getAllProduct()
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\ProductControllers->list()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\ProductControllers))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+CRITICAL - 2024-03-02 11:22:50 --> Call to a member function findAll() on null
+in APPPATH\Services\ProductsService.php on line 23.
+ 1 APPPATH\Controllers\Admin\ProductControllers.php(38): App\Services\ProductsService->getAllProduct()
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\ProductControllers->list()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\ProductControllers))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+INFO - 2024-03-02 11:23:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 11:23:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 11:24:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 11:24:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 11:24:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 11:24:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-02 11:24:55 --> Call to a member function findAll() on null
+in APPPATH\Services\ProductsService.php on line 23.
+ 1 APPPATH\Controllers\Admin\ProductControllers.php(38): App\Services\ProductsService->getAllProduct()
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\ProductControllers->list()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\ProductControllers))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+INFO - 2024-03-02 11:26:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 11:26:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 11:27:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 11:27:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 11:27:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 11:27:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-02 11:27:33 --> Call to a member function findAll() on null
+in APPPATH\Services\ProductsService.php on line 23.
+ 1 APPPATH\Controllers\Admin\ProductControllers.php(38): App\Services\ProductsService->getAllProduct()
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\ProductControllers->list()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\ProductControllers))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+CRITICAL - 2024-03-02 11:30:45 --> Call to a member function findAll() on null
+in APPPATH\Services\ProductsService.php on line 25.
+ 1 APPPATH\Controllers\Admin\ProductControllers.php(38): App\Services\ProductsService->getAllProduct()
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\ProductControllers->list()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\ProductControllers))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+INFO - 2024-03-02 11:30:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-02 11:30:58 --> Undefined variable $products
+in APPPATH\Views\Admin\pages\product\list.php on line 28.
+ 1 APPPATH\Views\Admin\pages\product\list.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $products', 'D:\\xampp\\file\\htdocs\\ComputerShop\\app\\Views\\Admin\\pages\\product\\list.php', 28)
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\xampp\\file\\htdocs\\ComputerShop\\app\\Views\\Admin\\pages\\product\\list.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('admin/pages/product/list', [], true)
+ 5 APPPATH\Controllers\BaseController.php(65): view('admin/pages/product/list', [...])
+ 6 APPPATH\Controllers\Admin\ProductControllers.php(39): App\Controllers\BaseController->loadMasterLayout([...], 'Danh sách sản phẩm', 'admin/pages/product/list', [...], [...], [...])
+ 7 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\ProductControllers->list()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\ProductControllers))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+CRITICAL - 2024-03-02 11:32:06 --> Call to a member function findAll() on null
+in APPPATH\Services\ProductsService.php on line 25.
+ 1 APPPATH\Controllers\Admin\ProductControllers.php(38): App\Services\ProductsService->getAllProduct()
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\ProductControllers->list()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\ProductControllers))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+INFO - 2024-03-02 11:32:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-02 11:32:13 --> Undefined variable $products
+in APPPATH\Views\Admin\pages\product\list.php on line 28.
+ 1 APPPATH\Views\Admin\pages\product\list.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $products', 'D:\\xampp\\file\\htdocs\\ComputerShop\\app\\Views\\Admin\\pages\\product\\list.php', 28)
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\xampp\\file\\htdocs\\ComputerShop\\app\\Views\\Admin\\pages\\product\\list.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('admin/pages/product/list', [], true)
+ 5 APPPATH\Controllers\BaseController.php(65): view('admin/pages/product/list', [...])
+ 6 APPPATH\Controllers\Admin\ProductControllers.php(39): App\Controllers\BaseController->loadMasterLayout([...], 'Danh sách sản phẩm', 'admin/pages/product/list', [...], [...], [...])
+ 7 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\ProductControllers->list()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\ProductControllers))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+INFO - 2024-03-02 11:32:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-02 11:32:22 --> foreach() argument must be of type array|object, null given
+in APPPATH\Views\Admin\pages\product\list.php on line 28.
+ 1 APPPATH\Views\Admin\pages\product\list.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, null given', 'D:\\xampp\\file\\htdocs\\ComputerShop\\app\\Views\\Admin\\pages\\product\\list.php', 28)
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\xampp\\file\\htdocs\\ComputerShop\\app\\Views\\Admin\\pages\\product\\list.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('admin/pages/product/list', [], true)
+ 5 APPPATH\Controllers\BaseController.php(65): view('admin/pages/product/list', [...])
+ 6 APPPATH\Controllers\Admin\ProductControllers.php(39): App\Controllers\BaseController->loadMasterLayout([...], 'Danh sách sản phẩm', 'admin/pages/product/list', [...], [...], [...])
+ 7 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\ProductControllers->list()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\ProductControllers))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+INFO - 2024-03-02 11:32:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-02 11:32:31 --> Undefined variable $products
+in APPPATH\Views\Admin\pages\product\list.php on line 28.
+ 1 APPPATH\Views\Admin\pages\product\list.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $products', 'D:\\xampp\\file\\htdocs\\ComputerShop\\app\\Views\\Admin\\pages\\product\\list.php', 28)
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\xampp\\file\\htdocs\\ComputerShop\\app\\Views\\Admin\\pages\\product\\list.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('admin/pages/product/list', [], true)
+ 5 APPPATH\Controllers\BaseController.php(65): view('admin/pages/product/list', [...])
+ 6 APPPATH\Controllers\Admin\ProductControllers.php(39): App\Controllers\BaseController->loadMasterLayout([...], 'Danh sách sản phẩm', 'admin/pages/product/list', [...], [...], [...])
+ 7 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\ProductControllers->list()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\ProductControllers))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+INFO - 2024-03-02 11:34:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-02 11:34:16 --> Undefined variable $products
+in APPPATH\Views\Admin\pages\product\list.php on line 28.
+ 1 APPPATH\Views\Admin\pages\product\list.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $products', 'D:\\xampp\\file\\htdocs\\ComputerShop\\app\\Views\\Admin\\pages\\product\\list.php', 28)
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\xampp\\file\\htdocs\\ComputerShop\\app\\Views\\Admin\\pages\\product\\list.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('admin/pages/product/list', [], true)
+ 5 APPPATH\Controllers\BaseController.php(65): view('admin/pages/product/list', [...])
+ 6 APPPATH\Controllers\Admin\ProductControllers.php(39): App\Controllers\BaseController->loadMasterLayout([...], 'Danh sách sản phẩm', 'admin/pages/product/list', [...], [...], [...])
+ 7 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\ProductControllers->list()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\ProductControllers))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+INFO - 2024-03-02 11:34:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-02 11:34:17 --> Undefined variable $products
+in APPPATH\Views\Admin\pages\product\list.php on line 28.
+ 1 APPPATH\Views\Admin\pages\product\list.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $products', 'D:\\xampp\\file\\htdocs\\ComputerShop\\app\\Views\\Admin\\pages\\product\\list.php', 28)
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\xampp\\file\\htdocs\\ComputerShop\\app\\Views\\Admin\\pages\\product\\list.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('admin/pages/product/list', [], true)
+ 5 APPPATH\Controllers\BaseController.php(65): view('admin/pages/product/list', [...])
+ 6 APPPATH\Controllers\Admin\ProductControllers.php(39): App\Controllers\BaseController->loadMasterLayout([...], 'Danh sách sản phẩm', 'admin/pages/product/list', [...], [...], [...])
+ 7 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\ProductControllers->list()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\ProductControllers))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+INFO - 2024-03-02 11:34:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-02 11:34:26 --> Undefined variable $products
+in APPPATH\Views\Admin\pages\product\list.php on line 28.
+ 1 APPPATH\Views\Admin\pages\product\list.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $products', 'D:\\xampp\\file\\htdocs\\ComputerShop\\app\\Views\\Admin\\pages\\product\\list.php', 28)
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\xampp\\file\\htdocs\\ComputerShop\\app\\Views\\Admin\\pages\\product\\list.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('admin/pages/product/list', [], true)
+ 5 APPPATH\Controllers\BaseController.php(65): view('admin/pages/product/list', [...])
+ 6 APPPATH\Controllers\Admin\ProductControllers.php(39): App\Controllers\BaseController->loadMasterLayout([...], 'Danh sách sản phẩm', 'admin/pages/product/list', [...], [...], [...])
+ 7 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\ProductControllers->list()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\ProductControllers))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+INFO - 2024-03-02 11:34:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-02 11:34:38 --> Undefined array key "category"
+in APPPATH\Views\Admin\pages\product\list.php on line 35.
+ 1 APPPATH\Views\Admin\pages\product\list.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "category"', 'D:\\xampp\\file\\htdocs\\ComputerShop\\app\\Views\\Admin\\pages\\product\\list.php', 35)
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\xampp\\file\\htdocs\\ComputerShop\\app\\Views\\Admin\\pages\\product\\list.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('admin/pages/product/list', [], true)
+ 5 APPPATH\Controllers\BaseController.php(65): view('admin/pages/product/list', [...])
+ 6 APPPATH\Controllers\Admin\ProductControllers.php(39): App\Controllers\BaseController->loadMasterLayout([...], 'Danh sách sản phẩm', 'admin/pages/product/list', [...], [...], [...])
+ 7 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\ProductControllers->list()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\ProductControllers))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+INFO - 2024-03-02 11:36:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-02 11:36:07 --> Undefined array key "category"
+in APPPATH\Views\Admin\pages\product\list.php on line 35.
+ 1 APPPATH\Views\Admin\pages\product\list.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "category"', 'D:\\xampp\\file\\htdocs\\ComputerShop\\app\\Views\\Admin\\pages\\product\\list.php', 35)
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\xampp\\file\\htdocs\\ComputerShop\\app\\Views\\Admin\\pages\\product\\list.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('admin/pages/product/list', [], true)
+ 5 APPPATH\Controllers\BaseController.php(65): view('admin/pages/product/list', [...])
+ 6 APPPATH\Controllers\Admin\ProductControllers.php(39): App\Controllers\BaseController->loadMasterLayout([...], 'Danh sách sản phẩm', 'admin/pages/product/list', [...], [...], [...])
+ 7 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\ProductControllers->list()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\ProductControllers))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+INFO - 2024-03-02 11:39:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-02 11:39:37 --> Undefined array key "category"
+in APPPATH\Views\Admin\pages\product\list.php on line 35.
+ 1 APPPATH\Views\Admin\pages\product\list.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "category"', 'D:\\xampp\\file\\htdocs\\ComputerShop\\app\\Views\\Admin\\pages\\product\\list.php', 35)
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\xampp\\file\\htdocs\\ComputerShop\\app\\Views\\Admin\\pages\\product\\list.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('admin/pages/product/list', [], true)
+ 5 APPPATH\Controllers\BaseController.php(65): view('admin/pages/product/list', [...])
+ 6 APPPATH\Controllers\Admin\ProductControllers.php(39): App\Controllers\BaseController->loadMasterLayout([...], 'Danh sách sản phẩm', 'admin/pages/product/list', [...], [...], [...])
+ 7 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\ProductControllers->list()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\ProductControllers))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+INFO - 2024-03-02 11:39:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-02 11:39:38 --> Undefined array key "category"
+in APPPATH\Views\Admin\pages\product\list.php on line 35.
+ 1 APPPATH\Views\Admin\pages\product\list.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "category"', 'D:\\xampp\\file\\htdocs\\ComputerShop\\app\\Views\\Admin\\pages\\product\\list.php', 35)
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\xampp\\file\\htdocs\\ComputerShop\\app\\Views\\Admin\\pages\\product\\list.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('admin/pages/product/list', [], true)
+ 5 APPPATH\Controllers\BaseController.php(65): view('admin/pages/product/list', [...])
+ 6 APPPATH\Controllers\Admin\ProductControllers.php(39): App\Controllers\BaseController->loadMasterLayout([...], 'Danh sách sản phẩm', 'admin/pages/product/list', [...], [...], [...])
+ 7 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\ProductControllers->list()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\ProductControllers))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+INFO - 2024-03-02 11:41:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-02 11:41:41 --> Undefined array key "category"
+in APPPATH\Views\Admin\pages\product\list.php on line 35.
+ 1 APPPATH\Views\Admin\pages\product\list.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "category"', 'D:\\xampp\\file\\htdocs\\ComputerShop\\app\\Views\\Admin\\pages\\product\\list.php', 35)
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\xampp\\file\\htdocs\\ComputerShop\\app\\Views\\Admin\\pages\\product\\list.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('admin/pages/product/list', [], true)
+ 5 APPPATH\Controllers\BaseController.php(65): view('admin/pages/product/list', [...])
+ 6 APPPATH\Controllers\Admin\ProductControllers.php(39): App\Controllers\BaseController->loadMasterLayout([...], 'Danh sách sản phẩm', 'admin/pages/product/list', [...], [...], [...])
+ 7 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\ProductControllers->list()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\ProductControllers))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+INFO - 2024-03-02 11:44:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-02 11:44:19 --> Undefined variable $products
+in APPPATH\Views\Admin\pages\product\list.php on line 28.
+ 1 APPPATH\Views\Admin\pages\product\list.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $products', 'D:\\xampp\\file\\htdocs\\ComputerShop\\app\\Views\\Admin\\pages\\product\\list.php', 28)
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\xampp\\file\\htdocs\\ComputerShop\\app\\Views\\Admin\\pages\\product\\list.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('admin/pages/product/list', [], true)
+ 5 APPPATH\Controllers\BaseController.php(65): view('admin/pages/product/list', [...])
+ 6 APPPATH\Controllers\Admin\ProductControllers.php(39): App\Controllers\BaseController->loadMasterLayout([...], 'Danh sách sản phẩm', 'admin/pages/product/list', [...], [...], [...])
+ 7 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\ProductControllers->list()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\ProductControllers))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+INFO - 2024-03-02 11:44:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-02 11:44:55 --> Undefined variable $products
+in APPPATH\Views\Admin\pages\product\list.php on line 28.
+ 1 APPPATH\Views\Admin\pages\product\list.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $products', 'D:\\xampp\\file\\htdocs\\ComputerShop\\app\\Views\\Admin\\pages\\product\\list.php', 28)
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\xampp\\file\\htdocs\\ComputerShop\\app\\Views\\Admin\\pages\\product\\list.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('admin/pages/product/list', [], true)
+ 5 APPPATH\Controllers\BaseController.php(65): view('admin/pages/product/list', [...])
+ 6 APPPATH\Controllers\Admin\ProductControllers.php(39): App\Controllers\BaseController->loadMasterLayout([...], 'Danh sách sản phẩm', 'admin/pages/product/list', [...], [...], [...])
+ 7 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\ProductControllers->list()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\ProductControllers))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+INFO - 2024-03-02 11:45:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 11:45:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 11:45:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 11:45:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 11:46:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-02 11:46:04 --> Undefined variable $products
+in APPPATH\Views\Admin\pages\product\list.php on line 28.
+ 1 APPPATH\Views\Admin\pages\product\list.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $products', 'D:\\xampp\\file\\htdocs\\ComputerShop\\app\\Views\\Admin\\pages\\product\\list.php', 28)
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\xampp\\file\\htdocs\\ComputerShop\\app\\Views\\Admin\\pages\\product\\list.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('admin/pages/product/list', [], true)
+ 5 APPPATH\Controllers\BaseController.php(65): view('admin/pages/product/list', [...])
+ 6 APPPATH\Controllers\Admin\ProductControllers.php(39): App\Controllers\BaseController->loadMasterLayout([...], 'Danh sách sản phẩm', 'admin/pages/product/list', [...], [...], [...])
+ 7 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\ProductControllers->list()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\ProductControllers))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+INFO - 2024-03-02 11:48:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 11:48:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 11:48:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 11:48:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 11:48:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 11:48:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 11:48:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 11:49:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 11:52:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 11:52:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 13:04:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 13:04:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 13:22:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 13:22:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 13:23:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 13:23:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 13:24:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 13:24:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 13:24:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 13:24:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 14:14:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 14:14:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 14:16:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 14:16:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 14:18:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 14:18:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 14:23:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 14:23:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 14:23:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 14:23:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 14:23:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 14:23:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 14:30:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 14:30:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 14:50:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 14:50:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 14:54:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 14:54:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 14:57:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 14:57:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 14:58:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 14:58:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 14:58:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 15:29:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 15:29:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 15:29:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 15:29:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 15:29:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 15:29:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 15:29:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 15:29:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 15:31:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 15:31:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 15:31:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 15:31:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 15:31:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 15:32:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 15:32:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-02 16:06:34 --> Call to a member function findAll() on null
+in APPPATH\Services\ProductsService.php on line 26.
+ 1 APPPATH\Controllers\Admin\ProductControllers.php(37): App\Services\ProductsService->getAllProduct()
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\ProductControllers->list()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\ProductControllers))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+INFO - 2024-03-02 16:07:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 16:07:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 16:07:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 16:07:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 16:12:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 16:12:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 16:12:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 16:12:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 16:13:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 16:13:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 16:14:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 16:14:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 16:14:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 16:14:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 16:14:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 16:14:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 16:16:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 16:16:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 16:16:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 16:16:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-03-02 16:21:20 --> mysqli_sql_exception: Unknown table 'computershop.users' in D:\xampp\file\htdocs\ComputerShop\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\xampp\file\htdocs\ComputerShop\system\Database\MySQLi\Connection.php(306): mysqli->query('DROP TABLE `use...', 0)
+#1 D:\xampp\file\htdocs\ComputerShop\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('DROP TABLE `use...')
+#2 D:\xampp\file\htdocs\ComputerShop\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('DROP TABLE `use...')
+#3 D:\xampp\file\htdocs\ComputerShop\system\Database\Forge.php(637): CodeIgniter\Database\BaseConnection->query('DROP TABLE `use...')
+#4 D:\xampp\file\htdocs\ComputerShop\app\Database\Migrations\2023-12-23-022416_CreateTableUsers.php(38): CodeIgniter\Database\Forge->dropTable('users')
+#5 D:\xampp\file\htdocs\ComputerShop\system\Database\MigrationRunner.php(873): App\Database\Migrations\CreateTableUsers->down()
+#6 D:\xampp\file\htdocs\ComputerShop\system\Database\MigrationRunner.php(295): CodeIgniter\Database\MigrationRunner->migrate('down', Object(stdClass))
+#7 D:\xampp\file\htdocs\ComputerShop\system\Commands\Database\MigrateRollback.php(86): CodeIgniter\Database\MigrationRunner->regress(0)
+#8 D:\xampp\file\htdocs\ComputerShop\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\MigrateRollback->run(Array)
+#9 D:\xampp\file\htdocs\ComputerShop\system\CLI\BaseCommand.php(115): CodeIgniter\CLI\Commands->run('migrate:rollbac...', Array)
+#10 D:\xampp\file\htdocs\ComputerShop\system\Commands\Database\MigrateRefresh.php(84): CodeIgniter\CLI\BaseCommand->call('migrate:rollbac...', Array)
+#11 D:\xampp\file\htdocs\ComputerShop\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\MigrateRefresh->run(Array)
+#12 D:\xampp\file\htdocs\ComputerShop\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('migrate:refresh', Array)
+#13 D:\xampp\file\htdocs\ComputerShop\spark(102): CodeIgniter\CLI\Console->run()
+#14 {main}
+INFO - 2024-03-02 16:24:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 16:24:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 16:24:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 16:24:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 16:27:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 16:27:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 16:28:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 16:28:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 16:46:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 16:46:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 16:46:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 16:46:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 16:47:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 16:47:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 17:00:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 17:00:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 17:02:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 17:02:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 17:04:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 17:04:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 17:07:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 17:07:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 17:07:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 17:07:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 17:08:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 17:08:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 17:10:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 17:10:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 17:10:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 17:10:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 17:15:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 17:15:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 17:16:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 17:16:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 17:16:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 17:16:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 17:16:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 17:16:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 17:26:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 17:26:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 17:27:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 17:27:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 17:27:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 17:27:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 17:27:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 17:27:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 17:27:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 17:27:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 17:27:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 17:27:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 17:27:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 17:27:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 17:27:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 17:27:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 17:27:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 17:28:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-02 17:28:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

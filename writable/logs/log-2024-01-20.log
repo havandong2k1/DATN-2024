@@ -1,0 +1,48 @@
+INFO - 2024-01-20 03:02:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 04:08:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 04:11:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 04:12:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 04:12:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 04:12:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 04:12:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 04:12:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 04:13:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 04:13:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 04:13:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-01-20 05:09:26 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '(255) NOT NULL,
+	CONSTRAINT `pk_products` PRIMARY KEY(`id`)
+) DEFAULT CHARACT...' at line 8 in D:\xampp\file\htdocs\ComputerShop\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\xampp\file\htdocs\ComputerShop\system\Database\MySQLi\Connection.php(306): mysqli->query('CREATE TABLE `p...', 0)
+#1 D:\xampp\file\htdocs\ComputerShop\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `p...')
+#2 D:\xampp\file\htdocs\ComputerShop\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `p...')
+#3 D:\xampp\file\htdocs\ComputerShop\system\Database\Forge.php(546): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `p...')
+#4 D:\xampp\file\htdocs\ComputerShop\app\Database\Migrations\2024-01-20-042014_CreateTableProduct.php(50): CodeIgniter\Database\Forge->createTable('products')
+#5 D:\xampp\file\htdocs\ComputerShop\system\Database\MigrationRunner.php(873): App\Database\Migrations\CreateTableProduct->up()
+#6 D:\xampp\file\htdocs\ComputerShop\system\Database\MigrationRunner.php(188): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 D:\xampp\file\htdocs\ComputerShop\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 D:\xampp\file\htdocs\ComputerShop\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 D:\xampp\file\htdocs\ComputerShop\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 D:\xampp\file\htdocs\ComputerShop\spark(102): CodeIgniter\CLI\Console->run()
+#11 {main}
+ERROR - 2024-01-20 05:12:03 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '(255) NOT NULL,
+	CONSTRAINT `pk_products` PRIMARY KEY(`id`)
+) DEFAULT CHARACT...' at line 8 in D:\xampp\file\htdocs\ComputerShop\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\xampp\file\htdocs\ComputerShop\system\Database\MySQLi\Connection.php(306): mysqli->query('CREATE TABLE `p...', 0)
+#1 D:\xampp\file\htdocs\ComputerShop\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `p...')
+#2 D:\xampp\file\htdocs\ComputerShop\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `p...')
+#3 D:\xampp\file\htdocs\ComputerShop\system\Database\Forge.php(546): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `p...')
+#4 D:\xampp\file\htdocs\ComputerShop\app\Database\Migrations\2024-01-20-042014_CreateTableProduct.php(50): CodeIgniter\Database\Forge->createTable('products')
+#5 D:\xampp\file\htdocs\ComputerShop\system\Database\MigrationRunner.php(873): App\Database\Migrations\CreateTableProduct->up()
+#6 D:\xampp\file\htdocs\ComputerShop\system\Database\MigrationRunner.php(188): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 D:\xampp\file\htdocs\ComputerShop\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 D:\xampp\file\htdocs\ComputerShop\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 D:\xampp\file\htdocs\ComputerShop\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 D:\xampp\file\htdocs\ComputerShop\spark(102): CodeIgniter\CLI\Console->run()
+#11 {main}
+INFO - 2024-01-20 08:39:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 08:41:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 16:40:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 16:41:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 16:41:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

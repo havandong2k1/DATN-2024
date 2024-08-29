@@ -1,0 +1,213 @@
+ERROR - 2023-12-23 02:28:52 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'NOT NULL,
+	`email` VARCHAR NULL UNIQUE,
+	CONSTRAINT `pk_users` PRIMARY KEY(`i...' at line 4 in D:\xampp\file\htdocs\ComputerShop\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\xampp\file\htdocs\ComputerShop\system\Database\MySQLi\Connection.php(306): mysqli->query('CREATE TABLE `u...', 0)
+#1 D:\xampp\file\htdocs\ComputerShop\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `u...')
+#2 D:\xampp\file\htdocs\ComputerShop\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `u...')
+#3 D:\xampp\file\htdocs\ComputerShop\system\Database\Forge.php(546): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `u...')
+#4 D:\xampp\file\htdocs\ComputerShop\app\Database\Migrations\2023-12-23-022416_CreateTableUsers.php(33): CodeIgniter\Database\Forge->createTable('users')
+#5 D:\xampp\file\htdocs\ComputerShop\system\Database\MigrationRunner.php(873): App\Database\Migrations\CreateTableUsers->up()
+#6 D:\xampp\file\htdocs\ComputerShop\system\Database\MigrationRunner.php(188): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 D:\xampp\file\htdocs\ComputerShop\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 D:\xampp\file\htdocs\ComputerShop\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 D:\xampp\file\htdocs\ComputerShop\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 D:\xampp\file\htdocs\ComputerShop\spark(102): CodeIgniter\CLI\Console->run()
+#11 {main}
+ERROR - 2023-12-23 02:30:16 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'NOT NULL,
+	`email` VARCHAR NOT NULL UNIQUE,
+	CONSTRAINT `pk_users` PRIMARY KE...' at line 4 in D:\xampp\file\htdocs\ComputerShop\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\xampp\file\htdocs\ComputerShop\system\Database\MySQLi\Connection.php(306): mysqli->query('CREATE TABLE `u...', 0)
+#1 D:\xampp\file\htdocs\ComputerShop\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `u...')
+#2 D:\xampp\file\htdocs\ComputerShop\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `u...')
+#3 D:\xampp\file\htdocs\ComputerShop\system\Database\Forge.php(546): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `u...')
+#4 D:\xampp\file\htdocs\ComputerShop\app\Database\Migrations\2023-12-23-022416_CreateTableUsers.php(33): CodeIgniter\Database\Forge->createTable('users')
+#5 D:\xampp\file\htdocs\ComputerShop\system\Database\MigrationRunner.php(873): App\Database\Migrations\CreateTableUsers->up()
+#6 D:\xampp\file\htdocs\ComputerShop\system\Database\MigrationRunner.php(188): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 D:\xampp\file\htdocs\ComputerShop\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 D:\xampp\file\htdocs\ComputerShop\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 D:\xampp\file\htdocs\ComputerShop\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 D:\xampp\file\htdocs\ComputerShop\spark(102): CodeIgniter\CLI\Console->run()
+#11 {main}
+CRITICAL - 2023-12-23 06:28:25 --> Assignments can only happen to writable values
+in APPPATH\Controllers\Admin\UserControllers.php on line 24.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-12-23 06:30:35 --> Class "App\Servies\UserServices" not found
+in APPPATH\Controllers\Admin\UserControllers.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(914): App\Controllers\Admin\UserControllers->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+CRITICAL - 2023-12-23 06:38:26 --> Class "App\Services\UserServices" not found
+in APPPATH\Controllers\Admin\UserControllers.php on line 18.
+ 1 SYSTEMPATH\CodeIgniter.php(914): App\Controllers\Admin\UserControllers->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+CRITICAL - 2023-12-23 06:38:28 --> Class "App\Services\UserServices" not found
+in APPPATH\Controllers\Admin\UserControllers.php on line 18.
+ 1 SYSTEMPATH\CodeIgniter.php(914): App\Controllers\Admin\UserControllers->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+CRITICAL - 2023-12-23 06:38:29 --> Class "App\Services\UserServices" not found
+in APPPATH\Controllers\Admin\UserControllers.php on line 18.
+ 1 SYSTEMPATH\CodeIgniter.php(914): App\Controllers\Admin\UserControllers->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+CRITICAL - 2023-12-23 06:40:16 --> Class "App\Services\UserServices" not found
+in APPPATH\Controllers\Admin\UserControllers.php on line 18.
+ 1 SYSTEMPATH\CodeIgniter.php(914): App\Controllers\Admin\UserControllers->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+CRITICAL - 2023-12-23 06:41:08 --> Class "App\Services\UserServices" not found
+in APPPATH\Controllers\Admin\UserControllers.php on line 18.
+ 1 SYSTEMPATH\CodeIgniter.php(914): App\Controllers\Admin\UserControllers->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+CRITICAL - 2023-12-23 06:41:10 --> Class "App\Services\UserServices" not found
+in APPPATH\Controllers\Admin\UserControllers.php on line 18.
+ 1 SYSTEMPATH\CodeIgniter.php(914): App\Controllers\Admin\UserControllers->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+CRITICAL - 2023-12-23 06:42:48 --> Class "App\Services\UserServices" not found
+in APPPATH\Controllers\Admin\UserControllers.php on line 18.
+ 1 SYSTEMPATH\CodeIgniter.php(914): App\Controllers\Admin\UserControllers->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+CRITICAL - 2023-12-23 06:42:48 --> Class "App\Services\UserServices" not found
+in APPPATH\Controllers\Admin\UserControllers.php on line 18.
+ 1 SYSTEMPATH\CodeIgniter.php(914): App\Controllers\Admin\UserControllers->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+CRITICAL - 2023-12-23 06:42:49 --> Class "App\Services\UserServices" not found
+in APPPATH\Controllers\Admin\UserControllers.php on line 18.
+ 1 SYSTEMPATH\CodeIgniter.php(914): App\Controllers\Admin\UserControllers->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+CRITICAL - 2023-12-23 06:43:21 --> Class "App\Services\UserServices" not found
+in APPPATH\Controllers\Admin\UserControllers.php on line 18.
+ 1 SYSTEMPATH\CodeIgniter.php(914): App\Controllers\Admin\UserControllers->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+CRITICAL - 2023-12-23 06:48:52 --> Class "App\Services\UserService" not found
+in APPPATH\Controllers\Admin\UserControllers.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(914): App\Controllers\Admin\UserControllers->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+CRITICAL - 2023-12-23 06:49:37 --> Class "App\Services\UserService" not found
+in APPPATH\Controllers\Admin\UserControllers.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(914): App\Controllers\Admin\UserControllers->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+CRITICAL - 2023-12-23 06:49:38 --> Class "App\Services\UserService" not found
+in APPPATH\Controllers\Admin\UserControllers.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(914): App\Controllers\Admin\UserControllers->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+CRITICAL - 2023-12-23 07:10:40 --> Undefined array key "users"
+in APPPATH\Controllers\Admin\UserControllers.php on line 25.
+ 1 APPPATH\Controllers\Admin\UserControllers.php(25): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "users"', 'D:\\xampp\\file\\htdocs\\ComputerShop\\app\\Controllers\\Admin\\UserControllers.php', 25)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\UserControllers->list()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\UserControllers))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+CRITICAL - 2023-12-23 07:12:29 --> Undefined array key "users"
+in APPPATH\Controllers\Admin\UserControllers.php on line 25.
+ 1 APPPATH\Controllers\Admin\UserControllers.php(25): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "users"', 'D:\\xampp\\file\\htdocs\\ComputerShop\\app\\Controllers\\Admin\\UserControllers.php', 25)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\UserControllers->list()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\UserControllers))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+CRITICAL - 2023-12-23 07:13:26 --> Undefined array key "users"
+in APPPATH\Controllers\Admin\UserControllers.php on line 25.
+ 1 APPPATH\Controllers\Admin\UserControllers.php(25): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "users"', 'D:\\xampp\\file\\htdocs\\ComputerShop\\app\\Controllers\\Admin\\UserControllers.php', 25)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\UserControllers->list()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\UserControllers))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+CRITICAL - 2023-12-23 07:13:27 --> Undefined array key "users"
+in APPPATH\Controllers\Admin\UserControllers.php on line 25.
+ 1 APPPATH\Controllers\Admin\UserControllers.php(25): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "users"', 'D:\\xampp\\file\\htdocs\\ComputerShop\\app\\Controllers\\Admin\\UserControllers.php', 25)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\UserControllers->list()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\UserControllers))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+CRITICAL - 2023-12-23 07:13:28 --> Undefined array key "users"
+in APPPATH\Controllers\Admin\UserControllers.php on line 25.
+ 1 APPPATH\Controllers\Admin\UserControllers.php(25): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "users"', 'D:\\xampp\\file\\htdocs\\ComputerShop\\app\\Controllers\\Admin\\UserControllers.php', 25)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\UserControllers->list()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\UserControllers))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+CRITICAL - 2023-12-23 07:13:28 --> Undefined array key "users"
+in APPPATH\Controllers\Admin\UserControllers.php on line 25.
+ 1 APPPATH\Controllers\Admin\UserControllers.php(25): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "users"', 'D:\\xampp\\file\\htdocs\\ComputerShop\\app\\Controllers\\Admin\\UserControllers.php', 25)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\UserControllers->list()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\UserControllers))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+CRITICAL - 2023-12-23 07:21:51 --> Too few arguments to function App\Controllers\BaseController::loadMasterLayout(), 5 passed in D:\xampp\file\htdocs\ComputerShop\app\Controllers\Admin\HomeControllers.php on line 13 and exactly 6 expected
+in APPPATH\Controllers\BaseController.php on line 60.
+ 1 APPPATH\Controllers\Admin\HomeControllers.php(13): App\Controllers\BaseController->loadMasterLayout([], 'Trang chủ', 'admin/pages/home', [], [])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\HomeControllers->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\HomeControllers))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+CRITICAL - 2023-12-23 12:46:31 --> Undefined variable $users
+in APPPATH\Views\Admin\pages\user\list.php on line 24.
+ 1 APPPATH\Views\Admin\pages\user\list.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $users', 'D:\\xampp\\file\\htdocs\\ComputerShop\\app\\Views\\Admin\\pages\\user\\list.php', 24)
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\xampp\\file\\htdocs\\ComputerShop\\app\\Views\\Admin\\pages\\user\\list.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('admin/pages/user/list', [], true)
+ 5 APPPATH\Controllers\BaseController.php(65): view('admin/pages/user/list', [])
+ 6 APPPATH\Controllers\Admin\UserControllers.php(44): App\Controllers\BaseController->loadMasterLayout([...], 'Tài khoản', 'admin/pages/user/list')
+ 7 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\UserControllers->add()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\UserControllers))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+CRITICAL - 2023-12-23 12:47:09 --> Invalid file: "admin/pages/add.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/pages/add.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('admin/pages/add', [], true)
+ 3 APPPATH\Controllers\BaseController.php(65): view('admin/pages/add', [])
+ 4 APPPATH\Controllers\Admin\UserControllers.php(44): App\Controllers\BaseController->loadMasterLayout([...], 'Tài khoản', 'admin/pages/add')
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\UserControllers->add()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\UserControllers))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')

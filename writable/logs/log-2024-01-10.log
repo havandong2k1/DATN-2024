@@ -1,0 +1,73 @@
+ERROR - 2024-01-10 14:46:11 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in D:\xampp\file\htdocs\ComputerShop\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 D:\xampp\file\htdocs\ComputerShop\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'ComputerShop', 3306, '', 0)
+#1 D:\xampp\file\htdocs\ComputerShop\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\xampp\file\htdocs\ComputerShop\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\xampp\file\htdocs\ComputerShop\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\xampp\file\htdocs\ComputerShop\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\file\htdocs\ComputerShop\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\xampp\file\htdocs\ComputerShop\app\Services\UserService.php(24): CodeIgniter\BaseModel->findAll()
+#7 D:\xampp\file\htdocs\ComputerShop\app\Controllers\Admin\UserControllers.php(38): App\Services\UserService->getAllUsers()
+#8 D:\xampp\file\htdocs\ComputerShop\system\CodeIgniter.php(942): App\Controllers\Admin\UserControllers->list()
+#9 D:\xampp\file\htdocs\ComputerShop\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\UserControllers))
+#10 D:\xampp\file\htdocs\ComputerShop\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\xampp\file\htdocs\ComputerShop\public\index.php(81): CodeIgniter\CodeIgniter->run()
+#12 D:\xampp\file\htdocs\ComputerShop\system\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\h...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in D:\xampp\file\htdocs\ComputerShop\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 D:\xampp\file\htdocs\ComputerShop\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\xampp\file\htdocs\ComputerShop\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\xampp\file\htdocs\ComputerShop\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\xampp\file\htdocs\ComputerShop\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\xampp\file\htdocs\ComputerShop\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#5 D:\xampp\file\htdocs\ComputerShop\app\Services\UserService.php(24): CodeIgniter\BaseModel->findAll()
+#6 D:\xampp\file\htdocs\ComputerShop\app\Controllers\Admin\UserControllers.php(38): App\Services\UserService->getAllUsers()
+#7 D:\xampp\file\htdocs\ComputerShop\system\CodeIgniter.php(942): App\Controllers\Admin\UserControllers->list()
+#8 D:\xampp\file\htdocs\ComputerShop\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\UserControllers))
+#9 D:\xampp\file\htdocs\ComputerShop\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\xampp\file\htdocs\ComputerShop\public\index.php(81): CodeIgniter\CodeIgniter->run()
+#11 D:\xampp\file\htdocs\ComputerShop\system\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\h...')
+#12 {main}
+CRITICAL - 2024-01-10 14:46:11 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`', [], false)
+ 3 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Services\UserService.php(24): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH\Controllers\Admin\UserControllers.php(38): App\Services\UserService->getAllUsers()
+ 7 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\UserControllers->list()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\UserControllers))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+INFO - 2024-01-10 14:46:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-10 14:49:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-10 14:49:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-10 14:49:48 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Admin\UserControllers.php on line 78.
+ 1 APPPATH\Controllers\Admin\UserControllers.php(78): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'D:\\xampp\\file\\htdocs\\ComputerShop\\app\\Controllers\\Admin\\UserControllers.php', 78)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\UserControllers->update()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\UserControllers))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+INFO - 2024-01-10 14:50:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-01-10 14:50:23 --> [DEPRECATED] preg_quote(): Passing null to parameter #1 ($str) of type string is deprecated in SYSTEMPATH\Validation\Validation.php on line 833.
+ 1 SYSTEMPATH\Validation\Validation.php(833): preg_quote(null, '/')
+ 2 [internal function]: CodeIgniter\Validation\Validation::CodeIgniter\Validation\{closure}('password')
+ 3 SYSTEMPATH\Validation\Validation.php(832): array_filter([...], Object(Closure), 2)
+ 4 APPPATH\Services\UserService.php(67): CodeIgniter\Validation\Validation->getError()
+ 5 APPPATH\Controllers\Admin\UserControllers.php(77): App\Services\UserService->updateUserInfo(Object(CodeIgniter\HTTP\IncomingRequest))
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\UserControllers->update()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\UserControllers))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+INFO - 2024-01-10 14:50:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-10 15:44:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-10 15:44:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

@@ -1,0 +1,682 @@
+INFO - 2024-02-18 07:24:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-18 07:38:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-18 07:38:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-18 07:41:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-02-18 07:41:57 --> [DEPRECATED] preg_quote(): Passing null to parameter #1 ($str) of type string is deprecated in SYSTEMPATH\Validation\Validation.php on line 833.
+ 1 SYSTEMPATH\Validation\Validation.php(833): preg_quote(null, '/')
+ 2 [internal function]: CodeIgniter\Validation\Validation::CodeIgniter\Validation\{closure}('password')
+ 3 SYSTEMPATH\Validation\Validation.php(832): array_filter([...], Object(Closure), 2)
+ 4 APPPATH\Services\LoginService.php(29): CodeIgniter\Validation\Validation->getError()
+ 5 APPPATH\Controllers\Admin\LoginControllers.php(30): App\Services\LoginService->hasLoginInfo(Object(CodeIgniter\HTTP\IncomingRequest))
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\LoginControllers->login()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\LoginControllers))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+INFO - 2024-02-18 07:41:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-18 07:41:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-02-18 07:42:02 --> [DEPRECATED] preg_quote(): Passing null to parameter #1 ($str) of type string is deprecated in SYSTEMPATH\Validation\Validation.php on line 833.
+ 1 SYSTEMPATH\Validation\Validation.php(833): preg_quote(null, '/')
+ 2 [internal function]: CodeIgniter\Validation\Validation::CodeIgniter\Validation\{closure}('password')
+ 3 SYSTEMPATH\Validation\Validation.php(832): array_filter([...], Object(Closure), 2)
+ 4 APPPATH\Services\LoginService.php(29): CodeIgniter\Validation\Validation->getError()
+ 5 APPPATH\Controllers\Admin\LoginControllers.php(30): App\Services\LoginService->hasLoginInfo(Object(CodeIgniter\HTTP\IncomingRequest))
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\LoginControllers->login()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\LoginControllers))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+INFO - 2024-02-18 07:42:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-18 07:42:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-02-18 07:42:06 --> [DEPRECATED] preg_quote(): Passing null to parameter #1 ($str) of type string is deprecated in SYSTEMPATH\Validation\Validation.php on line 833.
+ 1 SYSTEMPATH\Validation\Validation.php(833): preg_quote(null, '/')
+ 2 [internal function]: CodeIgniter\Validation\Validation::CodeIgniter\Validation\{closure}('password')
+ 3 SYSTEMPATH\Validation\Validation.php(832): array_filter([...], Object(Closure), 2)
+ 4 APPPATH\Services\LoginService.php(29): CodeIgniter\Validation\Validation->getError()
+ 5 APPPATH\Controllers\Admin\LoginControllers.php(30): App\Services\LoginService->hasLoginInfo(Object(CodeIgniter\HTTP\IncomingRequest))
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\LoginControllers->login()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\LoginControllers))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+INFO - 2024-02-18 07:42:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-18 07:42:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-18 07:42:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-18 07:42:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-02-18 07:42:55 --> [DEPRECATED] preg_quote(): Passing null to parameter #1 ($str) of type string is deprecated in SYSTEMPATH\Validation\Validation.php on line 833.
+ 1 SYSTEMPATH\Validation\Validation.php(833): preg_quote(null, '/')
+ 2 [internal function]: CodeIgniter\Validation\Validation::CodeIgniter\Validation\{closure}('password')
+ 3 SYSTEMPATH\Validation\Validation.php(832): array_filter([...], Object(Closure), 2)
+ 4 APPPATH\Services\LoginService.php(29): CodeIgniter\Validation\Validation->getError()
+ 5 APPPATH\Controllers\Admin\LoginControllers.php(30): App\Services\LoginService->hasLoginInfo(Object(CodeIgniter\HTTP\IncomingRequest))
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\LoginControllers->login()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\LoginControllers))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+INFO - 2024-02-18 07:42:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-18 07:42:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-02-18 07:42:58 --> [DEPRECATED] preg_quote(): Passing null to parameter #1 ($str) of type string is deprecated in SYSTEMPATH\Validation\Validation.php on line 833.
+ 1 SYSTEMPATH\Validation\Validation.php(833): preg_quote(null, '/')
+ 2 [internal function]: CodeIgniter\Validation\Validation::CodeIgniter\Validation\{closure}('password')
+ 3 SYSTEMPATH\Validation\Validation.php(832): array_filter([...], Object(Closure), 2)
+ 4 APPPATH\Services\LoginService.php(29): CodeIgniter\Validation\Validation->getError()
+ 5 APPPATH\Controllers\Admin\LoginControllers.php(30): App\Services\LoginService->hasLoginInfo(Object(CodeIgniter\HTTP\IncomingRequest))
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\LoginControllers->login()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\LoginControllers))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+INFO - 2024-02-18 07:42:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-18 07:42:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-18 07:49:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-18 07:49:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-02-18 07:49:23 --> [DEPRECATED] preg_quote(): Passing null to parameter #1 ($str) of type string is deprecated in SYSTEMPATH\Validation\Validation.php on line 833.
+ 1 SYSTEMPATH\Validation\Validation.php(833): preg_quote(null, '/')
+ 2 [internal function]: CodeIgniter\Validation\Validation::CodeIgniter\Validation\{closure}('password')
+ 3 SYSTEMPATH\Validation\Validation.php(832): array_filter([...], Object(Closure), 2)
+ 4 APPPATH\Services\LoginService.php(29): CodeIgniter\Validation\Validation->getError()
+ 5 APPPATH\Controllers\Admin\LoginControllers.php(30): App\Services\LoginService->hasLoginInfo(Object(CodeIgniter\HTTP\IncomingRequest))
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\LoginControllers->login()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\LoginControllers))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+INFO - 2024-02-18 07:49:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-18 07:49:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-02-18 07:49:25 --> [DEPRECATED] preg_quote(): Passing null to parameter #1 ($str) of type string is deprecated in SYSTEMPATH\Validation\Validation.php on line 833.
+ 1 SYSTEMPATH\Validation\Validation.php(833): preg_quote(null, '/')
+ 2 [internal function]: CodeIgniter\Validation\Validation::CodeIgniter\Validation\{closure}('password')
+ 3 SYSTEMPATH\Validation\Validation.php(832): array_filter([...], Object(Closure), 2)
+ 4 APPPATH\Services\LoginService.php(29): CodeIgniter\Validation\Validation->getError()
+ 5 APPPATH\Controllers\Admin\LoginControllers.php(30): App\Services\LoginService->hasLoginInfo(Object(CodeIgniter\HTTP\IncomingRequest))
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\LoginControllers->login()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\LoginControllers))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+INFO - 2024-02-18 07:49:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-18 07:49:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-02-18 07:49:27 --> [DEPRECATED] preg_quote(): Passing null to parameter #1 ($str) of type string is deprecated in SYSTEMPATH\Validation\Validation.php on line 833.
+ 1 SYSTEMPATH\Validation\Validation.php(833): preg_quote(null, '/')
+ 2 [internal function]: CodeIgniter\Validation\Validation::CodeIgniter\Validation\{closure}('password')
+ 3 SYSTEMPATH\Validation\Validation.php(832): array_filter([...], Object(Closure), 2)
+ 4 APPPATH\Services\LoginService.php(29): CodeIgniter\Validation\Validation->getError()
+ 5 APPPATH\Controllers\Admin\LoginControllers.php(30): App\Services\LoginService->hasLoginInfo(Object(CodeIgniter\HTTP\IncomingRequest))
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\LoginControllers->login()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\LoginControllers))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+INFO - 2024-02-18 07:49:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-18 07:49:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-18 07:49:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-02-18 07:49:52 --> [DEPRECATED] preg_quote(): Passing null to parameter #1 ($str) of type string is deprecated in SYSTEMPATH\Validation\Validation.php on line 833.
+ 1 SYSTEMPATH\Validation\Validation.php(833): preg_quote(null, '/')
+ 2 [internal function]: CodeIgniter\Validation\Validation::CodeIgniter\Validation\{closure}('password')
+ 3 SYSTEMPATH\Validation\Validation.php(832): array_filter([...], Object(Closure), 2)
+ 4 APPPATH\Services\LoginService.php(29): CodeIgniter\Validation\Validation->getError()
+ 5 APPPATH\Controllers\Admin\LoginControllers.php(30): App\Services\LoginService->hasLoginInfo(Object(CodeIgniter\HTTP\IncomingRequest))
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\LoginControllers->login()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\LoginControllers))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+INFO - 2024-02-18 07:49:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-18 07:49:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-02-18 07:49:55 --> [DEPRECATED] preg_quote(): Passing null to parameter #1 ($str) of type string is deprecated in SYSTEMPATH\Validation\Validation.php on line 833.
+ 1 SYSTEMPATH\Validation\Validation.php(833): preg_quote(null, '/')
+ 2 [internal function]: CodeIgniter\Validation\Validation::CodeIgniter\Validation\{closure}('password')
+ 3 SYSTEMPATH\Validation\Validation.php(832): array_filter([...], Object(Closure), 2)
+ 4 APPPATH\Services\LoginService.php(29): CodeIgniter\Validation\Validation->getError()
+ 5 APPPATH\Controllers\Admin\LoginControllers.php(30): App\Services\LoginService->hasLoginInfo(Object(CodeIgniter\HTTP\IncomingRequest))
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\LoginControllers->login()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\LoginControllers))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+INFO - 2024-02-18 07:49:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-18 07:49:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-02-18 07:50:07 --> Invalid file: "admin/pages/login.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/pages/login.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('admin/pages/login', [], true)
+ 3 APPPATH\Controllers\Admin\LoginControllers.php(25): view('admin/pages/login')
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\LoginControllers->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\LoginControllers))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+CRITICAL - 2024-02-18 07:50:16 --> Invalid file: "admin/pages/login.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/pages/login.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('admin/pages/login', [], true)
+ 3 APPPATH\Controllers\Admin\LoginControllers.php(25): view('admin/pages/login')
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\LoginControllers->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\LoginControllers))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+CRITICAL - 2024-02-18 07:50:58 --> Invalid file: "admin/pages/login.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/pages/login.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('admin/pages/login', [], true)
+ 3 APPPATH\Controllers\Admin\LoginControllers.php(25): view('admin/pages/login')
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\LoginControllers->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\LoginControllers))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+CRITICAL - 2024-02-18 07:51:21 --> Invalid file: "admin/pages/home.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/pages/home.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('admin/pages/home', [], true)
+ 3 APPPATH\Controllers\BaseController.php(65): view('admin/pages/home', [])
+ 4 APPPATH\Controllers\Admin\HomeControllers.php(13): App\Controllers\BaseController->loadMasterLayout([...], 'Trang chủ', 'admin/pages/home', [], [])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\HomeControllers->index()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\HomeControllers))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+INFO - 2024-02-18 07:51:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-18 07:51:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-18 07:51:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-18 07:51:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-18 07:51:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-18 07:52:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-18 08:03:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-18 08:03:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-02-18 08:04:16 --> [DEPRECATED] preg_quote(): Passing null to parameter #1 ($str) of type string is deprecated in SYSTEMPATH\Validation\Validation.php on line 833.
+ 1 SYSTEMPATH\Validation\Validation.php(833): preg_quote(null, '/')
+ 2 [internal function]: CodeIgniter\Validation\Validation::CodeIgniter\Validation\{closure}('password')
+ 3 SYSTEMPATH\Validation\Validation.php(832): array_filter([...], Object(Closure), 2)
+ 4 APPPATH\Services\LoginService.php(30): CodeIgniter\Validation\Validation->getError()
+ 5 APPPATH\Controllers\Admin\LoginControllers.php(30): App\Services\LoginService->hasLoginInfo(Object(CodeIgniter\HTTP\IncomingRequest))
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\LoginControllers->login()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\LoginControllers))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+INFO - 2024-02-18 08:04:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-18 08:04:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-02-18 08:04:29 --> [DEPRECATED] preg_quote(): Passing null to parameter #1 ($str) of type string is deprecated in SYSTEMPATH\Validation\Validation.php on line 833.
+ 1 SYSTEMPATH\Validation\Validation.php(833): preg_quote(null, '/')
+ 2 [internal function]: CodeIgniter\Validation\Validation::CodeIgniter\Validation\{closure}('password')
+ 3 SYSTEMPATH\Validation\Validation.php(832): array_filter([...], Object(Closure), 2)
+ 4 APPPATH\Services\LoginService.php(30): CodeIgniter\Validation\Validation->getError()
+ 5 APPPATH\Controllers\Admin\LoginControllers.php(30): App\Services\LoginService->hasLoginInfo(Object(CodeIgniter\HTTP\IncomingRequest))
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\LoginControllers->login()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\LoginControllers))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+INFO - 2024-02-18 08:04:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-18 08:04:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-02-18 08:04:39 --> [DEPRECATED] preg_quote(): Passing null to parameter #1 ($str) of type string is deprecated in SYSTEMPATH\Validation\Validation.php on line 833.
+ 1 SYSTEMPATH\Validation\Validation.php(833): preg_quote(null, '/')
+ 2 [internal function]: CodeIgniter\Validation\Validation::CodeIgniter\Validation\{closure}('email')
+ 3 SYSTEMPATH\Validation\Validation.php(832): array_filter([...], Object(Closure), 2)
+ 4 APPPATH\Services\LoginService.php(30): CodeIgniter\Validation\Validation->getError()
+ 5 APPPATH\Controllers\Admin\LoginControllers.php(30): App\Services\LoginService->hasLoginInfo(Object(CodeIgniter\HTTP\IncomingRequest))
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\LoginControllers->login()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\LoginControllers))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+WARNING - 2024-02-18 08:04:39 --> [DEPRECATED] preg_quote(): Passing null to parameter #1 ($str) of type string is deprecated in SYSTEMPATH\Validation\Validation.php on line 833.
+ 1 SYSTEMPATH\Validation\Validation.php(833): preg_quote(null, '/')
+ 2 [internal function]: CodeIgniter\Validation\Validation::CodeIgniter\Validation\{closure}('password')
+ 3 SYSTEMPATH\Validation\Validation.php(832): array_filter([...], Object(Closure), 2)
+ 4 APPPATH\Services\LoginService.php(30): CodeIgniter\Validation\Validation->getError()
+ 5 APPPATH\Controllers\Admin\LoginControllers.php(30): App\Services\LoginService->hasLoginInfo(Object(CodeIgniter\HTTP\IncomingRequest))
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\LoginControllers->login()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\LoginControllers))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+INFO - 2024-02-18 08:04:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-18 08:04:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-02-18 08:04:40 --> [DEPRECATED] preg_quote(): Passing null to parameter #1 ($str) of type string is deprecated in SYSTEMPATH\Validation\Validation.php on line 833.
+ 1 SYSTEMPATH\Validation\Validation.php(833): preg_quote(null, '/')
+ 2 [internal function]: CodeIgniter\Validation\Validation::CodeIgniter\Validation\{closure}('email')
+ 3 SYSTEMPATH\Validation\Validation.php(832): array_filter([...], Object(Closure), 2)
+ 4 APPPATH\Services\LoginService.php(30): CodeIgniter\Validation\Validation->getError()
+ 5 APPPATH\Controllers\Admin\LoginControllers.php(30): App\Services\LoginService->hasLoginInfo(Object(CodeIgniter\HTTP\IncomingRequest))
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\LoginControllers->login()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\LoginControllers))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+WARNING - 2024-02-18 08:04:40 --> [DEPRECATED] preg_quote(): Passing null to parameter #1 ($str) of type string is deprecated in SYSTEMPATH\Validation\Validation.php on line 833.
+ 1 SYSTEMPATH\Validation\Validation.php(833): preg_quote(null, '/')
+ 2 [internal function]: CodeIgniter\Validation\Validation::CodeIgniter\Validation\{closure}('password')
+ 3 SYSTEMPATH\Validation\Validation.php(832): array_filter([...], Object(Closure), 2)
+ 4 APPPATH\Services\LoginService.php(30): CodeIgniter\Validation\Validation->getError()
+ 5 APPPATH\Controllers\Admin\LoginControllers.php(30): App\Services\LoginService->hasLoginInfo(Object(CodeIgniter\HTTP\IncomingRequest))
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\LoginControllers->login()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\LoginControllers))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+INFO - 2024-02-18 08:04:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-18 08:04:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-18 08:09:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-18 08:09:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-02-18 08:10:16 --> [DEPRECATED] preg_quote(): Passing null to parameter #1 ($str) of type string is deprecated in SYSTEMPATH\Validation\Validation.php on line 833.
+ 1 SYSTEMPATH\Validation\Validation.php(833): preg_quote(null, '/')
+ 2 [internal function]: CodeIgniter\Validation\Validation::CodeIgniter\Validation\{closure}('password')
+ 3 SYSTEMPATH\Validation\Validation.php(832): array_filter([...], Object(Closure), 2)
+ 4 APPPATH\Services\LoginService.php(30): CodeIgniter\Validation\Validation->getError()
+ 5 APPPATH\Controllers\Admin\LoginControllers.php(30): App\Services\LoginService->hasLoginInfo(Object(CodeIgniter\HTTP\IncomingRequest))
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\LoginControllers->login()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\LoginControllers))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+INFO - 2024-02-18 08:10:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-18 08:10:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-02-18 08:10:17 --> [DEPRECATED] preg_quote(): Passing null to parameter #1 ($str) of type string is deprecated in SYSTEMPATH\Validation\Validation.php on line 833.
+ 1 SYSTEMPATH\Validation\Validation.php(833): preg_quote(null, '/')
+ 2 [internal function]: CodeIgniter\Validation\Validation::CodeIgniter\Validation\{closure}('password')
+ 3 SYSTEMPATH\Validation\Validation.php(832): array_filter([...], Object(Closure), 2)
+ 4 APPPATH\Services\LoginService.php(30): CodeIgniter\Validation\Validation->getError()
+ 5 APPPATH\Controllers\Admin\LoginControllers.php(30): App\Services\LoginService->hasLoginInfo(Object(CodeIgniter\HTTP\IncomingRequest))
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\LoginControllers->login()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\LoginControllers))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+INFO - 2024-02-18 08:10:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-18 08:10:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-02-18 08:10:22 --> [DEPRECATED] preg_quote(): Passing null to parameter #1 ($str) of type string is deprecated in SYSTEMPATH\Validation\Validation.php on line 833.
+ 1 SYSTEMPATH\Validation\Validation.php(833): preg_quote(null, '/')
+ 2 [internal function]: CodeIgniter\Validation\Validation::CodeIgniter\Validation\{closure}('password')
+ 3 SYSTEMPATH\Validation\Validation.php(832): array_filter([...], Object(Closure), 2)
+ 4 APPPATH\Services\LoginService.php(30): CodeIgniter\Validation\Validation->getError()
+ 5 APPPATH\Controllers\Admin\LoginControllers.php(30): App\Services\LoginService->hasLoginInfo(Object(CodeIgniter\HTTP\IncomingRequest))
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\LoginControllers->login()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\LoginControllers))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+INFO - 2024-02-18 08:10:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-18 08:10:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-02-18 08:11:28 --> [DEPRECATED] preg_quote(): Passing null to parameter #1 ($str) of type string is deprecated in SYSTEMPATH\Validation\Validation.php on line 833.
+ 1 SYSTEMPATH\Validation\Validation.php(833): preg_quote(null, '/')
+ 2 [internal function]: CodeIgniter\Validation\Validation::CodeIgniter\Validation\{closure}('password')
+ 3 SYSTEMPATH\Validation\Validation.php(832): array_filter([...], Object(Closure), 2)
+ 4 APPPATH\Services\LoginService.php(30): CodeIgniter\Validation\Validation->getError()
+ 5 APPPATH\Controllers\Admin\LoginControllers.php(30): App\Services\LoginService->hasLoginInfo(Object(CodeIgniter\HTTP\IncomingRequest))
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\LoginControllers->login()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\LoginControllers))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+INFO - 2024-02-18 08:11:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-18 08:11:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-02-18 08:13:21 --> [DEPRECATED] preg_quote(): Passing null to parameter #1 ($str) of type string is deprecated in SYSTEMPATH\Validation\Validation.php on line 833.
+ 1 SYSTEMPATH\Validation\Validation.php(833): preg_quote(null, '/')
+ 2 [internal function]: CodeIgniter\Validation\Validation::CodeIgniter\Validation\{closure}('password')
+ 3 SYSTEMPATH\Validation\Validation.php(832): array_filter([...], Object(Closure), 2)
+ 4 APPPATH\Services\LoginService.php(30): CodeIgniter\Validation\Validation->getError()
+ 5 APPPATH\Controllers\Admin\LoginControllers.php(30): App\Services\LoginService->hasLoginInfo(Object(CodeIgniter\HTTP\IncomingRequest))
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\LoginControllers->login()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\LoginControllers))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+INFO - 2024-02-18 08:13:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-18 08:13:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-18 08:15:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-02-18 08:15:41 --> [DEPRECATED] preg_quote(): Passing null to parameter #1 ($str) of type string is deprecated in SYSTEMPATH\Validation\Validation.php on line 833.
+ 1 SYSTEMPATH\Validation\Validation.php(833): preg_quote(null, '/')
+ 2 [internal function]: CodeIgniter\Validation\Validation::CodeIgniter\Validation\{closure}('password')
+ 3 SYSTEMPATH\Validation\Validation.php(832): array_filter([...], Object(Closure), 2)
+ 4 APPPATH\Services\LoginService.php(30): CodeIgniter\Validation\Validation->getError()
+ 5 APPPATH\Controllers\Admin\LoginControllers.php(30): App\Services\LoginService->hasLoginInfo(Object(CodeIgniter\HTTP\IncomingRequest))
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\LoginControllers->login()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\LoginControllers))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+CRITICAL - 2024-02-18 08:15:41 --> The route for "admin/pages/login" cannot be found.
+in SYSTEMPATH\HTTP\RedirectResponse.php on line 62.
+ 1 SYSTEMPATH\HTTP\RedirectResponse.php(62): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute('admin/pages/login')
+ 2 SYSTEMPATH\Common.php(878): CodeIgniter\HTTP\RedirectResponse->route(false)
+ 3 APPPATH\Controllers\Admin\LoginControllers.php(35): redirect('admin/pages/login')
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\LoginControllers->login()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\LoginControllers))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+WARNING - 2024-02-18 08:16:03 --> [DEPRECATED] preg_quote(): Passing null to parameter #1 ($str) of type string is deprecated in SYSTEMPATH\Validation\Validation.php on line 833.
+ 1 SYSTEMPATH\Validation\Validation.php(833): preg_quote(null, '/')
+ 2 [internal function]: CodeIgniter\Validation\Validation::CodeIgniter\Validation\{closure}('password')
+ 3 SYSTEMPATH\Validation\Validation.php(832): array_filter([...], Object(Closure), 2)
+ 4 APPPATH\Services\LoginService.php(30): CodeIgniter\Validation\Validation->getError()
+ 5 APPPATH\Controllers\Admin\LoginControllers.php(30): App\Services\LoginService->hasLoginInfo(Object(CodeIgniter\HTTP\IncomingRequest))
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\LoginControllers->login()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\LoginControllers))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+INFO - 2024-02-18 08:16:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-18 08:16:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-02-18 08:16:05 --> [DEPRECATED] preg_quote(): Passing null to parameter #1 ($str) of type string is deprecated in SYSTEMPATH\Validation\Validation.php on line 833.
+ 1 SYSTEMPATH\Validation\Validation.php(833): preg_quote(null, '/')
+ 2 [internal function]: CodeIgniter\Validation\Validation::CodeIgniter\Validation\{closure}('password')
+ 3 SYSTEMPATH\Validation\Validation.php(832): array_filter([...], Object(Closure), 2)
+ 4 APPPATH\Services\LoginService.php(30): CodeIgniter\Validation\Validation->getError()
+ 5 APPPATH\Controllers\Admin\LoginControllers.php(30): App\Services\LoginService->hasLoginInfo(Object(CodeIgniter\HTTP\IncomingRequest))
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\LoginControllers->login()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\LoginControllers))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+INFO - 2024-02-18 08:16:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-18 08:16:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-18 08:16:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-02-18 08:17:04 --> [DEPRECATED] preg_quote(): Passing null to parameter #1 ($str) of type string is deprecated in SYSTEMPATH\Validation\Validation.php on line 833.
+ 1 SYSTEMPATH\Validation\Validation.php(833): preg_quote(null, '/')
+ 2 [internal function]: CodeIgniter\Validation\Validation::CodeIgniter\Validation\{closure}('password')
+ 3 SYSTEMPATH\Validation\Validation.php(832): array_filter([...], Object(Closure), 2)
+ 4 APPPATH\Services\LoginService.php(30): CodeIgniter\Validation\Validation->getError()
+ 5 APPPATH\Controllers\Admin\LoginControllers.php(30): App\Services\LoginService->hasLoginInfo(Object(CodeIgniter\HTTP\IncomingRequest))
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\LoginControllers->login()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\LoginControllers))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+INFO - 2024-02-18 08:17:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-18 08:17:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-02-18 08:17:06 --> [DEPRECATED] preg_quote(): Passing null to parameter #1 ($str) of type string is deprecated in SYSTEMPATH\Validation\Validation.php on line 833.
+ 1 SYSTEMPATH\Validation\Validation.php(833): preg_quote(null, '/')
+ 2 [internal function]: CodeIgniter\Validation\Validation::CodeIgniter\Validation\{closure}('password')
+ 3 SYSTEMPATH\Validation\Validation.php(832): array_filter([...], Object(Closure), 2)
+ 4 APPPATH\Services\LoginService.php(30): CodeIgniter\Validation\Validation->getError()
+ 5 APPPATH\Controllers\Admin\LoginControllers.php(30): App\Services\LoginService->hasLoginInfo(Object(CodeIgniter\HTTP\IncomingRequest))
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\LoginControllers->login()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\LoginControllers))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+INFO - 2024-02-18 08:17:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-18 08:17:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-02-18 08:17:08 --> [DEPRECATED] preg_quote(): Passing null to parameter #1 ($str) of type string is deprecated in SYSTEMPATH\Validation\Validation.php on line 833.
+ 1 SYSTEMPATH\Validation\Validation.php(833): preg_quote(null, '/')
+ 2 [internal function]: CodeIgniter\Validation\Validation::CodeIgniter\Validation\{closure}('password')
+ 3 SYSTEMPATH\Validation\Validation.php(832): array_filter([...], Object(Closure), 2)
+ 4 APPPATH\Services\LoginService.php(30): CodeIgniter\Validation\Validation->getError()
+ 5 APPPATH\Controllers\Admin\LoginControllers.php(30): App\Services\LoginService->hasLoginInfo(Object(CodeIgniter\HTTP\IncomingRequest))
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\LoginControllers->login()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\LoginControllers))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+INFO - 2024-02-18 08:17:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-18 08:17:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-02-18 08:17:15 --> [DEPRECATED] preg_quote(): Passing null to parameter #1 ($str) of type string is deprecated in SYSTEMPATH\Validation\Validation.php on line 833.
+ 1 SYSTEMPATH\Validation\Validation.php(833): preg_quote(null, '/')
+ 2 [internal function]: CodeIgniter\Validation\Validation::CodeIgniter\Validation\{closure}('password')
+ 3 SYSTEMPATH\Validation\Validation.php(832): array_filter([...], Object(Closure), 2)
+ 4 APPPATH\Services\LoginService.php(30): CodeIgniter\Validation\Validation->getError()
+ 5 APPPATH\Controllers\Admin\LoginControllers.php(30): App\Services\LoginService->hasLoginInfo(Object(CodeIgniter\HTTP\IncomingRequest))
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\LoginControllers->login()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\LoginControllers))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+INFO - 2024-02-18 08:17:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-18 08:17:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-18 08:17:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-02-18 08:17:41 --> [DEPRECATED] preg_quote(): Passing null to parameter #1 ($str) of type string is deprecated in SYSTEMPATH\Validation\Validation.php on line 833.
+ 1 SYSTEMPATH\Validation\Validation.php(833): preg_quote(null, '/')
+ 2 [internal function]: CodeIgniter\Validation\Validation::CodeIgniter\Validation\{closure}('password')
+ 3 SYSTEMPATH\Validation\Validation.php(832): array_filter([...], Object(Closure), 2)
+ 4 APPPATH\Services\LoginService.php(30): CodeIgniter\Validation\Validation->getError()
+ 5 APPPATH\Controllers\Admin\LoginControllers.php(30): App\Services\LoginService->hasLoginInfo(Object(CodeIgniter\HTTP\IncomingRequest))
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\LoginControllers->login()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\LoginControllers))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+INFO - 2024-02-18 08:17:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-18 08:17:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-18 08:24:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-18 08:24:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-02-18 08:24:29 --> [DEPRECATED] preg_quote(): Passing null to parameter #1 ($str) of type string is deprecated in SYSTEMPATH\Validation\Validation.php on line 833.
+ 1 SYSTEMPATH\Validation\Validation.php(833): preg_quote(null, '/')
+ 2 [internal function]: CodeIgniter\Validation\Validation::CodeIgniter\Validation\{closure}('email')
+ 3 SYSTEMPATH\Validation\Validation.php(832): array_filter([...], Object(Closure), 2)
+ 4 APPPATH\Services\UserService.php(35): CodeIgniter\Validation\Validation->getError()
+ 5 APPPATH\Controllers\Admin\UserControllers.php(53): App\Services\UserService->addUserInfo(Object(CodeIgniter\HTTP\IncomingRequest))
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\UserControllers->create()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\UserControllers))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+INFO - 2024-02-18 08:24:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-18 08:24:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-18 08:28:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-18 08:28:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-18 08:29:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-18 08:29:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-18 08:29:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-18 08:35:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-18 08:35:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-18 08:35:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-18 08:35:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-18 08:35:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-02-18 08:35:55 --> [DEPRECATED] preg_quote(): Passing null to parameter #1 ($str) of type string is deprecated in SYSTEMPATH\Validation\Validation.php on line 833.
+ 1 SYSTEMPATH\Validation\Validation.php(833): preg_quote(null, '/')
+ 2 [internal function]: CodeIgniter\Validation\Validation::CodeIgniter\Validation\{closure}('email')
+ 3 SYSTEMPATH\Validation\Validation.php(832): array_filter([...], Object(Closure), 2)
+ 4 APPPATH\Services\UserService.php(67): CodeIgniter\Validation\Validation->getError()
+ 5 APPPATH\Controllers\Admin\UserControllers.php(77): App\Services\UserService->updateUserInfo(Object(CodeIgniter\HTTP\IncomingRequest))
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\UserControllers->update()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\UserControllers))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+INFO - 2024-02-18 08:35:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-18 08:35:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-18 08:39:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-02-18 08:39:08 --> [DEPRECATED] preg_quote(): Passing null to parameter #1 ($str) of type string is deprecated in SYSTEMPATH\Validation\Validation.php on line 833.
+ 1 SYSTEMPATH\Validation\Validation.php(833): preg_quote(null, '/')
+ 2 [internal function]: CodeIgniter\Validation\Validation::CodeIgniter\Validation\{closure}('password')
+ 3 SYSTEMPATH\Validation\Validation.php(832): array_filter([...], Object(Closure), 2)
+ 4 APPPATH\Services\LoginService.php(30): CodeIgniter\Validation\Validation->getError()
+ 5 APPPATH\Controllers\Admin\LoginControllers.php(30): App\Services\LoginService->hasLoginInfo(Object(CodeIgniter\HTTP\IncomingRequest))
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\LoginControllers->login()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\LoginControllers))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+INFO - 2024-02-18 08:39:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-18 08:39:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-02-18 08:39:09 --> [DEPRECATED] preg_quote(): Passing null to parameter #1 ($str) of type string is deprecated in SYSTEMPATH\Validation\Validation.php on line 833.
+ 1 SYSTEMPATH\Validation\Validation.php(833): preg_quote(null, '/')
+ 2 [internal function]: CodeIgniter\Validation\Validation::CodeIgniter\Validation\{closure}('password')
+ 3 SYSTEMPATH\Validation\Validation.php(832): array_filter([...], Object(Closure), 2)
+ 4 APPPATH\Services\LoginService.php(30): CodeIgniter\Validation\Validation->getError()
+ 5 APPPATH\Controllers\Admin\LoginControllers.php(30): App\Services\LoginService->hasLoginInfo(Object(CodeIgniter\HTTP\IncomingRequest))
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\LoginControllers->login()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\LoginControllers))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+INFO - 2024-02-18 08:39:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-18 08:39:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-18 08:46:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-18 08:46:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-18 08:46:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-18 08:47:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-18 08:47:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-02-18 08:47:29 --> [DEPRECATED] preg_quote(): Passing null to parameter #1 ($str) of type string is deprecated in SYSTEMPATH\Validation\Validation.php on line 833.
+ 1 SYSTEMPATH\Validation\Validation.php(833): preg_quote(null, '/')
+ 2 [internal function]: CodeIgniter\Validation\Validation::CodeIgniter\Validation\{closure}('password')
+ 3 SYSTEMPATH\Validation\Validation.php(832): array_filter([...], Object(Closure), 2)
+ 4 APPPATH\Services\LoginService.php(30): CodeIgniter\Validation\Validation->getError()
+ 5 APPPATH\Controllers\Admin\LoginControllers.php(30): App\Services\LoginService->hasLoginInfo(Object(CodeIgniter\HTTP\IncomingRequest))
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\LoginControllers->login()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\LoginControllers))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+INFO - 2024-02-18 08:47:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-18 08:47:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-02-18 08:47:31 --> [DEPRECATED] preg_quote(): Passing null to parameter #1 ($str) of type string is deprecated in SYSTEMPATH\Validation\Validation.php on line 833.
+ 1 SYSTEMPATH\Validation\Validation.php(833): preg_quote(null, '/')
+ 2 [internal function]: CodeIgniter\Validation\Validation::CodeIgniter\Validation\{closure}('password')
+ 3 SYSTEMPATH\Validation\Validation.php(832): array_filter([...], Object(Closure), 2)
+ 4 APPPATH\Services\LoginService.php(30): CodeIgniter\Validation\Validation->getError()
+ 5 APPPATH\Controllers\Admin\LoginControllers.php(30): App\Services\LoginService->hasLoginInfo(Object(CodeIgniter\HTTP\IncomingRequest))
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\LoginControllers->login()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\LoginControllers))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+INFO - 2024-02-18 08:47:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-18 08:47:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-18 08:47:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-18 08:47:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-02-18 08:48:09 --> [DEPRECATED] preg_quote(): Passing null to parameter #1 ($str) of type string is deprecated in SYSTEMPATH\Validation\Validation.php on line 833.
+ 1 SYSTEMPATH\Validation\Validation.php(833): preg_quote(null, '/')
+ 2 [internal function]: CodeIgniter\Validation\Validation::CodeIgniter\Validation\{closure}('password')
+ 3 SYSTEMPATH\Validation\Validation.php(832): array_filter([...], Object(Closure), 2)
+ 4 APPPATH\Services\LoginService.php(30): CodeIgniter\Validation\Validation->getError()
+ 5 APPPATH\Controllers\Admin\LoginControllers.php(30): App\Services\LoginService->hasLoginInfo(Object(CodeIgniter\HTTP\IncomingRequest))
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\LoginControllers->login()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\LoginControllers))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+INFO - 2024-02-18 08:48:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-18 08:48:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-02-18 08:48:10 --> [DEPRECATED] preg_quote(): Passing null to parameter #1 ($str) of type string is deprecated in SYSTEMPATH\Validation\Validation.php on line 833.
+ 1 SYSTEMPATH\Validation\Validation.php(833): preg_quote(null, '/')
+ 2 [internal function]: CodeIgniter\Validation\Validation::CodeIgniter\Validation\{closure}('email')
+ 3 SYSTEMPATH\Validation\Validation.php(832): array_filter([...], Object(Closure), 2)
+ 4 APPPATH\Services\LoginService.php(30): CodeIgniter\Validation\Validation->getError()
+ 5 APPPATH\Controllers\Admin\LoginControllers.php(30): App\Services\LoginService->hasLoginInfo(Object(CodeIgniter\HTTP\IncomingRequest))
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\LoginControllers->login()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\LoginControllers))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+WARNING - 2024-02-18 08:48:10 --> [DEPRECATED] preg_quote(): Passing null to parameter #1 ($str) of type string is deprecated in SYSTEMPATH\Validation\Validation.php on line 833.
+ 1 SYSTEMPATH\Validation\Validation.php(833): preg_quote(null, '/')
+ 2 [internal function]: CodeIgniter\Validation\Validation::CodeIgniter\Validation\{closure}('password')
+ 3 SYSTEMPATH\Validation\Validation.php(832): array_filter([...], Object(Closure), 2)
+ 4 APPPATH\Services\LoginService.php(30): CodeIgniter\Validation\Validation->getError()
+ 5 APPPATH\Controllers\Admin\LoginControllers.php(30): App\Services\LoginService->hasLoginInfo(Object(CodeIgniter\HTTP\IncomingRequest))
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\LoginControllers->login()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\LoginControllers))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+INFO - 2024-02-18 08:48:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-18 08:48:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-02-18 08:48:27 --> Invalid file: "admin/login.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/login.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('admin/login', [], true)
+ 3 APPPATH\Controllers\Admin\LoginControllers.php(25): view('admin/login')
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\LoginControllers->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\LoginControllers))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+INFO - 2024-02-18 08:48:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-18 08:48:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-18 08:48:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-02-18 08:49:03 --> [DEPRECATED] preg_quote(): Passing null to parameter #1 ($str) of type string is deprecated in SYSTEMPATH\Validation\Validation.php on line 833.
+ 1 SYSTEMPATH\Validation\Validation.php(833): preg_quote(null, '/')
+ 2 [internal function]: CodeIgniter\Validation\Validation::CodeIgniter\Validation\{closure}('password')
+ 3 SYSTEMPATH\Validation\Validation.php(832): array_filter([...], Object(Closure), 2)
+ 4 APPPATH\Services\LoginService.php(30): CodeIgniter\Validation\Validation->getError()
+ 5 APPPATH\Controllers\Admin\LoginControllers.php(30): App\Services\LoginService->hasLoginInfo(Object(CodeIgniter\HTTP\IncomingRequest))
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\LoginControllers->login()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\LoginControllers))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+INFO - 2024-02-18 08:49:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-18 08:49:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-02-18 08:49:05 --> [DEPRECATED] preg_quote(): Passing null to parameter #1 ($str) of type string is deprecated in SYSTEMPATH\Validation\Validation.php on line 833.
+ 1 SYSTEMPATH\Validation\Validation.php(833): preg_quote(null, '/')
+ 2 [internal function]: CodeIgniter\Validation\Validation::CodeIgniter\Validation\{closure}('email')
+ 3 SYSTEMPATH\Validation\Validation.php(832): array_filter([...], Object(Closure), 2)
+ 4 APPPATH\Services\LoginService.php(30): CodeIgniter\Validation\Validation->getError()
+ 5 APPPATH\Controllers\Admin\LoginControllers.php(30): App\Services\LoginService->hasLoginInfo(Object(CodeIgniter\HTTP\IncomingRequest))
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\LoginControllers->login()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\LoginControllers))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+WARNING - 2024-02-18 08:49:05 --> [DEPRECATED] preg_quote(): Passing null to parameter #1 ($str) of type string is deprecated in SYSTEMPATH\Validation\Validation.php on line 833.
+ 1 SYSTEMPATH\Validation\Validation.php(833): preg_quote(null, '/')
+ 2 [internal function]: CodeIgniter\Validation\Validation::CodeIgniter\Validation\{closure}('password')
+ 3 SYSTEMPATH\Validation\Validation.php(832): array_filter([...], Object(Closure), 2)
+ 4 APPPATH\Services\LoginService.php(30): CodeIgniter\Validation\Validation->getError()
+ 5 APPPATH\Controllers\Admin\LoginControllers.php(30): App\Services\LoginService->hasLoginInfo(Object(CodeIgniter\HTTP\IncomingRequest))
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\LoginControllers->login()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\LoginControllers))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+INFO - 2024-02-18 08:49:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-18 08:49:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-18 08:53:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-02-18 08:53:25 --> [DEPRECATED] preg_quote(): Passing null to parameter #1 ($str) of type string is deprecated in SYSTEMPATH\Validation\Validation.php on line 833.
+ 1 SYSTEMPATH\Validation\Validation.php(833): preg_quote(null, '/')
+ 2 [internal function]: CodeIgniter\Validation\Validation::CodeIgniter\Validation\{closure}('password')
+ 3 SYSTEMPATH\Validation\Validation.php(832): array_filter([...], Object(Closure), 2)
+ 4 APPPATH\Services\LoginService.php(30): CodeIgniter\Validation\Validation->getError()
+ 5 APPPATH\Controllers\Admin\LoginControllers.php(30): App\Services\LoginService->hasLoginInfo(Object(CodeIgniter\HTTP\IncomingRequest))
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\LoginControllers->login()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\LoginControllers))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+INFO - 2024-02-18 08:53:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-18 08:53:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-02-18 08:53:37 --> [DEPRECATED] preg_quote(): Passing null to parameter #1 ($str) of type string is deprecated in SYSTEMPATH\Validation\Validation.php on line 833.
+ 1 SYSTEMPATH\Validation\Validation.php(833): preg_quote(null, '/')
+ 2 [internal function]: CodeIgniter\Validation\Validation::CodeIgniter\Validation\{closure}('password')
+ 3 SYSTEMPATH\Validation\Validation.php(832): array_filter([...], Object(Closure), 2)
+ 4 APPPATH\Services\LoginService.php(30): CodeIgniter\Validation\Validation->getError()
+ 5 APPPATH\Controllers\Admin\LoginControllers.php(30): App\Services\LoginService->hasLoginInfo(Object(CodeIgniter\HTTP\IncomingRequest))
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\LoginControllers->login()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\LoginControllers))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+INFO - 2024-02-18 08:53:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-18 08:53:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-02-18 08:54:03 --> [DEPRECATED] preg_quote(): Passing null to parameter #1 ($str) of type string is deprecated in SYSTEMPATH\Validation\Validation.php on line 833.
+ 1 SYSTEMPATH\Validation\Validation.php(833): preg_quote(null, '/')
+ 2 [internal function]: CodeIgniter\Validation\Validation::CodeIgniter\Validation\{closure}('password')
+ 3 SYSTEMPATH\Validation\Validation.php(832): array_filter([...], Object(Closure), 2)
+ 4 APPPATH\Services\LoginService.php(30): CodeIgniter\Validation\Validation->getError()
+ 5 APPPATH\Controllers\Admin\LoginControllers.php(30): App\Services\LoginService->hasLoginInfo(Object(CodeIgniter\HTTP\IncomingRequest))
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\LoginControllers->login()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\LoginControllers))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+INFO - 2024-02-18 08:54:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-18 08:54:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-02-18 08:54:06 --> [DEPRECATED] preg_quote(): Passing null to parameter #1 ($str) of type string is deprecated in SYSTEMPATH\Validation\Validation.php on line 833.
+ 1 SYSTEMPATH\Validation\Validation.php(833): preg_quote(null, '/')
+ 2 [internal function]: CodeIgniter\Validation\Validation::CodeIgniter\Validation\{closure}('password')
+ 3 SYSTEMPATH\Validation\Validation.php(832): array_filter([...], Object(Closure), 2)
+ 4 APPPATH\Services\LoginService.php(30): CodeIgniter\Validation\Validation->getError()
+ 5 APPPATH\Controllers\Admin\LoginControllers.php(30): App\Services\LoginService->hasLoginInfo(Object(CodeIgniter\HTTP\IncomingRequest))
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\LoginControllers->login()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\LoginControllers))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+INFO - 2024-02-18 08:54:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-18 08:54:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

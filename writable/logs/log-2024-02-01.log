@@ -1,0 +1,222 @@
+INFO - 2024-02-01 14:20:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-01 14:22:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-02-01 14:22:13 --> Invalid file: "admin/pages/product/list.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/pages/product/list.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('admin/pages/product/list', [], true)
+ 3 APPPATH\Controllers\BaseController.php(65): view('admin/pages/product/list', [...])
+ 4 APPPATH\Controllers\Admin\ProductControllers.php(39): App\Controllers\BaseController->loadMasterLayout([...], 'Danh sách sản phẩm', 'admin/pages/product/list', [...], [...], [...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\ProductControllers->list()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\ProductControllers))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+CRITICAL - 2024-02-01 14:23:07 --> Invalid file: "admin/pages/product/list.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/pages/product/list.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('admin/pages/product/list', [], true)
+ 3 APPPATH\Controllers\BaseController.php(65): view('admin/pages/product/list', [...])
+ 4 APPPATH\Controllers\Admin\ProductControllers.php(39): App\Controllers\BaseController->loadMasterLayout([...], 'Danh sách sản phẩm', 'admin/pages/product/list', [...], [...], [...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\ProductControllers->list()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\ProductControllers))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+CRITICAL - 2024-02-01 14:25:09 --> Invalid file: "messages/message.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('messages/message.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('messages/message', [], true)
+ 3 APPPATH\Views\Admin\pages\product\list.php(5): view('messages/message')
+ 4 SYSTEMPATH\View\View.php(228): include('D:\\xampp\\file\\htdocs\\ComputerShop\\app\\Views\\Admin\\pages\\product\\list.php')
+ 5 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('admin/pages/product/list', [], true)
+ 7 APPPATH\Controllers\BaseController.php(65): view('admin/pages/product/list', [...])
+ 8 APPPATH\Controllers\Admin\ProductControllers.php(39): App\Controllers\BaseController->loadMasterLayout([...], 'Danh sách sản phẩm', 'admin/pages/product/list', [...], [...], [...])
+ 9 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\ProductControllers->list()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\ProductControllers))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+CRITICAL - 2024-02-01 15:07:32 --> Invalid file: "messages/message.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('messages/message.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('messages/message', [], true)
+ 3 APPPATH\Views\Admin\pages\product\list.php(5): view('messages/message')
+ 4 SYSTEMPATH\View\View.php(228): include('D:\\xampp\\file\\htdocs\\ComputerShop\\app\\Views\\Admin\\pages\\product\\list.php')
+ 5 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('admin/pages/product/list', [], true)
+ 7 APPPATH\Controllers\BaseController.php(65): view('admin/pages/product/list', [...])
+ 8 APPPATH\Controllers\Admin\ProductControllers.php(39): App\Controllers\BaseController->loadMasterLayout([...], 'Danh sách sản phẩm', 'admin/pages/product/list', [...], [...], [...])
+ 9 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\ProductControllers->list()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\ProductControllers))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+CRITICAL - 2024-02-01 15:13:21 --> Invalid file: "messages/message.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('messages/message.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('messages/message', [], true)
+ 3 APPPATH\Views\Admin\pages\product\list.php(5): view('messages/message')
+ 4 SYSTEMPATH\View\View.php(228): include('D:\\xampp\\file\\htdocs\\ComputerShop\\app\\Views\\Admin\\pages\\product\\list.php')
+ 5 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('admin/pages/product/list', [], true)
+ 7 APPPATH\Controllers\BaseController.php(65): view('admin/pages/product/list', [...])
+ 8 APPPATH\Controllers\Admin\ProductControllers.php(39): App\Controllers\BaseController->loadMasterLayout([...], 'Danh sách sản phẩm', 'admin/pages/product/list', [...], [...], [...])
+ 9 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\ProductControllers->list()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\ProductControllers))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+CRITICAL - 2024-02-01 15:13:22 --> Invalid file: "messages/message.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('messages/message.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('messages/message', [], true)
+ 3 APPPATH\Views\Admin\pages\product\list.php(5): view('messages/message')
+ 4 SYSTEMPATH\View\View.php(228): include('D:\\xampp\\file\\htdocs\\ComputerShop\\app\\Views\\Admin\\pages\\product\\list.php')
+ 5 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('admin/pages/product/list', [], true)
+ 7 APPPATH\Controllers\BaseController.php(65): view('admin/pages/product/list', [...])
+ 8 APPPATH\Controllers\Admin\ProductControllers.php(39): App\Controllers\BaseController->loadMasterLayout([...], 'Danh sách sản phẩm', 'admin/pages/product/list', [...], [...], [...])
+ 9 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\ProductControllers->list()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\ProductControllers))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+INFO - 2024-02-01 15:13:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-01 15:13:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-02-01 15:15:48 --> Invalid file: "messages/message.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('messages/message.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('messages/message', [], true)
+ 3 APPPATH\Views\Admin\pages\product\list.php(5): view('messages/message')
+ 4 SYSTEMPATH\View\View.php(228): include('D:\\xampp\\file\\htdocs\\ComputerShop\\app\\Views\\Admin\\pages\\product\\list.php')
+ 5 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('admin/pages/product/list', [], true)
+ 7 APPPATH\Controllers\BaseController.php(65): view('admin/pages/product/list', [...])
+ 8 APPPATH\Controllers\Admin\ProductControllers.php(39): App\Controllers\BaseController->loadMasterLayout([...], 'Danh sách sản phẩm', 'admin/pages/product/list', [...], [...], [...])
+ 9 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\ProductControllers->list()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\ProductControllers))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+INFO - 2024-02-01 15:16:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-02-01 15:16:15 --> Invalid file: "messages/message.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('messages/message.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('messages/message', [], true)
+ 3 APPPATH\Views\Admin\pages\product\list.php(5): view('messages/message')
+ 4 SYSTEMPATH\View\View.php(228): include('D:\\xampp\\file\\htdocs\\ComputerShop\\app\\Views\\Admin\\pages\\product\\list.php')
+ 5 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('admin/pages/product/list', [], true)
+ 7 APPPATH\Controllers\BaseController.php(65): view('admin/pages/product/list', [...])
+ 8 APPPATH\Controllers\Admin\ProductControllers.php(39): App\Controllers\BaseController->loadMasterLayout([...], 'Danh sách sản phẩm', 'admin/pages/product/list', [...], [...], [...])
+ 9 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\ProductControllers->list()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\ProductControllers))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+INFO - 2024-02-01 15:16:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-02-01 15:16:23 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in D:\xampp\file\htdocs\ComputerShop\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 D:\xampp\file\htdocs\ComputerShop\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'ComputerShop', 3306, '', 0)
+#1 D:\xampp\file\htdocs\ComputerShop\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\xampp\file\htdocs\ComputerShop\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\xampp\file\htdocs\ComputerShop\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\xampp\file\htdocs\ComputerShop\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\file\htdocs\ComputerShop\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\xampp\file\htdocs\ComputerShop\app\Services\UserService.php(24): CodeIgniter\BaseModel->findAll()
+#7 D:\xampp\file\htdocs\ComputerShop\app\Controllers\Admin\UserControllers.php(39): App\Services\UserService->getAllUsers()
+#8 D:\xampp\file\htdocs\ComputerShop\system\CodeIgniter.php(942): App\Controllers\Admin\UserControllers->list()
+#9 D:\xampp\file\htdocs\ComputerShop\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\UserControllers))
+#10 D:\xampp\file\htdocs\ComputerShop\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\xampp\file\htdocs\ComputerShop\public\index.php(81): CodeIgniter\CodeIgniter->run()
+#12 D:\xampp\file\htdocs\ComputerShop\system\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\h...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in D:\xampp\file\htdocs\ComputerShop\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 D:\xampp\file\htdocs\ComputerShop\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\xampp\file\htdocs\ComputerShop\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\xampp\file\htdocs\ComputerShop\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\xampp\file\htdocs\ComputerShop\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\xampp\file\htdocs\ComputerShop\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#5 D:\xampp\file\htdocs\ComputerShop\app\Services\UserService.php(24): CodeIgniter\BaseModel->findAll()
+#6 D:\xampp\file\htdocs\ComputerShop\app\Controllers\Admin\UserControllers.php(39): App\Services\UserService->getAllUsers()
+#7 D:\xampp\file\htdocs\ComputerShop\system\CodeIgniter.php(942): App\Controllers\Admin\UserControllers->list()
+#8 D:\xampp\file\htdocs\ComputerShop\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\UserControllers))
+#9 D:\xampp\file\htdocs\ComputerShop\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\xampp\file\htdocs\ComputerShop\public\index.php(81): CodeIgniter\CodeIgniter->run()
+#11 D:\xampp\file\htdocs\ComputerShop\system\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\h...')
+#12 {main}
+CRITICAL - 2024-02-01 15:16:23 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`', [], false)
+ 3 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Services\UserService.php(24): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH\Controllers\Admin\UserControllers.php(39): App\Services\UserService->getAllUsers()
+ 7 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\UserControllers->list()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\UserControllers))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+INFO - 2024-02-01 15:16:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-02-01 15:16:54 --> Invalid file: "messages/message.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('messages/message.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('messages/message', [], true)
+ 3 APPPATH\Views\Admin\pages\product\list.php(5): view('messages/message')
+ 4 SYSTEMPATH\View\View.php(228): include('D:\\xampp\\file\\htdocs\\ComputerShop\\app\\Views\\Admin\\pages\\product\\list.php')
+ 5 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('admin/pages/product/list', [], true)
+ 7 APPPATH\Controllers\BaseController.php(65): view('admin/pages/product/list', [...])
+ 8 APPPATH\Controllers\Admin\ProductControllers.php(39): App\Controllers\BaseController->loadMasterLayout([...], 'Danh sách sản phẩm', 'admin/pages/product/list', [...], [...], [...])
+ 9 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\ProductControllers->list()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\ProductControllers))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+INFO - 2024-02-01 15:16:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-02-01 15:40:40 --> Invalid file: "messages/message.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('messages/message.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('messages/message', [], true)
+ 3 APPPATH\Views\Admin\pages\product\list.php(5): view('messages/message')
+ 4 SYSTEMPATH\View\View.php(228): include('D:\\xampp\\file\\htdocs\\ComputerShop\\app\\Views\\Admin\\pages\\product\\list.php')
+ 5 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('admin/pages/product/list', [], true)
+ 7 APPPATH\Controllers\BaseController.php(65): view('admin/pages/product/list', [...])
+ 8 APPPATH\Controllers\Admin\ProductControllers.php(39): App\Controllers\BaseController->loadMasterLayout([...], 'Danh sách sản phẩm', 'admin/pages/product/list', [...], [...], [...])
+ 9 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\ProductControllers->list()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\ProductControllers))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+INFO - 2024-02-01 15:41:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-01 15:41:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-01 15:42:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-01 15:44:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-01 15:45:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-01 15:45:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-01 15:45:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-01 15:45:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-01 15:46:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-01 15:46:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-01 15:46:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-01 15:47:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-01 15:47:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-01 15:47:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-01 15:47:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-01 15:47:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-01 15:47:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-01 15:53:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-01 15:53:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-01 15:56:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-01 16:05:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-01 16:06:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-01 16:06:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-01 16:06:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-01 16:06:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

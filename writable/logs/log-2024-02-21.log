@@ -1,0 +1,1505 @@
+CRITICAL - 2024-02-21 00:45:52 --> Config\Security::$csrfProtection is set to 'cookie'. Same-site attackers may bypass the CSRF protection. Please set it to 'session'.
+in VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php on line 103.
+ 1 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(91): CodeIgniter\Shield\Authentication\Authenticators\Session->checkSecurityConfig()
+ 2 VENDORPATH\codeigniter4\shield\src\Authentication\Authentication.php(67): CodeIgniter\Shield\Authentication\Authenticators\Session->__construct(Object(CodeIgniter\Shield\Models\UserModel))
+ 3 VENDORPATH\codeigniter4\shield\src\Auth.php(95): CodeIgniter\Shield\Authentication\Authentication->factory('session')
+ 4 VENDORPATH\codeigniter4\shield\src\Collectors\Auth.php(68): CodeIgniter\Shield\Auth->getAuthenticator()
+ 5 SYSTEMPATH\Debug\Toolbar\Collectors\BaseCollector.php(225): CodeIgniter\Shield\Collectors\Auth->getTitleDetails()
+ 6 SYSTEMPATH\Debug\Toolbar.php(93): CodeIgniter\Debug\Toolbar\Collectors\BaseCollector->getAsArray()
+ 7 SYSTEMPATH\Debug\Toolbar.php(369): CodeIgniter\Debug\Toolbar->run(1708476352.112333, 0.2585, Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+ 8 SYSTEMPATH\Filters\DebugToolbar.php(42): CodeIgniter\Debug\Toolbar->prepare(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+ 9 SYSTEMPATH\Filters\Filters.php(210): CodeIgniter\Filters\DebugToolbar->after(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), null)
+10 SYSTEMPATH\CodeIgniter.php(522): CodeIgniter\Filters\Filters->run('admin/login', 'after')
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+ERROR - 2024-02-21 04:43:52 --> mysqli_sql_exception: Table 'users' already exists in D:\xampp\file\htdocs\ComputerShop\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\xampp\file\htdocs\ComputerShop\system\Database\MySQLi\Connection.php(306): mysqli->query('CREATE TABLE `u...', 0)
+#1 D:\xampp\file\htdocs\ComputerShop\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `u...')
+#2 D:\xampp\file\htdocs\ComputerShop\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `u...')
+#3 D:\xampp\file\htdocs\ComputerShop\system\Database\Forge.php(546): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `u...')
+#4 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Database\Migrations\2020-12-28-223112_create_auth_tables.php(187): CodeIgniter\Database\Forge->createTable('users', false, Array)
+#5 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Database\Migrations\2020-12-28-223112_create_auth_tables.php(60): CodeIgniter\Shield\Database\Migrations\CreateAuthTables->createTable('users')
+#6 D:\xampp\file\htdocs\ComputerShop\system\Database\MigrationRunner.php(873): CodeIgniter\Shield\Database\Migrations\CreateAuthTables->up()
+#7 D:\xampp\file\htdocs\ComputerShop\system\Database\MigrationRunner.php(188): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#8 D:\xampp\file\htdocs\ComputerShop\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#9 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Commands\Setup.php(420): CodeIgniter\Commands\Database\Migrate->run(Array)
+#10 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Commands\Setup.php(97): CodeIgniter\Shield\Commands\Setup->runMigrations()
+#11 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Commands\Setup.php(82): CodeIgniter\Shield\Commands\Setup->publishConfig()
+#12 D:\xampp\file\htdocs\ComputerShop\system\CLI\Commands.php(65): CodeIgniter\Shield\Commands\Setup->run(Array)
+#13 D:\xampp\file\htdocs\ComputerShop\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('shield:setup', Array)
+#14 D:\xampp\file\htdocs\ComputerShop\spark(102): CodeIgniter\CLI\Console->run()
+#15 {main}
+ERROR - 2024-02-21 04:44:44 --> mysqli_sql_exception: Table 'computershop.settings' doesn't exist in D:\xampp\file\htdocs\ComputerShop\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\xampp\file\htdocs\ComputerShop\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\xampp\file\htdocs\ComputerShop\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\xampp\file\htdocs\ComputerShop\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\xampp\file\htdocs\ComputerShop\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\settings\src\Handlers\DatabaseHandler.php(186): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\settings\src\Handlers\DatabaseHandler.php(51): CodeIgniter\Settings\Handlers\DatabaseHandler->hydrate(NULL)
+#6 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\settings\src\Settings.php(59): CodeIgniter\Settings\Handlers\DatabaseHandler->has('Config\\Auth', 'sessionConfig', NULL)
+#7 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\settings\src\Helpers\setting_helper.php(25): CodeIgniter\Settings\Settings->get('Auth.sessionCon...')
+#8 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(685): setting('Auth.sessionCon...')
+#9 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(703): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserInfo()
+#10 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(390): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionKey('id')
+#11 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(374): CodeIgniter\Shield\Authentication\Authenticators\Session->checkUserState()
+#12 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Auth.php(191): CodeIgniter\Shield\Authentication\Authenticators\Session->loggedIn()
+#13 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Collectors\Auth.php(76): CodeIgniter\Shield\Auth->__call('loggedIn', Array)
+#14 D:\xampp\file\htdocs\ComputerShop\system\Debug\Toolbar\Collectors\BaseCollector.php(226): CodeIgniter\Shield\Collectors\Auth->display()
+#15 D:\xampp\file\htdocs\ComputerShop\system\Debug\Toolbar.php(93): CodeIgniter\Debug\Toolbar\Collectors\BaseCollector->getAsArray()
+#16 D:\xampp\file\htdocs\ComputerShop\system\Debug\Toolbar.php(369): CodeIgniter\Debug\Toolbar->run(1708490684.6744, 0.1986, Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+#17 D:\xampp\file\htdocs\ComputerShop\system\Filters\DebugToolbar.php(42): CodeIgniter\Debug\Toolbar->prepare(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+#18 D:\xampp\file\htdocs\ComputerShop\system\Filters\Filters.php(210): CodeIgniter\Filters\DebugToolbar->after(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), NULL)
+#19 D:\xampp\file\htdocs\ComputerShop\system\CodeIgniter.php(522): CodeIgniter\Filters\Filters->run('admin/login', 'after')
+#20 D:\xampp\file\htdocs\ComputerShop\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#21 D:\xampp\file\htdocs\ComputerShop\public\index.php(81): CodeIgniter\CodeIgniter->run()
+#22 D:\xampp\file\htdocs\ComputerShop\system\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\h...')
+#23 {main}
+CRITICAL - 2024-02-21 04:44:45 --> Table 'computershop.settings' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `settings`
+WHERE `context` IS NULL', [], false)
+ 2 VENDORPATH\codeigniter4\settings\src\Handlers\DatabaseHandler.php(186): CodeIgniter\Database\BaseBuilder->get()
+ 3 VENDORPATH\codeigniter4\settings\src\Handlers\DatabaseHandler.php(51): CodeIgniter\Settings\Handlers\DatabaseHandler->hydrate(null)
+ 4 VENDORPATH\codeigniter4\settings\src\Settings.php(59): CodeIgniter\Settings\Handlers\DatabaseHandler->has('Config\\Auth', 'sessionConfig', null)
+ 5 VENDORPATH\codeigniter4\settings\src\Helpers\setting_helper.php(25): CodeIgniter\Settings\Settings->get('Auth.sessionConfig')
+ 6 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(685): setting('Auth.sessionConfig')
+ 7 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(703): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserInfo()
+ 8 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(390): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionKey('id')
+ 9 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(374): CodeIgniter\Shield\Authentication\Authenticators\Session->checkUserState()
+10 VENDORPATH\codeigniter4\shield\src\Auth.php(191): CodeIgniter\Shield\Authentication\Authenticators\Session->loggedIn()
+11 VENDORPATH\codeigniter4\shield\src\Collectors\Auth.php(76): CodeIgniter\Shield\Auth->__call('loggedIn', [])
+12 SYSTEMPATH\Debug\Toolbar\Collectors\BaseCollector.php(226): CodeIgniter\Shield\Collectors\Auth->display()
+13 SYSTEMPATH\Debug\Toolbar.php(93): CodeIgniter\Debug\Toolbar\Collectors\BaseCollector->getAsArray()
+14 SYSTEMPATH\Debug\Toolbar.php(369): CodeIgniter\Debug\Toolbar->run(1708490684.674377, 0.1986, Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+15 SYSTEMPATH\Filters\DebugToolbar.php(42): CodeIgniter\Debug\Toolbar->prepare(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+16 SYSTEMPATH\Filters\Filters.php(210): CodeIgniter\Filters\DebugToolbar->after(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), null)
+17 SYSTEMPATH\CodeIgniter.php(522): CodeIgniter\Filters\Filters->run('admin/login', 'after')
+18 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+19 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+20 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+ERROR - 2024-02-21 04:45:42 --> mysqli_sql_exception: Table 'computershop.settings' doesn't exist in D:\xampp\file\htdocs\ComputerShop\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\xampp\file\htdocs\ComputerShop\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\xampp\file\htdocs\ComputerShop\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\xampp\file\htdocs\ComputerShop\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\xampp\file\htdocs\ComputerShop\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\settings\src\Handlers\DatabaseHandler.php(186): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\settings\src\Handlers\DatabaseHandler.php(51): CodeIgniter\Settings\Handlers\DatabaseHandler->hydrate(NULL)
+#6 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\settings\src\Settings.php(59): CodeIgniter\Settings\Handlers\DatabaseHandler->has('Config\\Auth', 'sessionConfig', NULL)
+#7 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\settings\src\Helpers\setting_helper.php(25): CodeIgniter\Settings\Settings->get('Auth.sessionCon...')
+#8 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(685): setting('Auth.sessionCon...')
+#9 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(703): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserInfo()
+#10 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(390): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionKey('id')
+#11 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(374): CodeIgniter\Shield\Authentication\Authenticators\Session->checkUserState()
+#12 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Auth.php(191): CodeIgniter\Shield\Authentication\Authenticators\Session->loggedIn()
+#13 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Collectors\Auth.php(76): CodeIgniter\Shield\Auth->__call('loggedIn', Array)
+#14 D:\xampp\file\htdocs\ComputerShop\system\Debug\Toolbar\Collectors\BaseCollector.php(226): CodeIgniter\Shield\Collectors\Auth->display()
+#15 D:\xampp\file\htdocs\ComputerShop\system\Debug\Toolbar.php(93): CodeIgniter\Debug\Toolbar\Collectors\BaseCollector->getAsArray()
+#16 D:\xampp\file\htdocs\ComputerShop\system\Debug\Toolbar.php(369): CodeIgniter\Debug\Toolbar->run(1708490741.9233, 0.1063, Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+#17 D:\xampp\file\htdocs\ComputerShop\system\Filters\DebugToolbar.php(42): CodeIgniter\Debug\Toolbar->prepare(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+#18 D:\xampp\file\htdocs\ComputerShop\system\Filters\Filters.php(210): CodeIgniter\Filters\DebugToolbar->after(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), NULL)
+#19 D:\xampp\file\htdocs\ComputerShop\system\CodeIgniter.php(522): CodeIgniter\Filters\Filters->run('admin/login', 'after')
+#20 D:\xampp\file\htdocs\ComputerShop\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#21 D:\xampp\file\htdocs\ComputerShop\public\index.php(81): CodeIgniter\CodeIgniter->run()
+#22 D:\xampp\file\htdocs\ComputerShop\system\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\h...')
+#23 {main}
+CRITICAL - 2024-02-21 04:45:42 --> Table 'computershop.settings' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `settings`
+WHERE `context` IS NULL', [], false)
+ 2 VENDORPATH\codeigniter4\settings\src\Handlers\DatabaseHandler.php(186): CodeIgniter\Database\BaseBuilder->get()
+ 3 VENDORPATH\codeigniter4\settings\src\Handlers\DatabaseHandler.php(51): CodeIgniter\Settings\Handlers\DatabaseHandler->hydrate(null)
+ 4 VENDORPATH\codeigniter4\settings\src\Settings.php(59): CodeIgniter\Settings\Handlers\DatabaseHandler->has('Config\\Auth', 'sessionConfig', null)
+ 5 VENDORPATH\codeigniter4\settings\src\Helpers\setting_helper.php(25): CodeIgniter\Settings\Settings->get('Auth.sessionConfig')
+ 6 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(685): setting('Auth.sessionConfig')
+ 7 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(703): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserInfo()
+ 8 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(390): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionKey('id')
+ 9 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(374): CodeIgniter\Shield\Authentication\Authenticators\Session->checkUserState()
+10 VENDORPATH\codeigniter4\shield\src\Auth.php(191): CodeIgniter\Shield\Authentication\Authenticators\Session->loggedIn()
+11 VENDORPATH\codeigniter4\shield\src\Collectors\Auth.php(76): CodeIgniter\Shield\Auth->__call('loggedIn', [])
+12 SYSTEMPATH\Debug\Toolbar\Collectors\BaseCollector.php(226): CodeIgniter\Shield\Collectors\Auth->display()
+13 SYSTEMPATH\Debug\Toolbar.php(93): CodeIgniter\Debug\Toolbar\Collectors\BaseCollector->getAsArray()
+14 SYSTEMPATH\Debug\Toolbar.php(369): CodeIgniter\Debug\Toolbar->run(1708490741.923291, 0.1063, Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+15 SYSTEMPATH\Filters\DebugToolbar.php(42): CodeIgniter\Debug\Toolbar->prepare(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+16 SYSTEMPATH\Filters\Filters.php(210): CodeIgniter\Filters\DebugToolbar->after(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), null)
+17 SYSTEMPATH\CodeIgniter.php(522): CodeIgniter\Filters\Filters->run('admin/login', 'after')
+18 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+19 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+20 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+CRITICAL - 2024-02-21 04:45:54 --> You have not selected a database type to connect to.
+in SYSTEMPATH\Database\Database.php on line 52.
+ 1 SYSTEMPATH\Database\Config.php(83): CodeIgniter\Database\Database->load([...], 'default')
+ 2 SYSTEMPATH\Model.php(151): CodeIgniter\Database\Config::connect('default')
+ 3 APPPATH\Services\LoginService.php(18): CodeIgniter\Model->__construct()
+ 4 APPPATH\Controllers\Admin\LoginControllers.php(19): App\Services\LoginService->__construct()
+ 5 SYSTEMPATH\CodeIgniter.php(914): App\Controllers\Admin\LoginControllers->__construct()
+ 6 SYSTEMPATH\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+CRITICAL - 2024-02-21 04:46:08 --> Class "CodeIgniter\Database\Mysql\Connection" not found
+in SYSTEMPATH\Database\Database.php on line 137.
+ 1 SYSTEMPATH\Database\Database.php(55): CodeIgniter\Database\Database->initDriver('Mysql', 'Connection', [...])
+ 2 SYSTEMPATH\Database\Config.php(83): CodeIgniter\Database\Database->load([...], 'default')
+ 3 SYSTEMPATH\Model.php(151): CodeIgniter\Database\Config::connect('default')
+ 4 APPPATH\Services\LoginService.php(18): CodeIgniter\Model->__construct()
+ 5 APPPATH\Controllers\Admin\LoginControllers.php(19): App\Services\LoginService->__construct()
+ 6 SYSTEMPATH\CodeIgniter.php(914): App\Controllers\Admin\LoginControllers->__construct()
+ 7 SYSTEMPATH\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+ERROR - 2024-02-21 04:46:35 --> mysqli_sql_exception: Table 'computershop.settings' doesn't exist in D:\xampp\file\htdocs\ComputerShop\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\xampp\file\htdocs\ComputerShop\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\xampp\file\htdocs\ComputerShop\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\xampp\file\htdocs\ComputerShop\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\xampp\file\htdocs\ComputerShop\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\settings\src\Handlers\DatabaseHandler.php(186): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\settings\src\Handlers\DatabaseHandler.php(51): CodeIgniter\Settings\Handlers\DatabaseHandler->hydrate(NULL)
+#6 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\settings\src\Settings.php(59): CodeIgniter\Settings\Handlers\DatabaseHandler->has('Config\\Auth', 'sessionConfig', NULL)
+#7 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\settings\src\Helpers\setting_helper.php(25): CodeIgniter\Settings\Settings->get('Auth.sessionCon...')
+#8 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(685): setting('Auth.sessionCon...')
+#9 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(703): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserInfo()
+#10 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(390): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionKey('id')
+#11 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(374): CodeIgniter\Shield\Authentication\Authenticators\Session->checkUserState()
+#12 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Auth.php(191): CodeIgniter\Shield\Authentication\Authenticators\Session->loggedIn()
+#13 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Collectors\Auth.php(76): CodeIgniter\Shield\Auth->__call('loggedIn', Array)
+#14 D:\xampp\file\htdocs\ComputerShop\system\Debug\Toolbar\Collectors\BaseCollector.php(226): CodeIgniter\Shield\Collectors\Auth->display()
+#15 D:\xampp\file\htdocs\ComputerShop\system\Debug\Toolbar.php(93): CodeIgniter\Debug\Toolbar\Collectors\BaseCollector->getAsArray()
+#16 D:\xampp\file\htdocs\ComputerShop\system\Debug\Toolbar.php(369): CodeIgniter\Debug\Toolbar->run(1708490795.0052, 0.1315, Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+#17 D:\xampp\file\htdocs\ComputerShop\system\Filters\DebugToolbar.php(42): CodeIgniter\Debug\Toolbar->prepare(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+#18 D:\xampp\file\htdocs\ComputerShop\system\Filters\Filters.php(210): CodeIgniter\Filters\DebugToolbar->after(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), NULL)
+#19 D:\xampp\file\htdocs\ComputerShop\system\CodeIgniter.php(522): CodeIgniter\Filters\Filters->run('admin/login', 'after')
+#20 D:\xampp\file\htdocs\ComputerShop\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#21 D:\xampp\file\htdocs\ComputerShop\public\index.php(81): CodeIgniter\CodeIgniter->run()
+#22 D:\xampp\file\htdocs\ComputerShop\system\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\h...')
+#23 {main}
+CRITICAL - 2024-02-21 04:46:35 --> Table 'computershop.settings' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `settings`
+WHERE `context` IS NULL', [], false)
+ 2 VENDORPATH\codeigniter4\settings\src\Handlers\DatabaseHandler.php(186): CodeIgniter\Database\BaseBuilder->get()
+ 3 VENDORPATH\codeigniter4\settings\src\Handlers\DatabaseHandler.php(51): CodeIgniter\Settings\Handlers\DatabaseHandler->hydrate(null)
+ 4 VENDORPATH\codeigniter4\settings\src\Settings.php(59): CodeIgniter\Settings\Handlers\DatabaseHandler->has('Config\\Auth', 'sessionConfig', null)
+ 5 VENDORPATH\codeigniter4\settings\src\Helpers\setting_helper.php(25): CodeIgniter\Settings\Settings->get('Auth.sessionConfig')
+ 6 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(685): setting('Auth.sessionConfig')
+ 7 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(703): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserInfo()
+ 8 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(390): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionKey('id')
+ 9 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(374): CodeIgniter\Shield\Authentication\Authenticators\Session->checkUserState()
+10 VENDORPATH\codeigniter4\shield\src\Auth.php(191): CodeIgniter\Shield\Authentication\Authenticators\Session->loggedIn()
+11 VENDORPATH\codeigniter4\shield\src\Collectors\Auth.php(76): CodeIgniter\Shield\Auth->__call('loggedIn', [])
+12 SYSTEMPATH\Debug\Toolbar\Collectors\BaseCollector.php(226): CodeIgniter\Shield\Collectors\Auth->display()
+13 SYSTEMPATH\Debug\Toolbar.php(93): CodeIgniter\Debug\Toolbar\Collectors\BaseCollector->getAsArray()
+14 SYSTEMPATH\Debug\Toolbar.php(369): CodeIgniter\Debug\Toolbar->run(1708490795.005235, 0.1315, Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+15 SYSTEMPATH\Filters\DebugToolbar.php(42): CodeIgniter\Debug\Toolbar->prepare(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+16 SYSTEMPATH\Filters\Filters.php(210): CodeIgniter\Filters\DebugToolbar->after(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), null)
+17 SYSTEMPATH\CodeIgniter.php(522): CodeIgniter\Filters\Filters->run('admin/login', 'after')
+18 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+19 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+20 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+ERROR - 2024-02-21 04:47:21 --> mysqli_sql_exception: Table 'computershop.settings' doesn't exist in D:\xampp\file\htdocs\ComputerShop\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\xampp\file\htdocs\ComputerShop\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\xampp\file\htdocs\ComputerShop\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\xampp\file\htdocs\ComputerShop\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\xampp\file\htdocs\ComputerShop\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\settings\src\Handlers\DatabaseHandler.php(186): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\settings\src\Handlers\DatabaseHandler.php(51): CodeIgniter\Settings\Handlers\DatabaseHandler->hydrate(NULL)
+#6 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\settings\src\Settings.php(59): CodeIgniter\Settings\Handlers\DatabaseHandler->has('Config\\Auth', 'sessionConfig', NULL)
+#7 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\settings\src\Helpers\setting_helper.php(25): CodeIgniter\Settings\Settings->get('Auth.sessionCon...')
+#8 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(685): setting('Auth.sessionCon...')
+#9 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(703): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserInfo()
+#10 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(390): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionKey('id')
+#11 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(374): CodeIgniter\Shield\Authentication\Authenticators\Session->checkUserState()
+#12 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Auth.php(191): CodeIgniter\Shield\Authentication\Authenticators\Session->loggedIn()
+#13 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Collectors\Auth.php(76): CodeIgniter\Shield\Auth->__call('loggedIn', Array)
+#14 D:\xampp\file\htdocs\ComputerShop\system\Debug\Toolbar\Collectors\BaseCollector.php(226): CodeIgniter\Shield\Collectors\Auth->display()
+#15 D:\xampp\file\htdocs\ComputerShop\system\Debug\Toolbar.php(93): CodeIgniter\Debug\Toolbar\Collectors\BaseCollector->getAsArray()
+#16 D:\xampp\file\htdocs\ComputerShop\system\Debug\Toolbar.php(369): CodeIgniter\Debug\Toolbar->run(1708490841.3714, 0.0821, Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+#17 D:\xampp\file\htdocs\ComputerShop\system\Filters\DebugToolbar.php(42): CodeIgniter\Debug\Toolbar->prepare(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+#18 D:\xampp\file\htdocs\ComputerShop\system\Filters\Filters.php(210): CodeIgniter\Filters\DebugToolbar->after(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), NULL)
+#19 D:\xampp\file\htdocs\ComputerShop\system\CodeIgniter.php(522): CodeIgniter\Filters\Filters->run('admin/login', 'after')
+#20 D:\xampp\file\htdocs\ComputerShop\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#21 D:\xampp\file\htdocs\ComputerShop\public\index.php(81): CodeIgniter\CodeIgniter->run()
+#22 D:\xampp\file\htdocs\ComputerShop\system\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\h...')
+#23 {main}
+CRITICAL - 2024-02-21 04:47:21 --> Table 'computershop.settings' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `settings`
+WHERE `context` IS NULL', [], false)
+ 2 VENDORPATH\codeigniter4\settings\src\Handlers\DatabaseHandler.php(186): CodeIgniter\Database\BaseBuilder->get()
+ 3 VENDORPATH\codeigniter4\settings\src\Handlers\DatabaseHandler.php(51): CodeIgniter\Settings\Handlers\DatabaseHandler->hydrate(null)
+ 4 VENDORPATH\codeigniter4\settings\src\Settings.php(59): CodeIgniter\Settings\Handlers\DatabaseHandler->has('Config\\Auth', 'sessionConfig', null)
+ 5 VENDORPATH\codeigniter4\settings\src\Helpers\setting_helper.php(25): CodeIgniter\Settings\Settings->get('Auth.sessionConfig')
+ 6 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(685): setting('Auth.sessionConfig')
+ 7 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(703): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserInfo()
+ 8 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(390): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionKey('id')
+ 9 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(374): CodeIgniter\Shield\Authentication\Authenticators\Session->checkUserState()
+10 VENDORPATH\codeigniter4\shield\src\Auth.php(191): CodeIgniter\Shield\Authentication\Authenticators\Session->loggedIn()
+11 VENDORPATH\codeigniter4\shield\src\Collectors\Auth.php(76): CodeIgniter\Shield\Auth->__call('loggedIn', [])
+12 SYSTEMPATH\Debug\Toolbar\Collectors\BaseCollector.php(226): CodeIgniter\Shield\Collectors\Auth->display()
+13 SYSTEMPATH\Debug\Toolbar.php(93): CodeIgniter\Debug\Toolbar\Collectors\BaseCollector->getAsArray()
+14 SYSTEMPATH\Debug\Toolbar.php(369): CodeIgniter\Debug\Toolbar->run(1708490841.371428, 0.0821, Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+15 SYSTEMPATH\Filters\DebugToolbar.php(42): CodeIgniter\Debug\Toolbar->prepare(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+16 SYSTEMPATH\Filters\Filters.php(210): CodeIgniter\Filters\DebugToolbar->after(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), null)
+17 SYSTEMPATH\CodeIgniter.php(522): CodeIgniter\Filters\Filters->run('admin/login', 'after')
+18 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+19 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+20 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+ERROR - 2024-02-21 04:48:31 --> mysqli_sql_exception: Table 'computershop.settings' doesn't exist in D:\xampp\file\htdocs\ComputerShop\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\xampp\file\htdocs\ComputerShop\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\xampp\file\htdocs\ComputerShop\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\xampp\file\htdocs\ComputerShop\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\xampp\file\htdocs\ComputerShop\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\settings\src\Handlers\DatabaseHandler.php(186): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\settings\src\Handlers\DatabaseHandler.php(51): CodeIgniter\Settings\Handlers\DatabaseHandler->hydrate(NULL)
+#6 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\settings\src\Settings.php(59): CodeIgniter\Settings\Handlers\DatabaseHandler->has('Config\\Auth', 'sessionConfig', NULL)
+#7 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\settings\src\Helpers\setting_helper.php(25): CodeIgniter\Settings\Settings->get('Auth.sessionCon...')
+#8 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(685): setting('Auth.sessionCon...')
+#9 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(703): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserInfo()
+#10 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(390): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionKey('id')
+#11 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(374): CodeIgniter\Shield\Authentication\Authenticators\Session->checkUserState()
+#12 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Auth.php(191): CodeIgniter\Shield\Authentication\Authenticators\Session->loggedIn()
+#13 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Collectors\Auth.php(76): CodeIgniter\Shield\Auth->__call('loggedIn', Array)
+#14 D:\xampp\file\htdocs\ComputerShop\system\Debug\Toolbar\Collectors\BaseCollector.php(226): CodeIgniter\Shield\Collectors\Auth->display()
+#15 D:\xampp\file\htdocs\ComputerShop\system\Debug\Toolbar.php(93): CodeIgniter\Debug\Toolbar\Collectors\BaseCollector->getAsArray()
+#16 D:\xampp\file\htdocs\ComputerShop\system\Debug\Toolbar.php(369): CodeIgniter\Debug\Toolbar->run(1708490911.0083, 0.0916, Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+#17 D:\xampp\file\htdocs\ComputerShop\system\Filters\DebugToolbar.php(42): CodeIgniter\Debug\Toolbar->prepare(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+#18 D:\xampp\file\htdocs\ComputerShop\system\Filters\Filters.php(210): CodeIgniter\Filters\DebugToolbar->after(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), NULL)
+#19 D:\xampp\file\htdocs\ComputerShop\system\CodeIgniter.php(522): CodeIgniter\Filters\Filters->run('admin/login', 'after')
+#20 D:\xampp\file\htdocs\ComputerShop\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#21 D:\xampp\file\htdocs\ComputerShop\public\index.php(81): CodeIgniter\CodeIgniter->run()
+#22 D:\xampp\file\htdocs\ComputerShop\system\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\h...')
+#23 {main}
+CRITICAL - 2024-02-21 04:48:31 --> Table 'computershop.settings' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `settings`
+WHERE `context` IS NULL', [], false)
+ 2 VENDORPATH\codeigniter4\settings\src\Handlers\DatabaseHandler.php(186): CodeIgniter\Database\BaseBuilder->get()
+ 3 VENDORPATH\codeigniter4\settings\src\Handlers\DatabaseHandler.php(51): CodeIgniter\Settings\Handlers\DatabaseHandler->hydrate(null)
+ 4 VENDORPATH\codeigniter4\settings\src\Settings.php(59): CodeIgniter\Settings\Handlers\DatabaseHandler->has('Config\\Auth', 'sessionConfig', null)
+ 5 VENDORPATH\codeigniter4\settings\src\Helpers\setting_helper.php(25): CodeIgniter\Settings\Settings->get('Auth.sessionConfig')
+ 6 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(685): setting('Auth.sessionConfig')
+ 7 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(703): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserInfo()
+ 8 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(390): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionKey('id')
+ 9 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(374): CodeIgniter\Shield\Authentication\Authenticators\Session->checkUserState()
+10 VENDORPATH\codeigniter4\shield\src\Auth.php(191): CodeIgniter\Shield\Authentication\Authenticators\Session->loggedIn()
+11 VENDORPATH\codeigniter4\shield\src\Collectors\Auth.php(76): CodeIgniter\Shield\Auth->__call('loggedIn', [])
+12 SYSTEMPATH\Debug\Toolbar\Collectors\BaseCollector.php(226): CodeIgniter\Shield\Collectors\Auth->display()
+13 SYSTEMPATH\Debug\Toolbar.php(93): CodeIgniter\Debug\Toolbar\Collectors\BaseCollector->getAsArray()
+14 SYSTEMPATH\Debug\Toolbar.php(369): CodeIgniter\Debug\Toolbar->run(1708490911.008344, 0.0916, Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+15 SYSTEMPATH\Filters\DebugToolbar.php(42): CodeIgniter\Debug\Toolbar->prepare(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+16 SYSTEMPATH\Filters\Filters.php(210): CodeIgniter\Filters\DebugToolbar->after(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), null)
+17 SYSTEMPATH\CodeIgniter.php(522): CodeIgniter\Filters\Filters->run('admin/login', 'after')
+18 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+19 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+20 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+ERROR - 2024-02-21 04:49:36 --> mysqli_sql_exception: Table 'computershop.settings' doesn't exist in D:\xampp\file\htdocs\ComputerShop\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\xampp\file\htdocs\ComputerShop\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\xampp\file\htdocs\ComputerShop\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\xampp\file\htdocs\ComputerShop\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\xampp\file\htdocs\ComputerShop\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\settings\src\Handlers\DatabaseHandler.php(186): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\settings\src\Handlers\DatabaseHandler.php(51): CodeIgniter\Settings\Handlers\DatabaseHandler->hydrate(NULL)
+#6 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\settings\src\Settings.php(59): CodeIgniter\Settings\Handlers\DatabaseHandler->has('Config\\Auth', 'sessionConfig', NULL)
+#7 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\settings\src\Helpers\setting_helper.php(25): CodeIgniter\Settings\Settings->get('Auth.sessionCon...')
+#8 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(685): setting('Auth.sessionCon...')
+#9 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(703): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserInfo()
+#10 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(390): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionKey('id')
+#11 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(374): CodeIgniter\Shield\Authentication\Authenticators\Session->checkUserState()
+#12 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Auth.php(191): CodeIgniter\Shield\Authentication\Authenticators\Session->loggedIn()
+#13 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Collectors\Auth.php(76): CodeIgniter\Shield\Auth->__call('loggedIn', Array)
+#14 D:\xampp\file\htdocs\ComputerShop\system\Debug\Toolbar\Collectors\BaseCollector.php(226): CodeIgniter\Shield\Collectors\Auth->display()
+#15 D:\xampp\file\htdocs\ComputerShop\system\Debug\Toolbar.php(93): CodeIgniter\Debug\Toolbar\Collectors\BaseCollector->getAsArray()
+#16 D:\xampp\file\htdocs\ComputerShop\system\Debug\Toolbar.php(369): CodeIgniter\Debug\Toolbar->run(1708490976.0858, 0.0894, Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+#17 D:\xampp\file\htdocs\ComputerShop\system\Filters\DebugToolbar.php(42): CodeIgniter\Debug\Toolbar->prepare(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+#18 D:\xampp\file\htdocs\ComputerShop\system\Filters\Filters.php(210): CodeIgniter\Filters\DebugToolbar->after(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), NULL)
+#19 D:\xampp\file\htdocs\ComputerShop\system\CodeIgniter.php(522): CodeIgniter\Filters\Filters->run('admin/login', 'after')
+#20 D:\xampp\file\htdocs\ComputerShop\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#21 D:\xampp\file\htdocs\ComputerShop\public\index.php(81): CodeIgniter\CodeIgniter->run()
+#22 D:\xampp\file\htdocs\ComputerShop\system\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\h...')
+#23 {main}
+CRITICAL - 2024-02-21 04:49:36 --> Table 'computershop.settings' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `settings`
+WHERE `context` IS NULL', [], false)
+ 2 VENDORPATH\codeigniter4\settings\src\Handlers\DatabaseHandler.php(186): CodeIgniter\Database\BaseBuilder->get()
+ 3 VENDORPATH\codeigniter4\settings\src\Handlers\DatabaseHandler.php(51): CodeIgniter\Settings\Handlers\DatabaseHandler->hydrate(null)
+ 4 VENDORPATH\codeigniter4\settings\src\Settings.php(59): CodeIgniter\Settings\Handlers\DatabaseHandler->has('Config\\Auth', 'sessionConfig', null)
+ 5 VENDORPATH\codeigniter4\settings\src\Helpers\setting_helper.php(25): CodeIgniter\Settings\Settings->get('Auth.sessionConfig')
+ 6 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(685): setting('Auth.sessionConfig')
+ 7 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(703): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserInfo()
+ 8 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(390): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionKey('id')
+ 9 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(374): CodeIgniter\Shield\Authentication\Authenticators\Session->checkUserState()
+10 VENDORPATH\codeigniter4\shield\src\Auth.php(191): CodeIgniter\Shield\Authentication\Authenticators\Session->loggedIn()
+11 VENDORPATH\codeigniter4\shield\src\Collectors\Auth.php(76): CodeIgniter\Shield\Auth->__call('loggedIn', [])
+12 SYSTEMPATH\Debug\Toolbar\Collectors\BaseCollector.php(226): CodeIgniter\Shield\Collectors\Auth->display()
+13 SYSTEMPATH\Debug\Toolbar.php(93): CodeIgniter\Debug\Toolbar\Collectors\BaseCollector->getAsArray()
+14 SYSTEMPATH\Debug\Toolbar.php(369): CodeIgniter\Debug\Toolbar->run(1708490976.085783, 0.0894, Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+15 SYSTEMPATH\Filters\DebugToolbar.php(42): CodeIgniter\Debug\Toolbar->prepare(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+16 SYSTEMPATH\Filters\Filters.php(210): CodeIgniter\Filters\DebugToolbar->after(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), null)
+17 SYSTEMPATH\CodeIgniter.php(522): CodeIgniter\Filters\Filters->run('admin/login', 'after')
+18 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+19 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+20 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+ERROR - 2024-02-21 04:49:39 --> mysqli_sql_exception: Table 'computershop.settings' doesn't exist in D:\xampp\file\htdocs\ComputerShop\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\xampp\file\htdocs\ComputerShop\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\xampp\file\htdocs\ComputerShop\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\xampp\file\htdocs\ComputerShop\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\xampp\file\htdocs\ComputerShop\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\settings\src\Handlers\DatabaseHandler.php(186): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\settings\src\Handlers\DatabaseHandler.php(51): CodeIgniter\Settings\Handlers\DatabaseHandler->hydrate(NULL)
+#6 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\settings\src\Settings.php(59): CodeIgniter\Settings\Handlers\DatabaseHandler->has('Config\\Auth', 'sessionConfig', NULL)
+#7 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\settings\src\Helpers\setting_helper.php(25): CodeIgniter\Settings\Settings->get('Auth.sessionCon...')
+#8 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(685): setting('Auth.sessionCon...')
+#9 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(703): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserInfo()
+#10 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(390): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionKey('id')
+#11 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(374): CodeIgniter\Shield\Authentication\Authenticators\Session->checkUserState()
+#12 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Auth.php(191): CodeIgniter\Shield\Authentication\Authenticators\Session->loggedIn()
+#13 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Collectors\Auth.php(76): CodeIgniter\Shield\Auth->__call('loggedIn', Array)
+#14 D:\xampp\file\htdocs\ComputerShop\system\Debug\Toolbar\Collectors\BaseCollector.php(226): CodeIgniter\Shield\Collectors\Auth->display()
+#15 D:\xampp\file\htdocs\ComputerShop\system\Debug\Toolbar.php(93): CodeIgniter\Debug\Toolbar\Collectors\BaseCollector->getAsArray()
+#16 D:\xampp\file\htdocs\ComputerShop\system\Debug\Toolbar.php(369): CodeIgniter\Debug\Toolbar->run(1708490979.7442, 0.1289, Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+#17 D:\xampp\file\htdocs\ComputerShop\system\Filters\DebugToolbar.php(42): CodeIgniter\Debug\Toolbar->prepare(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+#18 D:\xampp\file\htdocs\ComputerShop\system\Filters\Filters.php(210): CodeIgniter\Filters\DebugToolbar->after(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), NULL)
+#19 D:\xampp\file\htdocs\ComputerShop\system\CodeIgniter.php(522): CodeIgniter\Filters\Filters->run('admin/home', 'after')
+#20 D:\xampp\file\htdocs\ComputerShop\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#21 D:\xampp\file\htdocs\ComputerShop\public\index.php(81): CodeIgniter\CodeIgniter->run()
+#22 D:\xampp\file\htdocs\ComputerShop\system\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\h...')
+#23 {main}
+CRITICAL - 2024-02-21 04:49:39 --> Table 'computershop.settings' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `settings`
+WHERE `context` IS NULL', [], false)
+ 2 VENDORPATH\codeigniter4\settings\src\Handlers\DatabaseHandler.php(186): CodeIgniter\Database\BaseBuilder->get()
+ 3 VENDORPATH\codeigniter4\settings\src\Handlers\DatabaseHandler.php(51): CodeIgniter\Settings\Handlers\DatabaseHandler->hydrate(null)
+ 4 VENDORPATH\codeigniter4\settings\src\Settings.php(59): CodeIgniter\Settings\Handlers\DatabaseHandler->has('Config\\Auth', 'sessionConfig', null)
+ 5 VENDORPATH\codeigniter4\settings\src\Helpers\setting_helper.php(25): CodeIgniter\Settings\Settings->get('Auth.sessionConfig')
+ 6 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(685): setting('Auth.sessionConfig')
+ 7 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(703): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserInfo()
+ 8 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(390): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionKey('id')
+ 9 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(374): CodeIgniter\Shield\Authentication\Authenticators\Session->checkUserState()
+10 VENDORPATH\codeigniter4\shield\src\Auth.php(191): CodeIgniter\Shield\Authentication\Authenticators\Session->loggedIn()
+11 VENDORPATH\codeigniter4\shield\src\Collectors\Auth.php(76): CodeIgniter\Shield\Auth->__call('loggedIn', [])
+12 SYSTEMPATH\Debug\Toolbar\Collectors\BaseCollector.php(226): CodeIgniter\Shield\Collectors\Auth->display()
+13 SYSTEMPATH\Debug\Toolbar.php(93): CodeIgniter\Debug\Toolbar\Collectors\BaseCollector->getAsArray()
+14 SYSTEMPATH\Debug\Toolbar.php(369): CodeIgniter\Debug\Toolbar->run(1708490979.744172, 0.1289, Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+15 SYSTEMPATH\Filters\DebugToolbar.php(42): CodeIgniter\Debug\Toolbar->prepare(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+16 SYSTEMPATH\Filters\Filters.php(210): CodeIgniter\Filters\DebugToolbar->after(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), null)
+17 SYSTEMPATH\CodeIgniter.php(522): CodeIgniter\Filters\Filters->run('admin/home', 'after')
+18 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+19 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+20 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+ERROR - 2024-02-21 04:52:28 --> mysqli_sql_exception: Table 'computershop.settings' doesn't exist in D:\xampp\file\htdocs\ComputerShop\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\xampp\file\htdocs\ComputerShop\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\xampp\file\htdocs\ComputerShop\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\xampp\file\htdocs\ComputerShop\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\xampp\file\htdocs\ComputerShop\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\settings\src\Handlers\DatabaseHandler.php(186): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\settings\src\Handlers\DatabaseHandler.php(51): CodeIgniter\Settings\Handlers\DatabaseHandler->hydrate(NULL)
+#6 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\settings\src\Settings.php(59): CodeIgniter\Settings\Handlers\DatabaseHandler->has('Config\\Auth', 'sessionConfig', NULL)
+#7 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\settings\src\Helpers\setting_helper.php(25): CodeIgniter\Settings\Settings->get('Auth.sessionCon...')
+#8 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(685): setting('Auth.sessionCon...')
+#9 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(703): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserInfo()
+#10 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(390): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionKey('id')
+#11 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(374): CodeIgniter\Shield\Authentication\Authenticators\Session->checkUserState()
+#12 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Auth.php(191): CodeIgniter\Shield\Authentication\Authenticators\Session->loggedIn()
+#13 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Collectors\Auth.php(76): CodeIgniter\Shield\Auth->__call('loggedIn', Array)
+#14 D:\xampp\file\htdocs\ComputerShop\system\Debug\Toolbar\Collectors\BaseCollector.php(226): CodeIgniter\Shield\Collectors\Auth->display()
+#15 D:\xampp\file\htdocs\ComputerShop\system\Debug\Toolbar.php(93): CodeIgniter\Debug\Toolbar\Collectors\BaseCollector->getAsArray()
+#16 D:\xampp\file\htdocs\ComputerShop\system\Debug\Toolbar.php(369): CodeIgniter\Debug\Toolbar->run(1708491148.7936, 0.0832, Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+#17 D:\xampp\file\htdocs\ComputerShop\system\Filters\DebugToolbar.php(42): CodeIgniter\Debug\Toolbar->prepare(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+#18 D:\xampp\file\htdocs\ComputerShop\system\Filters\Filters.php(210): CodeIgniter\Filters\DebugToolbar->after(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), NULL)
+#19 D:\xampp\file\htdocs\ComputerShop\system\CodeIgniter.php(522): CodeIgniter\Filters\Filters->run('admin/home', 'after')
+#20 D:\xampp\file\htdocs\ComputerShop\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#21 D:\xampp\file\htdocs\ComputerShop\public\index.php(81): CodeIgniter\CodeIgniter->run()
+#22 D:\xampp\file\htdocs\ComputerShop\system\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\h...')
+#23 {main}
+CRITICAL - 2024-02-21 04:52:28 --> Table 'computershop.settings' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `settings`
+WHERE `context` IS NULL', [], false)
+ 2 VENDORPATH\codeigniter4\settings\src\Handlers\DatabaseHandler.php(186): CodeIgniter\Database\BaseBuilder->get()
+ 3 VENDORPATH\codeigniter4\settings\src\Handlers\DatabaseHandler.php(51): CodeIgniter\Settings\Handlers\DatabaseHandler->hydrate(null)
+ 4 VENDORPATH\codeigniter4\settings\src\Settings.php(59): CodeIgniter\Settings\Handlers\DatabaseHandler->has('Config\\Auth', 'sessionConfig', null)
+ 5 VENDORPATH\codeigniter4\settings\src\Helpers\setting_helper.php(25): CodeIgniter\Settings\Settings->get('Auth.sessionConfig')
+ 6 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(685): setting('Auth.sessionConfig')
+ 7 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(703): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserInfo()
+ 8 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(390): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionKey('id')
+ 9 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(374): CodeIgniter\Shield\Authentication\Authenticators\Session->checkUserState()
+10 VENDORPATH\codeigniter4\shield\src\Auth.php(191): CodeIgniter\Shield\Authentication\Authenticators\Session->loggedIn()
+11 VENDORPATH\codeigniter4\shield\src\Collectors\Auth.php(76): CodeIgniter\Shield\Auth->__call('loggedIn', [])
+12 SYSTEMPATH\Debug\Toolbar\Collectors\BaseCollector.php(226): CodeIgniter\Shield\Collectors\Auth->display()
+13 SYSTEMPATH\Debug\Toolbar.php(93): CodeIgniter\Debug\Toolbar\Collectors\BaseCollector->getAsArray()
+14 SYSTEMPATH\Debug\Toolbar.php(369): CodeIgniter\Debug\Toolbar->run(1708491148.793639, 0.0832, Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+15 SYSTEMPATH\Filters\DebugToolbar.php(42): CodeIgniter\Debug\Toolbar->prepare(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+16 SYSTEMPATH\Filters\Filters.php(210): CodeIgniter\Filters\DebugToolbar->after(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), null)
+17 SYSTEMPATH\CodeIgniter.php(522): CodeIgniter\Filters\Filters->run('admin/home', 'after')
+18 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+19 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+20 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+ERROR - 2024-02-21 04:55:17 --> mysqli_sql_exception: Table 'computershop.settings' doesn't exist in D:\xampp\file\htdocs\ComputerShop\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\xampp\file\htdocs\ComputerShop\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\xampp\file\htdocs\ComputerShop\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\xampp\file\htdocs\ComputerShop\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\xampp\file\htdocs\ComputerShop\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\settings\src\Handlers\DatabaseHandler.php(186): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\settings\src\Handlers\DatabaseHandler.php(51): CodeIgniter\Settings\Handlers\DatabaseHandler->hydrate(NULL)
+#6 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\settings\src\Settings.php(59): CodeIgniter\Settings\Handlers\DatabaseHandler->has('Config\\Auth', 'sessionConfig', NULL)
+#7 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\settings\src\Helpers\setting_helper.php(25): CodeIgniter\Settings\Settings->get('Auth.sessionCon...')
+#8 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(685): setting('Auth.sessionCon...')
+#9 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(703): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserInfo()
+#10 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(390): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionKey('id')
+#11 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(374): CodeIgniter\Shield\Authentication\Authenticators\Session->checkUserState()
+#12 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Auth.php(191): CodeIgniter\Shield\Authentication\Authenticators\Session->loggedIn()
+#13 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Collectors\Auth.php(76): CodeIgniter\Shield\Auth->__call('loggedIn', Array)
+#14 D:\xampp\file\htdocs\ComputerShop\system\Debug\Toolbar\Collectors\BaseCollector.php(226): CodeIgniter\Shield\Collectors\Auth->display()
+#15 D:\xampp\file\htdocs\ComputerShop\system\Debug\Toolbar.php(93): CodeIgniter\Debug\Toolbar\Collectors\BaseCollector->getAsArray()
+#16 D:\xampp\file\htdocs\ComputerShop\system\Debug\Toolbar.php(369): CodeIgniter\Debug\Toolbar->run(1708491317.1407, 0.0863, Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+#17 D:\xampp\file\htdocs\ComputerShop\system\Filters\DebugToolbar.php(42): CodeIgniter\Debug\Toolbar->prepare(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+#18 D:\xampp\file\htdocs\ComputerShop\system\Filters\Filters.php(210): CodeIgniter\Filters\DebugToolbar->after(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), NULL)
+#19 D:\xampp\file\htdocs\ComputerShop\system\CodeIgniter.php(522): CodeIgniter\Filters\Filters->run('admin/home', 'after')
+#20 D:\xampp\file\htdocs\ComputerShop\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#21 D:\xampp\file\htdocs\ComputerShop\public\index.php(81): CodeIgniter\CodeIgniter->run()
+#22 D:\xampp\file\htdocs\ComputerShop\system\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\h...')
+#23 {main}
+CRITICAL - 2024-02-21 04:55:17 --> Table 'computershop.settings' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `settings`
+WHERE `context` IS NULL', [], false)
+ 2 VENDORPATH\codeigniter4\settings\src\Handlers\DatabaseHandler.php(186): CodeIgniter\Database\BaseBuilder->get()
+ 3 VENDORPATH\codeigniter4\settings\src\Handlers\DatabaseHandler.php(51): CodeIgniter\Settings\Handlers\DatabaseHandler->hydrate(null)
+ 4 VENDORPATH\codeigniter4\settings\src\Settings.php(59): CodeIgniter\Settings\Handlers\DatabaseHandler->has('Config\\Auth', 'sessionConfig', null)
+ 5 VENDORPATH\codeigniter4\settings\src\Helpers\setting_helper.php(25): CodeIgniter\Settings\Settings->get('Auth.sessionConfig')
+ 6 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(685): setting('Auth.sessionConfig')
+ 7 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(703): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserInfo()
+ 8 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(390): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionKey('id')
+ 9 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(374): CodeIgniter\Shield\Authentication\Authenticators\Session->checkUserState()
+10 VENDORPATH\codeigniter4\shield\src\Auth.php(191): CodeIgniter\Shield\Authentication\Authenticators\Session->loggedIn()
+11 VENDORPATH\codeigniter4\shield\src\Collectors\Auth.php(76): CodeIgniter\Shield\Auth->__call('loggedIn', [])
+12 SYSTEMPATH\Debug\Toolbar\Collectors\BaseCollector.php(226): CodeIgniter\Shield\Collectors\Auth->display()
+13 SYSTEMPATH\Debug\Toolbar.php(93): CodeIgniter\Debug\Toolbar\Collectors\BaseCollector->getAsArray()
+14 SYSTEMPATH\Debug\Toolbar.php(369): CodeIgniter\Debug\Toolbar->run(1708491317.140663, 0.0863, Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+15 SYSTEMPATH\Filters\DebugToolbar.php(42): CodeIgniter\Debug\Toolbar->prepare(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+16 SYSTEMPATH\Filters\Filters.php(210): CodeIgniter\Filters\DebugToolbar->after(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), null)
+17 SYSTEMPATH\CodeIgniter.php(522): CodeIgniter\Filters\Filters->run('admin/home', 'after')
+18 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+19 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+20 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+ERROR - 2024-02-21 04:56:38 --> mysqli_sql_exception: Table 'computershop.settings' doesn't exist in D:\xampp\file\htdocs\ComputerShop\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\xampp\file\htdocs\ComputerShop\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\xampp\file\htdocs\ComputerShop\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\xampp\file\htdocs\ComputerShop\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\xampp\file\htdocs\ComputerShop\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\settings\src\Handlers\DatabaseHandler.php(186): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\settings\src\Handlers\DatabaseHandler.php(51): CodeIgniter\Settings\Handlers\DatabaseHandler->hydrate(NULL)
+#6 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\settings\src\Settings.php(59): CodeIgniter\Settings\Handlers\DatabaseHandler->has('Config\\Validati...', 'registration', NULL)
+#7 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\settings\src\Helpers\setting_helper.php(25): CodeIgniter\Settings\Settings->get('Validation.regi...')
+#8 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Validation\ValidationRules.php(39): setting('Validation.regi...')
+#9 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Commands\User.php(221): CodeIgniter\Shield\Validation\ValidationRules->getRegistrationRules()
+#10 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Commands\User.php(139): CodeIgniter\Shield\Commands\User->setValidationRules()
+#11 D:\xampp\file\htdocs\ComputerShop\system\CLI\Commands.php(65): CodeIgniter\Shield\Commands\User->run(Array)
+#12 D:\xampp\file\htdocs\ComputerShop\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('shield:user', Array)
+#13 D:\xampp\file\htdocs\ComputerShop\spark(102): CodeIgniter\CLI\Console->run()
+#14 {main}
+CRITICAL - 2024-02-21 04:56:38 --> Table 'computershop.settings' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `settings`
+WHERE `context` IS NULL', [], false)
+ 2 VENDORPATH\codeigniter4\settings\src\Handlers\DatabaseHandler.php(186): CodeIgniter\Database\BaseBuilder->get()
+ 3 VENDORPATH\codeigniter4\settings\src\Handlers\DatabaseHandler.php(51): CodeIgniter\Settings\Handlers\DatabaseHandler->hydrate(null)
+ 4 VENDORPATH\codeigniter4\settings\src\Settings.php(59): CodeIgniter\Settings\Handlers\DatabaseHandler->has('Config\\Validation', 'registration', null)
+ 5 VENDORPATH\codeigniter4\settings\src\Helpers\setting_helper.php(25): CodeIgniter\Settings\Settings->get('Validation.registration')
+ 6 VENDORPATH\codeigniter4\shield\src\Validation\ValidationRules.php(39): setting('Validation.registration')
+ 7 VENDORPATH\codeigniter4\shield\src\Commands\User.php(221): CodeIgniter\Shield\Validation\ValidationRules->getRegistrationRules()
+ 8 VENDORPATH\codeigniter4\shield\src\Commands\User.php(139): CodeIgniter\Shield\Commands\User->setValidationRules()
+ 9 SYSTEMPATH\CLI\Commands.php(65): CodeIgniter\Shield\Commands\User->run([])
+10 SYSTEMPATH\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('shield:user', [])
+11 ROOTPATH\spark(102): CodeIgniter\CLI\Console->run()
+ERROR - 2024-02-21 04:58:20 --> mysqli_sql_exception: Table 'computershop.settings' doesn't exist in D:\xampp\file\htdocs\ComputerShop\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\xampp\file\htdocs\ComputerShop\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\xampp\file\htdocs\ComputerShop\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\xampp\file\htdocs\ComputerShop\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\xampp\file\htdocs\ComputerShop\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\settings\src\Handlers\DatabaseHandler.php(186): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\settings\src\Handlers\DatabaseHandler.php(51): CodeIgniter\Settings\Handlers\DatabaseHandler->hydrate(NULL)
+#6 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\settings\src\Settings.php(59): CodeIgniter\Settings\Handlers\DatabaseHandler->has('Config\\Validati...', 'registration', NULL)
+#7 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\settings\src\Helpers\setting_helper.php(25): CodeIgniter\Settings\Settings->get('Validation.regi...')
+#8 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Validation\ValidationRules.php(39): setting('Validation.regi...')
+#9 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Commands\User.php(221): CodeIgniter\Shield\Validation\ValidationRules->getRegistrationRules()
+#10 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Commands\User.php(139): CodeIgniter\Shield\Commands\User->setValidationRules()
+#11 D:\xampp\file\htdocs\ComputerShop\system\CLI\Commands.php(65): CodeIgniter\Shield\Commands\User->run(Array)
+#12 D:\xampp\file\htdocs\ComputerShop\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('shield:user', Array)
+#13 D:\xampp\file\htdocs\ComputerShop\spark(102): CodeIgniter\CLI\Console->run()
+#14 {main}
+CRITICAL - 2024-02-21 04:58:20 --> Table 'computershop.settings' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `settings`
+WHERE `context` IS NULL', [], false)
+ 2 VENDORPATH\codeigniter4\settings\src\Handlers\DatabaseHandler.php(186): CodeIgniter\Database\BaseBuilder->get()
+ 3 VENDORPATH\codeigniter4\settings\src\Handlers\DatabaseHandler.php(51): CodeIgniter\Settings\Handlers\DatabaseHandler->hydrate(null)
+ 4 VENDORPATH\codeigniter4\settings\src\Settings.php(59): CodeIgniter\Settings\Handlers\DatabaseHandler->has('Config\\Validation', 'registration', null)
+ 5 VENDORPATH\codeigniter4\settings\src\Helpers\setting_helper.php(25): CodeIgniter\Settings\Settings->get('Validation.registration')
+ 6 VENDORPATH\codeigniter4\shield\src\Validation\ValidationRules.php(39): setting('Validation.registration')
+ 7 VENDORPATH\codeigniter4\shield\src\Commands\User.php(221): CodeIgniter\Shield\Validation\ValidationRules->getRegistrationRules()
+ 8 VENDORPATH\codeigniter4\shield\src\Commands\User.php(139): CodeIgniter\Shield\Commands\User->setValidationRules()
+ 9 SYSTEMPATH\CLI\Commands.php(65): CodeIgniter\Shield\Commands\User->run([])
+10 SYSTEMPATH\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('shield:user', [])
+11 ROOTPATH\spark(102): CodeIgniter\CLI\Console->run()
+ERROR - 2024-02-21 05:01:05 --> mysqli_sql_exception: Table 'computershop.settings' doesn't exist in D:\xampp\file\htdocs\ComputerShop\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\xampp\file\htdocs\ComputerShop\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\xampp\file\htdocs\ComputerShop\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\xampp\file\htdocs\ComputerShop\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\xampp\file\htdocs\ComputerShop\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\settings\src\Handlers\DatabaseHandler.php(186): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\settings\src\Handlers\DatabaseHandler.php(51): CodeIgniter\Settings\Handlers\DatabaseHandler->hydrate(NULL)
+#6 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\settings\src\Settings.php(59): CodeIgniter\Settings\Handlers\DatabaseHandler->has('Config\\Auth', 'sessionConfig', NULL)
+#7 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\settings\src\Helpers\setting_helper.php(25): CodeIgniter\Settings\Settings->get('Auth.sessionCon...')
+#8 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(685): setting('Auth.sessionCon...')
+#9 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(703): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserInfo()
+#10 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(390): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionKey('id')
+#11 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(374): CodeIgniter\Shield\Authentication\Authenticators\Session->checkUserState()
+#12 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Auth.php(191): CodeIgniter\Shield\Authentication\Authenticators\Session->loggedIn()
+#13 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Collectors\Auth.php(76): CodeIgniter\Shield\Auth->__call('loggedIn', Array)
+#14 D:\xampp\file\htdocs\ComputerShop\system\Debug\Toolbar\Collectors\BaseCollector.php(226): CodeIgniter\Shield\Collectors\Auth->display()
+#15 D:\xampp\file\htdocs\ComputerShop\system\Debug\Toolbar.php(93): CodeIgniter\Debug\Toolbar\Collectors\BaseCollector->getAsArray()
+#16 D:\xampp\file\htdocs\ComputerShop\system\Debug\Toolbar.php(369): CodeIgniter\Debug\Toolbar->run(1708491665.3816, 0.0699, Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+#17 D:\xampp\file\htdocs\ComputerShop\system\Filters\DebugToolbar.php(42): CodeIgniter\Debug\Toolbar->prepare(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+#18 D:\xampp\file\htdocs\ComputerShop\system\Filters\Filters.php(210): CodeIgniter\Filters\DebugToolbar->after(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), NULL)
+#19 D:\xampp\file\htdocs\ComputerShop\system\CodeIgniter.php(522): CodeIgniter\Filters\Filters->run('admin/home', 'after')
+#20 D:\xampp\file\htdocs\ComputerShop\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#21 D:\xampp\file\htdocs\ComputerShop\public\index.php(81): CodeIgniter\CodeIgniter->run()
+#22 D:\xampp\file\htdocs\ComputerShop\system\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\h...')
+#23 {main}
+CRITICAL - 2024-02-21 05:01:05 --> Table 'computershop.settings' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `settings`
+WHERE `context` IS NULL', [], false)
+ 2 VENDORPATH\codeigniter4\settings\src\Handlers\DatabaseHandler.php(186): CodeIgniter\Database\BaseBuilder->get()
+ 3 VENDORPATH\codeigniter4\settings\src\Handlers\DatabaseHandler.php(51): CodeIgniter\Settings\Handlers\DatabaseHandler->hydrate(null)
+ 4 VENDORPATH\codeigniter4\settings\src\Settings.php(59): CodeIgniter\Settings\Handlers\DatabaseHandler->has('Config\\Auth', 'sessionConfig', null)
+ 5 VENDORPATH\codeigniter4\settings\src\Helpers\setting_helper.php(25): CodeIgniter\Settings\Settings->get('Auth.sessionConfig')
+ 6 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(685): setting('Auth.sessionConfig')
+ 7 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(703): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserInfo()
+ 8 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(390): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionKey('id')
+ 9 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(374): CodeIgniter\Shield\Authentication\Authenticators\Session->checkUserState()
+10 VENDORPATH\codeigniter4\shield\src\Auth.php(191): CodeIgniter\Shield\Authentication\Authenticators\Session->loggedIn()
+11 VENDORPATH\codeigniter4\shield\src\Collectors\Auth.php(76): CodeIgniter\Shield\Auth->__call('loggedIn', [])
+12 SYSTEMPATH\Debug\Toolbar\Collectors\BaseCollector.php(226): CodeIgniter\Shield\Collectors\Auth->display()
+13 SYSTEMPATH\Debug\Toolbar.php(93): CodeIgniter\Debug\Toolbar\Collectors\BaseCollector->getAsArray()
+14 SYSTEMPATH\Debug\Toolbar.php(369): CodeIgniter\Debug\Toolbar->run(1708491665.381638, 0.0699, Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+15 SYSTEMPATH\Filters\DebugToolbar.php(42): CodeIgniter\Debug\Toolbar->prepare(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+16 SYSTEMPATH\Filters\Filters.php(210): CodeIgniter\Filters\DebugToolbar->after(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), null)
+17 SYSTEMPATH\CodeIgniter.php(522): CodeIgniter\Filters\Filters->run('admin/home', 'after')
+18 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+19 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+20 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+ERROR - 2024-02-21 05:02:06 --> mysqli_sql_exception: Table 'computershop.settings' doesn't exist in D:\xampp\file\htdocs\ComputerShop\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\xampp\file\htdocs\ComputerShop\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\xampp\file\htdocs\ComputerShop\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\xampp\file\htdocs\ComputerShop\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\xampp\file\htdocs\ComputerShop\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\settings\src\Handlers\DatabaseHandler.php(186): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\settings\src\Handlers\DatabaseHandler.php(51): CodeIgniter\Settings\Handlers\DatabaseHandler->hydrate(NULL)
+#6 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\settings\src\Settings.php(59): CodeIgniter\Settings\Handlers\DatabaseHandler->has('Config\\Auth', 'sessionConfig', NULL)
+#7 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\settings\src\Helpers\setting_helper.php(25): CodeIgniter\Settings\Settings->get('Auth.sessionCon...')
+#8 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(685): setting('Auth.sessionCon...')
+#9 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(703): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserInfo()
+#10 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(390): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionKey('id')
+#11 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(374): CodeIgniter\Shield\Authentication\Authenticators\Session->checkUserState()
+#12 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Auth.php(191): CodeIgniter\Shield\Authentication\Authenticators\Session->loggedIn()
+#13 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Collectors\Auth.php(76): CodeIgniter\Shield\Auth->__call('loggedIn', Array)
+#14 D:\xampp\file\htdocs\ComputerShop\system\Debug\Toolbar\Collectors\BaseCollector.php(226): CodeIgniter\Shield\Collectors\Auth->display()
+#15 D:\xampp\file\htdocs\ComputerShop\system\Debug\Toolbar.php(93): CodeIgniter\Debug\Toolbar\Collectors\BaseCollector->getAsArray()
+#16 D:\xampp\file\htdocs\ComputerShop\system\Debug\Toolbar.php(369): CodeIgniter\Debug\Toolbar->run(1708491726.6327, 0.1139, Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+#17 D:\xampp\file\htdocs\ComputerShop\system\Filters\DebugToolbar.php(42): CodeIgniter\Debug\Toolbar->prepare(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+#18 D:\xampp\file\htdocs\ComputerShop\system\Filters\Filters.php(210): CodeIgniter\Filters\DebugToolbar->after(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), NULL)
+#19 D:\xampp\file\htdocs\ComputerShop\system\CodeIgniter.php(522): CodeIgniter\Filters\Filters->run('admin/home', 'after')
+#20 D:\xampp\file\htdocs\ComputerShop\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#21 D:\xampp\file\htdocs\ComputerShop\public\index.php(81): CodeIgniter\CodeIgniter->run()
+#22 D:\xampp\file\htdocs\ComputerShop\system\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\h...')
+#23 {main}
+CRITICAL - 2024-02-21 05:02:06 --> Table 'computershop.settings' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `settings`
+WHERE `context` IS NULL', [], false)
+ 2 VENDORPATH\codeigniter4\settings\src\Handlers\DatabaseHandler.php(186): CodeIgniter\Database\BaseBuilder->get()
+ 3 VENDORPATH\codeigniter4\settings\src\Handlers\DatabaseHandler.php(51): CodeIgniter\Settings\Handlers\DatabaseHandler->hydrate(null)
+ 4 VENDORPATH\codeigniter4\settings\src\Settings.php(59): CodeIgniter\Settings\Handlers\DatabaseHandler->has('Config\\Auth', 'sessionConfig', null)
+ 5 VENDORPATH\codeigniter4\settings\src\Helpers\setting_helper.php(25): CodeIgniter\Settings\Settings->get('Auth.sessionConfig')
+ 6 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(685): setting('Auth.sessionConfig')
+ 7 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(703): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserInfo()
+ 8 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(390): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionKey('id')
+ 9 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(374): CodeIgniter\Shield\Authentication\Authenticators\Session->checkUserState()
+10 VENDORPATH\codeigniter4\shield\src\Auth.php(191): CodeIgniter\Shield\Authentication\Authenticators\Session->loggedIn()
+11 VENDORPATH\codeigniter4\shield\src\Collectors\Auth.php(76): CodeIgniter\Shield\Auth->__call('loggedIn', [])
+12 SYSTEMPATH\Debug\Toolbar\Collectors\BaseCollector.php(226): CodeIgniter\Shield\Collectors\Auth->display()
+13 SYSTEMPATH\Debug\Toolbar.php(93): CodeIgniter\Debug\Toolbar\Collectors\BaseCollector->getAsArray()
+14 SYSTEMPATH\Debug\Toolbar.php(369): CodeIgniter\Debug\Toolbar->run(1708491726.63267, 0.1139, Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+15 SYSTEMPATH\Filters\DebugToolbar.php(42): CodeIgniter\Debug\Toolbar->prepare(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+16 SYSTEMPATH\Filters\Filters.php(210): CodeIgniter\Filters\DebugToolbar->after(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), null)
+17 SYSTEMPATH\CodeIgniter.php(522): CodeIgniter\Filters\Filters->run('admin/home', 'after')
+18 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+19 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+20 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+ERROR - 2024-02-21 05:03:06 --> mysqli_sql_exception: Table 'computershop.settings' doesn't exist in D:\xampp\file\htdocs\ComputerShop\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\xampp\file\htdocs\ComputerShop\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\xampp\file\htdocs\ComputerShop\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\xampp\file\htdocs\ComputerShop\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\xampp\file\htdocs\ComputerShop\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\settings\src\Handlers\DatabaseHandler.php(186): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\settings\src\Handlers\DatabaseHandler.php(51): CodeIgniter\Settings\Handlers\DatabaseHandler->hydrate(NULL)
+#6 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\settings\src\Settings.php(59): CodeIgniter\Settings\Handlers\DatabaseHandler->has('CodeIgniter\\Shi...', 'sessionConfig', NULL)
+#7 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\settings\src\Helpers\setting_helper.php(25): CodeIgniter\Settings\Settings->get('Auth.sessionCon...')
+#8 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(685): setting('Auth.sessionCon...')
+#9 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(703): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserInfo()
+#10 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(390): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionKey('id')
+#11 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(374): CodeIgniter\Shield\Authentication\Authenticators\Session->checkUserState()
+#12 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Auth.php(191): CodeIgniter\Shield\Authentication\Authenticators\Session->loggedIn()
+#13 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Collectors\Auth.php(76): CodeIgniter\Shield\Auth->__call('loggedIn', Array)
+#14 D:\xampp\file\htdocs\ComputerShop\system\Debug\Toolbar\Collectors\BaseCollector.php(226): CodeIgniter\Shield\Collectors\Auth->display()
+#15 D:\xampp\file\htdocs\ComputerShop\system\Debug\Toolbar.php(93): CodeIgniter\Debug\Toolbar\Collectors\BaseCollector->getAsArray()
+#16 D:\xampp\file\htdocs\ComputerShop\system\Debug\Toolbar.php(369): CodeIgniter\Debug\Toolbar->run(1708491785.9087, 0.0976, Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+#17 D:\xampp\file\htdocs\ComputerShop\system\Filters\DebugToolbar.php(42): CodeIgniter\Debug\Toolbar->prepare(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+#18 D:\xampp\file\htdocs\ComputerShop\system\Filters\Filters.php(210): CodeIgniter\Filters\DebugToolbar->after(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), NULL)
+#19 D:\xampp\file\htdocs\ComputerShop\system\CodeIgniter.php(522): CodeIgniter\Filters\Filters->run('admin/home', 'after')
+#20 D:\xampp\file\htdocs\ComputerShop\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#21 D:\xampp\file\htdocs\ComputerShop\public\index.php(81): CodeIgniter\CodeIgniter->run()
+#22 D:\xampp\file\htdocs\ComputerShop\system\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\h...')
+#23 {main}
+CRITICAL - 2024-02-21 05:03:06 --> Table 'computershop.settings' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `settings`
+WHERE `context` IS NULL', [], false)
+ 2 VENDORPATH\codeigniter4\settings\src\Handlers\DatabaseHandler.php(186): CodeIgniter\Database\BaseBuilder->get()
+ 3 VENDORPATH\codeigniter4\settings\src\Handlers\DatabaseHandler.php(51): CodeIgniter\Settings\Handlers\DatabaseHandler->hydrate(null)
+ 4 VENDORPATH\codeigniter4\settings\src\Settings.php(59): CodeIgniter\Settings\Handlers\DatabaseHandler->has('CodeIgniter\\Shield\\Config\\Auth', 'sessionConfig', null)
+ 5 VENDORPATH\codeigniter4\settings\src\Helpers\setting_helper.php(25): CodeIgniter\Settings\Settings->get('Auth.sessionConfig')
+ 6 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(685): setting('Auth.sessionConfig')
+ 7 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(703): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserInfo()
+ 8 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(390): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionKey('id')
+ 9 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(374): CodeIgniter\Shield\Authentication\Authenticators\Session->checkUserState()
+10 VENDORPATH\codeigniter4\shield\src\Auth.php(191): CodeIgniter\Shield\Authentication\Authenticators\Session->loggedIn()
+11 VENDORPATH\codeigniter4\shield\src\Collectors\Auth.php(76): CodeIgniter\Shield\Auth->__call('loggedIn', [])
+12 SYSTEMPATH\Debug\Toolbar\Collectors\BaseCollector.php(226): CodeIgniter\Shield\Collectors\Auth->display()
+13 SYSTEMPATH\Debug\Toolbar.php(93): CodeIgniter\Debug\Toolbar\Collectors\BaseCollector->getAsArray()
+14 SYSTEMPATH\Debug\Toolbar.php(369): CodeIgniter\Debug\Toolbar->run(1708491785.90874, 0.0976, Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+15 SYSTEMPATH\Filters\DebugToolbar.php(42): CodeIgniter\Debug\Toolbar->prepare(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+16 SYSTEMPATH\Filters\Filters.php(210): CodeIgniter\Filters\DebugToolbar->after(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), null)
+17 SYSTEMPATH\CodeIgniter.php(522): CodeIgniter\Filters\Filters->run('admin/home', 'after')
+18 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+19 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+20 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+ERROR - 2024-02-21 05:03:08 --> mysqli_sql_exception: Table 'computershop.settings' doesn't exist in D:\xampp\file\htdocs\ComputerShop\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\xampp\file\htdocs\ComputerShop\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\xampp\file\htdocs\ComputerShop\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\xampp\file\htdocs\ComputerShop\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\xampp\file\htdocs\ComputerShop\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\settings\src\Handlers\DatabaseHandler.php(186): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\settings\src\Handlers\DatabaseHandler.php(51): CodeIgniter\Settings\Handlers\DatabaseHandler->hydrate(NULL)
+#6 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\settings\src\Settings.php(59): CodeIgniter\Settings\Handlers\DatabaseHandler->has('CodeIgniter\\Shi...', 'sessionConfig', NULL)
+#7 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\settings\src\Helpers\setting_helper.php(25): CodeIgniter\Settings\Settings->get('Auth.sessionCon...')
+#8 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(685): setting('Auth.sessionCon...')
+#9 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(703): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserInfo()
+#10 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(390): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionKey('id')
+#11 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(374): CodeIgniter\Shield\Authentication\Authenticators\Session->checkUserState()
+#12 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Auth.php(191): CodeIgniter\Shield\Authentication\Authenticators\Session->loggedIn()
+#13 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Collectors\Auth.php(76): CodeIgniter\Shield\Auth->__call('loggedIn', Array)
+#14 D:\xampp\file\htdocs\ComputerShop\system\Debug\Toolbar\Collectors\BaseCollector.php(226): CodeIgniter\Shield\Collectors\Auth->display()
+#15 D:\xampp\file\htdocs\ComputerShop\system\Debug\Toolbar.php(93): CodeIgniter\Debug\Toolbar\Collectors\BaseCollector->getAsArray()
+#16 D:\xampp\file\htdocs\ComputerShop\system\Debug\Toolbar.php(369): CodeIgniter\Debug\Toolbar->run(1708491788.3261, 0.0911, Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+#17 D:\xampp\file\htdocs\ComputerShop\system\Filters\DebugToolbar.php(42): CodeIgniter\Debug\Toolbar->prepare(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+#18 D:\xampp\file\htdocs\ComputerShop\system\Filters\Filters.php(210): CodeIgniter\Filters\DebugToolbar->after(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), NULL)
+#19 D:\xampp\file\htdocs\ComputerShop\system\CodeIgniter.php(522): CodeIgniter\Filters\Filters->run('admin/home', 'after')
+#20 D:\xampp\file\htdocs\ComputerShop\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#21 D:\xampp\file\htdocs\ComputerShop\public\index.php(81): CodeIgniter\CodeIgniter->run()
+#22 D:\xampp\file\htdocs\ComputerShop\system\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\h...')
+#23 {main}
+CRITICAL - 2024-02-21 05:03:08 --> Table 'computershop.settings' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `settings`
+WHERE `context` IS NULL', [], false)
+ 2 VENDORPATH\codeigniter4\settings\src\Handlers\DatabaseHandler.php(186): CodeIgniter\Database\BaseBuilder->get()
+ 3 VENDORPATH\codeigniter4\settings\src\Handlers\DatabaseHandler.php(51): CodeIgniter\Settings\Handlers\DatabaseHandler->hydrate(null)
+ 4 VENDORPATH\codeigniter4\settings\src\Settings.php(59): CodeIgniter\Settings\Handlers\DatabaseHandler->has('CodeIgniter\\Shield\\Config\\Auth', 'sessionConfig', null)
+ 5 VENDORPATH\codeigniter4\settings\src\Helpers\setting_helper.php(25): CodeIgniter\Settings\Settings->get('Auth.sessionConfig')
+ 6 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(685): setting('Auth.sessionConfig')
+ 7 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(703): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserInfo()
+ 8 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(390): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionKey('id')
+ 9 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(374): CodeIgniter\Shield\Authentication\Authenticators\Session->checkUserState()
+10 VENDORPATH\codeigniter4\shield\src\Auth.php(191): CodeIgniter\Shield\Authentication\Authenticators\Session->loggedIn()
+11 VENDORPATH\codeigniter4\shield\src\Collectors\Auth.php(76): CodeIgniter\Shield\Auth->__call('loggedIn', [])
+12 SYSTEMPATH\Debug\Toolbar\Collectors\BaseCollector.php(226): CodeIgniter\Shield\Collectors\Auth->display()
+13 SYSTEMPATH\Debug\Toolbar.php(93): CodeIgniter\Debug\Toolbar\Collectors\BaseCollector->getAsArray()
+14 SYSTEMPATH\Debug\Toolbar.php(369): CodeIgniter\Debug\Toolbar->run(1708491788.326132, 0.0911, Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+15 SYSTEMPATH\Filters\DebugToolbar.php(42): CodeIgniter\Debug\Toolbar->prepare(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+16 SYSTEMPATH\Filters\Filters.php(210): CodeIgniter\Filters\DebugToolbar->after(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), null)
+17 SYSTEMPATH\CodeIgniter.php(522): CodeIgniter\Filters\Filters->run('admin/home', 'after')
+18 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+19 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+20 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+ERROR - 2024-02-21 05:04:11 --> mysqli_sql_exception: Table 'computershop.settings' doesn't exist in D:\xampp\file\htdocs\ComputerShop\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\xampp\file\htdocs\ComputerShop\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\xampp\file\htdocs\ComputerShop\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\xampp\file\htdocs\ComputerShop\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\xampp\file\htdocs\ComputerShop\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\settings\src\Handlers\DatabaseHandler.php(186): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\settings\src\Handlers\DatabaseHandler.php(51): CodeIgniter\Settings\Handlers\DatabaseHandler->hydrate(NULL)
+#6 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\settings\src\Settings.php(59): CodeIgniter\Settings\Handlers\DatabaseHandler->has('CodeIgniter\\Shi...', 'sessionConfig', NULL)
+#7 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\settings\src\Helpers\setting_helper.php(25): CodeIgniter\Settings\Settings->get('Auth.sessionCon...')
+#8 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(685): setting('Auth.sessionCon...')
+#9 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(703): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserInfo()
+#10 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(390): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionKey('id')
+#11 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(374): CodeIgniter\Shield\Authentication\Authenticators\Session->checkUserState()
+#12 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Auth.php(191): CodeIgniter\Shield\Authentication\Authenticators\Session->loggedIn()
+#13 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Collectors\Auth.php(76): CodeIgniter\Shield\Auth->__call('loggedIn', Array)
+#14 D:\xampp\file\htdocs\ComputerShop\system\Debug\Toolbar\Collectors\BaseCollector.php(226): CodeIgniter\Shield\Collectors\Auth->display()
+#15 D:\xampp\file\htdocs\ComputerShop\system\Debug\Toolbar.php(93): CodeIgniter\Debug\Toolbar\Collectors\BaseCollector->getAsArray()
+#16 D:\xampp\file\htdocs\ComputerShop\system\Debug\Toolbar.php(369): CodeIgniter\Debug\Toolbar->run(1708491851.0057, 0.0844, Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+#17 D:\xampp\file\htdocs\ComputerShop\system\Filters\DebugToolbar.php(42): CodeIgniter\Debug\Toolbar->prepare(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+#18 D:\xampp\file\htdocs\ComputerShop\system\Filters\Filters.php(210): CodeIgniter\Filters\DebugToolbar->after(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), NULL)
+#19 D:\xampp\file\htdocs\ComputerShop\system\CodeIgniter.php(522): CodeIgniter\Filters\Filters->run('admin/home', 'after')
+#20 D:\xampp\file\htdocs\ComputerShop\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#21 D:\xampp\file\htdocs\ComputerShop\public\index.php(81): CodeIgniter\CodeIgniter->run()
+#22 D:\xampp\file\htdocs\ComputerShop\system\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\h...')
+#23 {main}
+CRITICAL - 2024-02-21 05:04:11 --> Table 'computershop.settings' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `settings`
+WHERE `context` IS NULL', [], false)
+ 2 VENDORPATH\codeigniter4\settings\src\Handlers\DatabaseHandler.php(186): CodeIgniter\Database\BaseBuilder->get()
+ 3 VENDORPATH\codeigniter4\settings\src\Handlers\DatabaseHandler.php(51): CodeIgniter\Settings\Handlers\DatabaseHandler->hydrate(null)
+ 4 VENDORPATH\codeigniter4\settings\src\Settings.php(59): CodeIgniter\Settings\Handlers\DatabaseHandler->has('CodeIgniter\\Shield\\Config\\Auth', 'sessionConfig', null)
+ 5 VENDORPATH\codeigniter4\settings\src\Helpers\setting_helper.php(25): CodeIgniter\Settings\Settings->get('Auth.sessionConfig')
+ 6 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(685): setting('Auth.sessionConfig')
+ 7 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(703): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserInfo()
+ 8 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(390): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionKey('id')
+ 9 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(374): CodeIgniter\Shield\Authentication\Authenticators\Session->checkUserState()
+10 VENDORPATH\codeigniter4\shield\src\Auth.php(191): CodeIgniter\Shield\Authentication\Authenticators\Session->loggedIn()
+11 VENDORPATH\codeigniter4\shield\src\Collectors\Auth.php(76): CodeIgniter\Shield\Auth->__call('loggedIn', [])
+12 SYSTEMPATH\Debug\Toolbar\Collectors\BaseCollector.php(226): CodeIgniter\Shield\Collectors\Auth->display()
+13 SYSTEMPATH\Debug\Toolbar.php(93): CodeIgniter\Debug\Toolbar\Collectors\BaseCollector->getAsArray()
+14 SYSTEMPATH\Debug\Toolbar.php(369): CodeIgniter\Debug\Toolbar->run(1708491851.005671, 0.0844, Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+15 SYSTEMPATH\Filters\DebugToolbar.php(42): CodeIgniter\Debug\Toolbar->prepare(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+16 SYSTEMPATH\Filters\Filters.php(210): CodeIgniter\Filters\DebugToolbar->after(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), null)
+17 SYSTEMPATH\CodeIgniter.php(522): CodeIgniter\Filters\Filters->run('admin/home', 'after')
+18 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+19 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+20 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+ERROR - 2024-02-21 05:05:12 --> mysqli_sql_exception: Table 'computershop.settings' doesn't exist in D:\xampp\file\htdocs\ComputerShop\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\xampp\file\htdocs\ComputerShop\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\xampp\file\htdocs\ComputerShop\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\xampp\file\htdocs\ComputerShop\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\xampp\file\htdocs\ComputerShop\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\settings\src\Handlers\DatabaseHandler.php(186): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\settings\src\Handlers\DatabaseHandler.php(51): CodeIgniter\Settings\Handlers\DatabaseHandler->hydrate(NULL)
+#6 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\settings\src\Settings.php(59): CodeIgniter\Settings\Handlers\DatabaseHandler->has('CodeIgniter\\Shi...', 'sessionConfig', NULL)
+#7 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\settings\src\Helpers\setting_helper.php(25): CodeIgniter\Settings\Settings->get('Auth.sessionCon...')
+#8 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(685): setting('Auth.sessionCon...')
+#9 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(703): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserInfo()
+#10 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(390): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionKey('id')
+#11 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(374): CodeIgniter\Shield\Authentication\Authenticators\Session->checkUserState()
+#12 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Auth.php(191): CodeIgniter\Shield\Authentication\Authenticators\Session->loggedIn()
+#13 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Collectors\Auth.php(76): CodeIgniter\Shield\Auth->__call('loggedIn', Array)
+#14 D:\xampp\file\htdocs\ComputerShop\system\Debug\Toolbar\Collectors\BaseCollector.php(226): CodeIgniter\Shield\Collectors\Auth->display()
+#15 D:\xampp\file\htdocs\ComputerShop\system\Debug\Toolbar.php(93): CodeIgniter\Debug\Toolbar\Collectors\BaseCollector->getAsArray()
+#16 D:\xampp\file\htdocs\ComputerShop\system\Debug\Toolbar.php(369): CodeIgniter\Debug\Toolbar->run(1708491912.6023, 0.0759, Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+#17 D:\xampp\file\htdocs\ComputerShop\system\Filters\DebugToolbar.php(42): CodeIgniter\Debug\Toolbar->prepare(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+#18 D:\xampp\file\htdocs\ComputerShop\system\Filters\Filters.php(210): CodeIgniter\Filters\DebugToolbar->after(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), NULL)
+#19 D:\xampp\file\htdocs\ComputerShop\system\CodeIgniter.php(522): CodeIgniter\Filters\Filters->run('admin/home', 'after')
+#20 D:\xampp\file\htdocs\ComputerShop\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#21 D:\xampp\file\htdocs\ComputerShop\public\index.php(81): CodeIgniter\CodeIgniter->run()
+#22 D:\xampp\file\htdocs\ComputerShop\system\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\h...')
+#23 {main}
+CRITICAL - 2024-02-21 05:05:12 --> Table 'computershop.settings' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `settings`
+WHERE `context` IS NULL', [], false)
+ 2 VENDORPATH\codeigniter4\settings\src\Handlers\DatabaseHandler.php(186): CodeIgniter\Database\BaseBuilder->get()
+ 3 VENDORPATH\codeigniter4\settings\src\Handlers\DatabaseHandler.php(51): CodeIgniter\Settings\Handlers\DatabaseHandler->hydrate(null)
+ 4 VENDORPATH\codeigniter4\settings\src\Settings.php(59): CodeIgniter\Settings\Handlers\DatabaseHandler->has('CodeIgniter\\Shield\\Config\\Auth', 'sessionConfig', null)
+ 5 VENDORPATH\codeigniter4\settings\src\Helpers\setting_helper.php(25): CodeIgniter\Settings\Settings->get('Auth.sessionConfig')
+ 6 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(685): setting('Auth.sessionConfig')
+ 7 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(703): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserInfo()
+ 8 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(390): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionKey('id')
+ 9 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(374): CodeIgniter\Shield\Authentication\Authenticators\Session->checkUserState()
+10 VENDORPATH\codeigniter4\shield\src\Auth.php(191): CodeIgniter\Shield\Authentication\Authenticators\Session->loggedIn()
+11 VENDORPATH\codeigniter4\shield\src\Collectors\Auth.php(76): CodeIgniter\Shield\Auth->__call('loggedIn', [])
+12 SYSTEMPATH\Debug\Toolbar\Collectors\BaseCollector.php(226): CodeIgniter\Shield\Collectors\Auth->display()
+13 SYSTEMPATH\Debug\Toolbar.php(93): CodeIgniter\Debug\Toolbar\Collectors\BaseCollector->getAsArray()
+14 SYSTEMPATH\Debug\Toolbar.php(369): CodeIgniter\Debug\Toolbar->run(1708491912.602326, 0.0759, Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+15 SYSTEMPATH\Filters\DebugToolbar.php(42): CodeIgniter\Debug\Toolbar->prepare(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+16 SYSTEMPATH\Filters\Filters.php(210): CodeIgniter\Filters\DebugToolbar->after(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), null)
+17 SYSTEMPATH\CodeIgniter.php(522): CodeIgniter\Filters\Filters->run('admin/home', 'after')
+18 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+19 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+20 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+ERROR - 2024-02-21 05:05:59 --> mysqli_sql_exception: Table 'computershop.settings' doesn't exist in D:\xampp\file\htdocs\ComputerShop\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\xampp\file\htdocs\ComputerShop\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\xampp\file\htdocs\ComputerShop\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\xampp\file\htdocs\ComputerShop\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\xampp\file\htdocs\ComputerShop\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\settings\src\Handlers\DatabaseHandler.php(186): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\settings\src\Handlers\DatabaseHandler.php(51): CodeIgniter\Settings\Handlers\DatabaseHandler->hydrate(NULL)
+#6 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\settings\src\Settings.php(59): CodeIgniter\Settings\Handlers\DatabaseHandler->has('CodeIgniter\\Shi...', 'sessionConfig', NULL)
+#7 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\settings\src\Helpers\setting_helper.php(25): CodeIgniter\Settings\Settings->get('Auth.sessionCon...')
+#8 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(685): setting('Auth.sessionCon...')
+#9 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(703): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserInfo()
+#10 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(390): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionKey('id')
+#11 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(374): CodeIgniter\Shield\Authentication\Authenticators\Session->checkUserState()
+#12 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Auth.php(191): CodeIgniter\Shield\Authentication\Authenticators\Session->loggedIn()
+#13 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Collectors\Auth.php(76): CodeIgniter\Shield\Auth->__call('loggedIn', Array)
+#14 D:\xampp\file\htdocs\ComputerShop\system\Debug\Toolbar\Collectors\BaseCollector.php(226): CodeIgniter\Shield\Collectors\Auth->display()
+#15 D:\xampp\file\htdocs\ComputerShop\system\Debug\Toolbar.php(93): CodeIgniter\Debug\Toolbar\Collectors\BaseCollector->getAsArray()
+#16 D:\xampp\file\htdocs\ComputerShop\system\Debug\Toolbar.php(369): CodeIgniter\Debug\Toolbar->run(1708491958.9384, 0.1456, Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+#17 D:\xampp\file\htdocs\ComputerShop\system\Filters\DebugToolbar.php(42): CodeIgniter\Debug\Toolbar->prepare(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+#18 D:\xampp\file\htdocs\ComputerShop\system\Filters\Filters.php(210): CodeIgniter\Filters\DebugToolbar->after(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), NULL)
+#19 D:\xampp\file\htdocs\ComputerShop\system\CodeIgniter.php(522): CodeIgniter\Filters\Filters->run('admin/home', 'after')
+#20 D:\xampp\file\htdocs\ComputerShop\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#21 D:\xampp\file\htdocs\ComputerShop\public\index.php(81): CodeIgniter\CodeIgniter->run()
+#22 D:\xampp\file\htdocs\ComputerShop\system\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\h...')
+#23 {main}
+CRITICAL - 2024-02-21 05:05:59 --> Table 'computershop.settings' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `settings`
+WHERE `context` IS NULL', [], false)
+ 2 VENDORPATH\codeigniter4\settings\src\Handlers\DatabaseHandler.php(186): CodeIgniter\Database\BaseBuilder->get()
+ 3 VENDORPATH\codeigniter4\settings\src\Handlers\DatabaseHandler.php(51): CodeIgniter\Settings\Handlers\DatabaseHandler->hydrate(null)
+ 4 VENDORPATH\codeigniter4\settings\src\Settings.php(59): CodeIgniter\Settings\Handlers\DatabaseHandler->has('CodeIgniter\\Shield\\Config\\Auth', 'sessionConfig', null)
+ 5 VENDORPATH\codeigniter4\settings\src\Helpers\setting_helper.php(25): CodeIgniter\Settings\Settings->get('Auth.sessionConfig')
+ 6 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(685): setting('Auth.sessionConfig')
+ 7 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(703): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserInfo()
+ 8 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(390): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionKey('id')
+ 9 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(374): CodeIgniter\Shield\Authentication\Authenticators\Session->checkUserState()
+10 VENDORPATH\codeigniter4\shield\src\Auth.php(191): CodeIgniter\Shield\Authentication\Authenticators\Session->loggedIn()
+11 VENDORPATH\codeigniter4\shield\src\Collectors\Auth.php(76): CodeIgniter\Shield\Auth->__call('loggedIn', [])
+12 SYSTEMPATH\Debug\Toolbar\Collectors\BaseCollector.php(226): CodeIgniter\Shield\Collectors\Auth->display()
+13 SYSTEMPATH\Debug\Toolbar.php(93): CodeIgniter\Debug\Toolbar\Collectors\BaseCollector->getAsArray()
+14 SYSTEMPATH\Debug\Toolbar.php(369): CodeIgniter\Debug\Toolbar->run(1708491958.938431, 0.1456, Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+15 SYSTEMPATH\Filters\DebugToolbar.php(42): CodeIgniter\Debug\Toolbar->prepare(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+16 SYSTEMPATH\Filters\Filters.php(210): CodeIgniter\Filters\DebugToolbar->after(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), null)
+17 SYSTEMPATH\CodeIgniter.php(522): CodeIgniter\Filters\Filters->run('admin/home', 'after')
+18 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+19 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+20 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+ERROR - 2024-02-21 05:08:42 --> mysqli_sql_exception: Table 'computershop.settings' doesn't exist in D:\xampp\file\htdocs\ComputerShop\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\xampp\file\htdocs\ComputerShop\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\xampp\file\htdocs\ComputerShop\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\xampp\file\htdocs\ComputerShop\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\xampp\file\htdocs\ComputerShop\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\settings\src\Handlers\DatabaseHandler.php(186): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\settings\src\Handlers\DatabaseHandler.php(51): CodeIgniter\Settings\Handlers\DatabaseHandler->hydrate(NULL)
+#6 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\settings\src\Settings.php(59): CodeIgniter\Settings\Handlers\DatabaseHandler->has('Config\\Auth', 'sessionConfig', NULL)
+#7 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\settings\src\Helpers\setting_helper.php(25): CodeIgniter\Settings\Settings->get('Auth.sessionCon...')
+#8 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(685): setting('Auth.sessionCon...')
+#9 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(703): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserInfo()
+#10 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(390): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionKey('id')
+#11 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(374): CodeIgniter\Shield\Authentication\Authenticators\Session->checkUserState()
+#12 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Auth.php(191): CodeIgniter\Shield\Authentication\Authenticators\Session->loggedIn()
+#13 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Collectors\Auth.php(76): CodeIgniter\Shield\Auth->__call('loggedIn', Array)
+#14 D:\xampp\file\htdocs\ComputerShop\system\Debug\Toolbar\Collectors\BaseCollector.php(226): CodeIgniter\Shield\Collectors\Auth->display()
+#15 D:\xampp\file\htdocs\ComputerShop\system\Debug\Toolbar.php(93): CodeIgniter\Debug\Toolbar\Collectors\BaseCollector->getAsArray()
+#16 D:\xampp\file\htdocs\ComputerShop\system\Debug\Toolbar.php(369): CodeIgniter\Debug\Toolbar->run(1708492122.5865, 0.2332, Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+#17 D:\xampp\file\htdocs\ComputerShop\system\Filters\DebugToolbar.php(42): CodeIgniter\Debug\Toolbar->prepare(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+#18 D:\xampp\file\htdocs\ComputerShop\system\Filters\Filters.php(210): CodeIgniter\Filters\DebugToolbar->after(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), NULL)
+#19 D:\xampp\file\htdocs\ComputerShop\system\CodeIgniter.php(522): CodeIgniter\Filters\Filters->run('admin/home', 'after')
+#20 D:\xampp\file\htdocs\ComputerShop\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#21 D:\xampp\file\htdocs\ComputerShop\public\index.php(81): CodeIgniter\CodeIgniter->run()
+#22 D:\xampp\file\htdocs\ComputerShop\system\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\h...')
+#23 {main}
+CRITICAL - 2024-02-21 05:08:42 --> Table 'computershop.settings' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `settings`
+WHERE `context` IS NULL', [], false)
+ 2 VENDORPATH\codeigniter4\settings\src\Handlers\DatabaseHandler.php(186): CodeIgniter\Database\BaseBuilder->get()
+ 3 VENDORPATH\codeigniter4\settings\src\Handlers\DatabaseHandler.php(51): CodeIgniter\Settings\Handlers\DatabaseHandler->hydrate(null)
+ 4 VENDORPATH\codeigniter4\settings\src\Settings.php(59): CodeIgniter\Settings\Handlers\DatabaseHandler->has('Config\\Auth', 'sessionConfig', null)
+ 5 VENDORPATH\codeigniter4\settings\src\Helpers\setting_helper.php(25): CodeIgniter\Settings\Settings->get('Auth.sessionConfig')
+ 6 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(685): setting('Auth.sessionConfig')
+ 7 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(703): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserInfo()
+ 8 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(390): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionKey('id')
+ 9 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(374): CodeIgniter\Shield\Authentication\Authenticators\Session->checkUserState()
+10 VENDORPATH\codeigniter4\shield\src\Auth.php(191): CodeIgniter\Shield\Authentication\Authenticators\Session->loggedIn()
+11 VENDORPATH\codeigniter4\shield\src\Collectors\Auth.php(76): CodeIgniter\Shield\Auth->__call('loggedIn', [])
+12 SYSTEMPATH\Debug\Toolbar\Collectors\BaseCollector.php(226): CodeIgniter\Shield\Collectors\Auth->display()
+13 SYSTEMPATH\Debug\Toolbar.php(93): CodeIgniter\Debug\Toolbar\Collectors\BaseCollector->getAsArray()
+14 SYSTEMPATH\Debug\Toolbar.php(369): CodeIgniter\Debug\Toolbar->run(1708492122.58651, 0.2332, Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+15 SYSTEMPATH\Filters\DebugToolbar.php(42): CodeIgniter\Debug\Toolbar->prepare(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+16 SYSTEMPATH\Filters\Filters.php(210): CodeIgniter\Filters\DebugToolbar->after(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), null)
+17 SYSTEMPATH\CodeIgniter.php(522): CodeIgniter\Filters\Filters->run('admin/home', 'after')
+18 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+19 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+20 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+ERROR - 2024-02-21 05:13:36 --> mysqli_sql_exception: Table 'computershop.settings' doesn't exist in D:\xampp\file\htdocs\ComputerShop\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\xampp\file\htdocs\ComputerShop\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\xampp\file\htdocs\ComputerShop\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\xampp\file\htdocs\ComputerShop\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\xampp\file\htdocs\ComputerShop\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\settings\src\Handlers\DatabaseHandler.php(186): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\settings\src\Handlers\DatabaseHandler.php(51): CodeIgniter\Settings\Handlers\DatabaseHandler->hydrate(NULL)
+#6 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\settings\src\Settings.php(59): CodeIgniter\Settings\Handlers\DatabaseHandler->has('CodeIgniter\\Shi...', 'sessionConfig', NULL)
+#7 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\settings\src\Helpers\setting_helper.php(25): CodeIgniter\Settings\Settings->get('Auth.sessionCon...')
+#8 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(685): setting('Auth.sessionCon...')
+#9 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(703): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserInfo()
+#10 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(390): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionKey('id')
+#11 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(374): CodeIgniter\Shield\Authentication\Authenticators\Session->checkUserState()
+#12 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Auth.php(191): CodeIgniter\Shield\Authentication\Authenticators\Session->loggedIn()
+#13 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Collectors\Auth.php(76): CodeIgniter\Shield\Auth->__call('loggedIn', Array)
+#14 D:\xampp\file\htdocs\ComputerShop\system\Debug\Toolbar\Collectors\BaseCollector.php(226): CodeIgniter\Shield\Collectors\Auth->display()
+#15 D:\xampp\file\htdocs\ComputerShop\system\Debug\Toolbar.php(93): CodeIgniter\Debug\Toolbar\Collectors\BaseCollector->getAsArray()
+#16 D:\xampp\file\htdocs\ComputerShop\system\Debug\Toolbar.php(369): CodeIgniter\Debug\Toolbar->run(1708492416.3496, 0.1209, Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+#17 D:\xampp\file\htdocs\ComputerShop\system\Filters\DebugToolbar.php(42): CodeIgniter\Debug\Toolbar->prepare(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+#18 D:\xampp\file\htdocs\ComputerShop\system\Filters\Filters.php(210): CodeIgniter\Filters\DebugToolbar->after(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), NULL)
+#19 D:\xampp\file\htdocs\ComputerShop\system\CodeIgniter.php(522): CodeIgniter\Filters\Filters->run('admin/home', 'after')
+#20 D:\xampp\file\htdocs\ComputerShop\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#21 D:\xampp\file\htdocs\ComputerShop\public\index.php(81): CodeIgniter\CodeIgniter->run()
+#22 D:\xampp\file\htdocs\ComputerShop\system\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\h...')
+#23 {main}
+CRITICAL - 2024-02-21 05:13:36 --> Table 'computershop.settings' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `settings`
+WHERE `context` IS NULL', [], false)
+ 2 VENDORPATH\codeigniter4\settings\src\Handlers\DatabaseHandler.php(186): CodeIgniter\Database\BaseBuilder->get()
+ 3 VENDORPATH\codeigniter4\settings\src\Handlers\DatabaseHandler.php(51): CodeIgniter\Settings\Handlers\DatabaseHandler->hydrate(null)
+ 4 VENDORPATH\codeigniter4\settings\src\Settings.php(59): CodeIgniter\Settings\Handlers\DatabaseHandler->has('CodeIgniter\\Shield\\Config\\Auth', 'sessionConfig', null)
+ 5 VENDORPATH\codeigniter4\settings\src\Helpers\setting_helper.php(25): CodeIgniter\Settings\Settings->get('Auth.sessionConfig')
+ 6 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(685): setting('Auth.sessionConfig')
+ 7 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(703): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserInfo()
+ 8 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(390): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionKey('id')
+ 9 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(374): CodeIgniter\Shield\Authentication\Authenticators\Session->checkUserState()
+10 VENDORPATH\codeigniter4\shield\src\Auth.php(191): CodeIgniter\Shield\Authentication\Authenticators\Session->loggedIn()
+11 VENDORPATH\codeigniter4\shield\src\Collectors\Auth.php(76): CodeIgniter\Shield\Auth->__call('loggedIn', [])
+12 SYSTEMPATH\Debug\Toolbar\Collectors\BaseCollector.php(226): CodeIgniter\Shield\Collectors\Auth->display()
+13 SYSTEMPATH\Debug\Toolbar.php(93): CodeIgniter\Debug\Toolbar\Collectors\BaseCollector->getAsArray()
+14 SYSTEMPATH\Debug\Toolbar.php(369): CodeIgniter\Debug\Toolbar->run(1708492416.349599, 0.1209, Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+15 SYSTEMPATH\Filters\DebugToolbar.php(42): CodeIgniter\Debug\Toolbar->prepare(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+16 SYSTEMPATH\Filters\Filters.php(210): CodeIgniter\Filters\DebugToolbar->after(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), null)
+17 SYSTEMPATH\CodeIgniter.php(522): CodeIgniter\Filters\Filters->run('admin/home', 'after')
+18 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+19 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+20 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+ERROR - 2024-02-21 05:17:05 --> mysqli_sql_exception: Table 'computershop.settings' doesn't exist in D:\xampp\file\htdocs\ComputerShop\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\xampp\file\htdocs\ComputerShop\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\xampp\file\htdocs\ComputerShop\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\xampp\file\htdocs\ComputerShop\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\xampp\file\htdocs\ComputerShop\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\settings\src\Handlers\DatabaseHandler.php(186): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\settings\src\Handlers\DatabaseHandler.php(51): CodeIgniter\Settings\Handlers\DatabaseHandler->hydrate(NULL)
+#6 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\settings\src\Settings.php(59): CodeIgniter\Settings\Handlers\DatabaseHandler->has('CodeIgniter\\Shi...', 'sessionConfig', NULL)
+#7 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\settings\src\Helpers\setting_helper.php(25): CodeIgniter\Settings\Settings->get('Auth.sessionCon...')
+#8 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(685): setting('Auth.sessionCon...')
+#9 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(703): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserInfo()
+#10 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(390): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionKey('id')
+#11 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(374): CodeIgniter\Shield\Authentication\Authenticators\Session->checkUserState()
+#12 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Auth.php(191): CodeIgniter\Shield\Authentication\Authenticators\Session->loggedIn()
+#13 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Collectors\Auth.php(76): CodeIgniter\Shield\Auth->__call('loggedIn', Array)
+#14 D:\xampp\file\htdocs\ComputerShop\system\Debug\Toolbar\Collectors\BaseCollector.php(226): CodeIgniter\Shield\Collectors\Auth->display()
+#15 D:\xampp\file\htdocs\ComputerShop\system\Debug\Toolbar.php(93): CodeIgniter\Debug\Toolbar\Collectors\BaseCollector->getAsArray()
+#16 D:\xampp\file\htdocs\ComputerShop\system\Debug\Toolbar.php(369): CodeIgniter\Debug\Toolbar->run(1708492624.9211, 0.075, Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+#17 D:\xampp\file\htdocs\ComputerShop\system\Filters\DebugToolbar.php(42): CodeIgniter\Debug\Toolbar->prepare(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+#18 D:\xampp\file\htdocs\ComputerShop\system\Filters\Filters.php(210): CodeIgniter\Filters\DebugToolbar->after(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), NULL)
+#19 D:\xampp\file\htdocs\ComputerShop\system\CodeIgniter.php(522): CodeIgniter\Filters\Filters->run('admin/home', 'after')
+#20 D:\xampp\file\htdocs\ComputerShop\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#21 D:\xampp\file\htdocs\ComputerShop\public\index.php(81): CodeIgniter\CodeIgniter->run()
+#22 D:\xampp\file\htdocs\ComputerShop\system\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\h...')
+#23 {main}
+CRITICAL - 2024-02-21 05:17:05 --> Table 'computershop.settings' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `settings`
+WHERE `context` IS NULL', [], false)
+ 2 VENDORPATH\codeigniter4\settings\src\Handlers\DatabaseHandler.php(186): CodeIgniter\Database\BaseBuilder->get()
+ 3 VENDORPATH\codeigniter4\settings\src\Handlers\DatabaseHandler.php(51): CodeIgniter\Settings\Handlers\DatabaseHandler->hydrate(null)
+ 4 VENDORPATH\codeigniter4\settings\src\Settings.php(59): CodeIgniter\Settings\Handlers\DatabaseHandler->has('CodeIgniter\\Shield\\Config\\Auth', 'sessionConfig', null)
+ 5 VENDORPATH\codeigniter4\settings\src\Helpers\setting_helper.php(25): CodeIgniter\Settings\Settings->get('Auth.sessionConfig')
+ 6 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(685): setting('Auth.sessionConfig')
+ 7 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(703): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserInfo()
+ 8 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(390): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionKey('id')
+ 9 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(374): CodeIgniter\Shield\Authentication\Authenticators\Session->checkUserState()
+10 VENDORPATH\codeigniter4\shield\src\Auth.php(191): CodeIgniter\Shield\Authentication\Authenticators\Session->loggedIn()
+11 VENDORPATH\codeigniter4\shield\src\Collectors\Auth.php(76): CodeIgniter\Shield\Auth->__call('loggedIn', [])
+12 SYSTEMPATH\Debug\Toolbar\Collectors\BaseCollector.php(226): CodeIgniter\Shield\Collectors\Auth->display()
+13 SYSTEMPATH\Debug\Toolbar.php(93): CodeIgniter\Debug\Toolbar\Collectors\BaseCollector->getAsArray()
+14 SYSTEMPATH\Debug\Toolbar.php(369): CodeIgniter\Debug\Toolbar->run(1708492624.921072, 0.075, Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+15 SYSTEMPATH\Filters\DebugToolbar.php(42): CodeIgniter\Debug\Toolbar->prepare(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+16 SYSTEMPATH\Filters\Filters.php(210): CodeIgniter\Filters\DebugToolbar->after(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), null)
+17 SYSTEMPATH\CodeIgniter.php(522): CodeIgniter\Filters\Filters->run('admin/home', 'after')
+18 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+19 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+20 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+ERROR - 2024-02-21 05:21:16 --> mysqli_sql_exception: Table 'computershop.settings' doesn't exist in D:\xampp\file\htdocs\ComputerShop\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\xampp\file\htdocs\ComputerShop\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\xampp\file\htdocs\ComputerShop\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\xampp\file\htdocs\ComputerShop\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\xampp\file\htdocs\ComputerShop\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\settings\src\Handlers\DatabaseHandler.php(186): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\settings\src\Handlers\DatabaseHandler.php(51): CodeIgniter\Settings\Handlers\DatabaseHandler->hydrate(NULL)
+#6 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\settings\src\Settings.php(59): CodeIgniter\Settings\Handlers\DatabaseHandler->has('CodeIgniter\\Shi...', 'sessionConfig', NULL)
+#7 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\settings\src\Helpers\setting_helper.php(25): CodeIgniter\Settings\Settings->get('Auth.sessionCon...')
+#8 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(685): setting('Auth.sessionCon...')
+#9 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(703): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserInfo()
+#10 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(390): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionKey('id')
+#11 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(374): CodeIgniter\Shield\Authentication\Authenticators\Session->checkUserState()
+#12 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Auth.php(191): CodeIgniter\Shield\Authentication\Authenticators\Session->loggedIn()
+#13 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Collectors\Auth.php(76): CodeIgniter\Shield\Auth->__call('loggedIn', Array)
+#14 D:\xampp\file\htdocs\ComputerShop\system\Debug\Toolbar\Collectors\BaseCollector.php(226): CodeIgniter\Shield\Collectors\Auth->display()
+#15 D:\xampp\file\htdocs\ComputerShop\system\Debug\Toolbar.php(93): CodeIgniter\Debug\Toolbar\Collectors\BaseCollector->getAsArray()
+#16 D:\xampp\file\htdocs\ComputerShop\system\Debug\Toolbar.php(369): CodeIgniter\Debug\Toolbar->run(1708492876.0722, 0.1071, Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+#17 D:\xampp\file\htdocs\ComputerShop\system\Filters\DebugToolbar.php(42): CodeIgniter\Debug\Toolbar->prepare(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+#18 D:\xampp\file\htdocs\ComputerShop\system\Filters\Filters.php(210): CodeIgniter\Filters\DebugToolbar->after(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), NULL)
+#19 D:\xampp\file\htdocs\ComputerShop\system\CodeIgniter.php(522): CodeIgniter\Filters\Filters->run('admin/login', 'after')
+#20 D:\xampp\file\htdocs\ComputerShop\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#21 D:\xampp\file\htdocs\ComputerShop\public\index.php(81): CodeIgniter\CodeIgniter->run()
+#22 D:\xampp\file\htdocs\ComputerShop\system\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\h...')
+#23 {main}
+CRITICAL - 2024-02-21 05:21:16 --> Table 'computershop.settings' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `settings`
+WHERE `context` IS NULL', [], false)
+ 2 VENDORPATH\codeigniter4\settings\src\Handlers\DatabaseHandler.php(186): CodeIgniter\Database\BaseBuilder->get()
+ 3 VENDORPATH\codeigniter4\settings\src\Handlers\DatabaseHandler.php(51): CodeIgniter\Settings\Handlers\DatabaseHandler->hydrate(null)
+ 4 VENDORPATH\codeigniter4\settings\src\Settings.php(59): CodeIgniter\Settings\Handlers\DatabaseHandler->has('CodeIgniter\\Shield\\Config\\Auth', 'sessionConfig', null)
+ 5 VENDORPATH\codeigniter4\settings\src\Helpers\setting_helper.php(25): CodeIgniter\Settings\Settings->get('Auth.sessionConfig')
+ 6 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(685): setting('Auth.sessionConfig')
+ 7 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(703): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserInfo()
+ 8 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(390): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionKey('id')
+ 9 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(374): CodeIgniter\Shield\Authentication\Authenticators\Session->checkUserState()
+10 VENDORPATH\codeigniter4\shield\src\Auth.php(191): CodeIgniter\Shield\Authentication\Authenticators\Session->loggedIn()
+11 VENDORPATH\codeigniter4\shield\src\Collectors\Auth.php(76): CodeIgniter\Shield\Auth->__call('loggedIn', [])
+12 SYSTEMPATH\Debug\Toolbar\Collectors\BaseCollector.php(226): CodeIgniter\Shield\Collectors\Auth->display()
+13 SYSTEMPATH\Debug\Toolbar.php(93): CodeIgniter\Debug\Toolbar\Collectors\BaseCollector->getAsArray()
+14 SYSTEMPATH\Debug\Toolbar.php(369): CodeIgniter\Debug\Toolbar->run(1708492876.072163, 0.1071, Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+15 SYSTEMPATH\Filters\DebugToolbar.php(42): CodeIgniter\Debug\Toolbar->prepare(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+16 SYSTEMPATH\Filters\Filters.php(210): CodeIgniter\Filters\DebugToolbar->after(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), null)
+17 SYSTEMPATH\CodeIgniter.php(522): CodeIgniter\Filters\Filters->run('admin/login', 'after')
+18 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+19 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+20 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+ERROR - 2024-02-21 05:48:47 --> mysqli_sql_exception: Table 'computershop.settings' doesn't exist in D:\xampp\file\htdocs\ComputerShop\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\xampp\file\htdocs\ComputerShop\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\xampp\file\htdocs\ComputerShop\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\xampp\file\htdocs\ComputerShop\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\xampp\file\htdocs\ComputerShop\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\settings\src\Handlers\DatabaseHandler.php(186): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\settings\src\Handlers\DatabaseHandler.php(51): CodeIgniter\Settings\Handlers\DatabaseHandler->hydrate(NULL)
+#6 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\settings\src\Settings.php(59): CodeIgniter\Settings\Handlers\DatabaseHandler->has('CodeIgniter\\Shi...', 'sessionConfig', NULL)
+#7 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\settings\src\Helpers\setting_helper.php(25): CodeIgniter\Settings\Settings->get('Auth.sessionCon...')
+#8 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(685): setting('Auth.sessionCon...')
+#9 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(703): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserInfo()
+#10 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(390): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionKey('id')
+#11 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(374): CodeIgniter\Shield\Authentication\Authenticators\Session->checkUserState()
+#12 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Auth.php(191): CodeIgniter\Shield\Authentication\Authenticators\Session->loggedIn()
+#13 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Collectors\Auth.php(76): CodeIgniter\Shield\Auth->__call('loggedIn', Array)
+#14 D:\xampp\file\htdocs\ComputerShop\system\Debug\Toolbar\Collectors\BaseCollector.php(226): CodeIgniter\Shield\Collectors\Auth->display()
+#15 D:\xampp\file\htdocs\ComputerShop\system\Debug\Toolbar.php(93): CodeIgniter\Debug\Toolbar\Collectors\BaseCollector->getAsArray()
+#16 D:\xampp\file\htdocs\ComputerShop\system\Debug\Toolbar.php(369): CodeIgniter\Debug\Toolbar->run(1708494527.5884, 0.2992, Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+#17 D:\xampp\file\htdocs\ComputerShop\system\Filters\DebugToolbar.php(42): CodeIgniter\Debug\Toolbar->prepare(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+#18 D:\xampp\file\htdocs\ComputerShop\system\Filters\Filters.php(210): CodeIgniter\Filters\DebugToolbar->after(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), NULL)
+#19 D:\xampp\file\htdocs\ComputerShop\system\CodeIgniter.php(522): CodeIgniter\Filters\Filters->run('admin/login', 'after')
+#20 D:\xampp\file\htdocs\ComputerShop\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#21 D:\xampp\file\htdocs\ComputerShop\public\index.php(81): CodeIgniter\CodeIgniter->run()
+#22 D:\xampp\file\htdocs\ComputerShop\system\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\h...')
+#23 {main}
+CRITICAL - 2024-02-21 05:48:47 --> Table 'computershop.settings' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `settings`
+WHERE `context` IS NULL', [], false)
+ 2 VENDORPATH\codeigniter4\settings\src\Handlers\DatabaseHandler.php(186): CodeIgniter\Database\BaseBuilder->get()
+ 3 VENDORPATH\codeigniter4\settings\src\Handlers\DatabaseHandler.php(51): CodeIgniter\Settings\Handlers\DatabaseHandler->hydrate(null)
+ 4 VENDORPATH\codeigniter4\settings\src\Settings.php(59): CodeIgniter\Settings\Handlers\DatabaseHandler->has('CodeIgniter\\Shield\\Config\\Auth', 'sessionConfig', null)
+ 5 VENDORPATH\codeigniter4\settings\src\Helpers\setting_helper.php(25): CodeIgniter\Settings\Settings->get('Auth.sessionConfig')
+ 6 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(685): setting('Auth.sessionConfig')
+ 7 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(703): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserInfo()
+ 8 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(390): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionKey('id')
+ 9 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(374): CodeIgniter\Shield\Authentication\Authenticators\Session->checkUserState()
+10 VENDORPATH\codeigniter4\shield\src\Auth.php(191): CodeIgniter\Shield\Authentication\Authenticators\Session->loggedIn()
+11 VENDORPATH\codeigniter4\shield\src\Collectors\Auth.php(76): CodeIgniter\Shield\Auth->__call('loggedIn', [])
+12 SYSTEMPATH\Debug\Toolbar\Collectors\BaseCollector.php(226): CodeIgniter\Shield\Collectors\Auth->display()
+13 SYSTEMPATH\Debug\Toolbar.php(93): CodeIgniter\Debug\Toolbar\Collectors\BaseCollector->getAsArray()
+14 SYSTEMPATH\Debug\Toolbar.php(369): CodeIgniter\Debug\Toolbar->run(1708494527.588426, 0.2992, Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+15 SYSTEMPATH\Filters\DebugToolbar.php(42): CodeIgniter\Debug\Toolbar->prepare(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+16 SYSTEMPATH\Filters\Filters.php(210): CodeIgniter\Filters\DebugToolbar->after(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), null)
+17 SYSTEMPATH\CodeIgniter.php(522): CodeIgniter\Filters\Filters->run('admin/login', 'after')
+18 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+19 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+20 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+INFO - 2024-02-21 05:54:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 05:54:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 06:12:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 06:12:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 06:12:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 06:12:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 06:12:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 06:12:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 06:12:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 06:12:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 06:12:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 06:12:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 06:12:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 06:14:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 06:14:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 06:14:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 06:14:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 06:14:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 06:14:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 06:17:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 06:17:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-02-21 06:17:38 --> Invalid file: "admin/login.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/login.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('admin/login', [], true)
+ 3 APPPATH\Controllers\Admin\LoginControllers.php(59): view('admin/login', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\LoginControllers->login()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\LoginControllers))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+INFO - 2024-02-21 06:17:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 06:17:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 06:17:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 06:17:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-02-21 06:18:03 --> Invalid file: "admin/login.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/login.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('admin/login', [], true)
+ 3 APPPATH\Controllers\Admin\LoginControllers.php(59): view('admin/login', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\LoginControllers->login()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\LoginControllers))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+INFO - 2024-02-21 06:18:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 06:18:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 06:18:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 06:18:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 06:18:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 06:18:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 06:19:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 06:19:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 06:19:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 06:19:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 06:21:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 06:21:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 06:27:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 06:27:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 06:27:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 06:27:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 06:27:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 06:27:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-02-21 09:59:30 --> syntax error, unexpected token "return", expecting "function" or "const"
+in APPPATH\Controllers\Admin\LoginControllers.php on line 35.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile('D:\\xampp\\file\\htdocs\\ComputerShop\\app\\Controllers\\Admin\\LoginControllers.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Admin\\LoginControllers')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Admin\\LoginControllers')
+ 4 SYSTEMPATH\CodeIgniter.php(900): class_exists('\\App\\Controllers\\Admin\\LoginControllers', true)
+ 5 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+INFO - 2024-02-21 10:00:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 10:00:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 10:00:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 10:00:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-02-21 10:14:17 --> Invalid file: "login.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('login.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('login', [], true)
+ 3 APPPATH\Controllers\Admin\LoginControllers.php(47): view('login')
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\LoginControllers->login()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\LoginControllers))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+CRITICAL - 2024-02-21 10:14:36 --> Invalid file: "admin/login.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/login.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('admin/login', [], true)
+ 3 APPPATH\Controllers\Admin\LoginControllers.php(47): view('admin/login')
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\LoginControllers->login()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\LoginControllers))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+CRITICAL - 2024-02-21 10:14:42 --> Invalid file: "admin/login.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/login.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('admin/login', [], true)
+ 3 APPPATH\Controllers\Admin\LoginControllers.php(47): view('admin/login')
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\LoginControllers->login()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\LoginControllers))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+CRITICAL - 2024-02-21 10:14:55 --> Invalid file: "admin/login.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/login.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('admin/login', [], true)
+ 3 APPPATH\Controllers\Admin\LoginControllers.php(47): view('admin/login')
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\LoginControllers->login()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\LoginControllers))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+INFO - 2024-02-21 10:15:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 10:15:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 10:15:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 10:15:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 10:15:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 10:15:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 10:16:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 10:16:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 10:16:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 10:16:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 10:16:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 10:16:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 10:16:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 10:16:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 10:19:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 10:19:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 10:21:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 10:21:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 10:21:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 10:21:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 10:21:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 10:21:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 13:28:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 13:28:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-02-21 13:45:08 --> mysqli_sql_exception: Table 'users' already exists in D:\xampp\file\htdocs\ComputerShop\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\xampp\file\htdocs\ComputerShop\system\Database\MySQLi\Connection.php(306): mysqli->query('CREATE TABLE `u...', 0)
+#1 D:\xampp\file\htdocs\ComputerShop\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `u...')
+#2 D:\xampp\file\htdocs\ComputerShop\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `u...')
+#3 D:\xampp\file\htdocs\ComputerShop\system\Database\Forge.php(546): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `u...')
+#4 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Database\Migrations\2020-12-28-223112_create_auth_tables.php(187): CodeIgniter\Database\Forge->createTable('users', false, Array)
+#5 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Database\Migrations\2020-12-28-223112_create_auth_tables.php(60): CodeIgniter\Shield\Database\Migrations\CreateAuthTables->createTable('users')
+#6 D:\xampp\file\htdocs\ComputerShop\system\Database\MigrationRunner.php(873): CodeIgniter\Shield\Database\Migrations\CreateAuthTables->up()
+#7 D:\xampp\file\htdocs\ComputerShop\system\Database\MigrationRunner.php(188): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#8 D:\xampp\file\htdocs\ComputerShop\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#9 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Commands\Setup.php(420): CodeIgniter\Commands\Database\Migrate->run(Array)
+#10 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Commands\Setup.php(97): CodeIgniter\Shield\Commands\Setup->runMigrations()
+#11 D:\xampp\file\htdocs\ComputerShop\vendor\codeigniter4\shield\src\Commands\Setup.php(82): CodeIgniter\Shield\Commands\Setup->publishConfig()
+#12 D:\xampp\file\htdocs\ComputerShop\system\CLI\Commands.php(65): CodeIgniter\Shield\Commands\Setup->run(Array)
+#13 D:\xampp\file\htdocs\ComputerShop\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('shield:setup', Array)
+#14 D:\xampp\file\htdocs\ComputerShop\spark(102): CodeIgniter\CLI\Console->run()
+#15 {main}
+INFO - 2024-02-21 13:45:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 13:45:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 13:45:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 13:45:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 13:45:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 13:45:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 13:54:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 13:54:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-02-21 13:54:47 --> mysqli_sql_exception: Table 'computershop.users' doesn't exist in D:\xampp\file\htdocs\ComputerShop\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\xampp\file\htdocs\ComputerShop\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\xampp\file\htdocs\ComputerShop\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\xampp\file\htdocs\ComputerShop\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\xampp\file\htdocs\ComputerShop\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\xampp\file\htdocs\ComputerShop\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\file\htdocs\ComputerShop\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\xampp\file\htdocs\ComputerShop\app\Services\UserService.php(24): CodeIgniter\BaseModel->findAll()
+#7 D:\xampp\file\htdocs\ComputerShop\app\Controllers\Admin\UserControllers.php(38): App\Services\UserService->getAllUsers()
+#8 D:\xampp\file\htdocs\ComputerShop\system\CodeIgniter.php(942): App\Controllers\Admin\UserControllers->list()
+#9 D:\xampp\file\htdocs\ComputerShop\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\UserControllers))
+#10 D:\xampp\file\htdocs\ComputerShop\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\xampp\file\htdocs\ComputerShop\public\index.php(81): CodeIgniter\CodeIgniter->run()
+#12 D:\xampp\file\htdocs\ComputerShop\system\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\h...')
+#13 {main}
+CRITICAL - 2024-02-21 13:54:47 --> Table 'computershop.users' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`', [], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Services\UserService.php(24): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\Admin\UserControllers.php(38): App\Services\UserService->getAllUsers()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\UserControllers->list()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\UserControllers))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+INFO - 2024-02-21 13:56:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 13:56:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 13:56:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 13:56:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 13:56:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 13:56:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 13:59:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 13:59:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 14:00:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 14:00:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 14:00:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 14:00:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 14:00:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 14:00:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 14:00:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 14:00:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 14:00:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 14:01:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 14:01:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 14:01:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 14:01:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 14:01:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 14:01:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 14:01:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 14:01:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 14:02:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 14:02:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-02-21 14:02:29 --> Undefined array key "name"
+in APPPATH\Views\Admin\pages\user\list.php on line 32.
+ 1 APPPATH\Views\Admin\pages\user\list.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "name"', 'D:\\xampp\\file\\htdocs\\ComputerShop\\app\\Views\\Admin\\pages\\user\\list.php', 32)
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\xampp\\file\\htdocs\\ComputerShop\\app\\Views\\Admin\\pages\\user\\list.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('admin/pages/user/list', [], true)
+ 5 APPPATH\Controllers\BaseController.php(65): view('admin/pages/user/list', [...])
+ 6 APPPATH\Controllers\Admin\UserControllers.php(39): App\Controllers\BaseController->loadMasterLayout([...], 'Tài khoản', 'admin/pages/user/list', [...], [...], [...])
+ 7 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\UserControllers->list()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\UserControllers))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+INFO - 2024-02-21 14:04:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 14:04:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 14:05:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 14:05:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 14:05:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 14:06:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 14:06:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 14:06:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 14:07:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 14:07:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 14:10:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 14:10:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 14:10:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 14:10:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 14:28:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 14:28:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 14:29:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 14:29:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 14:29:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 14:29:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 14:29:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 14:29:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 14:29:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 14:29:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 14:29:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 14:29:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 14:29:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 14:29:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 14:30:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 14:30:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 14:31:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 14:31:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 14:31:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 14:31:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 14:31:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 14:31:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 14:32:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 14:32:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 14:32:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 14:32:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 14:32:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 14:32:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 14:32:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 14:32:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 14:32:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 14:32:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 14:34:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 14:35:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 14:35:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 14:35:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 14:35:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 14:35:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 14:35:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 14:35:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 14:43:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 14:44:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 14:44:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 14:44:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 14:44:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 14:44:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 14:44:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 14:44:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 14:44:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 14:45:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 14:45:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 14:45:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 14:45:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 14:45:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 14:45:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 14:53:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 14:53:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 14:53:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 14:53:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 14:58:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 14:58:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 14:58:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 14:58:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 14:58:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 14:58:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 14:58:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 14:58:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 14:58:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 14:58:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 14:58:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 14:59:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 14:59:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 15:04:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 15:04:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 15:04:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 15:04:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 15:05:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 15:05:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 15:05:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 15:05:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 15:06:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 15:06:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 15:09:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 15:09:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-21 15:09:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

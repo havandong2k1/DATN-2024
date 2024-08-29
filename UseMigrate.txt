@@ -1,0 +1,73 @@
+xem hướng dẫn: php spark
+Chạy tạo bảng : php spark migrate:create CreateTableUsers
+chạy cập nhât dữ liệu: php spark migrate
+run server: php spark serve
+php spark make:seeder UserSeeder
+
+git init
+git pull origin master --allow-unrelated-histories
+git push -u origin master
+
+
+git add .
+git commit -m "ComputerShop"
+git pull
+git push
+
+
+- chức năng chỉnh sửa sản phẩm phía admin 
+- load sản phẩm lên trang product 
+- ở trang index, load sản phẩm nổi bật và phía danh mục
+khi bấm vào sẽ sang trang sản phẩm :V 
+- mỗi tên ở danh mục khi sang trang khác sẽ chỉ có sản phẩm đó, 
+- thêm cả product_detail trang đó chọn mua bán như bth (add cart)
+- sau đó mới thanh toán (thanh toán đẩy về quản lý đơn hàng ở phía admin) phần này em chưa làm chỉ 
+có thêm sủa xóa usẻ, thêm xóa sp ạ 
+- thanh toán để em ngiên cứu rồi cấu hình có j em hỏi anh :v 
+xong rùi ạ :V thăn kiu anh 
+
+
+public function delete()
+    {
+        $model = new AffiliateModel(); 
+        $ids = $this->request->getPost('affiliate_id');
+        if ($ids != '') {
+            $model->deleteMultiIds($ids);
+            session()->setFlashdata('msg_success', 'Thành công');
+        } else {
+            session()->setFlashdata('msg_error', 'Không thành công');
+        }
+        return redirect()->back();
+    }
+
+ <!-- Trong view giỏ hàng -->
+                <?php if (session()->has('views/cart')) : ?>
+                    <h1>Giỏ hàng của bạn</h1>
+                    <ul>
+                        <?php foreach (session()->get('views/cart') as $item) : ?>
+                            <li>
+                                <span><?= $item['id_product'] ?></span>
+                                <span><?= $item['images'] ?></span>
+                                <span><?= $item['name'] ?></span>
+                                <span><?= $item['description'] ?></span>
+                                <span><?= $item['price'] ?></span>
+                                <span><?= $item['quantity'] ?></span>
+                                <span><?= $item['total'] ?></span>
+                            </li>
+                        <?php endforeach; ?>
+                    </ul>
+                <?php else : ?>
+                    <p><?= view('emptycart'); ?></p>
+                <?php endif; ?>
+
+
+
+
+
+Các mục cần hoàn thiện:
+- Trang login, register cho user. sau khi đăng ký thành công auto chuyển hướng qua login, rồi login vào website
+Ở trong trang chủ, sau khi login sẽ hiển thị user ở góc bên trên phải ( ví dụ : xin chào, ...... rồi toggle xuống có đăng xuất)
+- Danh mục sản phẩm, ở trang chủ và trang sản phẩm, bấm vào mục nào sẽ chuyển sang trang sản phẩm mục đó
+- Thêm sản phẩm chạy slide để kiểu khuyến khích
+- Thêm shopping cart, hiển thị sản phẩm trong giỏ hàng, cộng trừ sản phẩm để lựa chọn
+- Cộng thanh toán giá tiền sản phẩm sau đó là PAY

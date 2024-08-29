@@ -1,0 +1,700 @@
+<?php  if (session('errorMsg')) : ?>
+    <?php foreach (session('errorMsg') as $error) : ?>
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <?= $error ?>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <?php break; ?>
+<?php endforeach ?>
+<?php endif ?>
+
+<?php if (session('successMsg')) : ?>
+    <?php foreach (session('successMsg') as $success) : ?>
+        <div class="alert alert-success fade show" role="alert">
+            <?= $success ?>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <?php break; ?>
+<?php endforeach ?>
+<?php endif ?>
+
+
+$result = $this->service->hasLoginInfo($this->request);
+        if($result["status"] === ResultUtils::STATUS_CODE_OK){
+            return redirect("admin/home");
+        }elseif($result["status"] === ResultUtils::STATUS_CODE_ERR){
+            return redirect("admin/login")->with($result['messageCode'], $result['messages']);
+        }
+        return redirect("admin/home");
+
+
+
+<?php
+
+namespace App\Controllers\Admin;
+
+use App\Controllers\BaseController;
+use App\Services\ProductsService;
+
+
+class ProductControllers extends BaseController
+{
+    /**
+        @var Service
+     */
+    private $service;
+
+    public function __construct()
+    {
+        $this->service = new ProductsService();
+    }
+
+
+    public function list(): string
+    {
+        $data = [];
+
+
+        $cssFiles = [
+            'http://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js',
+            base_url() . '/assets/admin/js/datatable.js',
+            base_url() . '/assets/admin/js/event.js',
+
+        ];
+
+        $jsFiles = [
+            'https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css',
+            base_url() . '/assets/admin/css/datatable.css'
+
+        ];
+        $dataLayout['products'] = $this->service->getAllProduct();
+        
+        $data = $this->loadMasterLayout($data, 'Danh sách sản phẩm', 'admin/pages/product/list', $dataLayout, $cssFiles, $jsFiles);
+     
+        return view('admin/main', $data);
+    }
+
+    public function add()
+    {
+        $data = [];
+        $data = $this->loadMasterLayout($data, 'Thêm sản phẩm', 'admin/pages/product/add');
+        return view('admin/main', $data);
+    }
+
+    public function create()
+    {
+        $result = $this->service->addProductsInfo($this->request);
+        return redirect('admin/product/add')->withInput()->with($result['massageCode'], $result['messages']);
+    }
+
+    public function addProducts()
+    {
+        $id = $this->request->getPost('id');
+        $images = $this->request->getPost('images');
+        $name = $this->request->getPost('name');
+        $description = $this->request->getPost('description');
+        $amount = $this->request->getPost('amount');
+        $category = $this->request->getPost('category');
+
+        $target_dir = "public/uploads";
+        $target_file = $target_dir . basename($_FILES["images"]["name"]);
+        $uploadOk = 1;
+        $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
+
+        // Check if image file is a actual image or fake image
+        if (isset($_POST["submit"])) {
+            $check = getimagesize($_FILES["images"]["tmp_name"]);
+            if ($check !== false) {
+                echo "File is an image - " . $check["mime"] . ".";
+                $uploadOk = 1;
+            } else {
+                echo "File is not an image.";
+                $uploadOk = 0;
+            }
+        }
+
+        // Check if file already exists
+        if (file_exists($target_file)) {
+            echo "Sorry, file already exists.";
+            $uploadOk = 0;
+        }
+
+        // Check file size
+        if ($_FILES["images"]["size"] > 5000000) {
+            echo "Sorry, your file is too large.";
+            $uploadOk = 0;
+        }
+
+        // Allow certain file formats
+        if (
+            $imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
+            && $imageFileType != "gif"
+        ) {
+            echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
+            $uploadOk = 0;
+        }
+
+        // Check if $uploadOk is set to 0 by an error
+        if ($uploadOk == 0) {
+            echo "Sorry, your file was not uploaded.";
+            // if everything is ok, try to upload file
+        } else {
+            if (move_uploaded_file($_FILES["images"]["tmp_name"], $target_file)) {
+                echo "The file " . htmlspecialchars(basename($_FILES["images"]["name"])) . " has been uploaded.";
+            } else {
+                echo "Sorry, there was an error uploading your file.";
+            }
+        }
+    }
+}
+
+<?php if(isset($userInfo)): ?>
+    <h2>Thông tin tài khoản</h2>
+    <p>Tên tài khoản: <?= esc($userInfo->username); ?></p>
+    <!-- Thêm các thông tin khác của người dùng tại đây -->
+
+    <h3>Đơn hàng của bạn</h3>
+    <?php foreach($orders as $order): ?>
+        <p>Đơn hàng ID: <?= esc($order->id); ?> - Trạng thái: <?= esc($order->status); ?></p>
+        <!-- Thêm chi tiết đơn hàng -->
+    <?php endforeach; ?>
+
+    <h3>Sản phẩm yêu thích</h3>
+    <?php foreach($favorites as $favorite): ?>
+        <p>Sản phẩm: <?= esc($favorite->name); ?></p>
+        <!-- Thêm chi tiết sản phẩm -->
+    <?php endforeach; ?>
+<?php else: ?>
+    <p>Bạn cần <a href="login">đăng nhập</a> để xem thông tin này.</p>
+<?php endif; ?>
+
+
+
+<div class="dash-content">
+    <div class="container-fluid">
+        <h1 class="dash-title">Trang chủ / Sản phẩm / Thêm mới</h1>
+        <div class="row">
+            <div class="col-xl-12">
+            <?= view('messages/message') ?>
+                <div class="card easion-card">
+                    <div class="card-header">
+                        <div class="easion-card-icon">
+                            <i class="fas fa-chart-bar"></i>
+                        </div>
+                        <div class="easion-card-title"> Thông tin sản phẩm </div>
+                    </div>
+                    <div class="card-body ">
+
+                    
+                        <form action="admin/product/create" enctype="multipart/form-data" method="post">
+                            <input name="id" hidden>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label>Tên sản phẩm</label>
+                                    <input value="<?= old('name') ?>" name="name" type="text" class="form-control" placeholder="Nhập tên sản phẩm" required>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <div class="form-group"><label for="input-choose-image">Ảnh sản phẩm</label>
+                                        <input value="<?= old('images') ?>" name="images" type="file" accept="image/*" class="form-control-file" id="input-choose-image" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <img id="img-show" src="" class="img-fluid" alt="Hình đại diện." style="display: none;">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label>Giá</label>
+                                    <input value="<?= old('price') ?>" name="price" type="text" class="form-control" placeholder="Nhập giá bán" required>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label>Mô tả sản phẩm</label></br>
+                                    <textarea value="<?= old('description') ?>" name="description" id="description"></textarea>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label>Danh mục</label>
+                                    <input value="<?= old('category') ?>" name="category" type="text" class="form-control" placeholder="Nhập danh mục sản phẩm" required>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label>Số lượng</label>
+                                    <input value="<?= old('amount') ?>"  name="amount" type="text" class="form-control" placeholder="Nhập số lượng" required>
+                                </div>
+                            </div>
+                            <!-- <div class="form-row">
+                                <div class="form-group col-md-12">
+                                    <label>Thời gian hỗ trợ</label>
+                                    <input name="support" type="text" class="form-control" placeholder="Nhập thông tin hỗ trợ" required>
+                                </div>
+                            </div> -->
+                            <button type="submit" class="btn btn-success">Thêm mới</button>
+                            <button type="reset" class="btn btn-secondary">Nhập lại</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+ public function addProductsInfo($requestData)
+    {
+
+        $validate = $this->validateAddProducts($requestData);
+        if ($validate->getErrors()) {
+            return [
+                'status' => ResultUtils::STATUS_CODE_ERR,
+                'messageCode' => ResultUtils::MESSAGE_CODE_ERR,
+                'messages' => $validate->getError()
+            ];
+        }
+        $dataSave = $requestData->getPost();
+        $file = $requestData->getFile('images');
+        if ($file->isValid() && !$file->hasMoved()) {
+            $newName = $file->getRandomName();
+            $dataSave['images'] = $newName;
+            $file->move('uploads', $newName);
+        }
+        try {
+            $this->product->insert($dataSave);
+            return [
+                'status' => ResultUtils::STATUS_CODE_OK,
+                'messageCode' => ResultUtils::MESSAGE_CODE_OK,
+                'messages' => ['success' => 'Thêm sản phẩm thành công']
+            ];
+        } catch (Exception $e) {
+            return [
+                'status' => ResultUtils::STATUS_CODE_ERR,
+                'messageCode' => ResultUtils::MESSAGE_CODE_ERR,
+                'messages' => ['success' => $e->getMessage()]
+            ];
+        }
+    }
+
+
+
+                                <?php foreach ($products as $categoryName => $categoryProducts) : ?>
+									<h2><?= $categoryName ?></h2>
+									<ul>
+										<?php foreach ($categoryProducts as $product) : ?>
+											<li><?= $product['name'] ?></li>
+											<li><img src="uploads/<?php echo $product['images'];?>" height="300.6px" width="279.29px" alt="images"></li>
+											<li><?= $product['price'] ?></li>
+											<li><?= $product['description'] ?></li>
+											<li><?= $product['category'] ?></li>
+											<li><?= $product['amount'] ?></li>
+										<?php endforeach; ?>
+									</ul>
+								<?php endforeach; ?>
+
+
+                                <?php if (!empty($productObj) && is_array($productObj)) : ?>
+                                <?php foreach ($productObj as $key => $value) : ?>
+                                <div class="product-information">
+                                    <?php if ($key === 'images') : ?>
+                                    <!-- Hiển thị hình ảnh -->
+                                    <img src="uploads/<?= $value; ?>" alt="images" style="width: 60px">
+                                    <?php elseif ($key === 'price') : ?>
+                                    <!-- Hiển thị giá -->
+                                    <h2><?= $value ?> VNĐ</h2>
+                                    <?php elseif ($key === 'amount') : ?>
+                                    <!-- Hiển thị số lượng -->
+                                    <p><b>Số lượng: <?= $value ?></b></p>
+                                    <?php elseif ($key === 'category') : ?>
+                                    <!-- Hiển thị danh mục -->
+                                    <p><b>Danh mục: <?= $value ?></b></p>
+                                    <?php else : ?>
+                                    <!-- Hiển thị các trường thông tin khác -->
+                                    <h2><?= $value ?></h2>
+                                    <?php endif; ?>
+                                </div>
+                                <?php endforeach; ?>
+                                <?php endif; ?>
+                            </div>
+                            <!--/product-details-->
+
+
+                            
+
+                            <!-- Place the first <script> tag in your HTML's <head> -->
+<script src="https://cdn.tiny.cloud/1/hbozepm8v83oquejurp97p1x4p1eymqxvifr4r4izmvfi34i/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+
+<!-- Place the following <script> and <textarea> tags your HTML's <body> -->
+<script>
+  tinymce.init({
+    selector: 'textarea',
+    plugins: 'anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount checklist mediaembed casechange export formatpainter pageembed linkchecker a11ychecker tinymcespellchecker permanentpen powerpaste advtable advcode editimage advtemplate ai mentions tinycomments tableofcontents footnotes mergetags autocorrect typography inlinecss',
+    toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table mergetags | addcomment showcomments | spellcheckdialog a11ycheck typography | align lineheight | checklist numlist bullist indent outdent | emoticons charmap | removeformat',
+    tinycomments_mode: 'embedded',
+    tinycomments_author: 'Author name',
+    mergetags_list: [
+      { value: 'First.Name', title: 'First Name' },
+      { value: 'Email', title: 'Email' },
+    ],
+    ai_request: (request, respondWith) => respondWith.string(() => Promise.reject("See docs to implement AI Assistant")),
+  });
+</script>
+<textarea>
+  Welcome to TinyMCE!
+</textarea>
+<button type="button" class="btn btn-primary mt-4">Đăng bài</button>
+
+
+
+
+<div class="col-sm-9 padding-right">
+                <div class="product-details">
+                    <!--product-details-->
+                    <div class="col-sm-5">
+                        <?php if (!empty($productObj) && is_array($productObj)) : ?>
+                        <?php foreach ($productObj as $key => $value) : ?>
+                        <div class="product-information">
+                            <?php if ($key === 'images') : ?>
+                            <!-- Hiển thị hình ảnh -->
+                            <img src="uploads/<?php echo $product['images']; ?>" alt="images" width="400" height="380">
+                            <?php endif; ?>
+                        </div>
+                        <?php endforeach; ?>
+                        <?php endif; ?>
+                        <div id="similar-product" class="carousel slide" data-ride="carousel">
+
+                            <!-- Wrapper for slides -->
+                            <div class="carousel-inner">
+                                <div class="item active">
+                                    <a href=""><img src="images/product-details/similar1.jpg" alt=""></a>
+                                    <a href=""><img src="images/product-details/similar2.jpg" alt=""></a>
+                                    <a href=""><img src="images/product-details/similar3.jpg" alt=""></a>
+                                </div>
+                                <div class="item">
+                                    <a href=""><img src="images/product-details/similar1.jpg" alt=""></a>
+                                    <a href=""><img src="images/product-details/similar2.jpg" alt=""></a>
+                                    <a href=""><img src="images/product-details/similar3.jpg" alt=""></a>
+                                </div>
+                                <div class="item">
+                                    <a href=""><img src="images/product-details/similar1.jpg" alt=""></a>
+                                    <a href=""><img src="images/product-details/similar2.jpg" alt=""></a>
+                                    <a href=""><img src="images/product-details/similar3.jpg" alt=""></a>
+                                </div>
+
+                            </div>
+
+                            <!-- Controls -->
+                            <a class="left item-control" href="#similar-product" data-slide="prev">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a class="right item-control" href="#similar-product" data-slide="next">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        </div>
+
+                    </div>
+                    <div class="col-sm-7">
+                        <?php if (!empty($productObj) && is_array($productObj)) : ?>
+                        <?php foreach ($productObj as $key => $value) : ?>
+                        <?php if ($key === 'name') : ?>
+                        <!-- Hiển thị tên sản phẩm -->
+                        <h2><?= $value ?></h2>
+
+                        <?php elseif ($key === 'price') : ?>
+                        <!-- Hiển thị giá -->
+                        <h2><?= $value ?> VNĐ</h2>
+
+                        <?php elseif ($key === 'amount') : ?>
+
+                        <!-- Hiển thị giá -->
+                                    <p>Kho: <?= $value ?></h2> </p>
+
+                            <button type="button" class="btn btn-fefault cart">
+                                <i class="fa fa-shopping-cart"></i>
+                                Add to cart
+                            </button>
+
+                            <?php endif; ?>
+                            <?php endforeach; ?>
+                            <?php endif; ?>
+                    </div>
+                    <!--/product-details-->
+
+                    <div class="category-tab shop-details-tab">
+                        <!--category-tab-->
+                        <div class="col-sm-12">
+                            <ul class="nav nav-tabs">
+                                <li><a href="#details" data-toggle="tab">Chi tiết sản phẩm</a></li>
+                                <li class="active"><a href="#reviews" data-toggle="tab">Đánh giá</a></li>
+                            </ul>
+                        </div>
+                        <div class="tab-content">
+                            <div class="tab-pane fade" id="details">
+                                <?php if (!empty($productObj) && is_array($productObj)) : ?>
+                                <?php foreach ($productObj as $key => $value) : ?>
+                                <?php if ($key === 'description') : ?>
+                                <!-- Hiển thị mô tả sản phẩm -->
+                                <p><?= $value ?></p>
+                                <?php endif; ?>
+                                <?php endforeach; ?>
+                                <?php endif; ?>
+                            </div>
+
+
+
+                            <div class="tab-pane fade active in" id="reviews">
+                                <div class="col-sm-12">
+                                    <ul>
+                                        <li><a href=""><i class="fa fa-user"></i></a></li>
+                                        <li><a id="realtime-time" href=""><i class="fa fa-clock-o"></i></a></li>
+                                        <li><a id="realtime-date" href=""><i class="fa fa-calendar-o"></i></a></li>
+                                    </ul>
+                                    <p><b>Write Your Review</b></p>
+
+                                    <form action="#">
+                                        <span>
+                                            <input type="text" placeholder="Your Name" />
+                                            <input type="email" placeholder="Email Address" />
+                                        </span>
+                                        <textarea name=""></textarea>
+                                        <b>Rating: </b> <img src="images/product-details/rating.png" alt="" />
+                                        <button type="button" class="btn btn-default pull-right">
+                                            Submit
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!--/category-tab-->
+                </div>
+            </div>
+
+            <form action="<?= base_url('admin/blog/delete') ?>" method="post">
+            <div class="modal fade" id="confirmDeleteUser" tabindex="-1" role="dialog" aria-labelledby="confirmDeleteUser" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Xóa bài viết</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Bạn có chắc chắn muốn xóa bài viết này?</p>
+                        </div>
+                        <div class="modal-footer">
+                            <input type="hidden" name="id_blogs" class="blog_id_delete">
+                            <a style="background-color: red" href="<?= base_url('admin/blog/list') ?>" class="btn btn-secondary">Hủy</a>
+                            <button type="submit" class="btn btn-danger">Xác nhận xóa</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<?= $this->include("Modals/Users/delete") ?>
+<script>
+    $('.___js-delete-blog').on('click',function(){
+        // Lấy dữ liệu từ nút xóa
+        const id = $(this).data('id');
+        console.log(id);
+        // Đặt dữ liệu vào Form xóa
+        $('.blog_id_delete').val(id);
+        // Gọi Modal xóa
+        $('#confirmDeleteUser').modal('show');
+    });
+</script>
+
+
+
+public function productDetail($productId)
+    {
+        $productModel = new ProductModel();
+        $product = $productModel->find($productId);
+
+        if (!$product) {
+            return false; //Assuming $product is false when not found
+        }
+
+        $condition = [
+            'deleted_at' => null,
+            'id' => $productId
+        ];
+        $withSelect = 'name, description, price, images, amount, category';
+        $productObj = $productModel->getFirstByConditions($condition, '', $withSelect);
+
+        if (!$productObj) {
+            return false; //Assuming $productObj is false when not found
+        }
+        $data['productObj'] = $productObj;
+        $data['productId'] = $productId;
+
+
+        return view('product_detail', $data);
+    }
+
+
+
+
+
+
+<?php
+// Tính toán $totalItems (tổng số sản phẩm) và $itemsPerPage (số sản phẩm trên mỗi trang)
+$totalItems = 100; // Giả sử bạn có tổng cộng 100 sản phẩm
+$itemsPerPage = 10; // Số lượng sản phẩm bạn muốn hiển thị trên mỗi trang
+
+// Tính toán $totalPages (tổng số trang)
+$totalPages = ceil($totalItems / $itemsPerPage);
+
+// Xác định $currentPage (trang hiện tại)
+$currentPage = isset($_GET['page']) ? $_GET['page'] : 1; // Mặc định là trang 1 nếu không có tham số truy vấn
+
+// Trong trường hợp $currentPage vượt quá $totalPages, đặt lại $currentPage là trang cuối cùng
+if ($currentPage > $totalPages) {
+    $currentPage = $totalPages;
+}
+
+// Tính toán vị trí bắt đầu của sản phẩm trong truy vấn SQL hoặc từ bất kỳ nguồn dữ liệu nào bạn sử dụng
+$start = ($currentPage - 1) * $itemsPerPage;
+
+?>
+<!-- CSS Bootstrap -->
+<!--<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">-->
+
+<!-- JavaScript jQuery -->
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>-->
+
+<!-- JavaScript Bootstrap -->
+<!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
+
+<script>
+    // Định nghĩa biến để lấy tổng số trang và số trang hiện tại
+    var totalPages = <?php echo $totalPages; ?>;
+    var currentPage = <?php echo $currentPage; ?>;
+
+    // Hàm để tạo phân trang sử dụng Bootstrap Pagination
+    function createPagination() {
+        var pagination = $('#pagination');
+        pagination.empty();
+        // Tạo nút 'Previous'
+        if (currentPage > 1) {
+            pagination.append('<li><a href="javascript::void(0)" onclick="changePage(' + (currentPage - 1) + ');">&laquo;</a></li>');
+        }
+        // Tạo các nút trang
+        for (var i = 1; i <= totalPages; i++) {
+            pagination.append('<li ' + (i === currentPage ? 'class="active"' : '') + '><a href="javascript::void(0)" onclick="changePage(' + i + ');">' + i + '</a></li>');
+        }
+        // Tạo nút 'Next'
+        if (currentPage < totalPages) {
+            pagination.append('<li><a href="javascript::void(0)" onclick="changePage(' + (currentPage + 1) + ');">&raquo;</a></li>');
+        }
+    }
+
+    // Hàm để thay đổi trang
+    function changePage(page) {
+        currentPage = page;
+        // Thực hiện ajax hoặc chuyển hướng trang web đến trang mới
+        window.location.href = 'views/product/?page=' + page;
+        // Hoặc: $.ajax({url: 'your_script.php?page=' + page, success: function(result){ $('#dataContainer').html(result);}});
+        // Sau khi thực hiện xong, cập nhật lại phân trang
+        createPagination();
+    }
+
+    // Khởi tạo phân trang khi trang web được tải
+    $(document).ready(function() {
+        createPagination();
+    });
+
+</script>
+
+
+
+<div class="tab-content">
+                            <div class="tab-pane fade" id="details">
+                                <?php if (!empty ($productObj) && is_array($productObj)): ?>
+                                    <?php foreach ($productObj as $key => $value): ?>
+                                        <?php if ($key === 'description'): ?>
+                                            <!-- Hiển thị mô tả sản phẩm -->
+                                            <p><?= $value ?></p>
+                                        <?php endif; ?>
+                                    <?php endforeach; ?>
+                                <?php endif; ?>
+                            </div>
+
+
+
+
+public function vnpay_payment()
+    {
+        $vnp_Url = "https://sandbox.vnpayment.vn/paymentv2/vpcpay.html";
+        $vnp_Returnurl = "http://localhost:8080/views/checkout";
+        $vnp_TmnCode = "R4DYJ8FU";//Mã website tại VNPAY
+        $vnp_HashSecret = "RLNYRYRCRVFXLXOOMFKKUJKXLJLKUUGW"; //Chuỗi bí mật
+
+        $vnp_TxnRef = $_POST['order_id']; //Mã đơn hàng
+        $vnp_OrderInfo = $_POST['order_desc'];
+        $vnp_OrderType = $_POST['order_type'];
+        $vnp_Amount = $_POST['amount'] * 100;
+        $vnp_Locale = $_POST['language'];
+        $vnp_BankCode = $_POST['bank_code'];
+        $vnp_IpAddr = $_SERVER['REMOTE_ADDR'];
+        $vnp_ExpireDate = $_POST['txtexpire'];
+        $inputData = array(
+            "vnp_Version" => "2.1.0",
+            "vnp_TmnCode" => $vnp_TmnCode,
+            "vnp_Amount" => $vnp_Amount,
+            "vnp_Command" => "pay",
+            "vnp_CreateDate" => date('YmdHis'),
+            "vnp_CurrCode" => "VND",
+            "vnp_IpAddr" => $vnp_IpAddr,
+            "vnp_Locale" => $vnp_Locale,
+            "vnp_OrderInfo" => $vnp_OrderInfo,
+            "vnp_OrderType" => $vnp_OrderType,
+            "vnp_ReturnUrl" => $vnp_Returnurl,
+            "vnp_TxnRef" => $vnp_TxnRef,
+            "vnp_ExpireDate" => $vnp_ExpireDate,
+        );
+
+        if (isset($vnp_BankCode) && $vnp_BankCode != "") {
+            $inputData['vnp_BankCode'] = $vnp_BankCode;
+        }
+        if (isset($vnp_Bill_State) && $vnp_Bill_State != "") {
+            $inputData['vnp_Bill_State'] = $vnp_Bill_State;
+        }
+
+        //var_dump($inputData);
+        ksort($inputData);
+        $query = "";
+        $i = 0;
+        $hashdata = "";
+        foreach ($inputData as $key => $value) {
+            if ($i == 1) {
+                $hashdata .= '&' . urlencode($key) . "=" . urlencode($value);
+            } else {
+                $hashdata .= urlencode($key) . "=" . urlencode($value);
+                $i = 1;
+            }
+            $query .= urlencode($key) . "=" . urlencode($value) . '&';
+        }
+
+        $vnp_Url = $vnp_Url . "?" . $query;
+        if (isset($vnp_HashSecret)) {
+            $vnpSecureHash = hash_hmac('sha512', $hashdata, $vnp_HashSecret);//
+            $vnp_Url .= 'vnp_SecureHash=' . $vnpSecureHash;
+        }
+        $returnData = array('code' => '00'
+        , 'message' => 'success'
+        , 'data' => $vnp_Url);
+        if (isset($_POST['redirect'])) {
+            header('Location: ' . $vnp_Url);
+            die();
+        } else {
+            echo json_encode($returnData);
+        }
+    }

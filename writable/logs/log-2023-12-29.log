@@ -1,0 +1,35 @@
+CRITICAL - 2023-12-29 16:03:37 --> Too few arguments to function App\Controllers\Admin\UserControllers::edit(), 0 passed in D:\xampp\file\htdocs\ComputerShop\system\CodeIgniter.php on line 942 and exactly 1 expected
+in APPPATH\Controllers\Admin\UserControllers.php on line 55.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\UserControllers->edit()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\UserControllers))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+CRITICAL - 2023-12-29 16:04:10 --> Too few arguments to function App\Controllers\Admin\UserControllers::edit(), 0 passed in D:\xampp\file\htdocs\ComputerShop\system\CodeIgniter.php on line 942 and exactly 1 expected
+in APPPATH\Controllers\Admin\UserControllers.php on line 55.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\UserControllers->edit()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\UserControllers))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+CRITICAL - 2023-12-29 16:05:00 --> Too few arguments to function App\Controllers\Admin\UserControllers::edit(), 0 passed in D:\xampp\file\htdocs\ComputerShop\system\CodeIgniter.php on line 942 and exactly 1 expected
+in APPPATH\Controllers\Admin\UserControllers.php on line 55.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\UserControllers->edit()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\UserControllers))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+CRITICAL - 2023-12-29 16:05:07 --> Too few arguments to function App\Controllers\Admin\UserControllers::edit(), 0 passed in D:\xampp\file\htdocs\ComputerShop\system\CodeIgniter.php on line 942 and exactly 1 expected
+in APPPATH\Controllers\Admin\UserControllers.php on line 55.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\UserControllers->edit()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\UserControllers))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
+CRITICAL - 2023-12-29 16:05:46 --> Too few arguments to function App\Controllers\Admin\UserControllers::edit(), 0 passed in D:\xampp\file\htdocs\ComputerShop\system\CodeIgniter.php on line 942 and exactly 1 expected
+in APPPATH\Controllers\Admin\UserControllers.php on line 55.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\UserControllers->edit()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\UserControllers))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\file\\htdocs\\ComputerShop\\public\\index.php')
