@@ -30,7 +30,7 @@
                                         <div class="single-products">
                                             <div class="productinfo text-center">
                                                 <img id="images" src="uploads/<?= $product['images']; ?>" alt="images">
-                                                <h2 id="price"><?= $product['price']; ?> VND</h2>
+                                                <h2 id="price"><?= number_format($product['price'], 0, ',', '.') ?></h2>
                                                 <p id="product"><?= $product['name']; ?></p>
                                                 <p id="amount">Số lượng:<?= $product['amount']; ?></p>
                                                 <p id="category">Danh mục: <?= $product['category'] ?></p>
@@ -51,7 +51,6 @@
                             <p>Không có sản phẩm nào trong danh mục này.</p>
                         <?php endif; ?>
                     </div>
-
                     <!-- Hiển thị phân trang -->
                     <div class="col-sm-12">
                         <?php echo $pager->links(); ?>

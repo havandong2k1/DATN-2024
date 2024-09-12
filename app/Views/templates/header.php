@@ -37,8 +37,8 @@
 					<div class="col-sm-6">
 						<div class="contactinfo">
 							<ul class="nav nav-pills">
-								<li><a href="#"><i class="fa fa-phone"></i>0812453363</a></li>
-								<li><a href="#"><i class="fa fa-envelope"></i> dduong1703@gmail.com</a></li>
+								<li><a href="#"><i class="fa fa-phone"></i>0943997901</a></li>
+								<li><a href="#"><i class="fa fa-envelope"></i> testwithdraw001@gmail.com</a></li>
 							</ul>
 						</div>
 					</div>

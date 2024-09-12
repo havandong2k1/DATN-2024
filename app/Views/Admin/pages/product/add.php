@@ -40,11 +40,11 @@
                         </div>
                     </div>
                     <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <label for="price">Giá</label>
-                            <input value="<?= old('price') ?>" name="price" type="text" class="form-control"
-                                   placeholder="Nhập giá bán sản phẩm" required>
-                        </div>
+                    <div class="form-group col-md-6">
+                        <label for="price">Giá</label>
+                        <input value="<?= old('price') ?>" name="price" type="text" class="form-control" id="price"
+                            placeholder="Nhập giá bán sản phẩm" required>
+                    </div>
                         <div class="form-group col-md-6">
                             <label for="description">Thông số sản phẩm</label>
                             <textarea name="description" id="description"
@@ -120,5 +120,36 @@
         };
 
         reader.readAsDataURL(input.files[0]);
+    });
+    
+    function formatVND(value) {
+        return value.toString().replace(/\D/g, '') // Loại bỏ ký tự không phải số
+            .replace(/\B(?=(\d{3})+(?!\d))/g, '.') + ' VND'; // Thêm dấu phân cách hàng nghìn
+    }
+
+    // Bắt sự kiện khi người dùng nhập giá sản phẩm
+    document.getElementById('price').addEventListener('input', function (e) {
+        let value = e.target.value.replace(/\./g, ''); // Loại bỏ dấu chấm cũ
+        e.target.value = formatVND(value); // Gán lại giá trị đã được định dạng
+    });
+
+    // hàm jquery cấu hình ảnh khi được update lên website
+    $('#images').on('change', function() {
+        var file = this.files[0];
+        if (file) {
+            var img = new Image();
+            var objectUrl = URL.createObjectURL(file);
+            img.onload = function() {
+                if (this.width > 1080 || this.height > 1080) {
+                    alert('Kích thước ảnh phải nhỏ hơn hoặc bằng 1080x1080.');
+                    $('#images').val('');  // Clear the file input
+                    $('#img-show').hide();
+                } else {
+                    $('#img-show').attr('src', objectUrl).show(); // Show the image preview
+                }
+                URL.revokeObjectURL(objectUrl);
+            };
+            img.src = objectUrl;
+        }
     });
 </script>

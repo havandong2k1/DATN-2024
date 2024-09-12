@@ -14,4 +14,14 @@ class UserModel extends Model
     public function getUser(){
         return $this->findAll();
     }
+    public function deleteById($id)
+    {
+        $result = $this->where('id', $id)->delete();
+        if ($result) {
+            log_message('info', "Sản phẩm với ID $id đã được xóa.");
+        } else {
+            log_message('error', "Không thể xóa sản phẩm với ID $id.");
+        }
+        return $result;
+    }
 }

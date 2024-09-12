@@ -90,13 +90,15 @@ class UserControllers extends BaseController
 
     public function delete($id)
     {
-        $user = $this->service->getUserByID($id);
-
-        if(!$user){
-            return redirect('error/404');
+        // Tìm sản phẩm theo ID
+        $userModel = new UserModel();
+        $product = $userModel->find($id);
+        // Nếu sản phẩm tồn tại
+        if ($product) {
+            $userModel->delete($id);
+            return redirect()->to(base_url('admin/user/list'))->with('msg_success', 'Xóa tài khoản thành công!');
+        } else {
+            return redirect()->to(base_url('admin/user/list'))->with('msg_error', 'Tài khoản không tồn tại!');
         }
-
-        $result = $this->service->deleteUser($id);
-        return redirect('admin/user/list')->with($result['massageCode'], $result['messages']);
     }
 }

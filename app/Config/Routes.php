@@ -90,7 +90,7 @@ $routes->group('admin', ['filter' => 'AdminFilter'], function ($routes) {
         $routes->get('add', 'Admin\ProductControllers::add');
         $routes->post('create', 'Admin\ProductControllers::create');
         $routes->match(['get', 'post'], 'edit/(:num)', 'Admin\ProductControllers::editOrUpdate/$1'); // Use match for both GET and POST
-        $routes->post('delete', 'Admin\ProductControllers::delete');
+        $routes->get('delete/(:num)', 'Admin\ProductControllers::delete/$1');
     });
 
     $routes->group('blog', function ($routes) {

@@ -18,7 +18,7 @@ class ProductControllers extends BaseController
     public function __construct()
     {
         $this->service = new ProductsService();
-        $this->validation = \Config\Services::validation();
+        // $this->validation = \Config\Services::validation();
 
     }
 
@@ -127,30 +127,19 @@ class ProductControllers extends BaseController
         $data = $this->loadMasterLayout([], 'Sửa sản phẩm', 'admin/pages/product/edit', $dataLayout, $cssFiles, []);
         return view('admin/main', $data);
     }
-    public function delete()
-{
-    if ($this->request->getMethod() === 'post') {
+    public function delete($id)
+    {
+        // Tìm sản phẩm theo ID
         $productModel = new ProductModel();
-        $productId = $this->request->getPost('id_product');
-
-        if ($productId && $productId > 0) {
-            $deleted = $productModel->delete($productId);
-            if ($deleted) {
-                session()->setFlashdata('msg_success', 'Xóa sản phẩm thành công.');
-            } else {
-                session()->setFlashdata('msg_error', 'Không thể xóa sản phẩm.');
-            }
+        $product = $productModel->find($id);
+        // Nếu sản phẩm tồn tại
+        if ($product) {
+            $productModel->delete($id);
+            return redirect()->to(base_url('admin/product/list'))->with('msg_success', 'Sản phẩm đã được xóa thành công!');
         } else {
-            session()->setFlashdata('msg_error', 'ID sản phẩm không hợp lệ.');
+            return redirect()->to(base_url('admin/product/list'))->with('msg_error', 'Sản phẩm không tồn tại!');
         }
-    } else {
-        session()->setFlashdata('msg_error', 'Yêu cầu không phải là POST.');
     }
-
-    return redirect()->to(base_url('admin/product/list'));
-}
-
-    
     public function search(){
         $ProductModel = new ProductModel();
         $name = $this -> request ->getPost('name');

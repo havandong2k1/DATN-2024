@@ -20,7 +20,6 @@
             <?= session()->getFlashdata('msg_success') ?>
                 </div>
             <?php endif; ?>
-
             <?php if (session()->getFlashdata('msg_error')): ?>
                 <div class="alert alert-danger">
                     <?= session()->getFlashdata('msg_error') ?>
@@ -69,11 +68,14 @@
                                         <td><?= $product['amount'] ?></td>
                                         <td class="text-center"><?= $product['status_product'] ?></td>
                                         <td class="text-center">
-                                            <a href="admin/product/edit/<?= $product['id_product'] ?>" class="btn btn-primary btn-sm"><i class="fas fa-edit"></i></a>
-                                            <button class="btn btn-danger btn-sm ___js-delete-product" data-id="<?= $product['id_product']; ?>">
-                                                <i class="far fa-trash-alt"></i>
-                                            </button>
-                                        </td>
+                                        <a href="admin/product/edit/<?= $product['id_product'] ?>" class="btn btn-primary btn-sm">
+                                            <i class="fas fa-edit"></i>
+                                        </a>
+                                        <a href="<?= base_url('admin/product/delete/') . $product['id_product'] ?>" class="btn btn-danger btn-sm ___js-delete-product"
+                                         onclick="return confirm('Bạn có chắc chắn muốn xóa sản phẩm này?');">
+                                            <i class="far fa-trash-alt"></i>
+                                        </a>
+                                    </td>
                                     </tr>
                                 <?php endforeach ?>
                             <?php endif; ?>
@@ -84,23 +86,7 @@
         </div>
     </div>
 </div>
-
-<!-- Bao gồm modal -->
-<?= $this->include('Modals/Product/delete') ?>
-
 <script>
-    $(document).ready(function() {
-        console.log("Trang đã sẵn sàng!");
-
-        $('.___js-delete-product').on('click', function() {
-            const id = $(this).data('id');
-            console.log("ID sản phẩm để xóa: ", id); 
-
-            $('.product_id_delete').val(id);
-            $('#confirmDeleteProduct').modal('show');
-        });
-    });
 </script>
-
 </body>
 </html>
