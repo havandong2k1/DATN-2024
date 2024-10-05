@@ -47,39 +47,47 @@
                                 <th>Ảnh sản phẩm</th>
                                 <th>Giá</th>
                                 <th>Mô tả sản phẩm</th>
-                                <th>Danh mục</th>
-                                <th>Số lượng</th>
-                                <th class="text-center">Trạng thái sản phẩm nổi bật</th>
+                                <th>Sẩn phẩm</th>                           
+                                <th class="text-center">Trạng thái sản phẩm</th>
                                 <th class="text-center">Chức năng</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <?php if (!empty($products)) : ?>
-                                <?php foreach ($products as $index => $product) : ?>
-                                    <tr>
-                                        <td><?= $index + 1 ?></td>
-                                        <td><?= $product['name'] ?></td>
-                                        <td>
-                                            <img src="uploads/<?= $product['images']; ?>" alt="" height="60" width="60">
-                                        </td>
-                                        <td><?= $product['price'] . " VND" ?></td>
-                                        <td><?= $product['description'] ?></td>
-                                        <td><?= $product['category'] ?></td>
-                                        <td><?= $product['amount'] ?></td>
-                                        <td class="text-center"><?= $product['status_product'] ?></td>
-                                        <td class="text-center">
+                        <?php if (!empty($products)) : ?>
+                            <?php foreach ($products as $index => $product) : ?>
+                                <tr>
+                                    <td><?= $index + 1 ?></td>
+                                    <td><?= $product['name'] ?></td>
+                                    <td>
+                                        <img src="uploads/<?= $product['images']; ?>" alt="" height="60" width="60">
+                                    </td>
+                                    <td><?= $product['price'] . " VND" ?></td>
+                                    <td><?= $product['description'] ?></td>
+                                    <td><?= $product['category'] ?></td>
+                                    <td class="text-center">
+                                        <?php 
+                                            if ($product['status_product'] == 2) {
+                                                echo 'Sản phẩm hot';
+                                            } elseif ($product['status_product'] == 1) {
+                                                echo 'Bật';
+                                            } else {
+                                                echo 'Tắt';
+                                            }
+                                        ?>
+                                    </td>
+                                    <td class="text-center">
                                         <a href="admin/product/edit/<?= $product['id_product'] ?>" class="btn btn-primary btn-sm">
                                             <i class="fas fa-edit"></i>
                                         </a>
                                         <a href="<?= base_url('admin/product/delete/') . $product['id_product'] ?>" class="btn btn-danger btn-sm ___js-delete-product"
-                                         onclick="return confirm('Bạn có chắc chắn muốn xóa sản phẩm này?');">
+                                        onclick="return confirm('Bạn có chắc chắn muốn xóa sản phẩm này?');">
                                             <i class="far fa-trash-alt"></i>
                                         </a>
                                     </td>
-                                    </tr>
-                                <?php endforeach ?>
-                            <?php endif; ?>
-                        </tbody>
+                                </tr>
+                            <?php endforeach ?>
+                        <?php endif; ?>
+                    </tbody>
                     </table>
                 </div>
             </div>

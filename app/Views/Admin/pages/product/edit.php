@@ -29,6 +29,7 @@
                                     <select name="status_product" class="form-control" required>
                                         <option value="0" <?php echo ($product['status_product'] == 0) ? 'selected' : ''; ?>>Ẩn sản phẩm</option>
                                         <option value="1" <?php echo ($product['status_product'] == 1) ? 'selected' : ''; ?>>Hiển thị</option>
+                                        <option value="2" <?php echo ($product['status_product'] == 2) ? 'selected' : ''; ?>>Hiển thị SP hot</option>
                                     </select>
                                 </div>
                             </div>
@@ -43,33 +44,28 @@
                                 </div>
                             </div>
                             <div class="form-row">
-                                <div class="form-group col-md-6">
-                                    <label>Danh mục</label>
-                                    <select value="<?= old('category') ?>" name="category" class="form-control" id="category"
-                                            required>
-                                        <option>Nhập danh mục sản phẩm</option>
-                                        <option>MÀN HÌNH</option>
-                                        <option>THÙNG MÁY</option>
-                                        <option>CHIP</option>
-                                        <option>RAM</option>
-                                        <option>SSD</option>
-                                        <option>HDD</option>
-                                        <option>CARD ĐỒ HỌA</option>
-                                        <option>CHUỘT</option>
-                                        <option>BÀN, GHẾ GAMING</option>
-                                        <option>QUẠT TẢN NHIỆT</option>
-                                        <option>TAI NGHE</option>
-                                        <option>TABLET</option>
-                                        <option>BÀN PHÍM</option>
-                                        <option>LOA</option>
-                                        <option>LAPTOP</option>
-                                        <option>IPAD</option>
-                                    </select>
-                                </div>
-                                <div class="form-group col-md-6">
-                                    <label>Số lượng</label>
-                                    <input value="<?= $product['amount'] ?>" name="amount" type="text" class="form-control" placeholder="Nhập số lượng" required>
-                                </div>
+                            <div class="form-group col-md-6">
+                                <label for="category">Danh mục</label>
+                                <select name="category" class="form-control" id="category" required>
+                                    <option value="">Chọn danh mục sản phẩm</option>
+                                    <option value="MÀN HÌNH" <?= ($product['category'] == 'MÀN HÌNH') ? 'selected' : '' ?>>MÀN HÌNH</option>
+                                    <option value="THÙNG MÁY" <?= ($product['category'] == 'THÙNG MÁY') ? 'selected' : '' ?>>THÙNG MÁY</option>
+                                    <option value="CHIP" <?= ($product['category'] == 'CHIP') ? 'selected' : '' ?>>CHIP</option>
+                                    <option value="RAM" <?= ($product['category'] == 'RAM') ? 'selected' : '' ?>>RAM</option>
+                                    <option value="SSD" <?= ($product['category'] == 'SSD') ? 'selected' : '' ?>>SSD</option>
+                                    <option value="HDD" <?= ($product['category'] == 'HDD') ? 'selected' : '' ?>>HDD</option>
+                                    <option value="CARD ĐỒ HỌA" <?= ($product['category'] == 'CARD ĐỒ HỌA') ? 'selected' : '' ?>>CARD ĐỒ HỌA</option>
+                                    <option value="CHUỘT" <?= ($product['category'] == 'CHUỘT') ? 'selected' : '' ?>>CHUỘT</option>
+                                    <option value="BÀN, GHẾ GAMING" <?= ($product['category'] == 'BÀN, GHẾ GAMING') ? 'selected' : '' ?>>BÀN, GHẾ GAMING</option>
+                                    <option value="QUẠT TẢN NHIỆT" <?= ($product['category'] == 'QUẠT TẢN NHIỆT') ? 'selected' : '' ?>>QUẠT TẢN NHIỆT</option>
+                                    <option value="TAI NGHE" <?= ($product['category'] == 'TAI NGHE') ? 'selected' : '' ?>>TAI NGHE</option>
+                                    <option value="TABLET" <?= ($product['category'] == 'TABLET') ? 'selected' : '' ?>>TABLET</option>
+                                    <option value="BÀN PHÍM" <?= ($product['category'] == 'BÀN PHÍM') ? 'selected' : '' ?>>BÀN PHÍM</option>
+                                    <option value="LOA" <?= ($product['category'] == 'LOA') ? 'selected' : '' ?>>LOA</option>
+                                    <option value="LAPTOP" <?= ($product['category'] == 'LAPTOP') ? 'selected' : '' ?>>LAPTOP</option>
+                                    <option value="IPAD" <?= ($product['category'] == 'IPAD') ? 'selected' : '' ?>>IPAD</option>
+                                </select>
+                            </div>
                             </div>
                             <button type="submit" class="btn btn-primary rounded-4">Cập nhật</button>
                             <button id="btn-reset-edit-product" type="reset" class="btn btn-secondary rounded-4" onclick="return confirm('Are you sure you want to reset?')">Reset</button>
@@ -82,3 +78,16 @@
         </div>
     </div>
 </main>
+<script>
+    $(document).ready(function() {
+        // Lấy giá trị từ thẻ hidden và thiết lập giá trị cho select
+        var savedCategory = $('#hidden-category').val();
+        if (savedCategory) {
+            $('#category').val(savedCategory);
+        }
+        // Cập nhật thẻ hidden khi người dùng thay đổi select
+        $('#category').on('change', function() {
+            $('#hidden-category').val($(this).val());
+        });
+    });
+</script>

@@ -40,7 +40,8 @@ class BlogControllers extends BaseController
 
         $blogModel = new BlogModel();
         $blogs = $blogModel->findAll();
-
+        // print_r($blogs);
+        // die();
         $dataLayout = [];
         if ($blogs) {
             $dataLayout['blogs'] = $blogs;
@@ -61,24 +62,52 @@ class BlogControllers extends BaseController
 
     public function create()
     {
-        // Check if the form is submitted
+        // Kiểm tra xem form có được submit hay không
         if ($this->request->getMethod() === 'post') {
-            // Get the form input
+            $blogModel = new BlogModel();
+
+            // Lấy dữ liệu từ form
             $content = $this->request->getPost('content');
             $title = $this->request->getPost('title');
-            $data = [
-                'content' => $content,
-                'title' => $title,
-                // Add other fields here if needed
-            ];
-            $blogModel = new BlogModel();
-            $newBlogID = $blogModel->save($data);
-            session()->setFlashdata('msg_success', 'Thành công');
-            return redirect()->to('admin/blog/list');
+
+            // Lấy file hình ảnh từ form
+            $imageFile = $this->request->getFile('image');
+            $imageName = '';
+
+            // Kiểm tra xem file ảnh có hợp lệ không
+            if ($imageFile && $imageFile->isValid() && !$imageFile->hasMoved()) {
+                // Đặt tên ngẫu nhiên cho file để tránh trùng lặp
+                $imageName = $imageFile->getRandomName();
+
+                // Đường dẫn thư mục lưu trữ ảnh
+                $uploadDirectory = WRITEPATH . 'ingBlog';
+
+                // Di chuyển file vào thư mục lưu trữ
+                if ($imageFile->move($uploadDirectory, $imageName)) {
+                    // Lưu tên file ảnh vào cơ sở dữ liệu
+                    $data = [
+                        'content' => $content,
+                        'title' => $title,
+                        'image' => $imageName, // Lưu tên file ảnh
+                    ];
+
+                    // Lưu dữ liệu vào cơ sở dữ liệu
+                    $blogModel->save($data);
+                    
+                    // Đặt thông báo thành công và chuyển hướng
+                    session()->setFlashdata('msg_success', 'Thêm bài viết thành công');
+                    return redirect()->to('admin/blog/list');
+                } else {
+                    session()->setFlashdata('msg_error', 'Có lỗi xảy ra khi lưu ảnh');
+                }
+            } else {
+                session()->setFlashdata('msg_error', 'Tệp ảnh không hợp lệ hoặc không được chọn');
+            }
         }
+
+        // Hiển thị form nếu chưa submit
         return view('admin/blog/create');
     }
-
 
     public function editOrUpdate($id_blogs)
     {

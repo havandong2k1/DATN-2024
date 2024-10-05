@@ -5,7 +5,6 @@ namespace App\Filters;
 use CodeIgniter\Filters\FilterInterface;
 use CodeIgniter\HTTP\RequestInterface;
 use CodeIgniter\HTTP\ResponseInterface;
-use Config\Services;
 
 class AuthFilter implements FilterInterface
 {
@@ -13,11 +12,15 @@ class AuthFilter implements FilterInterface
     {
         $session = session();
 
-        if (!$session->get("logged_in")){
-            if (current_url() === base_url().'admin/login'){
-                return view('admin/pages/home');
+        // Kiểm tra xem người dùng đã đăng nhập chưa
+        if (!$session->get('logged_in')) {
+            // Nếu chưa đăng nhập, chuyển hướng đến trang đăng nhập
+            return redirect()->to('admin/login');
+        } else {
+            // Nếu đã đăng nhập và cố gắng truy cập trang đăng nhập, chuyển hướng đến trang chính
+            if (current_url() === base_url() . 'admin/login') {
+                return redirect()->to('admin/dashboard'); // Hoặc một trang nào đó bạn muốn
             }
-            return redirect('admin/login');
         }
     }
 

@@ -10,9 +10,9 @@ class BlogControllers extends BaseController
 {
     public function index($id_blogs)
     {
-        $BlogModel = new BlogModel();
+        $blogModel = new BlogModel();
 
-        $data['blogs'] = $BlogModel->findAll($id_blogs);
+        $data['blogs'] = $blogModel->findAll($id_blogs);
 
         return view('blog', $data);
     }

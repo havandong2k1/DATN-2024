@@ -19,28 +19,33 @@ class HomeControllers extends BaseController
         $products = [];
         $data['cateObj'] = $allParam;
         $data['recommendedProducts'] = $productModel->findAll();
-        $data['categories'] = [
-            'MÀN HÌNH',
-            'THÙNG MÁY',
-            'CHIP',
-            'RAM',
-            'SSD',
-            'HDD',
-            'CARD ĐỒ HỌA',
-            'CHUỘT',
-            'BÀN PHÍM',
-            'BÀN, GHẾ GAMING',
-            'QUẠT TẢN NHIỆT',
-            'TAI NGHE',
-            'LAPTOP',
-            'BALO MÁY TÍNH',
-            'IPAD',
-            'TABLET',
-            'LOA',
-        ];
-        
+        $cartModel = new CartModel();
+        $session = session();
+        // Kiểm tra xem người dùng đã đăng nhập chưa
+        $customerId = $session->get('customer_id');
+        // Khởi tạo biến tổng số lượng sản phẩm
+        $totalQuantity = 0;
+        // Nếu người dùng đã đăng nhập, tính toán tổng số sản phẩm trong giỏ hàng
+        if ($customerId) {
+            $condition = [
+                'deleted_at' => null,
+                'customer_id' => $customerId,
+            ];
+            $withSelect = 'quantity, id_product';
+            $dataCartUser = $cartModel->getByConditions($condition, '', $withSelect);
+            
+            if ($dataCartUser) {
+                foreach ($dataCartUser as $item) {
+                    $totalQuantity += $item['quantity'];
+                }
+            }
+        }
+        // Lưu tổng số lượng sản phẩm vào mảng dữ liệu
+        $data['totalQuantity'] = $totalQuantity; 
+        // Trả về view với dữ liệu
         return view('index', $data);
     }
+
 
     public function login()
     {
@@ -53,7 +58,6 @@ class HomeControllers extends BaseController
             // Lấy email và mật khẩu từ form đăng nhập
             $email = $this->request->getPost('customer_email');
             $password = $this->request->getPost('customer_password');
-
             // Kiểm tra xác thực đăng nhập
             $customerModel = new CustomerModel();
             $customer = $customerModel->where('customer_email', $email)->first();
@@ -66,13 +70,14 @@ class HomeControllers extends BaseController
                 session()->set('created_at', $customer['created_at']);
                 return redirect()->to('/');
             } else {
-                // Đăng nhập không thành công, hiển thị thông báo lỗi
-                $data['error'] = 'Email hoặc mật khẩu không chính xác.';
-                return view('login', $data);
+                // Đăng nhập không thành công, lưu thông báo lỗi vào session và chuyển hướng lại đến trang đăng nhập
+                session()->setFlashdata('error', 'Email hoặc mật khẩu không chính xác.');
+                return redirect()->back()->withInput();
             }
         }
         return view('login');
     }
+
 
     public function register()
     {
@@ -130,11 +135,22 @@ class HomeControllers extends BaseController
 
     public function blog()
     {
-        $model = new BlogModel();
-        $data['blogsObj'] = $model->findAll();
+        $blogModel = new BlogModel();
+
+        // Lấy dữ liệu từ model và sắp xếp theo ngày tạo mới nhất
+        $data['blogsObj'] = $blogModel->orderBy('created_at', 'ASEC')->findAll();
+        
+        // Tải view và truyền dữ liệu
         return view('blog', $data);
     }
+    public function viewBlog($id)
+    {
+        $model = new BlogModel();
+        $data['blog'] = $model->find($id); // Tìm bài viết theo ID
+        return view('viewblog', $data); // Gọi view 'viewblog' để hiển thị nội dung chi tiết
+    }
 
+    
     public function product($category = null){
         $productModel = new ProductModel();
         $data = [];
@@ -176,33 +192,14 @@ class HomeControllers extends BaseController
         return view('product_detail');
     }
 
-    public function cart()
-    {
-        return view('cart');
-    }
-
-    public function addToCart(){
-
-    }
-
     public function profile()
     {
-        // Create a new instance of the CustomerModel
         $customerModel = new CustomerModel();
-
-        // Get the customer_id from the session
         $customer_id = session()->get('customer_id');
-
-        // Retrieve the customer record from the database based on the customer_id
         $customer = $customerModel->find($customer_id);
-
-        // If the customer is not found, handle the case here
         if (!$customer) {
-            // For example, you might redirect to an error page or return an error message
-            return redirect()->route('error')->with('error', 'Customer not found!');
+            return redirect()->route('error')->with('error', 'Không tìm thấy!');
         }
-
-        // Pass the customer data to the view
         return view('profile', ['customer' => $customer]);
     }
 

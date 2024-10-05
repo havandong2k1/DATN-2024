@@ -25,16 +25,22 @@
                             <?= csrf_field() ?>
                             <div>
                                 <label>Tiêu đề:</label>
-                                <input type="text" name="title" placeholder="Tiêu đề">
+                                <input type="text" name="title" placeholder="Tiêu đề" class="form-control">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="image">Ảnh blog</label>
+                                <input name="image" type="file" accept="image/*" class="form-control-file" id="image" required>
+                                <div class="form-group">
+                                    <img id="img-show" src="" class="img-fluid" alt="Hình đại diện." style="display: none;">
+                                </div>
                             </div>
                             <div style="padding-top: 20px">
                                 <label>Nội dung</label>
-                                <textarea name="content" id="content">Welcome to TinyMCE!</textarea>
+                                <textarea name="content" id="content"></textarea>
                             </div>
-                            <button type="submit" class="btn btn-success mt-4 ">Đăng bài</button>
-                            <button style="background-color: yellow" href="<?= base_url('admin/blog/list') ?>" class="btn btn-warning  mt-4">Quay lại</button>
+                            <button type="submit" class="btn btn-success mt-4">Đăng bài</button>
+                            <a href="<?= base_url('admin/blog/list') ?>" class="btn btn-warning mt-4">Quay lại</a>
                         </form>
-
                     </div>
                 </div>
             </div>
@@ -42,11 +48,9 @@
     </div>
 </div>
 
-<!-- Place the first <script> tag in your HTML's <head> -->
-<script src="https://cdn.tiny.cloud/1/hbozepm8v83oquejurp97p1x4p1eymqxvifr4r4izmvfi34i/tinymce/6/tinymce.min.js"
-        referrerpolicy="origin"></script>
+<!-- TinyMCE Script -->
+<script src="https://cdn.tiny.cloud/1/hbozepm8v83oquejurp97p1x4p1eymqxvifr4r4izmvfi34i/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
 
-<!-- Place the following <script> tag in your HTML's <body> -->
 <script>
     tinymce.init({
         selector: 'textarea',
@@ -54,16 +58,22 @@
         toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table mergetags | addcomment showcomments | spellcheckdialog a11ycheck typography | align lineheight | checklist numlist bullist indent outdent | emoticons charmap | removeformat',
         tinycomments_mode: 'embedded',
         tinycomments_author: 'Author name',
-        mergetags_list: [{
-            value: 'First.Name',
-            title: 'First Name'
-        },
-            {
-                value: 'Email',
-                title: 'Email'
-            },
+        mergetags_list: [
+            { value: 'First.Name', title: 'First Name' },
+            { value: 'Email', title: 'Email' },
         ],
-        ai_request: (request, respondWith) => respondWith.string(() => Promise.reject(
-            "See docs to implement AI Assistant")),
+    });
+
+    document.getElementById('image').addEventListener('change', function (event) {
+        var input = event.target;
+        var img = document.getElementById('img-show');
+        img.style.display = 'block';
+
+        var reader = new FileReader();
+        reader.onload = function () {
+            img.src = reader.result;
+        };
+
+        reader.readAsDataURL(input.files[0]);
     });
 </script>

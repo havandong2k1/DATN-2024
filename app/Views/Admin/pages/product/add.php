@@ -52,35 +52,28 @@
                         </div>
                     </div>
                     <div class="form-row">
-                        <div class="form-group col-md-6">
+                    <div class="form-group col-md-6">
                             <label for="category">Danh mục</label>
-                            <!--                            <input value="-->
-                            <? //= old('category') ?><!--" name="category" type="text" class="form-control" id="category" placeholder="Nhập danh mục" required>-->
-                            <select value="<?= old('category') ?>" name="category" class="form-control" id="category"
-                                    required>
-                                <option>Nhập danh mục sản phẩm</option>
-                                <option>MÀN HÌNH</option>
-                                <option>THÙNG MÁY</option>
-                                <option>CHIP</option>
-                                <option>RAM</option>
-                                <option>SSD</option>
-                                <option>HDD</option>
-                                <option>CARD ĐỒ HỌA</option>
-                                <option>CHUỘT</option>
-                                <option>BÀN, GHẾ GAMING</option>
-                                <option>QUẠT TẢN NHIỆT</option>
-                                <option>TAI NGHE</option>
-                                <option>TABLET</option>
-                                <option>BÀN PHÍM</option>
-                                <option>LOA</option>
-                                <option>LAPTOP</option>
-                                <option>IPAD</option>
+                            <input type="hidden" id="category" name="category" value="">
+                            <select name="category" class="form-control" id="category" required>
+                                <option value="">Nhập danh mục sản phẩm</option>
+                                <option value="MÀN HÌNH" <?= old('category') == 'MÀN HÌNH' ? 'selected' : '' ?>>MÀN HÌNH</option>
+                                <option value="THÙNG MÁY" <?= old('category') == 'THÙNG MÁY' ? 'selected' : '' ?>>THÙNG MÁY</option>
+                                <option value="CHIP" <?= old('category') == 'CHIP' ? 'selected' : '' ?>>CHIP</option>
+                                <option value="RAM" <?= old('category') == 'RAM' ? 'selected' : '' ?>>RAM</option>
+                                <option value="SSD" <?= old('category') == 'SSD' ? 'selected' : '' ?>>SSD</option>
+                                <option value="HDD" <?= old('category') == 'HDD' ? 'selected' : '' ?>>HDD</option>
+                                <option value="CARD ĐỒ HỌA" <?= old('category') == 'CARD ĐỒ HỌA' ? 'selected' : '' ?>>CARD ĐỒ HỌA</option>
+                                <option value="CHUỘT" <?= old('category') == 'CHUỘT' ? 'selected' : '' ?>>CHUỘT</option>
+                                <option value="BÀN, GHẾ GAMING" <?= old('category') == 'BÀN, GHẾ GAMING' ? 'selected' : '' ?>>BÀN, GHẾ GAMING</option>
+                                <option value="QUẠT TẢN NHIỆT" <?= old('category') == 'QUẠT TẢN NHIỆT' ? 'selected' : '' ?>>QUẠT TẢN NHIỆT</option>
+                                <option value="TAI NGHE" <?= old('category') == 'TAI NGHE' ? 'selected' : '' ?>>TAI NGHE</option>
+                                <option value="TABLET" <?= old('category') == 'TABLET' ? 'selected' : '' ?>>TABLET</option>
+                                <option value="BÀN PHÍM" <?= old('category') == 'BÀN PHÍM' ? 'selected' : '' ?>>BÀN PHÍM</option>
+                                <option value="LOA" <?= old('category') == 'LOA' ? 'selected' : '' ?>>LOA</option>
+                                <option value="LAPTOP" <?= old('category') == 'LAPTOP' ? 'selected' : '' ?>>LAPTOP</option>
+                                <option value="IPAD" <?= old('category') == 'IPAD' ? 'selected' : '' ?>>IPAD</option>
                             </select>
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label for="amount">Số lượng</label>
-                            <input value="<?= old('amount') ?>" name="amount" type="number" class="form-control"
-                                   id="amount" placeholder="Nhập số lượng" required>
                         </div>
                     </div>
 
@@ -93,6 +86,9 @@
                                 </option>
                                 <option value="1" <?php echo (old('status_product') == 1) ? 'selected' : ''; ?>>Hiển
                                     thị
+                                </option>
+                                <option value="2" <?php echo (old('status_product') == 2) ? 'selected' : ''; ?>>Hiển
+                                    thị SPH
                                 </option>
                             </select>
                         </div>

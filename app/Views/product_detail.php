@@ -156,11 +156,10 @@
                             <div class="product-information"><!--/product-information-->
                                 <!--                                <img src="images/product-details/new.jpg" class="newarrival" alt="" />-->
                                 <h2><?= $productObj['name'] ?></h2>
-                                <p>Số lượng: <?= $productObj['amount'] ?></p>
                                 <img src="images/product-details/rating.png" alt=""/>
                                 <span>
                                    <p>Giá: <?= $productObj['price'] . ' ' . 'VND' ?></p>
-                                    <label>Quantity:</label>
+                                    <label>Số Lượng:</label>
                                     <input type="number" min="1" value="1"/>
                                     <form action="addToCart" method="post" id="cartForm">
                                                     <input type="hidden" name="product_id" id="productId">

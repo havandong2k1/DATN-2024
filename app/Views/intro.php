@@ -21,7 +21,7 @@
                         <br>Với cam kết về chất lượng sản phẩm, dịch vụ tận tình và một môi trường mua sắm trực tuyến tiện lợi, The Computer Shop là điểm đến lý tưởng cho những người đam mê công nghệ và muốn tìm kiếm những sản phẩm hàng đầu trên thị trường.
                     </p>
                     <button class="fa fa-shopping-cart" >
-                        <a  style="font-size: large; font-style: italic" href="views/product" class="stretched-link">Mua sắm ngay nào!</a>
+                        <a  style="font-size: large; font-style: italic" href="views/product/0" class="stretched-link">Mua sắm ngay nào!</a>
                     </button>
 
                 </div>

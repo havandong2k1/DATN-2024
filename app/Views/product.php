@@ -1,5 +1,3 @@
-<!-- views/cart/index.php -->
-
 <?php include 'templates/header.php'; ?>
 <section>
     <div class="container">
@@ -18,10 +16,15 @@
                         <li class="list-group-item">Không có danh mục sản phẩm</li>
                     <?php endif; ?>
                 </ul>
-            </div>
+            </div>           
             <div class="col-sm-9 padding-right">
                 <div class="features_items">
                     <h2 class="title text-center">Sản phẩm</h2>
+                    <?php if (session()->getFlashdata('msg_success')) : ?>
+                <div class="alert alert-success">
+                    <?= session()->getFlashdata('msg_success') ?>
+                </div>
+                <?php endif; ?> 
                     <div id="dataContainer" class="row">
                         <?php if (!empty($products)): ?>
                             <?php foreach ($products as $product): ?>
@@ -30,12 +33,10 @@
                                         <div class="single-products">
                                             <div class="productinfo text-center">
                                                 <img id="images" src="uploads/<?= $product['images']; ?>" alt="images">
-                                                <h2 id="price"><?= number_format($product['price'], 0, ',', '.') ?></h2>
-                                                <p id="product"><?= $product['name']; ?></p>
-                                                <p id="amount">Số lượng:<?= $product['amount']; ?></p>
-                                                <p id="category">Danh mục: <?= $product['category'] ?></p>
-                                                <!-- Modified the link to call addToCart() function -->
-                                                <a href="#" onclick="addToCart(<?= $product['id_product'] ?>)" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ hàng</a>
+                                                <h2 id="price"><?= number_format($product['price'], 0, ',', '.') ?> VND </h2>
+                                                <p id="product"><?= esc($product['name']); ?></p>
+                                                <p id="category">Danh mục: <?= esc($product['category']) ?></p>
+                                                <a href="javascript:void(0);" onclick="addToCart(<?= $product['id_product'] ?>)" class="btn btn-success">Thêm vào giỏ hàng</a>
                                             </div>
                                         </div>
                                         <div class="choose">
@@ -51,7 +52,6 @@
                             <p>Không có sản phẩm nào trong danh mục này.</p>
                         <?php endif; ?>
                     </div>
-                    <!-- Hiển thị phân trang -->
                     <div class="col-sm-12">
                         <?php echo $pager->links(); ?>
                     </div>
@@ -62,31 +62,9 @@
 </section>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
-    // Function to add item to cart via AJAX
     function addToCart(productId) {
-        console.log("id", productId);
-        // Retrieve the CSRF token name and value
-        const csrfName = $('[name="csrf_token"]').attr('name');
-        const csrfHash = $('[name="csrf_token"]').val();
-
-        // Make the AJAX request
-        $.ajax({
-            url: '<?= site_url('views/cart') ?>',
-            type: 'POST',
-            headers: {
-                '<?= csrf_header() ?>': '<?= csrf_hash() ?>'
-            },
-            data: {
-                product_id: productId
-            },
-            success: function(response) {
-                console.log("data", response);
-                alert('Sản phẩm đã được thêm vào giỏ hàng.');
-            },
-            error: function(xhr, status, error) {
-                alert('Đã xảy ra lỗi: ' + error);
-            }
-        });
+        // Chuyển hướng tới URL thêm sản phẩm vào giỏ hàng
+        window.location.href = "<?= site_url('cart/add/') ?>" + productId;
     }
 </script>
 <?php include 'templates/footer.php'; ?>

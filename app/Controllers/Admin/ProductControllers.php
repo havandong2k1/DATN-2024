@@ -43,6 +43,7 @@ class ProductControllers extends BaseController
         return view('admin/main', $data);
     }
 
+   
     public function add()
     {
         $data = [];
@@ -76,7 +77,6 @@ class ProductControllers extends BaseController
             // Nếu không có ảnh được tải lên, đặt giá trị của trường ảnh là chuỗi rỗng
             $productObj['images'] = '';
         }
-
         // Thiết lập giá trị cho trường khóa chính
         $productObj['id_product'] = null;
 
@@ -110,9 +110,7 @@ class ProductControllers extends BaseController
                 'description' => $this->request->getPost('description'),
                 'amount' => $this->request->getPost('amount'),
                 'category' => $this->request->getPost('category'),
-                // 'images' => $this->request->getPost('images'),
-            ];
-
+            ];  
             // Cập nhật thông tin sản phẩm trong cơ sở dữ liệu
             $productModel->update($id, $updatedData);
             // Chuyển hướng đến trang sản phẩm đã chỉnh sửa hoặc bất kỳ trang nào khác mong muốn

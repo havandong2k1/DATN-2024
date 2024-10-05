@@ -8,7 +8,7 @@ class BlogModel extends BaseModel
 {
     protected $table = 'blog';
     protected $primaryKey = 'id_blogs';
-    protected $allowedFields = ['title', 'content', 'status_blogs', 'create_at', 'update_at', 'deleted_at'];
+    protected $allowedFields = ['title', 'content', 'status_blogs', 'create_at', 'update_at', 'deleted_at', 'image'];
     protected $useAutoIncrement = true; // Thêm dòng này để bật AUTO_INCREMENT cho cột khóa chính
 
     protected function beforeInsert(array $data)
