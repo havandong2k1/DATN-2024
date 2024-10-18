@@ -32,14 +32,12 @@
                                     <td><?= htmlspecialchars($blog['content']) ?></td>
                                     <td>
                                         <?php if (!empty($blog['image'])): ?>
-                                            <!-- Kiểm tra và hiển thị hình ảnh -->
-                                            <img src="<?= base_url('public/viewblog/' . $blog['image']); ?>"  height="60" width="60">
+                                            <img src="<?= base_url('uploads/' . $blog['image']); ?>" height="60" width="60" alt="Blog Image: <?= htmlspecialchars($blog['title']) ?>">
                                         <?php else: ?>
-                                            <!-- Hiển thị placeholder nếu không có ảnh -->
-                                            <img src="<?= base_url('public/viewblog/placeholder.png'); ?>" alt="No image" height="60" width="60">
+                                            <img src="<?= base_url('uploads/placeholder.png'); ?>" alt="No image available" height="60" width="60">
                                         <?php endif; ?>
                                     </td>
-                                    <td><?= date('d-m-Y H:i:s', strtotime($blog['created_at'])) ?></td> <!-- Định dạng ngày tháng -->
+                                    <td><?= date('d-m-Y H:i:s', strtotime($blog['created_at'])) ?></td>
                                     <td class="text-center">
                                         <a href="admin/blog/edit/<?= $blog['id_blogs'] ?>" class="btn btn-primary btn-sm ___js-edit-blog"><i class="fas fa-edit"></i></a>
                                         <a class="btn btn-danger btn-sm ___js-delete-blog" data-id="<?= @$blog['id_blogs'];?>"><i class="far fa-trash-alt"></i></a>
@@ -63,31 +61,10 @@
 <?= $this->include("Modals/Blog/delete") ?>
 <script>
     $('.___js-delete-blog').on('click', function(){
-        // Lấy dữ liệu từ nút xóa
         const id = $(this).data('id');
-        // Đặt dữ liệu vào Form xóa
         $('.blogs_id_delete').val(id);
-        // Gọi Modal xóa
         $('#confirmDeleteBlogs').modal('show');
     });
 
-    $('#datatable').DataTable({
-        initComplete: function () {
-            this.api()
-                .columns()
-                .every(function () {
-                    var column = this;
-                    var title = column.footer().textContent;
-
-                    // Create input element and add event listener
-                    $('<input type="text" placeholder="Search ' + title + '" />')
-                        .appendTo($(column.footer()).empty())
-                        .on('keyup change clear', function () {
-                            if (column.search() !== this.value) {
-                                column.search(this.value).draw();
-                            }
-                        });
-                });
-        }
-    });
+    $('#datatable').DataTable();
 </script>

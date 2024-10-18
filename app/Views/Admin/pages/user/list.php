@@ -1,5 +1,5 @@
 <div class="container-fluid">
-    <h1 class="dash-title">Trang chủ / Tài khoản</h1>
+    <h1 class="dash-title">Trang chủ / Tài khoản ADMIN</h1>
     <script src="public/vendor/toastr/build/toastr.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
@@ -20,7 +20,7 @@
                     <div class="easion-card-icon">
                         <i class="fas fa-table"></i>
                     </div>
-                    <div class="easion-card-title">Danh sách tài khoản</div>
+                    <div class="easion-card-title">Danh sách tài khoản ADMIN</div>
                 </div>
                 <div class="card-body ">
                     <table id="datatable" class="cell-border stripe">

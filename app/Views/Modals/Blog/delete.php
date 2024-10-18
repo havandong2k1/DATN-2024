@@ -1,4 +1,4 @@
-<form action="<?= base_url('admin/blog/delete') ?>" method="post">
+<form action="<?= base_url('admin/blog/delete') ?>" method="post" onsubmit="return confirmDelete()">
     <div class="modal fade" id="confirmDeleteBlogs" tabindex="-1" role="dialog" aria-labelledby="confirmDeleteBlogs" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -20,3 +20,10 @@
         </div>
     </div>
 </form>
+
+<script>
+    function confirmDelete() {
+        console.log('Form is being submitted'); // Đảm bảo form được submit
+        return true; // Tiếp tục submit
+    }
+</script>

@@ -37,4 +37,5 @@ class CartModel extends BaseModel
                     ->where('cart.deleted_at', null) // Nếu bạn có cột `deleted_at` để soft delete
                     ->findAll();
     }
+    
 }

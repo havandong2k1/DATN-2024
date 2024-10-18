@@ -7,7 +7,8 @@
                     <i class="fas fa-user"></i>
                 </div>
                 <div class="stats-data">
-                    <div class="stats-number"></div>
+                    <!-- Hiển thị tổng số người dùng lấy từ $totalUsers -->
+                    <div class="stats-number"><?php echo isset($totalUsers) ? $totalUsers : 0; ?></div>
                 </div>
             </div>
         </div>
@@ -20,7 +21,7 @@
                     <i class="fas fa-cube"></i>
                 </div>
                 <div class="stats-data">
-                    <div class="stats-number"><?php echo '40'?></div>
+                    <div class="stats-number"><?php echo '40'; ?></div>
                 </div>
             </div>
         </div>
@@ -29,11 +30,11 @@
         <div class="stats stats-warning shadow-lg p-3 mb-5 rounded-4 ">
             <h3 class="stats-title"> Số lượng bài viết</h3>
             <div class="stats-content">
-                <div class="stats-icon">
+                <div class="stats-icon"> 
                     <i class="fas fa-book"></i>
                 </div>
                 <div class="stats-data">
-                    <div class="stats-number"><?php echo '1'?></div>
+                    <div class="stats-number"><?php echo '1'; ?></div>
                 </div>
             </div>
         </div>
@@ -46,11 +47,9 @@
                     <i class="fas fa-cube"></i>
                 </div>
                 <div class="stats-data">
-                    <div class="stats-number"><?php echo ''?></div>
+                    <div class="stats-number"><?php echo ''; ?></div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-
-

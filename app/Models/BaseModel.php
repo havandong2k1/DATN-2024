@@ -38,7 +38,7 @@ class BaseModel extends Model
     protected $beforeDelete         = [];
     protected $afterDelete          = [];
     protected $beforeInsert = ['beforeInsert'];//defined below
-    protected $beforeUpdate = ['beforeUpdate'];//defined below
+    // protected $beforeUpdate = ['beforeUpdate'];//defined below
 
     /**
      * Instance of the encrypter object.
@@ -338,4 +338,5 @@ class BaseModel extends Model
             $this->db->query($query);
         }
     }
+    
 }

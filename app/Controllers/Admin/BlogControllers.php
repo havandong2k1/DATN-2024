@@ -6,9 +6,7 @@ use App\Common\ResultUtils;
 use App\Models\BaseModel;
 use App\Controllers\BaseController;
 use App\Models\BlogModel;
-use App\Models\ProductModel;
 use App\Services\BlogsService;
-use Exception;
 
 class BlogControllers extends BaseController
 {
@@ -25,8 +23,6 @@ class BlogControllers extends BaseController
     public function list(): string
     {
         $data = [];
-        //$data = $this->service->getAllBlogs();
-        //dd($data);
         $cssFiles = [
             'http://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js',
             base_url() . '/assets/admin/js/datatable.js',
@@ -40,8 +36,6 @@ class BlogControllers extends BaseController
 
         $blogModel = new BlogModel();
         $blogs = $blogModel->findAll();
-        // print_r($blogs);
-        // die();
         $dataLayout = [];
         if ($blogs) {
             $dataLayout['blogs'] = $blogs;
@@ -49,7 +43,6 @@ class BlogControllers extends BaseController
         $data = $this->loadMasterLayout($data, 'Danh sách bài viết', 'admin/pages/blog/list', $dataLayout, $cssFiles, $jsFiles);
         return view('admin/main', $data);
     }
-
 
     public function add()
     {
@@ -61,53 +54,58 @@ class BlogControllers extends BaseController
     }
 
     public function create()
-    {
-        // Kiểm tra xem form có được submit hay không
-        if ($this->request->getMethod() === 'post') {
-            $blogModel = new BlogModel();
+{
+    // Kiểm tra xem form có được submit hay không
+    if ($this->request->getMethod() === 'post') {
+        $blogModel = new BlogModel();
 
-            // Lấy dữ liệu từ form
-            $content = $this->request->getPost('content');
-            $title = $this->request->getPost('title');
+        // Lấy dữ liệu từ form
+        $content = $this->request->getPost('content');
+        $title = $this->request->getPost('title');
 
-            // Lấy file hình ảnh từ form
-            $imageFile = $this->request->getFile('image');
-            $imageName = '';
+        // Lấy file hình ảnh từ form
+        $imageFile = $this->request->getFile('image');
+        $imageName = '';
 
-            // Kiểm tra xem file ảnh có hợp lệ không
-            if ($imageFile && $imageFile->isValid() && !$imageFile->hasMoved()) {
-                // Đặt tên ngẫu nhiên cho file để tránh trùng lặp
-                $imageName = $imageFile->getRandomName();
+        // Kiểm tra xem file ảnh có hợp lệ không
+        if ($imageFile && $imageFile->isValid() && !$imageFile->hasMoved()) {
+            // Đặt tên ngẫu nhiên cho file để tránh trùng lặp
+            $imageName = $imageFile->getRandomName();
 
-                // Đường dẫn thư mục lưu trữ ảnh
-                $uploadDirectory = WRITEPATH . 'ingBlog';
+            // Đường dẫn thư mục lưu trữ ảnh
+            $uploadDirectory = WRITEPATH . 'uploads'; // Thư mục lưu trữ tạm
 
-                // Di chuyển file vào thư mục lưu trữ
-                if ($imageFile->move($uploadDirectory, $imageName)) {
-                    // Lưu tên file ảnh vào cơ sở dữ liệu
-                    $data = [
-                        'content' => $content,
-                        'title' => $title,
-                        'image' => $imageName, // Lưu tên file ảnh
-                    ];
+            // Di chuyển file vào thư mục lưu trữ
+            if ($imageFile->move($uploadDirectory, $imageName)) {
+                // Di chuyển ảnh từ writable/uploads sang public/uploads
+                $targetPath = FCPATH . 'uploads/' . $imageName; // Đường dẫn đích
+                copy($uploadDirectory . '/' . $imageName, $targetPath); // Sao chép tệp vào thư mục public
 
-                    // Lưu dữ liệu vào cơ sở dữ liệu
-                    $blogModel->save($data);
-                    
-                    // Đặt thông báo thành công và chuyển hướng
-                    session()->setFlashdata('msg_success', 'Thêm bài viết thành công');
-                    return redirect()->to('admin/blog/list');
-                } else {
-                    session()->setFlashdata('msg_error', 'Có lỗi xảy ra khi lưu ảnh');
-                }
+                // Lưu tên file ảnh vào cơ sở dữ liệu
+                $data = [
+                    'content' => $content,
+                    'title' => $title,
+                    'image' => $imageName, // Lưu tên file ảnh
+                ];
+
+                // Lưu dữ liệu vào cơ sở dữ liệu
+                $blogModel->save($data);
+                
+                // Đặt thông báo thành công và chuyển hướng
+                session()->setFlashdata('msg_success', 'Thêm bài viết thành công');
+                return redirect()->to('admin/blog/list');
             } else {
-                session()->setFlashdata('msg_error', 'Tệp ảnh không hợp lệ hoặc không được chọn');
+                session()->setFlashdata('msg_error', 'Có lỗi xảy ra khi lưu ảnh');
             }
+        } else {
+            session()->setFlashdata('msg_error', 'Tệp ảnh không hợp lệ hoặc không được chọn');
         }
-
-        // Hiển thị form nếu chưa submit
-        return view('admin/blog/create');
     }
+
+    // Hiển thị form nếu chưa submit
+    return view('admin/blog/create');
+}
+
 
     public function editOrUpdate($id_blogs)
     {
@@ -118,16 +116,28 @@ class BlogControllers extends BaseController
             return redirect()->to('error/404')->with('error', 'Không tìm thấy bài viết với ID: ' . $id_blogs);
         }
         if ($this->request->getMethod() === 'post') {
-            // Xử lý biểu mẫu khi người dùng gửi để cập nhật thông tin sản phẩm
+            // Lấy dữ liệu từ form
             $updatedData = [
                 'content' => $this->request->getPost('content'),
                 'title' => $this->request->getPost('title'),
-
             ];
-            // Cập nhật thông tin sản phẩm trong cơ sở dữ liệu
+
+            // Lấy file hình ảnh từ form
+            $imageFile = $this->request->getFile('image');
+            if ($imageFile && $imageFile->isValid() && !$imageFile->hasMoved()) {
+                // Đặt tên ngẫu nhiên cho file để tránh trùng lặp
+                $imageName = $imageFile->getRandomName();
+                $uploadDirectory = WRITEPATH . 'uploads'; // Đường dẫn lưu ảnh
+
+                // Di chuyển file vào thư mục lưu trữ
+                if ($imageFile->move($uploadDirectory, $imageName)) {
+                    $updatedData['image'] = $imageName; // Cập nhật tên ảnh mới
+                }
+            }
+
+            // Cập nhật thông tin bài viết trong cơ sở dữ liệu
             $blogModel->update($id_blogs, $updatedData);
-            // Chuyển hướng đến trang sản phẩm đã chỉnh sửa hoặc bất kỳ trang nào khác mong muốn
-            session()->setFlashdata('success', 'Sửa thành công');
+            session()->setFlashdata('msg_success', 'Sửa thành công');
             return redirect()->to('admin/blog/edit/' . $id_blogs);
         }
         // Hiển thị biểu mẫu chỉnh sửa
@@ -135,13 +145,12 @@ class BlogControllers extends BaseController
             base_url() . '/assets/admin/js/event.js'
         ];
         $dataLayout['blog'] = $blogs;
-        $data = $this->loadMasterLayout([], 'Sửa tài khoản', 'admin/pages/blog/edit', $dataLayout, $cssFiles, []);
+        $data = $this->loadMasterLayout([], 'Sửa bài viết', 'admin/pages/blog/edit', $dataLayout, $cssFiles, []);
         return view('admin/main', $data);
     }
 
     public function delete()
     {
-
         $blogModel = new BlogModel();
         $ids = $this->request->getPost('id_blogs');
 
@@ -149,15 +158,16 @@ class BlogControllers extends BaseController
         if (!is_array($ids)) {
             $ids = explode(',', $ids); // Phân tách chuỗi thành mảng dựa trên dấu phẩy
         }
+
         // Kiểm tra xem có id nào được gửi lên không
         if (!empty($ids)) {
             foreach ($ids as $id) {
                 // Xóa bài viết với id được chỉ định
                 $blogModel->delete($id);
             }
-            session()->setFlashdata('msg_success', 'Thành công');
+            session()->setFlashdata('msg_success', 'Xóa bài viết thành công');
         } else {
-            session()->setFlashdata('msg_error', 'Không thành công');
+            session()->setFlashdata('msg_error', 'Không có bài viết nào để xóa');
         }
 
         return redirect()->to(base_url('admin/blog/list'));

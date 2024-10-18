@@ -12,8 +12,8 @@
                     <div class="col-sm-4"> <!-- Mỗi bài viết sẽ chiếm 1/3 chiều ngang màn hình -->
                         <div class="blog-item">
                             <a href="<?= base_url('views/viewblog/' . $blog['id_blogs']) ?>"> <!-- Liên kết đến trang chi tiết -->
-                                <img src="<?= $blog['image'] ?>" alt="<?= htmlspecialchars($blog['title'], ENT_QUOTES, 'UTF-8') ?>" style="width: 100%; max-width: 100%;"> <!-- Hiển thị ảnh -->
-                                <h2><?= htmlspecialchars($blog['title'], ENT_QUOTES, 'UTF-8') ?></h2>
+                                <img src="<?= base_url('uploads/' . $blog['image']) ?>" alt="<?= htmlspecialchars($blog['title'], ENT_QUOTES, 'UTF-8') ?>" class="blog-img"> <!-- Hiển thị ảnh -->
+                                <h2 class="blog-title"><?= htmlspecialchars($blog['title'], ENT_QUOTES, 'UTF-8') ?></h2>
                             </a>
                         </div>
                     </div>
@@ -24,13 +24,50 @@
         <?php endif; ?>
     </div>
 </div>
+
 <style>
     .blog-item {
-    margin-bottom: 20px;
-    text-align: center;
+        margin-bottom: 20px;
+        text-align: center;
     }
-    .blog-item img {
+    .blog-img {
         border-radius: 10px;
+        width: 50%;
+        object-fit: cover;
+    }
+    .blog-title {
+        font-size: 1.2em;
+        margin-top: 10px;
+        color: #333;
     }
 </style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function() {
+        // Tìm chiều cao lớn nhất của các phần tử hình ảnh
+        var maxHeight = 0;
+        $('.blog-img').each(function(){
+            var thisHeight = $(this).height();
+            if (thisHeight > maxHeight) {
+                maxHeight = thisHeight;
+            }
+        });
+
+        // Đặt chiều cao lớn nhất cho tất cả các ảnh
+        $('.blog-img').height(maxHeight);
+
+        // Tìm chiều cao lớn nhất của tiêu đề
+        var maxTitleHeight = 0;
+        $('.blog-title').each(function(){
+            var thisHeight = $(this).height();
+            if (thisHeight > maxTitleHeight) {
+                maxTitleHeight = thisHeight;
+            }
+        });
+
+        // Đặt chiều cao lớn nhất cho tất cả các tiêu đề
+        $('.blog-title').height(maxTitleHeight);
+    });
+</script>
 <?= view('templates/footer'); ?>

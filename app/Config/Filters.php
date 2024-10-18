@@ -23,13 +23,19 @@ class Filters extends BaseConfig
 
     public array $globals = [
         'before' => [
-            'csrf'
+            'csrf' => ['except' => [
+                'order/placeOrder', // Tắt CSRF cho route đặt hàng
+                'cart/add/*', // Tắt CSRF cho route thêm vào giỏ hàng
+                'process', // Tắt CSRF cho route xử lý thanh toán
+                'admin/order/edit/*', // Tắt CSRF cho các route chỉnh sửa đơn hàng
+                'admin/order/update/*', // Tắt CSRF cho các route cập nhật đơn hàng
+            ]],
         ],
         'after' => [
             'toolbar',
         ],
     ];
-
+    
     public array $methods = [];
 
     public array $filters = [];

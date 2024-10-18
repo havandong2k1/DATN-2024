@@ -3,7 +3,7 @@
                 <a href="javascript::void()" class="menu-toggle">
                     <i class="fas fa-bars"></i>
                 </a>
-                <a href="http://localhost:8080/admin/pages/home" class="easion-logo"><img src="/assets/images/logo.png" alt="" height="50" width="120"></a>
+                <a href="http://localhost:8080/admin/pages/home" class="easion-logo"><img src="/assets/images/logo.png" style="background-color: white;" alt="" height="50" width="130"></a>
 
             </header>
             <p class="text-center bg-primary text-dark">Version 1.0.0</p>
@@ -12,13 +12,19 @@
                     <i class="fas fa-home"></i> Thống kê </a>
                 <div class="dash-nav-dropdown">
                     <a href="javascript::void(0)" class="dash-nav-item dash-nav-dropdown-toggle">
-                        <i class="fas fa-users"></i> Tài khoản </a>
+                        <i class="fas fa-users"></i> Tài khoản ADMIN </a>
                     <div class="dash-nav-dropdown-menu">
                         <a href="admin/user/list" class="dash-nav-dropdown-item">Danh sách</a>
                         <a href="admin/user/add" class="dash-nav-dropdown-item">Thêm mới</a>
                     </div>
                 </div>
-
+                <div class="dash-nav-dropdown">
+                    <a href="javascript::void(0)" class="dash-nav-item dash-nav-dropdown-toggle">
+                        <i class="fas fa-users"></i> Tài khoản KH </a>
+                    <div class="dash-nav-dropdown-menu">
+                        <a href="admin/customer/list" class="dash-nav-dropdown-item">Danh sách</a>
+                    </div>
+                </div>
                 <div class="dash-nav-dropdown">
                     <a href="javascript::void(0)" class="dash-nav-item dash-nav-dropdown-toggle">
                         <i class="fas fa-cube"></i>Sản phẩm </a>

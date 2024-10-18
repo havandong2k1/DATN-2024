@@ -10,7 +10,7 @@ class ProductModel extends BaseModel
     protected $primaryKey = 'id_product';
     protected $allowedFields = ['name', 'description', 'price', 'images', 'amount', 'category',
                                 'status_product', 'created_at', 'updated_at', 'deleted_at'];
-    protected $useAutoIncrement = true; // Thêm dòng này để bật AUTO_INCREMENT cho cột khóa chính
+    protected $useAutoIncrement = true; 
     protected $returnType = 'array';
     protected function beforeInsert(array $data)
     {

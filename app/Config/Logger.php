@@ -49,6 +49,7 @@ class Logger extends BaseConfig
      * codes to set your own date formatting
      */
     public string $dateFormat = 'Y-m-d H:i:s';
+    
 
     /**
      * --------------------------------------------------------------------------
