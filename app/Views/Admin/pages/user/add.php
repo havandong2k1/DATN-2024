@@ -12,36 +12,44 @@
                     </div>
                     <div class="easion-card-title"> Thông tin tài khoản </div>
                 </div>
-                <div class="card-body ">
+                <div class="card-body">
                     <form action="admin/user/create" method="post">
                         <input type="hidden" name="<?= csrf_token() ?>" value="<?= csrf_hash() ?>" />
                         <div class="form-row">
                             <div class="form-group col-md-8">
                                 <label for="inputEmai">Email</label>
-                                <input  name="email" type="email" class="form-control" id="inputEmai" placeholder="Email" required>
+                                <input name="email" type="email" class="form-control" id="inputEmai" placeholder="Email" required>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="inputAddress">Tên hiển thị</label>
-                            <input  name="name" type="text" class="form-control" id="inputAddress" placeholder="Tên hiển thị người dùng" required>
+                            <input name="name" type="text" class="form-control" id="inputAddress" placeholder="Tên hiển thị người dùng" required>
                         </div>
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label for="password">Mật khẩu</label>
-                                <input  name="password" type="password" class="form-control" id="password" placeholder="Nhập vào mật khẩu">
+                                <input name="password" type="password" class="form-control" id="password" placeholder="Nhập vào mật khẩu">
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="password-confirm">Xác nhận mật khẩu</label>
-                                <input  name="password_confirm" type="password" class="form-control" id="password-confirm" placeholder="Xác nhận lại mật khẩu">
+                                <input name="password_confirm" type="password" class="form-control" id="password-confirm" placeholder="Xác nhận lại mật khẩu">
                             </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="userStatus">Trạng thái người dùng</label>
+                            <select name="status_users" class="form-control" id="userStatus" required>
+                                <option value="1">Admin</option>
+                                <option value="2">Quản lý</option>
+                                <option value="3">Nhân viên</option>
+                                <option value="0">Khóa</option>
+                            </select>
                         </div>
                         <button type="submit" class="btn btn-success rounded-4">Đăng ký</button>
                         <button type="reset" class="btn btn-secondary rounded-4">Nhập lại</button>
-                        <a style="background-color: yellow" href="<?= base_url('admin/user/list') ?>" class="btn btn-warning rounded-4 ">Quay lại</a>
+                        <a style="background-color: yellow" href="<?= base_url('admin/user/list') ?>" class="btn btn-warning rounded-4">Quay lại</a>
                     </form>
                 </div>
             </div>
         </div>
-    </div>
     </div>
 </main>

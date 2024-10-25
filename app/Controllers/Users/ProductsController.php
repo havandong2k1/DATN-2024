@@ -4,7 +4,6 @@ namespace App\Controllers\Users;
 
 use App\Controllers\BaseController;
 use App\Models\ProductModel;
-use App\Models\CategoryModel;
 use App\Models\ReviewModel;
 
 class ProductsController extends BaseController
@@ -89,48 +88,52 @@ class ProductsController extends BaseController
         // Lấy thông tin sản phẩm
         $product = $productModel->find($productId);
         if (!$product) {
-            return false; // Trả về false nếu không tìm thấy sản phẩm
-        }
-
-        $condition = [
-            'deleted_at' => null,
-            'id_product' => $productId
-        ];
-        $withSelect = 'name, description, price, images, amount, category';
-        $productObj = $productModel->getFirstByConditions($condition, '', $withSelect);
-        if (!$productObj) {
-            return false; // Trả về false nếu không tìm thấy sản phẩm
+            return redirect()->to('/'); // Hoặc trang lỗi nếu không tìm thấy
         }
 
         // Lấy danh sách đánh giá cho sản phẩm
         $reviews = $reviewModel->where('id_product', $productId)->findAll();
 
+        // Lấy sản phẩm đề xuất (ví dụ: sản phẩm cùng danh mục)
+        $recommendedProducts = $productModel->where('category', $product['category'])
+            ->where('id_product !=', $productId) // Tránh lấy sản phẩm hiện tại
+            ->findAll();
+
         // Truyền thông tin sản phẩm và đánh giá vào view
-        $data['productObj'] = $productObj;
+        $data['productObj'] = $product; // Đảm bảo $product có cấu trúc chính xác
         $data['productId'] = $productId;
         $data['reviews'] = $reviews;  // Truyền đánh giá vào view
         $data['categories'] = $this->categories; // Truyền danh mục vào view
+        $data['recommendedProducts'] = $recommendedProducts; // Truyền sản phẩm đề xuất vào view
 
         return view('product_detail', $data);
     }
 
     public function addReview()
     {
-        $reviewModel = new ReviewModel();
+        $model = new ReviewModel();
 
-        // Nhận dữ liệu từ form
+        // Lấy dữ liệu từ request
         $data = [
             'id_product' => $this->request->getPost('id_product'),
-            'customer_id' => $this->request->getPost('customer_id'),
+            'customer_id' => session()->get('customer_id'), // Lấy customer_id từ session
+            'customer_name' => session()->get('customer_name') ?? 'Người ẩn danh', // Nếu không có customer_name thì dùng 'Người ẩn danh'
             'rating' => $this->request->getPost('rating'),
-            'review' => $this->request->getPost('review')
+            'review' => $this->request->getPost('review'),
         ];
 
-        // Lưu đánh giá vào database
-        $reviewModel->save($data);
+        // Kiểm tra nếu tất cả các trường đều có dữ liệu
+        if (empty($data['id_product']) || empty($data['rating']) || empty($data['review'])) {
+            return redirect()->back()->with('error', 'Vui lòng điền đầy đủ thông tin đánh giá.');
+        }
 
-        // Chuyển hướng về trang chi tiết sản phẩm
-        return redirect()->back()->with('success', 'Đánh giá của bạn đã được thêm!');
+        // Thêm đánh giá vào database
+        if ($model->insert($data) === false) {
+            log_message('error', 'Insert error: ' . print_r($model->errors(), true));
+            return redirect()->back()->with('error', 'Không thể lưu đánh giá.');
+        }
+
+        return redirect()->back()->with('message', 'Đánh giá đã được lưu thành công.');
     }
 
     public function products()
@@ -155,17 +158,14 @@ class ProductsController extends BaseController
     public function countProductsByCategory()
     {
         $productModel = new ProductModel();
-
         // Fetch the counts of products for each category
         $categories = $productModel->groupBy('category')->findAll();
-
         // Loop through each category and get the count of products
         $categoryCounts = [];
         foreach ($categories as $category) {
             $count = $productModel->where('category', $category['category'])->countAllResults();
             $categoryCounts[$category['category']] = $count;
         }
-
         // Pass $categoryCounts array to the view
         return view('category', ['categoryCounts' => $categoryCounts, 'categories' => $this->categories]);
     }

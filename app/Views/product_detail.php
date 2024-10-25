@@ -11,7 +11,7 @@
                             <div class="panel panel-default">
                                 <div class="panel-heading">
                                     <h4 class="panel-title">
-                                        <a href="#"><?= $category ?></a>
+                                        <a href="#"><?= esc($category) ?></a>
                                     </h4>
                                 </div>
                             </div>
@@ -36,8 +36,8 @@
                             <span>
                                 <label>Số lượng:</label>
                                 <input type="number" name="quantity" min="1" value="1" id="productQuantity">
-                                <form action="/addToCart" method="post" id="cartForm">
-                                    <input type="hidden" name="product_id" value="<?= esc(data: $productObj['id_product']) ?>">
+                                <form action="/product/addToCart" method="post" id="cartForm">
+                                    <input type="hidden" name="product_id" value="<?= esc($productObj['id_product']) ?>">
                                     <input type="hidden" name="quantity" id="hiddenQuantity">
                                     <a href="javascript:void(0);" onclick="addToCart()" class="btn btn-success">Thêm vào giỏ hàng</a>
                                 </form>
@@ -63,8 +63,20 @@
                                 <!-- Hiển thị danh sách đánh giá -->
                                 <?php if (!empty($reviews)): ?>
                                     <?php foreach ($reviews as $review): ?>
-                                        <p><strong><?= esc($review['customer_name']) ?>:</strong> <?= esc($review['review']) ?></p>
-                                        <p>Đánh giá: <?= esc($review['rating']) ?>/5</p>
+                                        <div class="review">
+                                            <p>
+                                                <strong><?= esc($review['customer_name'] ?? 'Người ẩn danh') ?>:</strong>
+                                            </p>
+                                            <p class="rating">
+                                                <?php 
+                                                $rating = esc($review['rating'] ?? 0);
+                                                for ($i = 1; $i <= 5; $i++): 
+                                                ?>
+                                                    <span class="fa fa-star <?= $i <= $rating ? 'checked' : '' ?>"></span>
+                                                <?php endfor; ?>
+                                            </p>
+                                            <p><?= esc($review['review'] ?? 'Nội dung không có') ?></p>
+                                        </div>
                                     <?php endforeach; ?>
                                 <?php else: ?>
                                     <p>Chưa có đánh giá nào cho sản phẩm này.</p>
@@ -72,11 +84,20 @@
 
                                 <!-- Form thêm đánh giá -->
                                 <h3>Thêm đánh giá của bạn</h3>
-                                <form action="/users/products/addReview" method="post">
+                                <form action="/product/addReview" method="post" id="reviewForm">
+                                    <?= csrf_field(); ?>
                                     <input type="hidden" name="id_product" value="<?= esc($productObj['id_product']) ?>">
-                                    <input type="hidden" name="customer_id" value="<?= session()->get('customer_id') ?>">
+                                    <input type="hidden" name="customer_id" value="<?= session()->get('customer_id') ?? ''; ?>">
                                     <label for="rating">Đánh giá:</label>
-                                    <input type="number" name="rating" min="1" max="5" required> / 5 <br>
+                                    <div class="rating-stars">
+                                        <span class="fa fa-star" data-value="1"></span>
+                                        <span class="fa fa-star" data-value="2"></span>
+                                        <span class="fa fa-star" data-value="3"></span>
+                                        <span class="fa fa-star" data-value="4"></span>
+                                        <span class="fa fa-star" data-value="5"></span>
+                                        <input type="hidden" name="rating" id="rating" required>
+                                    </div>
+                                    <br>
                                     <label for="review">Nội dung:</label>
                                     <textarea name="review" required></textarea> <br>
                                     <button type="submit" class="btn btn-primary">Gửi đánh giá</button>
@@ -91,7 +112,7 @@
                     <div id="recommended-item-carousel" class="carousel slide" data-ride="carousel">
                         <div class="carousel-inner">
                             <?php foreach ($recommendedProducts as $product): ?>
-                                <div class="item <?= $loop->first ? 'active' : '' ?>">
+                                <div class="item <?= ($product === reset($recommendedProducts)) ? 'active' : '' ?>">
                                     <div class="col-sm-4">
                                         <div class="product-image-wrapper">
                                             <div class="single-products">
@@ -126,6 +147,65 @@
         document.getElementById('hiddenQuantity').value = quantity;
         document.getElementById('cartForm').submit();
     }
+
+    // JavaScript cho phần đánh giá
+    const stars = document.querySelectorAll('.rating-stars .fa-star');
+    const ratingInput = document.getElementById('rating');
+
+    stars.forEach(star => {
+        star.addEventListener('mouseover', () => {
+            resetStars();
+            const currentStarValue = star.getAttribute('data-value');
+            highlightStars(currentStarValue);
+        });
+
+        star.addEventListener('mouseout', () => {
+            resetStars();
+            // Ghi nhớ đánh giá đã chọn (nếu có)
+            if (ratingInput.value) {
+                highlightStars(ratingInput.value);
+            }
+        });
+
+        star.addEventListener('click', () => {
+            ratingInput.value = star.getAttribute('data-value');
+            resetStars();
+            highlightStars(ratingInput.value);
+        });
+    });
+
+    function highlightStars(rating) {
+        stars.forEach(star => {
+            if (star.getAttribute('data-value') <= rating) {
+                star.classList.add('checked');
+            }
+        });
+    }
+
+    function resetStars() {
+        stars.forEach(star => {
+            star.classList.remove('checked');
+        });
+    }
 </script>
 
+<style>
+    .rating-stars {
+        display: flex; /* Đặt chế độ hiển thị thành flex để các ngôi sao nằm ngang */
+        direction: row; /* Đảm bảo các ngôi sao được sắp xếp theo chiều ngang */
+    }
+
+    .rating-stars .fa-star {
+        font-size: 20px; /* Kích thước ngôi sao */
+        cursor: pointer;
+        color: #ccc; /* Màu xám cho ngôi sao chưa được chọn */
+        margin-right: 5px; /* Khoảng cách giữa các ngôi sao */
+    }
+
+    .rating-stars .fa-star.checked {
+        color: #FFD700; /* Màu vàng cho ngôi sao đã được đánh giá */
+    }
+</style>
+
 <?= view('templates/footer'); ?>
+    

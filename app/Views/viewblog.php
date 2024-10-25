@@ -11,20 +11,17 @@
             </div>
 
             <?php if (!empty($blog['image'])): ?>
-                <!-- Hiển thị ảnh bài viết nếu có -->
                 <div class="article-image text-center">
-                    <img src="<?= base_url('uploads/' . $blog['image']) ?>" alt="<?= htmlspecialchars($blog['title'], ENT_QUOTES, 'UTF-8') ?>" class="img-centered">
+                    <img src="<?= base_url('uploads/' . $blog['image']) ?>" alt="<?= htmlspecialchars($blog['title'], ENT_QUOTES, 'UTF-8') ?>" class="img-centered blog-image">
                 </div>
             <?php else: ?>
-                <!-- Hiển thị placeholder nếu không có ảnh -->
                 <div class="article-image text-center">
-                    <img src="<?= base_url('uploads/placeholder.png') ?>" alt="No image" class="img-centered">
+                    <img src="<?= base_url('uploads/placeholder.png') ?>" alt="No image" class="img-centered blog-image">
                 </div>
             <?php endif; ?>
 
             <div class="article-content">
-                <!-- Hiển thị nội dung bài viết -->
-                <p><?= nl2br(htmlspecialchars_decode($blog['content'], ENT_QUOTES)) ?></p>
+                    <p><?= nl2br(htmlspecialchars_decode($blog['content'], ENT_QUOTES)) ?></p>
             </div>
         <?php else: ?>
             <p>Bài viết không tồn tại.</p>
@@ -33,6 +30,9 @@
 </div>
 
 <style>
+    body {
+        font-family: Arial, Helvetica, sans-serif; /* Sửa font cho toàn bộ trang */
+    }
     .news-article {
         margin-top: 20px;
         line-height: 1.6;
@@ -53,7 +53,8 @@
         margin-bottom: 20px;
     }
     .img-centered {
-        width: 50%; /* Giảm kích thước ảnh đi 50% */
+        max-width: 100%; /* Đảm bảo hình ảnh không bị vượt quá kích thước container */
+        height: auto; /* Giữ tỷ lệ hình ảnh */
         display: block;
         margin-left: auto;
         margin-right: auto; /* Căn giữa ảnh */
@@ -65,4 +66,25 @@
         text-align: justify; /* Căn đều văn bản */
     }
 </style>
+
+<!-- Thêm jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+    $(document).ready(function() {
+        // Xử lý các hình ảnh không tải được
+        $('.blog-image').on('error', function() {
+            $(this).attr('src', '<?= base_url('uploads/placeholder.png') ?>'); // Thay thế bằng ảnh mặc định nếu ảnh bị lỗi
+        });
+
+        // Thêm CSS class nếu hình ảnh quá lớn
+        $('.blog-image').each(function() {
+            var imgWidth = $(this).width();
+            if (imgWidth > 500) { 
+                $(this).addClass('large-image');
+            }
+        });
+    });
+</script>
+
 <?= view('templates/footer'); ?>

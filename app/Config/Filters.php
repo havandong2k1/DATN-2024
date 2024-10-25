@@ -29,12 +29,15 @@ class Filters extends BaseConfig
                 'process', // Tắt CSRF cho route xử lý thanh toán
                 'admin/order/edit/*', // Tắt CSRF cho các route chỉnh sửa đơn hàng
                 'admin/order/update/*', // Tắt CSRF cho các route cập nhật đơn hàng
+                'order/get-wards', // Tắt CSRF cho route lấy xã/phường
+                'order/get-districts', // Tắt CSRF cho route lấy quận/huyện
             ]],
         ],
         'after' => [
             'toolbar',
         ],
     ];
+    
     
     public array $methods = [];
 

@@ -22,6 +22,10 @@ class OrderModel extends BaseModel
         'deleted_at',
         'order_status',
         'order_code',
+        'note',
+        'province_id',  
+        'district_id', 
+        'ward_id',      
     ];
 
     protected $useAutoIncrement = true; // Sử dụng AUTO_INCREMENT cho cột khóa chính

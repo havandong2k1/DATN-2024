@@ -90,7 +90,6 @@ class UserControllers extends BaseController
 
     public function delete($id)
     {
-        // Tìm sản phẩm theo ID
         $userModel = new UserModel();
         $product = $userModel->find($id);
         // Nếu sản phẩm tồn tại

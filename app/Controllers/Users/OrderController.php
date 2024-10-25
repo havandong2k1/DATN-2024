@@ -3,29 +3,27 @@ namespace App\Controllers\Users;
 
 use App\Controllers\BaseController;
 use App\Models\CartModel;
+use App\Models\DistrictsModel;
 use App\Models\OrderModel;
 use App\Models\ProductModel;
+use App\Models\WardsModel;
 
 class OrderController extends BaseController
 {
     public function index()
     {
         $cartModel = new CartModel();
-        
-        // Check if customer is logged in
+        $provinceModel = new ProductModel(); 
+        $districtModel = new DistrictsModel();
+        $wardsModel = new WardsModel();
         $customerId = session()->get('customer_id');
-        
         if ($customerId) {
-            // Get cart from database for logged-in users
             $data['cartItems'] = $cartModel->getCartWithProducts($customerId);
-        } else {
-            // Get cart from session for guest users
+        } else {   
             $data['cartItems'] = session()->get('cart') ?? [];
         }
-
-        // Calculate total
         $data['totalAmount'] = $this->calculateTotal($data['cartItems']);
-
+        $data['provinces'] = $provinceModel->findAllProvinces();
         return view('order', $data);
     }
 
@@ -35,10 +33,15 @@ class OrderController extends BaseController
         if (!$customerId) {
             $customerId = null;
         }
+        
         $customerName = $this->request->getPost('customer_name');
         $customerEmail = $this->request->getPost('customer_email');
         $customerPhone = $this->request->getPost('customer_phone');
         $customerAddress = $this->request->getPost('customer_address');
+        $provinceId = $this->request->getPost('province'); // Nhận ID tỉnh
+        $districtId = $this->request->getPost('district'); // Nhận ID quận
+        $wardId = $this->request->getPost('ward'); // Nhận ID phường
+        $customerNote = $this->request->getPost('note');
 
         // Get cart items
         $cartModel = new CartModel();
@@ -69,6 +72,10 @@ class OrderController extends BaseController
             'customer_phone' => $customerPhone,
             'total_amount' => $totalAmount,
             'customer_address' => $customerAddress,
+            'province_id' => $provinceId, // Thêm province_id
+            'district_id' => $districtId, // Thêm district_id
+            'ward_id' => $wardId, // Thêm ward_id
+            'note' => $customerNote,
             'payment_status' => 'pending',
             'created_at' => date('Y-m-d H:i:s'),
         ];
@@ -119,7 +126,6 @@ class OrderController extends BaseController
         $customerPhone = $this->request->getPost('customer_phone');
 
         $orderModel = new OrderModel();
-
         // Kiểm tra thông tin nhập vào
         if (!empty($orderCode) && !empty($customerEmail) && !empty($customerPhone)) {
             // Điều kiện tìm kiếm đơn hàng
@@ -177,6 +183,36 @@ class OrderController extends BaseController
         $data['products'] = $products;
     
         return view('order_status', $data);
+    }
+   
+    public function getDistricts()
+    {
+        $provinceId = $this->request->getPost('province_id');
+        if (!$provinceId) {
+            return $this->response->setJSON(['error' => 'Province ID missing']);
+        }
+        $districtsModel = new DistrictsModel();
+        $districts = $districtsModel->getDistrictsByProvince($provinceId);
+        return $this->response->setJSON($districts);
+    }
+    
+    public function getWards()
+    {
+        if ($this->request->isAJAX()) {
+            $districtId = $this->request->getPost('district_id');
+    
+            if (!$districtId) {
+                return $this->response->setJSON(['error' => 'District ID missing']);
+            }
+    
+            // Assuming you have a model for Wards
+            $wardsModel = new \App\Models\WardsModel();
+            $wards = $wardsModel->getWardsByDistrict($districtId);
+    
+            return $this->response->setJSON($wards);
+        } else {
+            return $this->response->setStatusCode(403, 'Forbidden');
+        }
     }
     
     

@@ -56,6 +56,12 @@ class ProductModel extends BaseModel
         }
         return $result;
     }
+    public function findAllProvinces()
+    {
+        // Giả định bạn có một bảng provinces và muốn lấy tất cả các tỉnh
+        $provinceModel = new ProvincesModel(); // Đảm bảo bạn đã tạo mô hình ProvinceModel
+        return $provinceModel->findAll(); // Trả về tất cả các tỉnh
+    }
     
 
     // public function search($keyword)

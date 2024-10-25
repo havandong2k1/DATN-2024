@@ -10,7 +10,6 @@ use App\Filters\AuthFilter;
 /**
  * @var RouteCollection $routes
  */
-// WEB-GUI
 $routes->get('/', 'Users\HomeControllers::index');
 $routes->get('views/index', 'Users\HomeControllers::index');
 
@@ -33,32 +32,35 @@ $routes->get('views/intro', 'Users\HomeControllers::intro');
 $routes->get('views/contact', 'Users\HomeControllers::contact');
 $routes->get('views/product/(:segment)', 'Users\HomeControllers::product/$1');
 $routes->get('product_detail/(:num)', 'Users\HomeControllers::product_detail/$1');
-$routes->post('/users/products/addReview', 'Users\ProductsController::addReview');
-
 
 // Giỏ hàng
 $routes->get('views/cart', 'Users\CartControllers::index');
 $routes->get('cart/add/(:num)', 'Users\CartControllers::addCart/$1');
+
 // Product - User
 $routes->group('product', function ($routes) {
     $routes->get('product_detail/(:num)', 'Users\ProductsController::productDetail/$1');
+    $routes->post('addReview', 'Users\ProductsController::addReview');  
 });
+
 // Đặt hàng
 $routes->get('order', 'Users\OrderController::index');
 $routes->post('order/placeOrder', 'Users\OrderController::placeOrder');
 $routes->get('success', 'Users\OrderController::orderSuccess');
+
 // Đơn hàng
 $routes->get('/order-status-form', 'Users\OrderController::orderStatusForm');
 $routes->post('/check-order-status', 'Users\OrderController::checkOrderStatus');
 $routes->match(['get', 'post'], '/order/status', 'Users\OrderController::orderStatus');
 $routes->get('/order/status/(:num)', 'Users\OrderController::orderStatusView/$1'); // Dành cho người dùng đã đăng nhập
 
-
-// routes.php
-$routes->group('order', function($routes) {
-    $routes->get('status/(:num)', 'Users\OrderController::orderStatus/$1');
+// Order management routes for Admin
+$routes->group('admin/order', ['filter' => 'AdminFilter'], function ($routes) {
+    $routes->get('list', 'Admin\OrderControllers::list');
+    $routes->get('edit/(:num)', 'Admin\OrderControllers::edit/$1');
+    $routes->post('update/(:num)', 'Admin\OrderControllers::update/$1');
+    $routes->post('delete/(:num)', 'Admin\OrderControllers::deletedOrder/$1');
 });
-
 
 // Mail
 $routes->get('views/mail', 'Users\EmailController::index');
@@ -71,10 +73,15 @@ $routes->post('public/upload', 'UploadControllers::upload'); // Upload file
 // Checkout
 $routes->get('views/checkout', 'Users\HomeControllers::checkout');
 
+// ajax
+$routes->post('order/get-districts', 'Users\OrderController::getDistricts');
+$routes->post('order/get-wards', 'Users\OrderController::getWards');
+
 // Trang lỗi
 $routes->get('error/404', function () {
     return view('errors/html/error_404');
 });
+
 // Hiển thị file
 $routes->get('showfile/(:any)', 'Admin\FileControllers::index/$1');
 
@@ -95,8 +102,9 @@ $routes->group('admin', ['filter' => 'AdminFilter'], function ($routes) {
         $routes->post('update', 'Admin\UserControllers::update');
         $routes->get('delete/(:num)', 'Admin\UserControllers::delete/$1');
     });
-     // Quản lý tài khoản admin
-     $routes->group('customer', function ($routes) {
+
+    // Quản lý khách hàng
+    $routes->group('customer', function ($routes) {
         $routes->get('list', 'Admin\CustomerControllers::listCustomer');
         $routes->get('toggle-status/(:num)', 'Admin\CustomerControllers::toggleStatus/$1');
         $routes->get('delete/(:num)', 'Admin\CustomerControllers::delete/$1');
@@ -120,23 +128,13 @@ $routes->group('admin', ['filter' => 'AdminFilter'], function ($routes) {
         $routes->post('delete', 'Admin\BlogControllers::delete');
     });
 
-   // Quản lý đơn hàng
-    $routes->group('order', function ($routes) {
-        $routes->get('list', 'Admin\OrderControllers::list');
-        $routes->get('edit/(:num)', 'Admin\OrderControllers::edit/$1');
-        $routes->post('update/(:num)', 'Admin\OrderControllers::update/$1');
-        $routes->post('delete/(:num)', 'Admin\OrderControllers::deletedOrder/$1');
-    });
-
     // Quản lý đánh giá
     $routes->group('reviews', function ($routes) {
         $routes->get('list', 'Admin\ReviewsControllers::list');
     });
 
-   // Thông số
+    // Thông số
     $routes->group('parameter', function ($routes) {
         $routes->get('countCus', 'Admin\HomeControllers::totalCustomer');
     });
 });
-
-

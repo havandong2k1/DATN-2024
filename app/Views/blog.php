@@ -12,7 +12,8 @@
                     <div class="col-sm-4"> <!-- Mỗi bài viết sẽ chiếm 1/3 chiều ngang màn hình -->
                         <div class="blog-item">
                             <a href="<?= base_url('views/viewblog/' . $blog['id_blogs']) ?>"> <!-- Liên kết đến trang chi tiết -->
-                                <img src="<?= base_url('uploads/' . $blog['image']) ?>" alt="<?= htmlspecialchars($blog['title'], ENT_QUOTES, 'UTF-8') ?>" class="blog-img"> <!-- Hiển thị ảnh -->
+                                <img src="<?= base_url('uploads/' . $blog['image']) ?>" 
+                                alt="<?= htmlspecialchars($blog['title'], ENT_QUOTES, 'UTF-8') ?>" class="blog-img"> 
                                 <h2 class="blog-title"><?= htmlspecialchars($blog['title'], ENT_QUOTES, 'UTF-8') ?></h2>
                             </a>
                         </div>
