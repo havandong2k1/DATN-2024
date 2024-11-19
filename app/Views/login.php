@@ -19,14 +19,12 @@
                                 
                                 <form class="mx-1 mx-md-4 mt-4" action="/login" method="post">
                                     <input type="hidden" name="<?= csrf_token() ?>" value="<?= csrf_hash() ?>"/>
-
                                     <!-- Thêm thông báo lỗi -->
                                     <?php if (session()->getFlashdata("error")): ?>
                                         <div class="alert alert-danger p-1 text-center" role="alert">
                                             <?= session()->getFlashdata("error") ?>
                                         </div>
                                     <?php endif; ?>
-
                                     <div class="form-outline mb-4">
                                         <label class="form-label" for="email">Email</label>
                                         <input type="email" name="customer_email" value="<?= old('customer_email') ?>"
@@ -36,7 +34,10 @@
                                     <div class="form-outline mb-5 ">
                                         <label class="form-label" for="password">Mật khẩu</label>
                                         <input type="password" name="customer_password" class="form-control"
-                                               id="password" placeholder="Your password" required/>
+                                               id="password" placeholder="*********" required/>
+                                    </div>
+                                    <div class="text-right mb-4">
+                                        <a href="<?= base_url('/forgot-password') ?>">Quên mật khẩu?</a>
                                     </div>
                                     <button type="submit" class="btn btn-primary btn-block">Đăng nhập</button>
                                     <hr>

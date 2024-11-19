@@ -7,6 +7,7 @@ namespace App\Controllers\Admin;
 use App\Controllers\BaseController;
 use App\Common\ResultUtils;
 use App\Models\BaseModel;
+use App\Models\ReviewModel;
 use App\Services\CartService;
 use Exception;
 
@@ -24,8 +25,11 @@ class ReviewsControllers extends BaseController
     }
 
     public function list(): string
-    {
-        $data = [];
+    {   
+        $dataReview = $this->listReview();
+        $data = [
+            'dataReview' => $dataReview,
+        ];
         $cssFiles = [
             'http://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js',
             base_url() . '/assets/admin/js/datatable.js',
@@ -45,4 +49,14 @@ class ReviewsControllers extends BaseController
         $data = $this->loadMasterLayout($data, 'Danh sách đánh giá', 'admin/pages/reviews/list', $dataLayout, $cssFiles, $jsFiles);
         return view('admin/main', $data);
     }
+    
+    public function listReview()
+    {
+        $reviewModel = new ReviewModel();
+        $conditions = [
+            'deleted_at' => null,
+        ];
+        return $reviewModel->where($conditions)->findAll();
+    }
+    
 }

@@ -14,17 +14,38 @@
                 <div class="card-body">
                     <table id="datatable" class="cell-border stripe">
                         <thead>
-                        <tr>
-                            <th scope="col">ID</th>
-                            <th scope="col">Tên người dùng</th>
-                            <th scope="col">Email</th>
-                            <th scope="col">Mội dung</th>
-                            <th scope="col">Thời gian</th>
-                            <th scope="col">Rating</th>
-                            <th scope="col">Chức năng</th>
-                        </tr>
+                            <tr>
+                                <th class="text-center" scope="col">ID</th>
+                                <th class="text-center" scope="col">ID Sản phẩm</th>
+                                <th class="text-center" scope="col">Review</th>
+                                <th class="text-center" scope="col">Đánh giá</th>
+                                <th class="text-center" scope="col">Thời gian</th>
+                            </tr>
                         </thead>
                         <tbody>
+                            <?php foreach ($dataReview as $review): ?>
+                                <tr>
+                                    <td class="text-center"><?= $review['id']; ?></td>
+                                    <td class="text-center"><?= $review['id_product']; ?></td>
+                                    <td class="text-center"><?= $review['review']; ?></td>
+                                    <td class="text-center">
+                                        <div class="star-rating">
+                                            <?php
+                                                $rating = $review['rating'];
+                                                for ($i = 1; $i <= 5; $i++) {
+                                                    if ($i <= $rating) {
+                                                        echo '<span class="star">&#9733;</span>';
+                                                    } else {
+                                                        echo '<span class="empty-star">&#9733;</span>';
+                                                    }
+                                                }
+                                            ?>
+                                        </div>
+                                    </td>
+                                    <td class="text-center"><?= $review['created_at']; ?></td>
+                                    <td><!-- Actions here --></td>
+                                </tr>
+                            <?php endforeach; ?>
                         </tbody>
                     </table>
                 </div>
@@ -32,17 +53,31 @@
         </div>
     </div>
 </div>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <?= $this->include("Modals/Order/delete") ?>
 <script>
-    $('.___js-delete-blog').on('click',function(){
-        // Lấy dữ liệu từ nút xóa
-        const id = $(this).data('id');
-        console.log(id);
-        // Đặt dữ liệu vào Form xóa
-        $('.Order_id_delete').val(id);
-        // Gọi Modal xóa
-        $('#confirmDeleteOrder').modal('show');
+    $(document).ready(function() {
+        $('.___js-delete-blog').on('click', function() {
+            const id = $(this).data('id');
+            console.log(id);
+            $('.Order_id_delete').val(id);
+            $('#confirmDeleteOrder').modal('show');
+        });
     });
 </script>
+<style>/* Star rating styles */
+.star-rating {
+    display: inline-block;
+    font-size: 20px;
+    color: #d3d3d3; /* Gray color for empty stars */
+}
 
+.star-rating .star {
+    color: #ffcc00; /* Yellow color for filled stars */
+}
+
+.star-rating .empty-star {
+    color: #d3d3d3; /* Gray color for empty stars */
+}
+</style>

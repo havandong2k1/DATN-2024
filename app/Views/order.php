@@ -42,10 +42,11 @@
             <?php endif; ?>
         </div>
 
-        <!-- Shipping Information -->
+        <!-- Shipping Information and Order Form -->
         <div class="col-md-6">
             <h4>Địa chỉ giao hàng</h4>
             <form action="<?= base_url('order/placeOrder') ?>" method="post">
+                <!-- Customer Information Fields -->
                 <div class="form-group">
                     <label for="customer_name">Họ và tên</label>
                     <input type="text" class="form-control" id="customer_name" name="customer_name" required>
@@ -89,6 +90,31 @@
                         <option selected>Chọn xã / phường</option>
                     </select>
                 </div>
+
+                <!-- Shipping and Payment Options Box -->
+                <h4>Vận chuyển và thanh toán</h4>
+                <div class="card p-3 mb-4" style="border: 1px solid #ddd;">
+                    <!-- <div class="form-group">
+                        <label>Phương thức giao hàng:</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="shipping_method" id="shipping_saver" value="saver" checked>
+                            <label class="form-check-label" for="shipping_saver">
+                                <i class="fas fa-box"></i> Giao hàng tiết kiệm
+                            </label>
+                        </div>
+                    </div> -->
+                    <div class="form-group">
+                        <label>Phương thức thanh toán:</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="payment_method" id="payment_cod" value="cod" checked>
+                            <label class="form-check-label" for="payment_cod">
+                                <i class="fas fa-money-bill-wave"></i> Thanh toán khi nhận hàng (COD)
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Order Note and Total Amount -->
                 <div class="form-group">
                     <label for="note">Ghi chú đơn hàng</label>
                     <textarea class="form-control" id="note" name="note" rows="3"></textarea>
@@ -102,24 +128,23 @@
         </div>
     </div>
 </div>
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
 $(document).ready(function() {
-    var csrfName = '<?= csrf_token() ?>'; // Lấy tên token CSRF
-    var csrfHash = '<?= csrf_hash() ?>';   // Lấy giá trị token CSRF
+    var csrfName = '<?= csrf_token() ?>';
+    var csrfHash = '<?= csrf_hash() ?>';
 
     $('#province').change(function() {
         var provinceId = $(this).val();
         $.ajax({
-            url: '<?= base_url('order/get-districts') ?>', // Sử dụng base_url() cho tính tương thích
+            url: '<?= base_url('order/get-districts') ?>',
             type: 'POST',
             data: { 
                 province_id: provinceId,
-                [csrfName]: csrfHash // Thêm token CSRF vào dữ liệu gửi đi
+                [csrfName]: csrfHash
             },
             success: function(data) {
-                console.log("Received data for districts:", data); // Log dữ liệu quận
                 var districtSelect = $('#district');
                 districtSelect.empty();
                 districtSelect.append('<option selected>Chọn huyện / quận</option>');
@@ -128,37 +153,34 @@ $(document).ready(function() {
                 });
             },
             error: function(xhr, status, error) {
-                console.error("AJAX error:", status, error); // Log bất kỳ lỗi nào xảy ra
+                console.error("AJAX error:", status, error);
             }
         });
     });
 
     $('#district').change(function() {
-    var districtId = $(this).val();
-    console.log("Selected District ID:", districtId); // Log the selected district ID
-    $.ajax({
-        url: '/order/get-wards',
-        type: 'POST',
-        data: { 
-            district_id: districtId, // Ensure this is correctly set
-            [csrfName]: csrfHash // Include CSRF token
-        },
-        success: function(data) {
-            console.log("Received data for wards:", data); // Log received wards
-            var wardSelect = $('#ward');
-            wardSelect.empty();
-            wardSelect.append('<option selected>Chọn xã / phường</option>');
-            $.each(data, function(index, ward) {
-                wardSelect.append('<option value="' + ward.id + '">' + ward.name + '</option>');
-            });
-        },
-        error: function(xhr, status, error) {
-            console.error("AJAX error:", status, error); // Log any errors
-        }
+        var districtId = $(this).val();
+        $.ajax({
+            url: '<?= base_url('order/get-wards') ?>',
+            type: 'POST',
+            data: { 
+                district_id: districtId,
+                [csrfName]: csrfHash
+            },
+            success: function(data) {
+                var wardSelect = $('#ward');
+                wardSelect.empty();
+                wardSelect.append('<option selected>Chọn xã / phường</option>');
+                $.each(data, function(index, ward) {
+                    wardSelect.append('<option value="' + ward.id + '">' + ward.name + '</option>');
+                });
+            },
+            error: function(xhr, status, error) {
+                console.error("AJAX error:", status, error);
+            }
+        });
     });
-});
-
 });
 </script>
 
-<?php include 'templates/footer.php'; ?>
+<?php include 'templates/footer.php'; ?> 

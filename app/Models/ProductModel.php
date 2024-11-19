@@ -8,15 +8,19 @@ class ProductModel extends BaseModel
 {
     protected $table = 'products';
     protected $primaryKey = 'id_product';
-    protected $allowedFields = ['name', 'description', 'price', 'images', 'amount', 'category',
-                                'status_product', 'created_at', 'updated_at', 'deleted_at'];
-    protected $useAutoIncrement = true; 
+    protected $allowedFields = [
+        'name', 'description', 'price', 'images', 'amount', 'category',
+        'status_product', 'created_at', 'updated_at', 'deleted_at', 'additional_images'
+    ];
+    protected $useAutoIncrement = true;
     protected $returnType = 'array';
+
     protected function beforeInsert(array $data)
     {
         unset($data['id_product']);
         return $this->updateTimestamp($data);
     }
+
     protected function beforeUpdate(array $data)
     {
         return $this->updateTimestamp($data);
@@ -31,21 +35,19 @@ class ProductModel extends BaseModel
         }
 
         $data['updated_at'] = $currentTimestamp;
-
         return $data;
     }
-
 
     public function __construct()
     {
         parent::__construct();
     }
 
-
     public function getProduct($id)
     {
-        return $this->find($id, );
+        return $this->find($id);
     }
+
     public function deleteById($id)
     {
         $result = $this->where('id_product', $id)->delete();
@@ -56,24 +58,16 @@ class ProductModel extends BaseModel
         }
         return $result;
     }
-    public function findAllProvinces()
-    {
-        // Giả định bạn có một bảng provinces và muốn lấy tất cả các tỉnh
-        $provinceModel = new ProvincesModel(); // Đảm bảo bạn đã tạo mô hình ProvinceModel
-        return $provinceModel->findAll(); // Trả về tất cả các tỉnh
+
+    public function searchProducts($keyword)
+{
+    // Kiểm tra nếu từ khóa trống
+    if (empty($keyword)) {
+        return [];
     }
-    
-
-    // public function search($keyword)
-    // {
-    //    $db = \Config\Database::connect();
-    //    $buider = $this->table = 'products';
-    //    $buider->select('*');
-    //    $buider->where('name',$keyword );
-    //    $querry = $buider->get();
-    //    return $querry->getResults();
-    // }
-
-
+    return $this->like('name', $keyword)
+                ->orLike('description', $keyword)
+                ->findAll();
 }
 
+}

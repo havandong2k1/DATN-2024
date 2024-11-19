@@ -44,7 +44,7 @@
 
                 <div class="dash-nav-dropdown">
                     <a href="javascript::void(0)" class="dash-nav-item dash-nav-dropdown-toggle">
-                    <i class="fas fa-cube"></i></i> Đơn hàng </a>
+                    <i class="fas fa-shopping-cart"></i></i> Đơn hàng </a>
                     <div class="dash-nav-dropdown-menu">
                         <a href="admin/order/list" class="dash-nav-dropdown-item">Danh sách</a>
                     </div>

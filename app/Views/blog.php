@@ -9,15 +9,17 @@
         <?php if (!empty($blogsObj) && is_array($blogsObj)): ?>
             <div class="row"> <!-- Tạo một hàng -->
                 <?php foreach ($blogsObj as $blog) : ?>
-                    <div class="col-sm-4"> <!-- Mỗi bài viết sẽ chiếm 1/3 chiều ngang màn hình -->
-                        <div class="blog-item">
-                            <a href="<?= base_url('views/viewblog/' . $blog['id_blogs']) ?>"> <!-- Liên kết đến trang chi tiết -->
-                                <img src="<?= base_url('uploads/' . $blog['image']) ?>" 
-                                alt="<?= htmlspecialchars($blog['title'], ENT_QUOTES, 'UTF-8') ?>" class="blog-img"> 
-                                <h2 class="blog-title"><?= htmlspecialchars($blog['title'], ENT_QUOTES, 'UTF-8') ?></h2>
-                            </a>
+                    <?php if ($blog['status_blogs'] == 1): ?> <!-- Kiểm tra trạng thái bài viết -->
+                        <div class="col-sm-4"> <!-- Mỗi bài viết sẽ chiếm 1/3 chiều ngang màn hình -->
+                            <div class="blog-item">
+                                <a href="<?= base_url('views/viewblog/' . $blog['id_blogs']) ?>"> <!-- Liên kết đến trang chi tiết -->
+                                    <img src="<?= base_url('uploads/' . $blog['image']) ?>" 
+                                    alt="<?= htmlspecialchars($blog['title'], ENT_QUOTES, 'UTF-8') ?>" class="blog-img"> 
+                                    <h2 class="blog-title"><?= htmlspecialchars($blog['title'], ENT_QUOTES, 'UTF-8') ?></h2>
+                                </a>
+                            </div>
                         </div>
-                    </div>
+                    <?php endif; ?> <!-- Kết thúc kiểm tra trạng thái -->
                 <?php endforeach; ?>
             </div> <!-- Kết thúc hàng -->
         <?php else: ?>

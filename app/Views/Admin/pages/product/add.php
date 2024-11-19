@@ -148,4 +148,26 @@
             img.src = objectUrl;
         }
     });
+
+    // document.getElementById('additional_images').addEventListener('change', function(event) {
+    //     var input = event.target;
+    //     var previewContainer = document.getElementById('additional-images-preview');
+    //     previewContainer.innerHTML = ''; // Clear previous previews
+
+    //     for (var i = 0; i < input.files.length; i++) {
+    //         var file = input.files[i];
+    //         var reader = new FileReader();
+            
+    //         reader.onload = function(e) {
+    //             var img = document.createElement('img');
+    //             img.src = e.target.result;
+    //             img.style.width = '100px'; // Optional: Resize image preview
+    //             img.style.margin = '5px';
+    //             img.classList.add('img-thumbnail');
+    //             previewContainer.appendChild(img);
+    //         };
+            
+    //         reader.readAsDataURL(file); // Read the file as data URL for preview
+    //     }
+    // });
 </script>

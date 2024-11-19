@@ -23,6 +23,14 @@ $routes->post('views/register', 'Users\HomeControllers::register');
 
 // Đăng xuất
 $routes->get('logout', 'Users\HomeControllers::logout');
+// Lấy lại mk
+$routes->get('forgot-password', 'Users\HomeControllers::forgotPassword');
+$routes->post('forgot-password', 'Users\HomeControllers::forgotPassword');
+$routes->get('password/reset/(:any)', 'Users\HomeControllers::resetPassword/$1');
+$routes->post('password/update', 'Users\HomeControllers::updatePassword');
+
+
+
 
 // Hồ sơ và các trang khác
 $routes->get('views/profile', 'Users\HomeControllers::profile');
@@ -35,13 +43,22 @@ $routes->get('product_detail/(:num)', 'Users\HomeControllers::product_detail/$1'
 
 // Giỏ hàng
 $routes->get('views/cart', 'Users\CartControllers::index');
-$routes->get('cart/add/(:num)', 'Users\CartControllers::addCart/$1');
+// $routes->get('cart/add/(:num)', 'Users\CartControllers::addCart/$1');
+$routes->post('cart/add', 'Users\CartControllers::addCart');
+$routes->get('cart/remove/(:num)', 'Users\CartControllers::removeFromCart/$1');
+$routes->get('cart/increase/(:num)', 'Users\CartControllers::increaseQuantity/$1');
+$routes->get('cart/decrease/(:num)', 'Users\CartControllers::decreaseQuantity/$1');
+
+
 
 // Product - User
 $routes->group('product', function ($routes) {
+    // Route cho chi tiết sản phẩm, sử dụng phương thức GET
     $routes->get('product_detail/(:num)', 'Users\ProductsController::productDetail/$1');
     $routes->post('addReview', 'Users\ProductsController::addReview');  
+    $routes->post('search', 'Users\ProductsController::search');
 });
+
 
 // Đặt hàng
 $routes->get('order', 'Users\OrderController::index');
@@ -52,7 +69,7 @@ $routes->get('success', 'Users\OrderController::orderSuccess');
 $routes->get('/order-status-form', 'Users\OrderController::orderStatusForm');
 $routes->post('/check-order-status', 'Users\OrderController::checkOrderStatus');
 $routes->match(['get', 'post'], '/order/status', 'Users\OrderController::orderStatus');
-$routes->get('/order/status/(:num)', 'Users\OrderController::orderStatusView/$1'); // Dành cho người dùng đã đăng nhập
+$routes->get('order/status/(:any)', 'Users\OrderController::orderStatusView/$1');
 
 // Order management routes for Admin
 $routes->group('admin/order', ['filter' => 'AdminFilter'], function ($routes) {

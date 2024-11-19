@@ -6,116 +6,22 @@ use CodeIgniter\Config\BaseConfig;
 
 class Email extends BaseConfig
 {
-    public string $fromEmail  = '';
-    public string $fromName   = 'DinhTungDuong';
-    public string $recipients = 'dduong1703@gmail.com';
-
-    /**
-     * The "user agent"
-     */
-    public string $userAgent = 'CodeIgniter';
-
-    /**
-     * The mail sending protocol: mail, sendmail, smtp
-     */
-    public string $protocol = 'smtp';
-
-    /**
-     * The server path to Sendmail.
-     */
-    public string $mailPath = '/usr/sbin/sendmail';
-
-    /**
-     * SMTP Server Address
-     */
-    public string $SMTPHost = 'smtp.gmail.com';
-
-    /**
-     * SMTP Username
-     */
-    public string $SMTPUser = 'dduong1703@gmail.com';
-
-    /**
-     * SMTP Password
-     */
-    public string $SMTPPass = 'ivqy hlqe nlfn cnsl';
-
-    /**
-     * SMTP Port
-     */
-    public int $SMTPPort = 587;
-
-    /**
-     * SMTP Timeout (in seconds)
-     */
-    public int $SMTPTimeout = 5;
-
-    /**
-     * Enable persistent SMTP connections
-     */
-    public bool $SMTPKeepAlive = false;
-
-    /**
-     * SMTP Encryption.
-     *
-     * @var string '', 'tls' or 'ssl'. 'tls' will issue a STARTTLS command
-     *             to the server. 'ssl' means implicit SSL. Connection on port
-     *             465 should set this to ''.
-     */
+    public string $fromEmail  = 'your-email@gmail.com';  // Your Gmail email address
+    public string $fromName   = 'HaVanDong';        // Your name or your website name
+    public string $SMTPHost   = 'smtp.gmail.com';
+    public string $SMTPUser   = 'your-email@gmail.com';  // Your Gmail email address
+    public string $SMTPPass   = 'your-app-password';     // App password (use environment variables for security)
+    public int $SMTPPort      = 587;
     public string $SMTPCrypto = 'tls';
-
-    /**
-     * Enable word-wrap
-     */
-    public bool $wordWrap = true;
-
-    /**
-     * Character count to wrap at
-     */
-    public int $wrapChars = 76;
-
-    /**
-     * Type of mail, either 'text' or 'html'
-     */
-    public string $mailType = 'html';
-
-    /**
-     * Character set (utf-8, iso-8859-1, etc.)
-     */
-    public string $charset = 'UTF-8';
-
-    /**
-     * Whether to validate the email address
-     */
-    public bool $validate = false;
-
-    /**
-     * Email Priority. 1 = highest. 5 = lowest. 3 = normal
-     */
-    public int $priority = 3;
-
-    /**
-     * Newline character. (Use “\r\n” to comply with RFC 822)
-     */
-    public string $CRLF = "\r\n";
-
-    /**
-     * Newline character. (Use “\r\n” to comply with RFC 822)
-     */
-    public string $newline = "\r\n";
-
-    /**
-     * Enable BCC Batch Mode.
-     */
+    public string $mailType   = 'html';
+    public string $charset    = 'UTF-8';
+    public bool $wordWrap     = true;
+    public int $wrapChars     = 76;
+    public bool $validate     = false;
+    public int $priority      = 3;
+    public string $CRLF       = "\r\n";
+    public string $newline    = "\r\n";
     public bool $BCCBatchMode = false;
-
-    /**
-     * Number of emails in each BCC batch
-     */
-    public int $BCCBatchSize = 200;
-
-    /**
-     * Enable notify message from server
-     */
-    public bool $DSN = false;
+    public int $BCCBatchSize  = 200;
+    public bool $DSN          = false;
 }

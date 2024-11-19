@@ -15,7 +15,9 @@ class CustomerModel extends BaseModel
         'created_at',
         'updated_at', 
         'deleted_at', 
-        'status_customer'
+        'status_customer',
+        'reset_token',
+        'reset_token_expiry',
     ];
     
     protected $useAutoIncrement = true; // Thêm dòng này để bật AUTO_INCREMENT cho cột khóa chính

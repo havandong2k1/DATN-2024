@@ -60,6 +60,11 @@ class ProductControllers extends BaseController
         // Lấy dữ liệu post
         $productObj = $this->request->getPost();
 
+        // Xử lý giá tiền: loại bỏ dấu chấm để đảm bảo giá trị số đúng
+        if (isset($productObj['price'])) {
+            $productObj['price'] = preg_replace('/\D/', '', $productObj['price']); // Loại bỏ tất cả ký tự không phải số
+        }
+
         // Kiểm tra xem đã có tệp ảnh được tải lên hay chưa
         if ($imageFile = $this->request->getFile('images')) {
             // Đường dẫn thư mục lưu trữ ảnh
@@ -77,21 +82,16 @@ class ProductControllers extends BaseController
             // Nếu không có ảnh được tải lên, đặt giá trị của trường ảnh là chuỗi rỗng
             $productObj['images'] = '';
         }
-        // Thiết lập giá trị cho trường khóa chính
         $productObj['id_product'] = null;
-
         try {
-            // Chèn dữ liệu vào cơ sở dữ liệu
-            $productModel->protect(false)->insert($productObj); // Loại bỏ bảo vệ trường khóa chính
-            // Thiết lập thông báo flash khi chèn thành công
+            $productModel->protect(false)->insert($productObj);
             session()->setFlashdata('success', 'Thêm sản phẩm thành công');
         } catch (\Exception $e) {
-            // Thiết lập thông báo flash khi có lỗi
             session()->setFlashdata('error', 'Có lỗi xảy ra khi thêm sản phẩm');
         }
-        // Chuyển hướng người dùng đến trang danh sách sản phẩm sau khi thêm thành công
         return redirect()->to(base_url('admin/product/list'));
     }
+
 
     public function editOrUpdate($id)
     {

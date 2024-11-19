@@ -54,16 +54,10 @@ class OrderControllers extends BaseController
     {
         try {
             $orderModel = new OrderModel();
-
-            // Lấy thông tin đơn hàng từ database
             $order = $orderModel->find($orderId);
-
-            // Kiểm tra nếu đơn hàng tồn tại
             if (!$order) {
                 return redirect()->back()->with('msg_error', 'Đơn hàng không tồn tại.');
-            }
-
-            // Truyền biến $order vào view
+            }   
             $dataLayout = [
                 'order' => $order // Chắc chắn $order được truyền vào view
             ];

@@ -1,4 +1,3 @@
-
 <main class="dash-content">
     <div class="container-fluid">
         <h1 class="dash-title">Trang chủ / Bài viết / Chỉnh sửa</h1>
@@ -10,7 +9,7 @@
                         <div class="easion-card-icon">
                             <i class="fas fa-chart-bar"></i>
                         </div>
-                        <div class="easion-card-title"> Thông tin bài viết </div>
+                        <div class="easion-card-title">Thông tin bài viết</div>
                     </div>
                     <div class="card-body">
                         <form action="<?= base_url('admin/blog/edit/'.@$blog['id_blogs']) ?>" method="post">
@@ -22,17 +21,24 @@
                             <?php endif; ?>
                             <div class="form-group">
                                 <label for="title">Tiêu đề:</label>
-                                <input type="text" class="form-control" id="title" name="title" value="<?= $blog['title'] ?>">
+                                <input type="text" class="form-control" id="title" name="title" value="<?= htmlspecialchars($blog['title']) ?>">
                             </div>
                             <div class="form-group">
                                 <label for="content">Nội dung:</label>
-                                <textarea class="form-control" id="content" name="content"><?= $blog['content'] ?></textarea>
+                                <textarea class="form-control" id="content" name="content"><?= htmlspecialchars($blog['content']) ?></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="status_blogs">Trạng thái:</label>
+                                <select class="form-control" id="status_blogs" name="status_blogs">
+                                    <option value="1" <?= $blog['status_blogs'] == 1 ? 'selected' : '' ?>>Bật</option>
+                                    <option value="0" <?= $blog['status_blogs'] == 0 ? 'selected' : '' ?>>Tắt</option>
+                                </select>
                             </div>
                             <button type="submit" class="btn btn-primary">Cập nhật</button>
                             <a style="background-color: red" href="<?= base_url('admin/blog/list') ?>" class="btn btn-secondary">Hủy</a>
                             <button id="btn-reset-edit-product" type="reset" class="btn btn-secondary"
                                 onclick="return confirm('Are you sure you want to reset?')">Reset</button>
-                            <a style="background-color: yellow" href="<?= base_url('admin/blog/list') ?>" class="btn btn-warning ">Quay lại</a>
+                            <a style="background-color: yellow" href="<?= base_url('admin/blog/list') ?>" class="btn btn-warning">Quay lại</a>
                         </form>
                     </div>
                 </div>

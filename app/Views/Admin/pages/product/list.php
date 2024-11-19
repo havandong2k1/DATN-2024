@@ -61,7 +61,8 @@
                                     <td>
                                         <img src="uploads/<?= $product['images']; ?>" alt="" height="60" width="60">
                                     </td>
-                                    <td><?= $product['price'] . " VND" ?></td>
+                                    <td style="width: 100px"><?= number_format($product['price'], 0, ',', '.') ?> ₫</td>
+
                                     <td><?= $product['description'] ?></td>
                                     <td><?= $product['category'] ?></td>
                                     <td class="text-center">

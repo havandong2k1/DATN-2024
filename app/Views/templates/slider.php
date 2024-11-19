@@ -23,7 +23,6 @@
 
 							<div class="col-sm-12">
 								<img src="<?= base_url('assets/images/banner1.jpg') ?>" class="girl img-responsive" alt="" width="1797" height="744"/>
-								
 							</div>
 						</div>
 						<div class="item">
@@ -55,7 +54,7 @@
 			</div>
 		</div>
 	</div>
-</section><!--/slider-->
+</section>
 
 
 

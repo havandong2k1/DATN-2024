@@ -58,16 +58,21 @@ abstract class BaseController extends Controller
     }
 
     /**Set MasterLayout */
-    public function loadMasterLayout($data, $title, $content, $dataLayout=[], $jsFiles=[],  $cssFiles=[])
+    public function loadMasterLayout($data, $title, $content, $dataLayout = [], $jsFiles = [], $cssFiles = [])
     {
+        // Thiết lập tiêu đề
         $data['title'] = $title;
-        $data['header'] = view('admin/layout/header');
-        $data['leftmenu'] = view('admin/layout/leftmenu');
-        $data['content'] = view($content, $dataLayout);
-        $data['cssFiles'] = $cssFiles;
-        $data['jsFiles'] = $jsFiles;
-        return $data;
+
+        // Gọi view cho header và menu bên trái
+        $data['header'] = view('admin/layout/header', $data); // Truyền dữ liệu nếu cần thiết
+        $data['leftmenu'] = view('admin/layout/leftmenu'); // Menu bên trái
+        $data['content'] = view($content, $dataLayout); // Nội dung chính
+        $data['cssFiles'] = $cssFiles; // CSS file
+        $data['jsFiles'] = $jsFiles; // JS file
+
+        return $data; // Trả về dữ liệu đã chuẩn bị
     }
+
 
     public function loadMasterLayoutWeb($data){
         $data['header'] = view('pages/header');

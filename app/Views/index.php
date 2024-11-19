@@ -29,12 +29,15 @@
                                         <div class="single-products">  
                                             <div class="productinfo text-center">  
                                                 <img src="uploads/<?php echo $product['images']; ?>" alt="images">  
-                                                <h2><?= ($product['name']) ?></h2>  
+                                                <h2><?= esc($product['name']) ?></h2>  
                                                 <p>Giá: <?= number_format($product['price'], 0, ',', '.') ?> VND</p>  
-                                                <p>Thông tin máy: <?= ($product['description']) ?></p> 
-                                                <p>Sản phẩm: <?= ($product['category']) ?></p>  
-                                                <form class="btn btn-default add-to-cart" action="" method="post">  
-                                                <a href="javascript:void(0);" onclick="addToCart(<?= $product['id_product'] ?>)" class="btn btn-success">Thêm vào giỏ hàng</a>
+                                                <p>Thông tin máy: <?= esc($product['description']) ?></p> 
+                                                <p>Sản phẩm: <?= esc($product['category']) ?></p>  
+                                                <form action="<?= site_url('cart/add') ?>" method="post" class="add-to-cart-form">  
+                                                    <?= csrf_field(); ?> <!-- Include CSRF token -->
+                                                    <input type="hidden" name="product_id" value="<?= esc($product['id_product']) ?>"> <!-- Hidden product ID -->
+                                                    <input type="hidden" name="quantity" value="1"> <!-- Fixed quantity -->
+                                                    <button type="submit" class="btn btn-success">Thêm vào giỏ hàng</button> <!-- Submit button -->
                                                 </form>  
                                             </div>  
                                         </div>  
@@ -57,10 +60,4 @@
         </div>  
     </div>  
 </section>  
-<script>
-     function addToCart(productId) {
-        // Chuyển hướng tới URL thêm sản phẩm vào giỏ hàng
-        window.location.href = "<?= site_url('cart/add/') ?>" + productId;
-    }
-</script>
 <?= view('templates/footer'); ?>

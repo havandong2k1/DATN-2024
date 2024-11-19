@@ -27,7 +27,6 @@
                             <img src="uploads/<?= esc($productObj['images']); ?>" alt="images" height="300.6px" width="279.29px">
                         </div>
                     </div>
-
                     <div class="col-sm-7">
                         <div class="product-information">
                             <h2><?= esc($productObj['name']) ?></h2>
@@ -35,13 +34,14 @@
                             <p>Danh mục: <?= esc($productObj['category']) ?></p>
                             <span>
                                 <label>Số lượng:</label>
-                                <input type="number" name="quantity" min="1" value="1" id="productQuantity">
-                                <form action="/product/addToCart" method="post" id="cartForm">
-                                    <input type="hidden" name="product_id" value="<?= esc($productObj['id_product']) ?>">
-                                    <input type="hidden" name="quantity" id="hiddenQuantity">
-                                    <a href="javascript:void(0);" onclick="addToCart()" class="btn btn-success">Thêm vào giỏ hàng</a>
-                                </form>
+                                <input type="number" name="quantity" min="1" value="1" id="productQuantity" required>
                             </span>
+                            <form action="<?= site_url('cart/add') ?>" method="post" id="cartForm">
+                                <?= csrf_field(); ?>
+                                <input type="hidden" name="product_id" value="<?= esc($productObj['id_product']) ?>">
+                                <input type="hidden" name="quantity" id="hiddenQuantity">
+                                <button type="button" onclick="addToCart()" class="btn btn-success">Thêm vào giỏ hàng</button>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -106,7 +106,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="recommended_items">
                     <h2 class="title text-center">Sản phẩm đề xuất</h2>
                     <div id="recommended-item-carousel" class="carousel slide" data-ride="carousel">
@@ -117,7 +116,7 @@
                                         <div class="product-image-wrapper">
                                             <div class="single-products">
                                                 <div class="productinfo text-center">
-                                                    <img src="uploads/<?= esc($product['images']); ?>" alt="images" height="100" width="100">
+                                                    <img src="uploads/<?= esc($product['images']); ?>" alt="images" height="200" width="100">
                                                     <h2><?= number_format($product['price'], 0, ',', '.') ?> VND</h2>
                                                     <p><?= esc($product['name']) ?></p>
                                                     <a href="javascript:void(0);" onclick="addToCart(<?= esc($product['id_product']) ?>)" class="btn btn-success">Thêm vào giỏ hàng</a>
@@ -144,8 +143,8 @@
 <script>
     function addToCart() {
         var quantity = document.getElementById('productQuantity').value;
-        document.getElementById('hiddenQuantity').value = quantity;
-        document.getElementById('cartForm').submit();
+        document.getElementById('hiddenQuantity').value = quantity; // Set the hidden input value
+        document.getElementById('cartForm').submit(); // Submit the form
     }
 
     // JavaScript cho phần đánh giá
@@ -203,9 +202,8 @@
     }
 
     .rating-stars .fa-star.checked {
-        color: #FFD700; /* Màu vàng cho ngôi sao đã được đánh giá */
+        color: #ffcc00; /* Màu vàng cho ngôi sao đã được chọn */
     }
 </style>
 
 <?= view('templates/footer'); ?>
-    

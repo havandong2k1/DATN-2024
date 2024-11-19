@@ -169,4 +169,38 @@ class ProductsController extends BaseController
         // Pass $categoryCounts array to the view
         return view('category', ['categoryCounts' => $categoryCounts, 'categories' => $this->categories]);
     }
+    // ProductController.php
+
+    public function search()
+{
+    // Lấy CSRF token từ POST data
+    $csrfToken = $this->request->getPost('csrf_token');
+
+    // Kiểm tra nếu CSRF token không hợp lệ
+    if (!$csrfToken || $csrfToken !== csrf_hash()) {
+        return $this->response->setJSON(['success' => false, 'message' => 'CSRF token is invalid']);
+    }
+
+    // Lấy giá trị từ input tìm kiếm
+    $keyword = $this->request->getPost('keyword');
+
+    if (empty($keyword)) {
+        return $this->response->setJSON(['success' => false, 'message' => 'Keyword is required']);
+    }
+
+    // Tiến hành tìm kiếm sản phẩm
+    $productModel = new \App\Models\ProductModel();
+    $products = $productModel->searchProducts($keyword);
+
+    // Kiểm tra nếu có sản phẩm tìm thấy
+    if (count($products) > 0) {
+        // Nếu có sản phẩm tìm thấy, trả về dữ liệu
+        $html = view('product/search_results', ['products' => $products]);
+        return $this->response->setJSON(['success' => true, 'html' => $html]);
+    } else {
+        // Nếu không có sản phẩm nào tìm thấy
+        return $this->response->setJSON(['success' => false, 'message' => 'No products found']);
+    }
+}
+
 }

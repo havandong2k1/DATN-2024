@@ -1,3 +1,8 @@
+<?php
+// Khởi tạo biến $current_page lấy phần cuối của URL hiện tại
+$current_page = basename(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,29 +20,26 @@
 	<link href="/assets/user/css/animate.css" rel="stylesheet">
 	<link href="/assets/user/css/main.css" rel="stylesheet">
 	<link href="/assets/user/css/responsive.css" rel="stylesheet">
-
-
-
 	<!--[if lt IE 9]>
     <script src="/assets/user/html5shiv./assets/user"></script>
     <script src="/assets/user/respond.min./assets/user"></script>
     <![endif]-->
-	<link rel="shortcut icon" href="/assets/user//assets/user/images/ico/favicon.ico">
+	<link rel="shortcut icon" href="/assets/user/images/ico/favicon.ico">
 	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/assets/user/images/ico/apple-touch-icon-144-precomposed.png">
 	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/assets/user/images/ico/apple-touch-icon-114-precomposed.png">
 	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/assets/user/images/ico/apple-touch-icon-72-precomposed.png">
 	<link rel="apple-touch-icon-precomposed" href="/assets/user/images/ico/apple-touch-icon-57-precomposed.png">
-</head><!--/head-->
+</head>
 
 <body>
-	<header id="header"><!--header-->
-		<div class="header_top"><!--header_top-->
+	<header id="header">
+		<div class="header_top">
 			<div class="container">
 				<div class="row">
 					<div class="col-sm-6">
 						<div class="contactinfo">
 							<ul class="nav nav-pills">
-								<li><a href="#"><i class="fa fa-phone"></i>0943997901</a></li>
+								<li><a href="#"><i class="fa fa-phone"></i>0943 9979 01</a></li>
 								<li><a href="#"><i class="fa fa-envelope"></i> testwithdraw001@gmail.com</a></li>
 							</ul>
 						</div>
@@ -53,62 +55,53 @@
 					</div>
 				</div>
 			</div>
-		</div><!--/header_top-->
+		</div>
 
-		<div class="header-middle"><!--header-middle-->
+		<div class="header-middle">
 			<div class="container">
 				<div class="row">
 					<div class="col-sm-4">
 						<div class="logo pull-left">
 							<a href="index.php?page=Trang-chu"><img src="/assets/images/logo.png" alt="" width="270" height="120"/></a>
 						</div>
-						<!-- <div class="btn-group pull-right">
-							<div class="btn-group">
-							</div>
-							
-							<div class="btn-group">
-							</div>
-						</div> -->
 					</div>
 					<div class="shop-menu pull-right">
-					<?php if (session()->has("customer_name")): ?>
-						<!-- Hiển thị khi người dùng đã đăng nhập -->
-						<ul class="nav navbar-nav --bs-breadcrumb-divider: '>'">
-							<li>
-								<a class="breadcrumb-item" href="views/profile"><i class="fa fa-user"></i><?= session()->get("customer_name") ?></a>
-							</li>
-							<li>
-								<a class="breadcrumb-item" href="#"><i class="fa fa-star"></i> Yêu thích</a>
-							</li>
-							<li>
-								<a class="breadcrumb-item" href="views/cart">
-									<i class="fa fa-shopping-cart"></i> Giỏ hàng
-									<?php if (isset($totalQuantity) && $totalQuantity > 0): ?>
-										<span class="badge badge-warning" style="background-color: #f39c12; border-radius: 50%; padding: 5px 10px;">
-											<?= esc($totalQuantity) ?>
-										</span>
-									<?php endif; ?>
-								</a>
-							</li>
-							<li>
-								<a class="breadcrumb-item" href="/logout"><i class="fa fa-sign-out"></i> Đăng xuất</a>
-							</li>
-						</ul>
-					<?php else: ?>
-						<!-- Hiển thị khi người dùng chưa đăng nhập -->
-						<ul class="nav navbar-nav --bs-breadcrumb-divider: '>'">
-							<li><a class="breadcrumb-item" href="views/profile"><i class="fa fa-user"></i>Tài khoản</a></li>
-							<li><a class="breadcrumb-item" href="#"><i class="fa fa-star"></i> Yêu thích</a></li>
-							<li><a class="breadcrumb-item" href="views/cart"><i class="fa fa-shopping-cart"></i> Giỏ hàng</a></li>
-							<li><a class="breadcrumb-item" href="/login"><i class="fa fa-lock"></i> Đăng nhập</a></li>
-						</ul>
-					<?php endif; ?>
+						<?php if (session()->has("customer_name")): ?>
+							<ul class="nav navbar-nav">
+								<li>
+									<a href="views/profile"><i class="fa fa-user"></i><?= session()->get("customer_name") ?></a>
+								</li>
+								<li>
+									<a href="#"><i class="fa fa-star"></i> Yêu thích</a>
+								</li>
+								<li>
+									<a href="views/cart">
+										<i class="fa fa-shopping-cart"></i> Giỏ hàng
+										<?php if (isset($totalQuantity) && $totalQuantity > 0): ?>
+											<span class="badge badge-warning" style="background-color: #f39c12; border-radius: 50%; padding: 5px 10px;">
+												<?= esc($totalQuantity) ?>
+											</span>
+										<?php endif; ?>
+									</a>
+								</li>
+								<li>
+									<a href="/logout"><i class="fa fa-sign-out"></i> Đăng xuất</a>
+								</li>
+							</ul>
+						<?php else: ?>
+							<ul class="nav navbar-nav">
+								<li><a href="views/profile"><i class="fa fa-user"></i>Tài khoản</a></li>
+								<li><a href="#"><i class="fa fa-star"></i> Yêu thích</a></li>
+								<li><a href="views/cart"><i class="fa fa-shopping-cart"></i> Giỏ hàng</a></li>
+								<li><a href="/login"><i class="fa fa-lock"></i> Đăng nhập</a></li>
+							</ul>
+						<?php endif; ?>
+					</div>
 				</div>
-                </div>
 			</div>
-		</div><!--/header-middle-->
+		</div>
 
-		<div id="Header" class="header-bottom"><!--header-bottom-->
+		<div id="Header" class="header-bottom">
 			<div class="container">
 				<div class="row">
 					<div class="col-sm-9">
@@ -120,32 +113,37 @@
 								<span class="icon-bar"></span>
 							</button>
 						</div>
-						<div  class="mainmenu pull-left">
-							<ul  class="nav navbar-nav collapse navbar-collapse">
-								<li><a  href="index.php?page=Trang-chu" id="myactive" class=" breadcrumb-item active">Trang chủ</a></li>
-								<li class="dropdown"><a href="#">Cửa hàng<i class="fa fa-angle-down"></i></a>
-									<ul role="menu" class="sub-menu">
-										<li><a class="breadcrumb-item" href="views/product/0">Sản phẩm</a></li>
-										<!-- <li><a href="product-details.html">Product Details</a></li> -->
-									</ul>
-								</li>
-								
-								<!-- <li><a href="404.html">404</a></li> -->
-								<li><a class="breadcrumb-item" href="views/blog">Tin tức công nghệ</a></li>
-                                <li><a class="breadcrumb-item" href="views/intro">Giới thiệu</a></li>
-								<li><a class="breadcrumb-item" href="views/contact">Liên hệ</a></li>
-							</ul>
-						</div>
+						<div class="mainmenu pull-left">
+                            <ul class="nav navbar-nav">
+                                <li class="<?= ($current_page == 'Trang-chu' || $current_page == '') ? 'active' : '' ?>">
+                                    <a href="index.php?page=Trang-chu">Trang chủ</a>
+                                </li>
+                                <li class="<?= ($current_page == 'product/0') ? 'active' : '' ?>">
+                                    <a href="/views/product/0">Cửa hàng</a>
+                                </li>
+                                <li class="<?= ($current_page == 'blog') ? 'active' : '' ?>">
+                                    <a href="/views/blog">Tin tức công nghệ</a>
+                                </li>
+                                <li class="<?= ($current_page == 'intro') ? 'active' : '' ?>">
+                                    <a href="/views/intro">Giới thiệu</a>
+                                </li>
+                                <li class="<?= ($current_page == 'contact') ? 'active' : '' ?>">
+                                    <a href="/views/contact">Liên hệ</a>
+                                </li>
+                            </ul>
+                        </div>
 					</div>
 					<div class="col-sm-3">
 						<div class="search_box pull-right">
-							<input type="text" placeholder="Search" />
+							<label for="search-input" class="sr-only">Tìm kiếm sản phẩm</label>
+							<input type="text" id="search-input" placeholder="Tìm kiếm sản phẩm..." />
+							<div id="search-results" style="display: none; position: absolute; background: white; width: 100%; border: 1px solid #ddd; border-radius: 5px; z-index: 1000;"></div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div><!--/header-bottom-->
-	</header><!--/header-->
+		</div>
+	</header>
 
 	<style>
         .product {
@@ -155,3 +153,52 @@
             margin-bottom: 20px;
         }
     </style>
+
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script>
+    $(document).ready(function() {
+        $('#search-input').on('keyup', function() {
+            var csrfName = '<?= csrf_token() ?>';  // Lấy tên token CSRF
+            var csrfHash = '<?= csrf_hash() ?>';  // Lấy giá trị token CSRF
+            var keyword = $(this).val().trim();  // Lấy giá trị từ input tìm kiếm
+
+            if (keyword.length > 2) {  // Nếu từ khóa tìm kiếm dài hơn 2 ký tự
+                $.ajax({
+                    url: '/product/search',  // Đảm bảo URL chính xác
+                    type: 'POST',  // POST request
+                    dataType: 'json',  // Đảm bảo dữ liệu trả về ở định dạng JSON
+                    data: {
+                        keyword: keyword,
+                        [csrfName]: csrfHash  // Thêm CSRF token vào dữ liệu gửi đi
+                    },
+                    success: function(response) {
+                        console.log(response); // Kiểm tra kết quả trả về từ server
+                        if (response.success) {
+                            $('#search-results').html(response.html).show();
+                        } else {
+                            $('#search-results').html('<p>Không tìm thấy sản phẩm nào.</p>').show();
+                        }
+                    },
+                    error: function(xhr, status, error) {
+                        console.log('Error:', xhr.responseText);  // Log lỗi trong console
+                        $('#search-results').html('<p>Có lỗi xảy ra khi tìm kiếm.</p>').show();
+                    }
+                });
+            } else {
+                $('#search-results').hide();  // Ẩn kết quả tìm kiếm nếu từ khóa ngắn hơn 3 ký tự
+            }
+        });
+
+        // Ẩn kết quả tìm kiếm khi click ra ngoài
+        $(document).click(function(event) {
+            if (!$(event.target).closest('#search-input').length && !$(event.target).closest('#search-results').length) {
+                $('#search-results').hide();
+            }
+        });
+    });
+</script>
+
+
+</body>
+
+</html>

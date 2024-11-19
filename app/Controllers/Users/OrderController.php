@@ -4,8 +4,10 @@ namespace App\Controllers\Users;
 use App\Controllers\BaseController;
 use App\Models\CartModel;
 use App\Models\DistrictsModel;
+use App\Models\OrderItemsModel;
 use App\Models\OrderModel;
 use App\Models\ProductModel;
+use App\Models\ProvincesModel;
 use App\Models\WardsModel;
 
 class OrderController extends BaseController
@@ -13,7 +15,7 @@ class OrderController extends BaseController
     public function index()
     {
         $cartModel = new CartModel();
-        $provinceModel = new ProductModel(); 
+        $provinceModel = new ProvincesModel(); 
         $districtModel = new DistrictsModel();
         $wardsModel = new WardsModel();
         $customerId = session()->get('customer_id');
@@ -72,15 +74,27 @@ class OrderController extends BaseController
             'customer_phone' => $customerPhone,
             'total_amount' => $totalAmount,
             'customer_address' => $customerAddress,
-            'province_id' => $provinceId, // Thêm province_id
-            'district_id' => $districtId, // Thêm district_id
-            'ward_id' => $wardId, // Thêm ward_id
+            'province_id' => $provinceId,
+            'district_id' => $districtId, 
+            'ward_id' => $wardId, 
             'note' => $customerNote,
             'payment_status' => 'pending',
             'created_at' => date('Y-m-d H:i:s'),
         ];
 
-        if ($orderModel->createOrder($orderData)) {
+        if ($orderId = $orderModel->createOrder($orderData)) {
+            // Lưu thông tin sản phẩm vào order_items
+            $orderItemsModel = new OrderItemsModel();
+            foreach ($cartItems as $item) {
+                $orderItemData = [
+                    'id_order' => $orderId, // ID của đơn hàng vừa tạo
+                    'id_product' => $item['id_product'], // ID sản phẩm
+                    'quantity' => $item['quantity'], // Số lượng sản phẩm
+                    'price' => $item['price'], // Giá sản phẩm
+                ];
+                $orderItemsModel->insert($orderItemData);
+            }
+
             session()->setFlashdata('msg_success', 'Đặt hàng thành công.');
             // Clear the cart
             $this->clearCart($customerId);
@@ -90,6 +104,7 @@ class OrderController extends BaseController
             return redirect()->to('/order');
         }        
     }
+
 
     public function clearCart($customerId)
     {
@@ -120,27 +135,29 @@ class OrderController extends BaseController
 
     public function orderStatus()
     {
-        // Lấy thông tin từ form tìm kiếm
         $orderCode = $this->request->getPost('order_code');
         $customerEmail = $this->request->getPost('customer_email');
         $customerPhone = $this->request->getPost('customer_phone');
 
         $orderModel = new OrderModel();
+
         // Kiểm tra thông tin nhập vào
         if (!empty($orderCode) && !empty($customerEmail) && !empty($customerPhone)) {
             // Điều kiện tìm kiếm đơn hàng
             $condition = [
-                'orders.order_code' => $orderCode,
-                'orders.customer_email' => $customerEmail,
-                'orders.customer_phone' => $customerPhone,
-                'orders.deleted_at' => null,
+                'order_code' => $orderCode,
+                'customer_email' => $customerEmail,
+                'customer_phone' => $customerPhone,
+                'deleted_at' => null,
             ];
+            
             // Lấy thông tin đơn hàng từ database
-            $orderObj = $orderModel->getFirstByConditions($condition);
+            $order = $orderModel->where($condition)->first();
+            
             // Nếu tìm thấy đơn hàng
-            if ($orderObj) {
-                $data['order'] = $orderObj;
-                return view('order_status', $data);  // View hiển thị đơn hàng
+            if ($order) {
+                // Gọi phương thức để lấy thông tin sản phẩm
+                return $this->orderStatusView($order['id_order']);
             } else {
                 // Nếu không tìm thấy đơn hàng, hiển thị thông báo lỗi
                 session()->setFlashdata('msg_error', 'Không tìm thấy đơn hàng với thông tin đã nhập.');
@@ -153,35 +170,39 @@ class OrderController extends BaseController
         }
     }
 
-    // Hàm hiển thị thông tin đơn hàng (dành cho khách vãng lai và đã đăng nhập)
+
+    // Hàm hiển thị thông tin đơn hàng 
     public function orderStatusView($orderId)
     {
         $orderModel = new OrderModel();
-        $cartModel = new CartModel();
+        $orderItemsModel = new OrderItemsModel(); 
         $productModel = new ProductModel();
-    
+
         // Lấy thông tin đơn hàng theo order_id
         $order = $orderModel->find($orderId);
         if (!$order) {
             session()->setFlashdata('msg_error', 'Không tìm thấy đơn hàng.');
             return redirect()->to('/');
         }
-        // Lấy thông tin sản phẩm trong giỏ hàng dựa trên customer_id
-        $cartItems = $cartModel->where('customer_id', $order['customer_id'])->findAll();
-        // Truy vấn sản phẩm từ bảng products dựa trên id_product từ giỏ hàng
+
+        // Lấy thông tin sản phẩm trong đơn hàng dựa trên order_id
+        $orderItems = $orderItemsModel->where('id_order', $orderId)->findAll(); // Sửa lại để lấy thông tin sản phẩm
         $products = [];
-        foreach ($cartItems as $item) {
-            $product = $productModel->find($item['id_product']);
+        
+        foreach ($orderItems as $item) {
+            $product = $productModel->find($item['id_product']); // Lấy sản phẩm dựa trên id_product
             if ($product) {
-                $product['quantity'] = $item['quantity'];  // Thêm số lượng từ giỏ hàng
-                $product['status'] = $order['payment_status'];  // Thêm trạng thái thanh toán từ đơn hàng
+                $product['quantity'] = $item['quantity']; // Số lượng sản phẩm trong đơn hàng
+                $product['status'] = $order['payment_status']; // Trạng thái thanh toán
+                $product['image'] = !empty($product['images']) ? base_url('uploads/' . esc($product['images'])) : base_url('uploads/default_image.jpg');
                 $products[] = $product;
             }
         }
-   
+
+        // Pass data to view
         $data['order'] = $order;
         $data['products'] = $products;
-    
+
         return view('order_status', $data);
     }
    
@@ -204,16 +225,12 @@ class OrderController extends BaseController
             if (!$districtId) {
                 return $this->response->setJSON(['error' => 'District ID missing']);
             }
-    
-            // Assuming you have a model for Wards
-            $wardsModel = new \App\Models\WardsModel();
+            $wardsModel = new WardsModel();
             $wards = $wardsModel->getWardsByDistrict($districtId);
-    
             return $this->response->setJSON($wards);
         } else {
             return $this->response->setStatusCode(403, 'Forbidden');
         }
     }
-    
-    
+
 }

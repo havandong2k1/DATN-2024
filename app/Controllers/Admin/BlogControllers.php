@@ -120,6 +120,7 @@ class BlogControllers extends BaseController
             $updatedData = [
                 'content' => $this->request->getPost('content'),
                 'title' => $this->request->getPost('title'),
+                'status_blogs' => $this->request->getPost('status_blogs'),
             ];
 
             // Lấy file hình ảnh từ form
@@ -138,7 +139,7 @@ class BlogControllers extends BaseController
             // Cập nhật thông tin bài viết trong cơ sở dữ liệu
             $blogModel->update($id_blogs, $updatedData);
             session()->setFlashdata('msg_success', 'Sửa thành công');
-            return redirect()->to('admin/blog/edit/' . $id_blogs);
+            return redirect()->to('admin/blog/list');
         }
         // Hiển thị biểu mẫu chỉnh sửa
         $cssFiles = [

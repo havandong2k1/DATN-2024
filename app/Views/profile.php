@@ -5,6 +5,9 @@
     .icon-shipped { color: purple; }
     .icon-delivered { color: green; }
     .icon-cancelled { color: red; }
+    .tooltip-inner {
+        text-align: center;
+    }
 </style>
 
 <div class="container gray-background mb-5">
@@ -30,47 +33,48 @@
             <table class="table table-bordered">
                 <thead>
                     <tr>
-                        <th class = 'text-center'>Mã đơn hàng</th>
-                        <th class = 'text-center'>Ngày đặt</th>
-                        <th class = 'text-center'>Tổng tiền</th>
-                        <th class = 'text-center'>Trạng thái</th>
-                        <th class = 'text-center'>Chi tiết</th>
+                        <th class='text-center'>Mã đơn hàng</th>
+                        <th class='text-center'>Ngày đặt</th>
+                        <th class='text-center'>Tổng tiền</th>
+                        <th class='text-center'>Trạng thái</th>
+                        <th class='text-center'>Chi tiết</th>
                     </tr>
                 </thead>
                 <tbody>
                     <?php if (!empty($orders)): ?>
                         <?php foreach ($orders as $order): ?>
                         <tr>
-                            <td class = 'text-center'><?= $order['order_code'] ?></td>
-                            <td class = 'text-center'><?= $order['created_at'] ?></td>
-                            <td class = 'text-center'><?= number_format($order['total_amount'], 0, ',', '.') ?> VND</td>
-                            <td class = 'text-center'>
+                            <td class='text-center'><?= $order['order_code'] ?></td>
+                            <td class='text-center'><?= date('d-m-Y', strtotime($order['created_at'])) ?></td>
+                            <td class='text-center'><?= number_format($order['total_amount'], 0, ',', '.') ?> VND</td>
+                            <td class='text-center'>
                                 <?php 
                                 // Hiển thị biểu tượng tương ứng với trạng thái đơn hàng
                                 switch ($order['order_status']) {
                                     case 'pending':
-                                        echo '<i class="bi bi-hourglass-split icon-pending"></i> Chờ xử lý';
+                                        echo '<i class="bi bi-hourglass-split icon-pending" data-toggle="tooltip" title="Chờ xử lý"></i>';
                                         break;
                                     case 'processing':
-                                        echo '<i class="bi bi-gear icon-processing"></i> Đang xử lý';
+                                        echo '<i class="bi bi-gear icon-processing" data-toggle="tooltip" title="Đang xử lý"></i>';
                                         break;
                                     case 'shipped':
-                                        echo '<i class="bi bi-truck icon-shipped"></i> Đã vận chuyển';
+                                        echo '<i class="bi bi-truck icon-shipped" data-toggle="tooltip" title="Đã vận chuyển"></i>';
                                         break;
                                     case 'delivered':
-                                        echo '<i class="bi bi-check-circle icon-delivered"></i> Đã giao hàng';
+                                        echo '<i class="bi bi-check-circle icon-delivered" data-toggle="tooltip" title="Đã giao hàng"></i>';
                                         break;
                                     case 'cancelled':
-                                        echo '<i class="bi bi-x-circle icon-cancelled"></i> Đã hủy';
+                                        echo '<i class="bi bi-x-circle icon-cancelled" data-toggle="tooltip" title="Đã hủy"></i>';
                                         break;
                                     default:
-                                        echo '<i class="bi bi-question-circle"></i> Không rõ';
+                                        echo '<i class="bi bi-question-circle" data-toggle="tooltip" title="Không rõ"></i>';
                                         break;
                                 }
                                 ?>
                             </td>
-                            <td class = 'text-center'><a href="<?= base_url('order/status/'.$order['id_order']) ?>" class="btn btn-info">Xem chi tiết</a></td>
-
+                            <td class='text-center'>
+                                <a href="<?= base_url('order/status/'.$order['id_order']) ?>" class="btn btn-info">Xem chi tiết</a>
+                            </td>
                         </tr>
                         <?php endforeach; ?>
                     <?php else: ?>
@@ -83,5 +87,11 @@
         </div>
     </div>
 </div>
+
+<script>
+    $(document).ready(function(){
+        $('[data-toggle="tooltip"]').tooltip(); // Khởi động tooltip
+    });
+</script>
 
 <?php include 'templates/footer.php'; ?>
