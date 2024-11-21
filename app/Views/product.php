@@ -39,10 +39,10 @@
                                                 <p id="product"><?= esc($product['name']); ?></p>
                                                 <p id="category">Danh mục: <?= esc($product['category']) ?></p>
                                                 <form action="<?= site_url('cart/add') ?>" method="POST" style="display:inline;">
-                                                    <?= csrf_field(); ?> <!-- Include CSRF token -->
-                                                    <input type="hidden" name="product_id" value="<?= esc($product['id_product']) ?>"> <!-- Hidden product ID -->
-                                                    <input type="hidden" name="quantity" min="1" value="1" style="width: 70px; display: inline;"> <!-- Input quantity -->
-                                                    <button type="submit" class="btn btn-success">Thêm vào giỏ hàng</button> <!-- Submit button -->
+                                                    <?= csrf_field(); ?>
+                                                    <input type="hidden" name="product_id" value="<?= esc($product['id_product']) ?>">
+                                                    <input type="hidden" name="quantity" min="1" value="1" style="width: 70px; display: inline;">
+                                                    <button type="submit" class="btn btn-success">Thêm vào giỏ hàng</button>
                                                 </form>
                                             </div>
                                         </div>
@@ -59,12 +59,65 @@
                             <p>Không có sản phẩm nào trong danh mục này.</p>
                         <?php endif; ?>
                     </div>
-                    <div class="col-sm-12">
-                        <?php echo $pager->links(); ?>
-                    </div>
+                    <div id="paginationContainer" class="text-center"></div> <!-- Phân trang -->
                 </div>
             </div>
         </div>
     </div>
 </section>
 <?php include 'templates/footer.php'; ?>
+
+<!-- Include jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!-- Include ScrollUp Plugin -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/scrollup/2.4.1/jquery.scrollUp.min.js"></script>
+
+<script>
+$(document).ready(function () {
+    // Sản phẩm phân trang
+    const products = $('#dataContainer .col-sm-4');
+    const itemsPerPage = 9;
+    const totalPages = Math.ceil(products.length / itemsPerPage);
+
+    function showPage(page) {
+        products.hide();
+        const start = (page - 1) * itemsPerPage;
+        const end = start + itemsPerPage;
+        products.slice(start, end).show();
+    }
+
+    function createPagination() {
+        const pagination = $('<ul class="pagination"></ul>');
+        for (let i = 1; i <= totalPages; i++) {
+            const pageItem = $(`<li class="page-item"><a class="page-link" href="#">${i}</a></li>`);
+            pageItem.click(function (e) {
+                e.preventDefault();
+                showPage(i);
+                $('.pagination .page-item').removeClass('active');
+                $(this).addClass('active');
+            });
+            pagination.append(pageItem);
+        }
+        $('#paginationContainer').html(pagination);
+        $('.pagination .page-item:first').addClass('active');
+    }
+
+    if (products.length > itemsPerPage) {
+        createPagination();
+    }
+    showPage(1);
+
+    // ScrollUp Plugin
+    $.scrollUp({
+        scrollName: 'scrollUp', // Element ID
+        scrollDistance: 300,   // Distance from top/bottom before showing element
+        scrollFrom: 'top',     // 'top' or 'bottom'
+        scrollSpeed: 300,      // Speed back to top
+        easingType: 'linear',
+        animation: 'fade',     // Fade, slide, none
+        animationSpeed: 200,   // Animation speed
+        scrollText: 'Scroll to top', // Text for element
+        zIndex: 2147483647     // Z-Index for the element
+    });
+});
+</script>

@@ -2,23 +2,20 @@
 <section>
     <div class="container">
         <div class="row">
-            <div class="col-sm-3">
-                <div class="left-sidebar">
-                    <h2>Danh mục sản phẩm</h2>
-                    <div class="panel-group category-products" id="accordian">
-                        <!-- Danh sách danh mục sản phẩm -->
+        <div class="col-sm-3">
+                <h2>Danh mục sản phẩm</h2>
+                <ul class="list-group">
+                    <?php if (isset($categories) && !empty($categories)): ?>
                         <?php foreach ($categories as $category): ?>
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title">
-                                        <a href="#"><?= esc($category) ?></a>
-                                    </h4>
-                                </div>
-                            </div>
+                            <li class="list-group-item">
+                                <a href="<?= base_url('views/product/' . urlencode($category)) ?>"><?= esc($category) ?></a>
+                            </li>
                         <?php endforeach; ?>
-                    </div>
-                </div>
-            </div>
+                    <?php else: ?>
+                        <li class="list-group-item">Không có danh mục sản phẩm</li>
+                    <?php endif; ?>
+                </ul>
+            </div>           
 
             <div class="col-sm-9 padding-right">
                 <div class="product-details">
@@ -31,7 +28,7 @@
                         <div class="product-information">
                             <h2><?= esc($productObj['name']) ?></h2>
                             <p>Giá: <?= number_format($productObj['price'], 0, ',', '.') ?> VND</p>
-                            <p>Danh mục: <?= esc($productObj['category']) ?></p>
+                            <p id="category">Danh mục: <?= esc($productObj['category']) ?></p>
                             <span>
                                 <label>Số lượng:</label>
                                 <input type="number" name="quantity" min="1" value="1" id="productQuantity" required>

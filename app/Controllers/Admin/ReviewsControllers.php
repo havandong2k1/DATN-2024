@@ -27,6 +27,7 @@ class ReviewsControllers extends BaseController
     public function list(): string
     {   
         $dataReview = $this->listReview();
+   
         $data = [
             'dataReview' => $dataReview,
         ];
@@ -54,9 +55,17 @@ class ReviewsControllers extends BaseController
     {
         $reviewModel = new ReviewModel();
         $conditions = [
-            'deleted_at' => null,
+            'reviews.deleted_at' => null,
         ];
-        return $reviewModel->where($conditions)->findAll();
+        $withSelect = 'reviews.id, reviews.rating, reviews.review, reviews.created_at, products.id_product, products.images';
+        $joinTable1 = 'products';
+        $withJoinCondition1 = 'reviews.id_product = products.id_product AND products.deleted_at is null';
+        $reviewObj = $reviewModel->getByConditions($conditions, '', $withSelect, $joinTable1, $withJoinCondition1);
+        
+        if(!$reviewObj){
+            return false;
+        }
+        return $reviewObj;
     }
     
 }

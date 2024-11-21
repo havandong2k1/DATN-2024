@@ -59,15 +59,16 @@ class ProductModel extends BaseModel
         return $result;
     }
 
-    public function searchProducts($keyword)
-{
-    // Kiểm tra nếu từ khóa trống
-    if (empty($keyword)) {
-        return [];
-    }
-    return $this->like('name', $keyword)
-                ->orLike('description', $keyword)
-                ->findAll();
-}
+    public function searchProducts($keyword, $limit = 10, $orderBy = 'updated_at', $orderDir = 'DESC')
+    {
+        if (empty($keyword)) {
+            return [];
+        }
 
+        return $this->select('id_product, name, price, images')
+                    ->like('name', $keyword)
+                    ->orLike('description', $keyword)
+                    ->orderBy($orderBy, $orderDir)
+                    ->findAll($limit);
+    }
 }

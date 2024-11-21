@@ -19,7 +19,7 @@ class AuthFilter implements FilterInterface
         } else {
             // Nếu đã đăng nhập và cố gắng truy cập trang đăng nhập, chuyển hướng đến trang chính
             if (current_url() === base_url() . 'admin/login') {
-                return redirect()->to('admin/dashboard'); // Hoặc một trang nào đó bạn muốn
+                return redirect()->to('admin/dashboard'); 
             }
         }
     }

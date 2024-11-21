@@ -263,11 +263,23 @@ class HomeControllers extends BaseController
         return view('product', $data);
     }
 
-    public function product_detail()
-    {
-        $data['totalQuantity'] = $this->getTotalCartQuantity();
-        return view('product_detail', $data);
-    }
+    // public function product_detail($category = null)
+    // {
+    //     $data['totalQuantity'] = $this->getTotalCartQuantity();
+    //     $data['products'] = $category ? 
+    //     $this->productModel->where('category', $category)->paginate(12) : 
+    //     $this->productModel->paginate(12);
+    //     $data['pager'] = $this->productModel->pager;
+    //     $data['categories'] = [
+    //     'MÀN HÌNH', 'THÙNG MÁY', 'CHIP', 'RAM', 'SSD', 'HDD',
+    //     'CARD ĐỒ HỌA', 'CHUỘT', 'BÀN PHÍM', 'BÀN, GHẾ GAMING',
+    //     'QUẠT TẢN NHIỆT', 'TAI NGHE', 'LAPTOP', 'BALO MÁY TÍNH',
+    //     'IPAD', 'TABLET', 'LOA',
+    // ];
+    
+    // $data['totalQuantity'] = $this->getTotalCartQuantity();
+    //     return view('product_detail', $data);
+    // }
 
     public function profile()
     {

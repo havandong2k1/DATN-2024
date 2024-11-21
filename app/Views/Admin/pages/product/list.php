@@ -9,7 +9,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
 <body>
-
 <div class="dash-content">
     <h1 class="dash-title">Trang chủ / Sản phẩm</h1>
     <div class="row">
@@ -57,14 +56,14 @@
                             <?php foreach ($products as $index => $product) : ?>
                                 <tr>
                                     <td><?= $index + 1 ?></td>
-                                    <td><?= $product['name'] ?></td>
-                                    <td>
+                                    <td class="text-center" style="width: 150px;"><?= $product['name'] ?></td>
+                                    <td class="text-center" style="width: 100px;">
                                         <img src="uploads/<?= $product['images']; ?>" alt="" height="60" width="60">
                                     </td>
-                                    <td style="width: 100px"><?= number_format($product['price'], 0, ',', '.') ?> ₫</td>
+                                    <td class="text-center" style="width: 100px"><?= number_format($product['price'], 0, ',', '.') ?> ₫</td>
 
-                                    <td><?= $product['description'] ?></td>
-                                    <td><?= $product['category'] ?></td>
+                                    <td class="text-center"><?= $product['description'] ?></td>
+                                    <td class="text-center"><?= $product['category'] ?></td>
                                     <td class="text-center">
                                         <?php 
                                             if ($product['status_product'] == 2) {
@@ -76,7 +75,7 @@
                                             }
                                         ?>
                                     </td>
-                                    <td class="text-center">
+                                    <td style="width: 200px;" class="text-center">
                                         <a href="admin/product/edit/<?= $product['id_product'] ?>" class="btn btn-primary btn-sm">
                                             <i class="fas fa-edit"></i>
                                         </a>

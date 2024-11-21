@@ -31,6 +31,8 @@ class Filters extends BaseConfig
                 'admin/order/update/*', // Tắt CSRF cho các route cập nhật đơn hàng
                 'order/get-wards', // Tắt CSRF cho route lấy xã/phường
                 'order/get-districts', // Tắt CSRF cho route lấy quận/huyện
+                'product/search', // Tắt CSRF cho route tìm kiếm sản phẩm
+
             ]],
         ],
         'after' => [

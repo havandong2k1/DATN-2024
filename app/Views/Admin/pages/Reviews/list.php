@@ -13,11 +13,11 @@
                 </div>
                 <div class="card-body">
                     <table id="datatable" class="cell-border stripe">
-                        <thead>
+                    <thead>
                             <tr>
                                 <th class="text-center" scope="col">ID</th>
-                                <th class="text-center" scope="col">ID Sản phẩm</th>
-                                <th class="text-center" scope="col">Review</th>
+                                <th class="text-center" scope="col">Hình ảnh</th>
+                                <th class="text-center" scope="col">Phản hồi</th>
                                 <th class="text-center" scope="col">Đánh giá</th>
                                 <th class="text-center" scope="col">Thời gian</th>
                             </tr>
@@ -26,7 +26,13 @@
                             <?php foreach ($dataReview as $review): ?>
                                 <tr>
                                     <td class="text-center"><?= $review['id']; ?></td>
-                                    <td class="text-center"><?= $review['id_product']; ?></td>
+                                    <td class="text-center">
+                                        <?php if (!empty($review['images'])): ?>
+                                            <img src="<?= base_url('uploads/' . $review['images']); ?>" alt="Product Image" style="max-width: 100px; height: auto;">
+                                        <?php else: ?>
+                                            <span>Không có ảnh</span>
+                                        <?php endif; ?>
+                                    </td>
                                     <td class="text-center"><?= $review['review']; ?></td>
                                     <td class="text-center">
                                         <div class="star-rating">
@@ -43,7 +49,6 @@
                                         </div>
                                     </td>
                                     <td class="text-center"><?= $review['created_at']; ?></td>
-                                    <td><!-- Actions here --></td>
                                 </tr>
                             <?php endforeach; ?>
                         </tbody>

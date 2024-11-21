@@ -33,8 +33,10 @@
                             <div class="form-group">
                                 <label for="status_product">Trạng thái users</label>
                                 <select name="status_users" class="form-control" required>
-                                    <option  value="1" <?php echo ($user['status_users'] == 1) ? 'selected' : ''; ?>>Enable</option>
-                                    <option  value="0" <?php echo ($user['status_users'] == 0) ? 'selected' : ''; ?>>Disable</option>
+                                    <option  value="0" <?php echo ($user['status_users'] == 3) ? 'selected' : ''; ?>>Nhân viên</option>
+                                    <option  value="0" <?php echo ($user['status_users'] == 2) ? 'selected' : ''; ?>>Quản lý</option>
+                                    <option  value="1" <?php echo ($user['status_users'] == 1) ? 'selected' : ''; ?>>ADmin</option>
+                                    <option  value="0" <?php echo ($user['status_users'] == 0) ? 'selected' : ''; ?>>Khóa</option>
                                 </select>
                             </div>
                             <div class="form-row">

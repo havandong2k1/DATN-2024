@@ -157,33 +157,38 @@ $current_page = basename(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	<script>
     $(document).ready(function() {
+        let searchTimeout;
+
         $('#search-input').on('keyup', function() {
+            clearTimeout(searchTimeout); // Xóa timeout trước đó (nếu có)
+
             var csrfName = '<?= csrf_token() ?>';  // Lấy tên token CSRF
             var csrfHash = '<?= csrf_hash() ?>';  // Lấy giá trị token CSRF
             var keyword = $(this).val().trim();  // Lấy giá trị từ input tìm kiếm
 
             if (keyword.length > 2) {  // Nếu từ khóa tìm kiếm dài hơn 2 ký tự
-                $.ajax({
-                    url: '/product/search',  // Đảm bảo URL chính xác
-                    type: 'POST',  // POST request
-                    dataType: 'json',  // Đảm bảo dữ liệu trả về ở định dạng JSON
-                    data: {
-                        keyword: keyword,
-                        [csrfName]: csrfHash  // Thêm CSRF token vào dữ liệu gửi đi
-                    },
-                    success: function(response) {
-                        console.log(response); // Kiểm tra kết quả trả về từ server
-                        if (response.success) {
-                            $('#search-results').html(response.html).show();
-                        } else {
-                            $('#search-results').html('<p>Không tìm thấy sản phẩm nào.</p>').show();
+                searchTimeout = setTimeout(function() {
+                    $.ajax({
+                        url: '/product/search',  // Đảm bảo URL chính xác
+                        type: 'POST',  // POST request
+                        dataType: 'json',  // Đảm bảo dữ liệu trả về ở định dạng JSON
+                        data: {
+                            keyword: keyword,
+                            [csrfName]: csrfHash  // Thêm CSRF token vào dữ liệu gửi đi
+                        },
+                        success: function(response) {
+                            if (response.success) {
+                                $('#search-results').html(response.html).show(); // Hiển thị HTML từ server
+                            } else {
+                                $('#search-results').html('<p>Không tìm thấy sản phẩm nào.</p>').show();
+                            }
+                        },
+                        error: function(xhr, status, error) {
+                            console.error('Error:', xhr.responseText);  // Log lỗi trong console
+                            $('#search-results').html('<p>Có lỗi xảy ra khi tìm kiếm.</p>').show();
                         }
-                    },
-                    error: function(xhr, status, error) {
-                        console.log('Error:', xhr.responseText);  // Log lỗi trong console
-                        $('#search-results').html('<p>Có lỗi xảy ra khi tìm kiếm.</p>').show();
-                    }
-                });
+                    });
+                }, 300); // Delay 300ms để giảm số lượng request
             } else {
                 $('#search-results').hide();  // Ẩn kết quả tìm kiếm nếu từ khóa ngắn hơn 3 ký tự
             }
@@ -198,7 +203,5 @@ $current_page = basename(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
     });
 </script>
 
-
 </body>
-
 </html>

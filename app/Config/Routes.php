@@ -54,6 +54,8 @@ $routes->get('cart/decrease/(:num)', 'Users\CartControllers::decreaseQuantity/$1
 // Product - User
 $routes->group('product', function ($routes) {
     // Route cho chi tiết sản phẩm, sử dụng phương thức GET
+    // $routes->get('product_detail/(:num)', 'Users\ProductsController::productDetail/$1');
+    $routes->get('product_detail/(:num)/(:segment)', 'Users\ProductsController::productDetail/$1/$2');
     $routes->get('product_detail/(:num)', 'Users\ProductsController::productDetail/$1');
     $routes->post('addReview', 'Users\ProductsController::addReview');  
     $routes->post('search', 'Users\ProductsController::search');
